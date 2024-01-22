@@ -1,0 +1,91 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('layer.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    font-family: "MV Boli";
+}
+
+#welcome, #visits{
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+#welcome{
+    font-size: 22px;
+}
+
+#catch{
+    font-size: 30px;
+}
+
+#visits_container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    gap:2vh;
+    width: 100vh;
+}
+#visits{
+    max-width: 35vh;
+}
+
+#visitsDisplayerButton{
+    border: 4px solid lightblue;
+    font-family: cursive;
+    border-radius: 20px;
+    min-width: 90px;
+    font-size: 22px;
+    color: red;
+    padding: 5px;
+    background-color: black;
+}
+
+#logout, .confirmButton{
+    border-radius: 20px;
+    font-size: 20px;
+    min-width: 20vh;
+    border: 3px solid cyan;
+    background-color: black;
+    color: whitesmoke;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'consolas';
+    font-weight: bold;
+}
+
+#logout:hover, .confirmButton:hover{
+    background-color: white;
+    border: 3px solid darkmagenta;
+    color: black;
+    box-shadow: 1px 1px 12px black;
+}
+
+#logout:active{
+    background-color: hsla(0, 0%, 0%, 0.678);
+    color:white;
+}
+
+#confirmForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20vh;
+}
+
+#sure{
+    font-size: 30px;
+}
+
+#confirmButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10vh;
+}
