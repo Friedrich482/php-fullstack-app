@@ -17,20 +17,20 @@
     <form action="login_process.php" method="post" id="loginForm" class="flex items-center justify-center flex-col">
         
         <label for="username">Enter your username :</label><br>
-        <input type="text" name="username" id="username" required placeholder="Ex : Paladin67" class="text-center rounded-2xl border-[3px] border-solid border-[darkmagenta] min-w-52 min-h-9"><br>
+        <input type="text" name="username" id="username" required placeholder="Ex : Paladin67" class="text-center rounded-2xl border-[3px] border-solid border-[darkmagenta] min-w-52 min-h-9 text-black"><br>
 
         <label for="password">Enter your password :</label><br>
         <div class="flex items-center justify-center gap-4 w-[100vh]">
-            <input type="password" name="password" required placeholder="*********" class="text-center rounded-2xl border-[3px] border-solid border-[darkmagenta] min-w-52 min-h-9 relative left-7">
-            <img src="eye_slashed.jpg" alt="Eye slashed" title="Display the password" class="h-[1.25rem] w-[1.25rem] relative right-[1rem] select-none"><br>
+            <input type="password" name="password"  id="password" placeholder="*********" class="text-center rounded-2xl border-[3px] border-solid border-[darkmagenta] min-w-52 min-h-9 relative left-7 text-black">
+            <img src="eye_slashed.jpg" id="eyeSlashed" alt="Eye slashed" title="Display the password" class="h-[1.25rem] w-[1.25rem] relative right-[1rem] select-none"><br>
         </div>
         <br><br>
         
-        <input type="submit" value="Submit" name="submit" class="text-center rounded-2xl border-[3px] border-solid border-cyan-500 min-h-9 text-[1.25rem] min-w-[20vh] bg-black text-[whitesmoke] p-[0.314rem] box-border font-[consolas] font-bold hover:bg-white hover:border-[darkmagenta] hover:text-black hover:shadow-lg active:bg-black active:opacity-65 active:text-white"><br>
+        <input type="submit" value="Submit" id="submit" name="submit" class="text-center rounded-2xl border-[3px] border-solid border-cyan-500 min-h-9 text-[1.25rem] min-w-[20vh] bg-black text-[whitesmoke] p-[0.314rem] box-border font-[consolas] font-bold hover:bg-white hover:border-[darkmagenta] hover:text-black hover:shadow-lg active:bg-black active:opacity-65 active:text-white"><br>
         <label id="displayErrors"></label>
         <script src="scriptLogin.js"></script>
     </form>
-    <p class="h-7">Not yet registersed? Click here to <a href="register.php" class="text-cyan-500 no-underline hover:text-2xl hover:text-green-400">register</a></p><br>
+    <p class="h-7">Not yet registered? Click here to <a href="register.php" class="text-cyan-500 no-underline hover:text-2xl hover:text-green-400">register</a></p><br>
     
     <script src="eye.js"></script>
     
