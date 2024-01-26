@@ -9,13 +9,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login 🔑</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+    <link rel="stylesheet" href="output.css">
     
 </head>
 <body>
     <p><b>Please fill this form to <i style="color: cyan;">login</i></b></p>
-    <form action="login_process.php" method="post" id="loginForm">
+    <form action="login_process.php" method="post" id="loginForm" >
         
         <label for="username">Enter your username :</label><br>
         <input type="text" name="username" id="username" required placeholder="Ex : Paladin67"><br>
@@ -34,6 +33,7 @@
     <p id="redirection">Not yet registersed? Click here to <a href="register.php">register</a></p><br>
     
     <script src="eye.js"></script>
+    
 </body>
 </html>
 
