@@ -1,11 +1,8 @@
 {
-  "devDependencies": {
-    "tailwindcss": "^3.4.1"
-  },
   "name": "php_form_registration",
   "description": "My first application in php to register users",
   "version": "1.0.0",
-  "main": "eye.js",
+  "main": "tailwind.config.js",
   "dependencies": {
     "ansi-regex": "^6.0.1",
     "ansi-styles": "^6.2.1",
@@ -98,8 +95,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tailwindcss -i style.css -o output.css --watch"
+    "dev": "tailwindcss -i css/input.css -o css/style.css --watch"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
 }

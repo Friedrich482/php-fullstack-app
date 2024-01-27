@@ -1,7 +1,7 @@
 <?php
     session_start();
-    include("database.php");
-    include("header.php");
+    include("../include/database.php");
+    include("../include/header.php");
     
 ?>
 <!DOCTYPE html>
@@ -10,9 +10,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration 📝</title>
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
-    <script src="eye.js" defer></script>
+    <script src="../assets/eye/eye.js" defer></script>
 </head>
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-[1.25rem] backgroundImg text-[whitesmoke] MV-boli">
     <p><b>Please fill this form to <i style="color: cyan;">register</i></b></p>
@@ -27,7 +27,7 @@
         <label for="password">Enter your password :</label><br>
         <div class="flex items-center justify-center gap-4 w-[100vh]">
             <input type="password" name="password" id="password" required placeholder="**********" minlength="8" class="text-center rounded-2xl border-[3px] border-solid border-[darkmagenta] min-w-52 min-h-9 relative left-7 text-black">
-            <img src="eye_slashed.jpg" id="eyeSlashed" alt="Eye slashed" title="Display the password" class="h-[1.25rem] w-[1.25rem] relative right-[1rem] select-none"><br>
+            <img src="../assets/eye/eye_slashed.jpg" id="eyeSlashed" alt="Eye slashed" title="Display the password" class="h-[1.25rem] w-[1.25rem] relative right-[1rem] select-none"><br>
         </div>
 
         <br><br>
@@ -36,12 +36,12 @@
         <label id="displayErrors"></label>
         <script src="registerScript.js"></script> 
     </form>
-    <p class="h-7">Already registered? Click here to <a href="login.php" class="text-cyan-500 no-underline hover:text-2xl hover:text-green-400">login</a></p><br>
+    <p class="h-7">Already registered? Click here to <a href="../login/login.php" class="text-cyan-500 no-underline hover:text-2xl hover:text-green-400">login</a></p><br>
 </body>
 </html>
 
 <?php
-    include('footer.php');
+    include("../include/footer.php");
 ?>
 
 

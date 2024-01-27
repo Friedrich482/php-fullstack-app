@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("database.php");
+include("../include/database.php");
 
 $response = ['error' => false];
 
@@ -28,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $id_user = $conn->insert_id;
             $_SESSION['id'] = $id_user;
 
-            $response['redirect'] = "home.php?username=$username&id=$id_user";
+            $response['redirect'] = "../home/home.php?username=$username&id=$id_user";
         } catch (mysqli_sql_exception $exception) {
             $response['error'] = true;
             $response['message'] = "This email/username is already taken ❌";

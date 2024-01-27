@@ -1,4 +1,4 @@
-console.log('Form submission intercepted');
+
 document.addEventListener('DOMContentLoaded', function() {
     const registerForm = document.getElementById('registerForm');
     const displayErrors = document.getElementById('displayErrors');
