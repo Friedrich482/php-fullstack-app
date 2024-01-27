@@ -1,12 +1,12 @@
 <?php
     session_start();
-    include("include/database.php");
+    include("../include/database.php");
 
 
     // Check if the user is logged in. Otherwise, redirect him to the login page.
 
     if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-        header('Location: login.php');
+        header('Location: ../login/login.php');
         exit;
     }
 
@@ -46,7 +46,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home 🏠</title>
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="script.js" defer></script>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
@@ -87,7 +87,7 @@
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $_SESSION['loggedin'] = false;
         session_destroy();
-        header("Location: login.php");
+        header("Location: ../login.login.php");
     }
 ?>
 <?php

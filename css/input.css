@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.MV-boli{
+    font-family: "MV Boli";
+}
+
+.backgroundImg{
+    background-image: url('../assets/layer.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

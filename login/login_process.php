@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include("include/database.php");
+    include("../include/database.php");
 
     $response = ['error' => false];
 
@@ -22,7 +22,7 @@
                     $_SESSION["username"] = $username;
                     $_SESSION['id'] = $user["id"];
                     $_SESSION['loggedin'] = true;
-                    $response = ['error' => false, 'redirect' => 'home.php'];
+                    $response = ['error' => false, 'redirect' => '../home/home.php'];
                 } else {
                     $response = ['error' => true, 'message' => "Incorrect password! ❌"];
                 }
