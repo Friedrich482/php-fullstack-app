@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+/* body{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,27 +13,37 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     color:whitesmoke
+} */
+
+.MV-boli{
+    font-family: "MV Boli";
 }
-h1{
+.backgroundImg{
+    background-image: url('layer.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* h1{
     font-size: 42px;
-}
-form{
+} */
+/* form{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     
-}
+} */
 
-input{
+/* input{
     text-align: center;
     border-radius: 20px;
     border: 3px solid darkmagenta;
     min-width: 40vh;
     min-height: 6vh;
-}
+} */
 
-#submit{
+/* #submit{
     font-size: 20px;
     min-width: 20vh;
     border: 3px solid cyan;
@@ -43,22 +53,22 @@ input{
     box-sizing: border-box;
     font-family: 'consolas';
     font-weight: bold;
-}
+} */
 
-#submit:hover{
+/* #submit:hover{
     background-color: white;
     border: 3px solid darkmagenta;
     color: black;
     box-shadow: 1px 1px 12px black;
     
-}
+} */
 
-#submit:active{
+/* #submit:active{
     background-color: hsla(0, 0%, 0%, 0.678);
     color:white;
-}
+} */
 
-a{
+/* a{
     color: cyan;
     text-decoration: none;
 }
@@ -66,22 +76,22 @@ a{
 a:hover{
     font-size: 25px;
     color: hsla(128, 84%, 48%, 0.904)
-}
+} */
 
-#redirection{
+/* #redirection{
     height: 5vh;
     
-}
+} */
 
-#eyeSlashed{
+/* #eyeSlashed{
     height: 20px;
     width: 20px;
     position: relative;
     right: 4vh;
     user-select: none;
-}
+} */
 
-#passwordDiv{
+/* #passwordDiv{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,4 +101,4 @@ a:hover{
 #password{
     position: relative;
     left: 9vh
-}
+} */

@@ -46,40 +46,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home 🏠</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="output.css">
     <script src="script.js" defer></script>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
-<body>
-    <div id="visits_container">
-        <button id="visitsDisplayerButton"><i class="fi fi-rr-angle-down"></i></button>
-        <div id="visits" style="display: none;">
+<body class="flex items-center justify-center flex-col text-[whitesmoke] backgroundImg MV-boli">
+    <div class="flex items-center justify-center flex-col gap-2 w-full">
+        <button id="visitsDisplayerButton" class="border-4 font-[cursive] rounded-2xl min-w-[5.625rem] text-2xl text-red-600 p-1 bg-black"><i class="fi fi-rr-angle-down"></i></button>
+        <div id="visits" style="display: none;" class="text-4xl text-center min-w-24 min-h-3">
             You have visited this page <label><?php echo $number_of_visits?></label> times
         </div>
     </div>
-    <i class="fi fi-rr-menu-burger"></i>
-    <h1 id="welcome">Welcome <?php echo "{$_SESSION['username']}"?>, on my page <lord-icon style="display:inline-block"  src="https://cdn.lordicon.com/pcwupfyl.json" trigger="loop" style="width:100px;height:100px"></lord-icon></h1>
+    <!-- <i class="fi fi-rr-menu-burger"></i> -->
+    <h1 class="text-4xl text-center">Welcome <?php echo "{$_SESSION['username']}"?>, on my page <lord-icon style="display:inline-block"  src="https://cdn.lordicon.com/pcwupfyl.json" trigger="loop" style="width:100px;height:100px"></lord-icon></h1>
         
-    <p id='catch'>What are we doing today ? 🙃</p>
-    
-    <i class="fi fi-rr-cross-small"></i>
+    <p class="text-3xl">What are we doing today ? 🙃</p>
+    <br><br><br>
+    <!-- <i class="fi fi-rr-cross-small"></i> -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore laborum corrupti commodi repudiandae velit quibusdam placeat, sit nobis fugiat dolore ratione, impedit, aperiam delectus autem explicabo officia quod rem. Consectetur?</p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit deleniti, sed officiis sequi quis totam consequatur illo doloribus recusandae consectetur laborum enim! Illo blanditiis harum, autem labore recusandae reiciendis error!
     <br><br><br><br><br><br><br><br><br><br>
-
     <form action="home.php" method="post">
-        <input type="button" value="Logout" name="logout" id="logout">
+        <input type="button" value="Logout" name="logout" id="logout" class="rounded-[1.25rem] text-xl min-w-[20vh] border-[3px] border-solid border-cyan-400 bg-black text-[whitesmoke] p-1 box-border font-[consolas] font-bold hover:bg-white hover:border-[darkmagenta] hover:text-black shadow-lg active:bg-gray-500 active:text-white">
     </form>
 
-    <form action="" method="post" style="display:none;" id="confirmForm">
-        <label id="sure">Are you sure to log out ?</label><br>
-        <div id="confirmButtons">
-            <input class = 'confirmButton' type="submit" value="Yes ✅">
-            <input class = 'confirmButton' type="button" value="No ❌" id="denyButton">
+    <form action="" method="post" style="display:none;" id="confirmForm" class="flex items-center justify-center gap-5">
+        <label class="text-[1.875rem]">Are you sure to log out ?</label><br>
+        <div class="flex items-center justify-center gap-5">
+            <input class="rounded-[1.25rem] text-xl min-w-[20vh] border-[3px] border-solid border-cyan-400 bg-black text-[whitesmoke] p-1 box-border font-[consolas] font-bold hover:bg-white hover:border-[darkmagenta] hover:text-black shadow-lg" type="submit" value="Yes ✅">
+            <input class="rounded-[1.25rem] text-xl min-w-[20vh] border-[3px] border-solid border-cyan-400 bg-black text-[whitesmoke] p-1 box-border font-[consolas] font-bold hover:bg-white hover:border-[darkmagenta] hover:text-black shadow-lg" type="button" value="No ❌" id="denyButton">
         </div>
 
     </form>
 
    <br><br>
-
    <script src="https://cdn.lordicon.com/lordicon.js"></script>
 </body>
 </html>
