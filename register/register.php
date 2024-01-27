@@ -1,7 +1,7 @@
 <?php
     session_start();
-    include("database.php");
-    include("header.php");
+    include("include/database.php");
+    include("include/header.php");
     
 ?>
 <!DOCTYPE html>
@@ -41,7 +41,7 @@
 </html>
 
 <?php
-    include('footer.php');
+    include("include/footer.php");
 ?>
 
 

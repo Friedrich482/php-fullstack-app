@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include("database.php");
+    include("include/database.php");
 
 
     // Check if the user is logged in. Otherwise, redirect him to the login page.
@@ -91,6 +91,6 @@
     }
 ?>
 <?php
-    include('footer.php');
+    include("include/footer.php");
 ?>
 
