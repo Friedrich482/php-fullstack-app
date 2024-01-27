@@ -87,10 +87,10 @@
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $_SESSION['loggedin'] = false;
         session_destroy();
-        header("Location: ../login.login.php");
+        header("Location: ../login/login.php");
     }
 ?>
 <?php
-    include("include/footer.php");
+    include("../include/footer.php");
 ?>
 
