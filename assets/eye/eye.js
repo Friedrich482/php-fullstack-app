@@ -10,7 +10,7 @@ eyeSlashed.addEventListener('click', () =>{
     }
     else{
         password.type = 'password';
-        eyeSlashed.src = '../assets/eye/eye_slashed.jpg';
+        eyeSlashed.src = '../assets/eye/eye-crossed.png';
         eyeSlashed.title="Display the password"
     }
 
