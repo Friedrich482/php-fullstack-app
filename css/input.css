@@ -13,4 +13,9 @@
     background-position: center;
     background-attachment: fixed;
 }
-  
+
+.visibleItem{
+    display: block;
+    color: red;
+    font-size: 1.25rem;
+}

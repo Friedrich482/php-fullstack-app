@@ -1,6 +1,5 @@
 // The eyes with the password
 let eyeSlashed = document.getElementById('eyeSlashed');
-let displayErrors = document.getElementById('displayErrors');
 eyeSlashed.addEventListener('click', () =>{
     let password = document.getElementById('password');
     if(password.type == 'password'){
@@ -15,4 +14,3 @@ eyeSlashed.addEventListener('click', () =>{
     }
 
 })
-displayErrors.style.fontSize = '25px'
