@@ -16,7 +16,7 @@ loginForm.addEventListener('submit', event => {
 
         // Display error message
         
-        displayErrors.textContent = 'User not found! (ಥ _ ಥ)';
+        // displayErrors.textContent = 'User not found! (ಥ _ ಥ)';
         displayErrors.style.color = 'red';
         displayErrors.style.fontSize = '30px';
         isErrorDisplayed = true;

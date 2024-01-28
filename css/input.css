@@ -7,8 +7,26 @@
 }
 
 .backgroundImg{
-    background-image: url('../assets/layer.svg');
+    background-image: url("../assets/bg-img/02.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
+.visibleItem{
+    display: flex;
+    color: red;
+    font-size: 1.25rem;
+    padding: 0;
+    margin:0;
+}
+
+.gradient-text {
+    background-clip: text;
+    color: transparent;
+}
+
+.fullElt{
+    min-width: 0;
+}
