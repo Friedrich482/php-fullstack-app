@@ -14,10 +14,10 @@
 </head>
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-[1.25rem] backgroundImg text-[whitesmoke] MV-boli">
     <p><b>Please fill this form to <i class="text-red-300">login</i></b></p>
-    <form action="login_process.php" method="post" id="loginForm" class="flex items-center justify-center flex-col bg-slate-700 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] w-60 sm:min-w-72 sm:p-2 gap-8">
+    <form action="login_process.php" method="post" id="loginForm" class="flex items-center justify-center flex-col bg-slate-700 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-8">
         <p></p>
 
-        <label for="username">Enter your username :</label>
+        <label for="username" class="fu">Enter your username :</label>
         <input type="text" name="username" id="username" required placeholder="Ex : Paladin67" class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-11/12 sm:w-10/12 focus:outline-none">
         <label id="usernameError" class="hidden"></label>
 
@@ -35,8 +35,8 @@
         <script src="scriptLogin.js"></script>
     </form>
     
-    <p class="h-7 flex flex-wrap text-center">Not yet registered? Click here to &nbsp;<a href="../register/register.php" class="text-red-300 no-underline hover:text-indigo-400">register</a></p><br>
-    
+    <p class="h-7 flex items-center justify-center flex-wrap text-center">Not yet registered? Click here to &nbsp;<a href="../register/register.php" class="text-red-300 no-underline hover:text-indigo-400">register</a></p><br>
+    <p></p><p></p>
     <script src="../assets/eye/eye.js"></script>
 </body>
 </html>

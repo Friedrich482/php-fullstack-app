@@ -27,3 +27,6 @@
     color: transparent;
 }
 
+.fullElt{
+    min-width: 0;
+}
