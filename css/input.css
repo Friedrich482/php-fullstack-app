@@ -15,7 +15,9 @@
 }
 
 .visibleItem{
-    display: block;
+    display: flex;
     color: red;
     font-size: 1.25rem;
+    padding: 0;
+    margin:0;
 }

@@ -18,17 +18,30 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             if (data.error) {
-                if(data.message.includes("User not found! (ಥ _ ಥ)")){
+                if(data.message.includes("User not found!<br> (ಥ _ ಥ)")){
                     usernameInput.focus();
+                    usernameInput.classList.add('border-rose-600')
+                    usernameInput.classList.remove('border-b-purple-600');
+                    usernameInput.classList.remove("hover:border-b-4");
+
                     display(usernameError);
-                    usernameError.textContent = data.message
+                    usernameError.innerHTML = data.message
                 }
                 else if(data.message.includes("Incorrect password! ❌")){
+                    usernameInput.classList.remove('border-rose-600')
+                    usernameInput.classList.add('border-b-purple-600')
+                    usernameInput.classList.add("hover:border-b-4");
+
                     passwordInput.focus();
+                    passwordInput.classList.add('border-rose-600')
+                    passwordInput.classList.remove('border-b-purple-600')
+                    passwordInput.classList.remove("hover:border-b-4");
+                    
                     display(passwordError);
                     passwordError.textContent = data.message
                 }
             } else {
+
                 window.location.href = data.redirect;
             }
         })
