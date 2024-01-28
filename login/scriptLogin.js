@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const passwordError = document.getElementById('passwordError');
     const usernameInput = document.getElementById('username'); 
     const passwordInput = document.getElementById('password');
+    const eye = document.querySelector('#eyeSlashed')
     loginForm.addEventListener('submit', function(e) {
         e.preventDefault();
         hidden(usernameError);
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     passwordInput.classList.add('border-rose-600')
                     passwordInput.classList.remove('border-b-purple-600')
                     passwordInput.classList.remove("hover:border-b-4");
-                    
+
                     display(passwordError);
                     passwordError.textContent = data.message
                 }
@@ -47,6 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Error:', error));
     });
+
+    passwordInput.addEventListener('mouseover', () =>{
+        // console.log("done");
+        // eye.classList.add('right-5');
+    })
 });
 
 function display(element){
@@ -59,3 +65,4 @@ function hidden(element){
     element.classList.remove('visibleItem')
     element.classList.add('hidden')
 }
+

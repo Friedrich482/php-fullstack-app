@@ -21,3 +21,9 @@
     padding: 0;
     margin:0;
 }
+
+.gradient-text {
+    background-clip: text;
+    color: transparent;
+}
+

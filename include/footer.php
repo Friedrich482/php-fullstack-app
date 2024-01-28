@@ -1,6 +1,6 @@
 <?php ?>
 <footer class="flex flex-wrap text-center">
-    <label id="yearLabel"></label> @Friedrich482 🚀<b> &copy;<i style="color: lightgreen;"> All</i> Rights Reserved</b>
+    <span>&copy; <label id="yearLabel"></label></span>,&nbsp; @Friedrich482 <img src="../assets/icons/rocket.gif" class="w-8 h-8 relative bottom-1"><b><i class="text-red-300"> All</i> Rights Reserved</b>
 </footer>
 <script>
         let date = new Date();
