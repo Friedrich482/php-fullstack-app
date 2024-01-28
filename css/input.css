@@ -7,8 +7,10 @@
 }
 
 .backgroundImg{
-    background-image: url('../assets/layer.svg');
+    background-image: url("../assets/bg-img/02.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
