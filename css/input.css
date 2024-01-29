@@ -30,3 +30,11 @@
 .fullElt{
     min-width: 0;
 }
+
+@layer utilities {
+    .gradient-text:hover {
+      background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(to right, #69caeb,#ce21e1); /* Remplacez les couleurs selon vos préférences */
+    }
+  }

@@ -1,11 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Form submission intercepted');
+    
     const loginForm = document.getElementById('loginForm');
+
     const usernameError = document.getElementById('usernameError');
     const passwordError = document.getElementById('passwordError');
+    const defaultError = document.querySelector('#defaultError');
+
     const usernameInput = document.getElementById('username'); 
     const passwordInput = document.getElementById('password');
-    const eye = document.querySelector('#eyeSlashed')
+
     loginForm.addEventListener('submit', function(e) {
         e.preventDefault();
         hidden(usernameError);
@@ -19,29 +23,37 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             if (data.error) {
+
+                let elts = [usernameInput, passwordInput];
+                elts.forEach((elt) =>{
+                    removeErrorFieldStyle(elt);
+                })
+
                 if(data.message.includes("User not found!<br> (ಥ _ ಥ)")){
                     usernameInput.focus();
-                    usernameInput.classList.add('border-rose-600')
-                    usernameInput.classList.remove('border-b-purple-600');
-                    usernameInput.classList.remove("hover:border-b-4");
-
+                    errorFieldStyle(usernameInput)
                     display(usernameError);
                     usernameError.innerHTML = data.message
                 }
+
                 else if(data.message.includes("Incorrect password! ❌")){
-                    usernameInput.classList.remove('border-rose-600')
-                    usernameInput.classList.add('border-b-purple-600')
-                    usernameInput.classList.add("hover:border-b-4");
-
                     passwordInput.focus();
-                    passwordInput.classList.add('border-rose-600')
-                    passwordInput.classList.remove('border-b-purple-600')
-                    passwordInput.classList.remove("hover:border-b-4");
-
+                    errorFieldStyle(passwordInput);
                     display(passwordError);
                     passwordError.textContent = data.message
                 }
-            } else {
+
+                else{
+                    // In this case, (all the fields are empty), so it will display an appropriate message
+                    usernameInput.focus();
+                    errorFieldStyle(usernameInput);
+                    errorFieldStyle(passwordInput);
+                    display(defaultError);
+                    defaultError.innerHTML = data.message
+                    
+                }
+            } 
+            else {
 
                 window.location.href = data.redirect;
             }
@@ -49,10 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Error:', error));
     });
 
-    passwordInput.addEventListener('mouseover', () =>{
-        // console.log("done");
-        // eye.classList.add('right-5');
-    })
 });
 
 function display(element){
@@ -62,7 +70,27 @@ function display(element){
 }
 
 function hidden(element){
+    element.textContent = '';
     element.classList.remove('visibleItem')
     element.classList.add('hidden')
 }
 
+function errorFieldStyle(element){
+    element.classList.add('border-red-600');
+    element.classList.add("shadow-lg") // 0
+    element.classList.add("shadow-rose-800") // 1
+    element.classList.remove("hover:shadow-black") // 2
+    element.classList.add("hover:shadow-rose-800") // 3
+    element.classList.remove('border-b-purple-600');
+    element.classList.remove("hover:border-b-4");
+}
+
+function removeErrorFieldStyle(element){
+    element.classList.remove('border-red-600');
+    element.classList.remove("shadow-lg") // 0
+    element.classList.remove("shadow-rose-800") // 1
+    element.classList.add("hover:shadow-black") // 2
+    element.classList.remove("hover:shadow-rose-800") // 3
+    element.classList.add('border-b-purple-600');
+    element.classList.add("hover:border-b-4");
+}
