@@ -23,21 +23,19 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             if (data.error) {
+                let elts = [emailInput, usernameInput, passwordInput];
+                elts.forEach((elt) =>{
+                    removeErrorFieldStyle(elt);
+                })
                 if(data.message.includes("This email is already taken ❌")){
                     emailInput.focus();
-                    emailInput.classList.add('border-rose-600')
-                    emailInput.classList.remove('border-b-purple-600');
-                    emailInput.classList.remove("hover:border-b-4");
-
+                    errorFieldStyle(emailInput);
                     display(emailError);
                     emailError.innerHTML = data.message
                 }
                 else if(data.message.includes("This username is already taken ❌")){
                     usernameInput.focus();
-                    usernameInput.classList.add('border-rose-600')
-                    usernameInput.classList.remove('border-b-purple-600');
-                    usernameInput.classList.remove("hover:border-b-4");
-
+                    errorFieldStyle(usernameInput);
                     display(usernameError);
                     usernameError.innerHTML = data.message
                 }
@@ -45,18 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 else{
                     // In this case, (all the fields are empty), so it will display an appropriate message
                     emailInput.focus();
-                    emailInput.classList.add('border-rose-600')
-                    emailInput.classList.remove('border-b-purple-600');
-                    emailInput.classList.remove("hover:border-b-4");
-
-                    usernameInput.classList.add('border-rose-600')
-                    usernameInput.classList.remove('border-b-purple-600');
-                    usernameInput.classList.remove("hover:border-b-4");
-                    
-                    passwordInput.classList.add('border-rose-600')
-                    passwordInput.classList.remove('border-b-purple-600');
-                    passwordInput.classList.remove("hover:border-b-4");
-
+                    errorFieldStyle(emailInput);
+                    errorFieldStyle(usernameInput);
+                    errorFieldStyle(passwordInput);
                     display(defaultError);
                     defaultError.innerHTML = data.message
                 }
@@ -71,10 +60,29 @@ document.addEventListener('DOMContentLoaded', function() {
 function display(element){
     element.classList.remove('hidden')
     element.classList.add('visibleItem')
-    
 }
 
 function hidden(element){
     element.classList.remove('visibleItem')
     element.classList.add('hidden')
+}
+
+function errorFieldStyle(element){
+    element.classList.add('border-red-600');
+    element.classList.add("shadow-lg") // 0
+    element.classList.add("shadow-rose-800") // 1
+    element.classList.remove("hover:shadow-black") // 2
+    element.classList.add("hover:shadow-rose-800") // 3
+    element.classList.remove('border-b-purple-600');
+    element.classList.remove("hover:border-b-4");
+}
+
+function removeErrorFieldStyle(element){
+    element.classList.remove('border-red-600');
+    element.classList.remove("shadow-lg") // 0
+    element.classList.remove("shadow-rose-800") // 1
+    element.classList.add("hover:shadow-black") // 2
+    element.classList.remove("hover:shadow-rose-800") // 3
+    element.classList.add('border-b-purple-600');
+    element.classList.add("hover:border-b-4");
 }

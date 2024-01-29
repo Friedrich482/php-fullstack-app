@@ -27,7 +27,7 @@
         <label id="emailError" class="hidden"></label>
 
         <label for="username">Enter your username :</label>
-        <input type="text" name="username" id="username" required placeholder="Ex : Paladin67" class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-11/12 sm:w-10/12 focus:outline-none">
+        <input type="text" name="username" id="username" required placeholder="Ex : friedrich482" class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-11/12 sm:w-10/12 focus:outline-none">
         <label id="usernameError" class="hidden"></label>
 
         <label for="password">Enter your password :</label>
