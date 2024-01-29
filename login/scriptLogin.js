@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Form submission intercepted');
+    
     const loginForm = document.getElementById('loginForm');
     const usernameError = document.getElementById('usernameError');
     const passwordError = document.getElementById('passwordError');
     const usernameInput = document.getElementById('username'); 
     const passwordInput = document.getElementById('password');
     const eye = document.querySelector('#eyeSlashed')
+
     loginForm.addEventListener('submit', function(e) {
         e.preventDefault();
         hidden(usernameError);
