@@ -30,8 +30,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $response['redirect'] = "../home/home.php?username=$username&id=$id_user";
         } catch (mysqli_sql_exception $exception) {
-            $response['error'] = true;
-            $response['message'] = "This email/username is already taken ❌";
+            // $response['error'] = true;
+            // $response['message'] = "This email/username is already taken ❌";
+           
+            $error_message = $exception->getMessage();
+
+            // Check if the error message contains specific keywords
+            if (strpos($error_message, 'Duplicate entry') !== false && strpos($error_message, 'email') !== false) {
+                $response['error'] = true;
+                $response['message'] = "This email is already taken ❌";
+            } elseif (strpos($error_message, 'Duplicate entry') !== false && strpos($error_message, 'username') !== false) {
+                $response['error'] = true;
+                $response['message'] = "This username is already taken ❌";
+            } else {
+                $response['error'] = true;
+                $response['message'] = "An error occurred ❌";
+            }
         }
 
         $stmt->close();
