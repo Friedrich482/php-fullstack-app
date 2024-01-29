@@ -36,7 +36,7 @@
         <script src="scriptLogin.js"></script>
     </form>
     
-    <p class="h-7 flex items-center justify-center flex-wrap text-center">Not yet registered? Click here to &nbsp;<a href="../register/register.php" class="text-pink-500 no-underline hover:text-indigo-400">register</a></p><br>
+    <p class="h-7 flex items-center justify-center flex-wrap text-center">Not yet registered? Click here to &thinsp;<a href="../register/register.php" class="text-pink-500 no-underline hover:text-indigo-400">register</a></p><br>
     <script src="../assets/eye/eye.js"></script>
 </body>
 </html>
