@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("Form submission intercepted");
 
     const registerForm = document.getElementById('registerForm');
+
     const emailInput = document.getElementById('email'); 
     const usernameInput = document.getElementById('username'); 
     const passwordInput = document.getElementById('password'); 
@@ -63,6 +64,7 @@ function display(element){
 }
 
 function hidden(element){
+    element.textContent = '';
     element.classList.remove('visibleItem')
     element.classList.add('hidden')
 }

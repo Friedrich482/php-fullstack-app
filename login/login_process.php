@@ -8,7 +8,12 @@
         $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
 
-        if(!empty($username) && !empty($password)){
+        if(empty($username) || empty($password)) {
+            $response['error'] = true;
+            $response['message'] = "All fields required !";
+        }
+
+        else{
             $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
             $stmt->bind_param("s", $username);
             $stmt->execute();

@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration 📝</title>
+    <title>Register 📝</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
     <script src="../assets/eye/eye.js" defer></script>
@@ -23,16 +23,16 @@
             Enter your email &ThinSpace;<span class="sm:hidden">address</span>  :
         </label>
 
-        <input type="email" name="email" id="email" required placeholder="Ex : example@gmail.com" class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-11/12 sm:w-10/12 focus:outline-none">
+        <input type="email" name="email" id="email" required placeholder="Ex : example@gmail.com" class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-11/12 sm:w-10/12 focus:outline-none text-[0.75rem] sm:text-sm">
         <label id="emailError" class="hidden"></label>
 
         <label for="username">Enter your username :</label>
-        <input type="text" name="username" id="username" required placeholder="Ex : friedrich482" class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-11/12 sm:w-10/12 focus:outline-none">
+        <input type="text" name="username" id="username" required placeholder="Ex : friedrich482" class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-11/12 sm:w-10/12 focus:outline-none text-sm sm:text-sm">
         <label id="usernameError" class="hidden"></label>
 
         <label for="password">Enter your password :</label>
         <div class="w-11/12 flex flex-row flex-nowrap p-0 sm:w-10/12">
-            <input type="password" name="password" id="password" required placeholder="**********" minlength="8" class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-full flex-shrink-0 box-border focus:outline-none">
+            <input type="password" name="password" id="password" required placeholder="**********" minlength="8" class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-full flex-shrink-0 box-border focus:outline-none text-[0.564rem] sm:text-sm">
             <img src="../assets/eye/eye-crossed.png" id="eyeSlashed" alt="Eye slashed" title="Display the password" class="h-[1.25rem] w-[1.25rem] select-none relative top-1 right-7 hover:scale-125">
         </div>
 

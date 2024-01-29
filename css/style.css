@@ -893,6 +893,35 @@ video {
   line-height: 1.75rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-\[0\.625rem\] {
+  font-size: 0.625rem;
+}
+
+.text-\[0\.8rem\] {
+  font-size: 0.8rem;
+}
+
+.text-\[0\.75rem\] {
+  font-size: 0.75rem;
+}
+
+.text-\[0\.55rem\] {
+  font-size: 0.55rem;
+}
+
+.text-\[0\.562rem\] {
+  font-size: 0.562rem;
+}
+
+.text-\[0\.564rem\] {
+  font-size: 0.564rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1157,5 +1186,15 @@ video {
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
