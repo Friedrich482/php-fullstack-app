@@ -27,30 +27,27 @@ visitsDisplayerButton.addEventListener('click', () =>{
     visitsDisplayerButton.innerHTML = '<i class="fi fi-rr-angle-down">'
    }
 })
-let logout = document.getElementById('logout');
-let confirmForm = document.getElementById('confirmForm');
-let denyButton = document.getElementById('denyButton');
+// Logout button
+let logoutButton = document.querySelector('#logout');
+let confirmDeconnexionDialog = document.querySelector('#confirmDeconnexionDialog');
+let denyButton = document.querySelector('#denyButton');
 
-logout.addEventListener('click', () =>{
-   confirmForm.style.display = 'block';
-   logout.addEventListener('mouseover', () =>{
-      logout.style.backgroundColor = 'rgba(130, 125, 127, 0.89)';
-      
-   })
-   logout.addEventListener('mouseout', () =>{
-      logout.style.backgroundColor = 'black';
-   })
+logoutButton.addEventListener('click', () =>{
+   displayDialog()
 })
 
 denyButton.addEventListener('click', () =>{
-   confirmForm.style.display = 'none';
-   logout.style.backgroundColor = 'black';
-   
-   logout.addEventListener('mouseover', () =>{
-      logout.style.backgroundColor = 'whitesmoke';
-   })
+   hiddenDialog()
 })
 
+function displayDialog(){
+   confirmDeconnexionDialog.classList.remove("hidden");
+   confirmDeconnexionDialog.classList.add("flex");
+}
+function hiddenDialog(){
+   confirmDeconnexionDialog.classList.add("hidden");
+   confirmDeconnexionDialog.classList.remove("flex");
+}
 // Animation for the title 
 
 const animatedText = document.getElementById('animatedText');
