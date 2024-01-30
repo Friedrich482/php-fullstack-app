@@ -6,7 +6,8 @@ Technologies/tools/languages used :
 
 <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white">  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white">  
 
-## To do
+## To do  
+
 - Add a forgot password 🔑
 - a nice animation to the welcome message 👋 when logging or registering. It needs to be multicolor and chars will display one after the other
 - a navbar (if possible) on the home page (the tools will be classified by category : game 🎮, weather app ☀, calculator 🖩, to do-list, and so on)
