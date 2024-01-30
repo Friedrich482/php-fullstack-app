@@ -42,7 +42,6 @@
 .animated-text {
     font-size: 2rem;
     font-family: "MV Boli";
-    white-space: nowrap;
 }
 
 @keyframes textAnimation {
@@ -53,9 +52,10 @@
 
 .cursor {
     position: absolute;
-    top:5.25rem;
+    top: 1rem;
     width: 1rem;
     height: 1rem;
+    /* font-size: 2px; */
     background-color: whitesmoke;
     border-radius: 100%;
 }

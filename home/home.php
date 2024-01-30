@@ -51,18 +51,21 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-[1.25rem] backgroundImg text-[whitesmoke] MV-boli">
-    <div class="flex items-center justify-center flex-col gap-2 w-full">
+    
+    <!-- <div class="flex items-center justify-center flex-col gap-2 w-full">
         <button id="visitsDisplayerButton" class="border-4 font-[cursive] rounded-2xl min-w-[5.625rem] text-2xl text-red-600 p-1 bg-black"><i class="fi fi-rr-angle-down"></i></button>
         <div id="visits" style="display: none;" class="text-4xl text-center min-w-24 min-h-3">
             You have visited this page <label><?php echo $number_of_visits?></label> times
         </div>
-    </div>
+    </div> -->
 
     <!-- <i class="fi fi-rr-menu-burger"></i> -->
-
-    <h1 class="text-4xl text-center animated-text min-h-10 gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500" id="animatedText">Welcome <?php echo "{$_SESSION['username']}"?>, on my page <lord-icon style="display:inline-block"  src="https://cdn.lordicon.com/pcwupfyl.json" trigger="loop" style="width:100px;height:100px"></lord-icon></h1>
+    <div class="flex items-center justify-center">
+        <h1 class="text-3xl sm:text-5xl text-center animated-text min-h-10 sm:min-h-12 gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-6" id="animatedText">Welcome <?php echo "{$_SESSION['username']}"?>, on my page </h1>
+    </div>
         
     <br><br><br>
+    <!-- <lord-icon style="display:inline-block"  src="https://cdn.lordicon.com/pcwupfyl.json" trigger="loop" style="width:100px;height:100px"></lord-icon> -->
     <!-- <i class="fi fi-rr-cross-small"></i> -->
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore laborum corrupti commodi repudiandae velit quibusdam placeat, sit nobis fugiat dolore ratione, impedit, aperiam delectus autem explicabo officia quod rem. Consectetur?</p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit deleniti, sed officiis sequi quis totam consequatur illo doloribus recusandae consectetur laborum enim! Illo blanditiis harum, autem labore recusandae reiciendis error!

@@ -548,6 +548,10 @@ video {
   position: relative;
 }
 
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
 .right-7 {
   right: 1.75rem;
 }
@@ -566,6 +570,14 @@ video {
 
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -592,6 +604,10 @@ video {
   height: 20rem;
 }
 
+.h-9 {
+  height: 2.25rem;
+}
+
 .h-\[1\.25rem\] {
   height: 1.25rem;
 }
@@ -614,6 +630,10 @@ video {
 
 .w-7 {
   width: 1.75rem;
+}
+
+.w-9 {
+  width: 2.25rem;
 }
 
 .w-\[1\.25rem\] {
@@ -713,8 +733,16 @@ video {
   gap: 1.25rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .rounded-2xl {
   border-radius: 1rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-bl-\[100px\] {
@@ -804,6 +832,10 @@ video {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.bg-gradient-to-tr {
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
 .from-purple-500 {
   --tw-gradient-from: #a855f7 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(168 85 247 / 0) var(--tw-gradient-to-position);
@@ -847,6 +879,34 @@ video {
 
 .p-\[2px\] {
   padding: 2px;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
+.pr-6 {
+  padding-right: 1.5rem;
 }
 
 .text-center {
@@ -1000,7 +1060,6 @@ video {
 .animated-text {
   font-size: 2rem;
   font-family: "MV Boli";
-  white-space: nowrap;
 }
 
 @keyframes textAnimation {
@@ -1011,9 +1070,10 @@ video {
 
 .cursor {
   position: absolute;
-  top:5.25rem;
+  top: 1rem;
   width: 1rem;
   height: 1rem;
+  /* font-size: 2px; */
   background-color: whitesmoke;
   border-radius: 100%;
 }
@@ -1126,6 +1186,14 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:bottom-0 {
+    bottom: 0px;
+  }
+
+  .sm\:top-5 {
+    top: 1.25rem;
+  }
+
   .sm\:hidden {
     display: none;
   }
@@ -1138,6 +1206,14 @@ video {
     height: 3rem;
   }
 
+  .sm\:h-5 {
+    height: 1.25rem;
+  }
+
+  .sm\:min-h-12 {
+    min-height: 3rem;
+  }
+
   .sm\:w-0 {
     width: 0px;
   }
@@ -1148,6 +1224,10 @@ video {
 
   .sm\:w-12 {
     width: 3rem;
+  }
+
+  .sm\:w-5 {
+    width: 1.25rem;
   }
 
   .sm\:min-w-72 {
