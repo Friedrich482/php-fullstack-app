@@ -909,14 +909,6 @@ video {
   text-decoration-line: none;
 }
 
-.opacity-100 {
-  opacity: 1;
-}
-
-.opacity-50 {
-  opacity: 0.5;
-}
-
 .opacity-75 {
   opacity: 0.75;
 }
@@ -1024,14 +1016,6 @@ video {
   height: 1rem;
   background-color: whitesmoke;
   border-radius: 100%;
-}
-
-body.dialogOpen {
-  filter: blur(7px);
-}
-
-body.dialogOpen #confirmDeconnexionDialog {
-  filter: blur(0);
 }
 
 .hover\:scale-110:hover {

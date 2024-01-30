@@ -45,13 +45,13 @@ function displayDialog(){
    confirmDeconnexionDialog.showModal();
    confirmDeconnexionDialog.classList.remove("hidden");
    confirmDeconnexionDialog.classList.add("flex");
-   body.classList.add("dialogOpen")
+   body.classList.add("blur-sm")
 }
 function hiddenDialog(){
    confirmDeconnexionDialog.close();
    confirmDeconnexionDialog.classList.add("hidden");
    confirmDeconnexionDialog.classList.remove("flex");
-   body.classList.remove("dialogOpen")
+   body.classList.remove("blur-sm")
 
 }
 // Animation for the title 

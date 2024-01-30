@@ -59,11 +59,3 @@
     background-color: whitesmoke;
     border-radius: 100%;
 }
-
-body.dialogOpen {
-    filter: blur(7px);
-}
-
-body.dialogOpen #confirmDeconnexionDialog {
-    filter: blur(0);
-}
