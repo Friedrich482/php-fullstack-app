@@ -60,8 +60,10 @@
     </div> -->
 
     <!-- <i class="fi fi-rr-menu-burger"></i> -->
-    <div class="flex items-center justify-center">
-        <h1 class="text-3xl sm:text-5xl text-center animated-text min-h-10 sm:min-h-12 gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-6" id="animatedText">Welcome <?php echo "{$_SESSION['username']}"?>, on my page </h1>
+    <div>
+        <h1 class="text-3xl sm:text-5xl text-center animated-text min-h-10 sm:min-h-12 gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-32" id="animatedText">
+            Welcome <?php echo "{$_SESSION['username']}"?>, on my page 
+        </h1>
     </div>
         
     <br><br><br>

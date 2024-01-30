@@ -560,6 +560,10 @@ video {
   top: 0.25rem;
 }
 
+.top-96 {
+  top: 24rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -576,16 +580,16 @@ video {
   display: inline-block;
 }
 
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
 }
 
 .hidden {
   display: none;
+}
+
+.h-32 {
+  height: 8rem;
 }
 
 .h-5 {
@@ -733,10 +737,6 @@ video {
   gap: 1.25rem;
 }
 
-.overflow-hidden {
-  overflow: hidden;
-}
-
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -881,32 +881,8 @@ video {
   padding: 2px;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
-.p-3 {
-  padding: 0.75rem;
-}
-
-.pr-2 {
-  padding-right: 0.5rem;
-}
-
-.pr-3 {
-  padding-right: 0.75rem;
-}
-
-.pr-4 {
-  padding-right: 1rem;
-}
-
 .pr-5 {
   padding-right: 1.25rem;
-}
-
-.pr-6 {
-  padding-right: 1.5rem;
 }
 
 .text-center {
@@ -1069,8 +1045,8 @@ video {
 }
 
 .cursor {
-  position: absolute;
-  top: 1rem;
+  /* position: absolute; */
+  /* top: 1rem; */
   width: 1rem;
   height: 1rem;
   /* font-size: 2px; */

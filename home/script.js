@@ -71,8 +71,9 @@ let reverse = false;
 
 function animateText() {
    animatedText.innerHTML = `<img src="../assets/icons/wave1.gif" alt="greeting" class="h-9 w-9 rounded-full sm:h-12 sm:w-12 relative bottom-1 sm:bottom-0 inline-block">` +
-   `<span class="inline-block">${textContent.slice(0, charIndex + 1)}</span>` + '<span class="inline-block bg-gradient-to-tr cursor animate-ping from-purple-500 via-teal-500 to-pink-500 sm:top-5 sm:w-5 sm:h-5"></span>';
+   `<div class="inline-block">${textContent.slice(0, charIndex + 1)}<span class="relative inline-block bg-gradient-to-tr cursor animate-ping from-purple-500 via-teal-500 to-pink-500 sm:top-5 sm:w-5 sm:h-5"></span></div>`;
   
+;
    charIndex = reverse ? charIndex - 1 : charIndex + 1;
 
    if (charIndex > textLength) {

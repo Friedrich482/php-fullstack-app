@@ -51,8 +51,8 @@
   }
 
 .cursor {
-    position: absolute;
-    top: 1rem;
+    /* position: absolute; */
+    /* top: 1rem; */
     width: 1rem;
     height: 1rem;
     /* font-size: 2px; */
