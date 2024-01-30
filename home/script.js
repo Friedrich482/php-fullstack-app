@@ -51,3 +51,28 @@ denyButton.addEventListener('click', () =>{
    })
 })
 
+// Animation for the title 
+
+const animatedText = document.getElementById('animatedText');
+const cursor = document.querySelector('.cursor');
+const textContent = animatedText.innerText;
+const textLength = textContent.length;
+let charIndex = 0;
+let reverse = false;
+
+function animateText() {
+  animatedText.innerHTML = textContent.slice(0, charIndex + 1) + '<span class="cursor animate-ping"></span>';
+  charIndex = reverse ? charIndex - 1 : charIndex + 1;
+
+  if (charIndex > textLength) {
+    reverse = true;
+  } 
+  else if (charIndex < 0) {
+    reverse = false;
+  }
+
+  const delay = charIndex === 0 || charIndex === textLength ? 1000 : 200;
+  setTimeout(animateText, delay);
+}
+
+animateText();

@@ -37,4 +37,25 @@
       color: transparent;
       background-image: linear-gradient(to right, #69caeb,#ce21e1); /* Remplacez les couleurs selon vos préférences */
     }
+}
+
+.animated-text {
+    font-size: 2rem;
+    font-family: "MV Boli";
+    white-space: nowrap;
+}
+
+@keyframes textAnimation {
+    from {
+      width: 0;
+    }
   }
+
+.cursor {
+    position: absolute;
+    top:5.25rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: whitesmoke;
+    border-radius: 100%;
+}
