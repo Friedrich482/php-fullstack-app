@@ -61,12 +61,11 @@
 
     <!-- <i class="fi fi-rr-menu-burger"></i> -->
     <div>
-        <h1 class="text-3xl sm:text-5xl text-center animated-text min-h-10 sm:min-h-12 gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-32" id="animatedText">
-            Welcome <?php echo "{$_SESSION['username']}"?>, on my page 
+        <h1 class="flex flex-row text-3xl sm:text-5xl text-center animated-text min-h-10 sm:min-h-12 gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-20" id="animatedText">
+            Welcome <?php echo "{$_SESSION['username']}"?>, on my site 
         </h1>
     </div>
         
-    <br><br><br>
     <!-- <lord-icon style="display:inline-block"  src="https://cdn.lordicon.com/pcwupfyl.json" trigger="loop" style="width:100px;height:100px"></lord-icon> -->
     <!-- <i class="fi fi-rr-cross-small"></i> -->
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore laborum corrupti commodi repudiandae velit quibusdam placeat, sit nobis fugiat dolore ratione, impedit, aperiam delectus autem explicabo officia quod rem. Consectetur?</p>
