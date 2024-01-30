@@ -9,7 +9,7 @@ Technologies/tools/languages used :
 ## To do  
 
 - Add a forgot password 🔑
-- a nice animation to the welcome message 👋 when logging or registering. It needs to be multicolor and chars will display one after the other
+- ~~a nice animation to the welcome message 👋 when logging or registering. It needs to be multicolor and chars will display one after the other~~ (_done_) ✅ (_**but may change**_)
 - a navbar (if possible) on the home page (the tools will be classified by category : game 🎮, weather app ☀, calculator 🖩, to do-list, and so on)
 - All the games and utilities as flex 💪 elements (they behavior should be responsive)
 - a different page for each tool
