@@ -61,7 +61,7 @@
 
     <!-- <i class="fi fi-rr-menu-burger"></i> -->
     <div>
-        <h1 class="flex flex-row text-3xl sm:text-5xl text-center animated-text min-h-10 sm:min-h-12 gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-20" id="animatedText">
+        <h1 class="flex flex-row text-3xl sm:text-5xl text-center animated-text  gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-36 sm:h-28" id="animatedText">
             Welcome <?php echo "{$_SESSION['username']}"?>, on my site 
         </h1>
     </div>
