@@ -588,24 +588,12 @@ video {
   height: 2rem;
 }
 
-.h-\[1\.25rem\] {
-  height: 1.25rem;
-}
-
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-96 {
-  height: 24rem;
-}
-
-.h-72 {
-  height: 18rem;
-}
-
 .h-80 {
   height: 20rem;
+}
+
+.h-\[1\.25rem\] {
+  height: 1.25rem;
 }
 
 .min-h-10 {
@@ -921,6 +909,14 @@ video {
   text-decoration-line: none;
 }
 
+.opacity-100 {
+  opacity: 1;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
 .opacity-75 {
   opacity: 0.75;
 }
@@ -938,6 +934,11 @@ video {
 .shadow-rose-800 {
   --tw-shadow-color: #9f1239;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.blur-sm {
+  --tw-blur: blur(4px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition {
@@ -1023,6 +1024,14 @@ video {
   height: 1rem;
   background-color: whitesmoke;
   border-radius: 100%;
+}
+
+body.dialogOpen {
+  filter: blur(7px);
+}
+
+body.dialogOpen #confirmDeconnexionDialog {
+  filter: blur(0);
 }
 
 .hover\:scale-110:hover {

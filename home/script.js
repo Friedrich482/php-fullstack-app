@@ -28,6 +28,7 @@ visitsDisplayerButton.addEventListener('click', () =>{
    }
 })
 // Logout button
+const body = document.body
 let logoutButton = document.querySelector('#logout');
 let confirmDeconnexionDialog = document.querySelector('#confirmDeconnexionDialog');
 let denyButton = document.querySelector('#denyButton');
@@ -41,12 +42,17 @@ denyButton.addEventListener('click', () =>{
 })
 
 function displayDialog(){
+   confirmDeconnexionDialog.showModal();
    confirmDeconnexionDialog.classList.remove("hidden");
    confirmDeconnexionDialog.classList.add("flex");
+   body.classList.add("dialogOpen")
 }
 function hiddenDialog(){
+   confirmDeconnexionDialog.close();
    confirmDeconnexionDialog.classList.add("hidden");
    confirmDeconnexionDialog.classList.remove("flex");
+   body.classList.remove("dialogOpen")
+
 }
 // Animation for the title 
 
