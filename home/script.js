@@ -88,3 +88,5 @@ function animateText() {
 }
 
 animateText();
+
+// Animation for the main text

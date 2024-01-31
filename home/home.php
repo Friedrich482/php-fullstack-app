@@ -68,13 +68,39 @@
         
     <!-- <lord-icon style="display:inline-block"  src="https://cdn.lordicon.com/pcwupfyl.json" trigger="loop" style="width:100px;height:100px"></lord-icon> -->
     <!-- <i class="fi fi-rr-cross-small"></i> -->
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore laborum corrupti commodi repudiandae velit quibusdam placeat, sit nobis fugiat dolore ratione, impedit, aperiam delectus autem explicabo officia quod rem. Consectetur?</p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit deleniti, sed officiis sequi quis totam consequatur illo doloribus recusandae consectetur laborum enim! Illo blanditiis harum, autem labore recusandae reiciendis error!
 
+    <main class="flex items-center justify-center flex-col gap-3">
+        <div class="flex items-center justify-center flex-col gap-5 m-3">
+            <p class="text-lg sm:text-2xl">
+                👉 Hello, dear visitor, my name is Friedrich482.<br><br>
+                
+                👉 I am a junior developper 👨‍💻.<br><br>
+                👉 I am currently learning TypeScript and how to use it in my projects.<br><br>
+                👉 ... Nothing more than that to say about me, except the fact that I like 🤩 videos games 🎮.<br>
+                👉 And really enjoy learn new things in programmation, 👨‍💻 especially Web Developpement and machine learning .
 
-    <div class="p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
-        <input type="button" value="Logout" id="logout" name="logout" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
-    </div>
+                <br><br>
+
+                This page is my first try
+                on a CRUD (Create-Read-Update-Delete) project. It was made with PHP, JavaScript, MySQL and Tailwind CSS.
+                Here you will find some of the projects I have done with JavaScript when learning it. Enjoy them and have a nice day.
+                <br>(If you don't see them, scroll down or use the navbar)
+            </p>
+            
+            <div class="animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+              </div>
+        
+        </div>
+        
+        <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
+            <input type="button" value="Logout" id="logout" name="logout" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
+        </div>
+    </main>
+    
+    
 
     <dialog id="confirmDeconnexionDialog" class="hidden items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] h-80">
         <form action="" method="post">
