@@ -568,6 +568,26 @@ video {
   margin: 0.75rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.ml-20 {
+  margin-left: 5rem;
+}
+
+.mr-20 {
+  margin-right: 5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1259,9 +1279,23 @@ video {
   }
 }
 
+@media (min-width: 358px) {
+  .mysql-custom\:w-full {
+    width: 100%;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:bottom-0 {
     bottom: 0px;
+  }
+
+  .sm\:ml-36 {
+    margin-left: 9rem;
+  }
+
+  .sm\:mr-36 {
+    margin-right: 9rem;
   }
 
   .sm\:hidden {

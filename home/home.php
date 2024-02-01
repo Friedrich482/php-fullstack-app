@@ -85,11 +85,11 @@
                 This page is my first try
                 on a CRUD (Create-Read-Update-Delete) project. It was made with:
             
-                <ul class="list-disc flex items-center justify-center flex-col gap-1" id="toolsList">
-                    <li>PHP</li>
-                    <li>JavaScript</li>
-                    <li>MySQL (as the DB)</li>
-                    <li>Tailwind CSS</li>
+                <ul class="list-disc ml-20 mr-20 mt-8 mb-8  sm:ml-36 sm:mr-36 gap-1">
+                    <li class="mb-2">PHP</li>
+                    <li class="mb-2">JavaScript</li>
+                    <li class="mb-2">MySQL (as the DB)</li>
+                    <li class="mb-2">Tailwind CSS</li>
                 </ul>            
 
                 You will also find some of the projects I have done with JavaScript when learning it. Enjoy them and have a nice day.
