@@ -69,9 +69,9 @@
     <!-- <lord-icon style="display:inline-block"  src="https://cdn.lordicon.com/pcwupfyl.json" trigger="loop" style="width:100px;height:100px"></lord-icon> -->
     <!-- <i class="fi fi-rr-cross-small"></i> -->
 
-    <main class="flex items-center justify-center flex-col gap-3 sm:w-[640px]">
+    <main class="flex items-center justify-center flex-col gap-3 sm:w-[640px] m-1">
         <div class="flex items-center justify-center flex-col gap-5 m-3">
-            <div class="text-lg sm:text-2xl" id="mainText">
+            <div class="text-lg sm:text-2xl h-[1150px] mysql-custom:h-[1000px]" id="mainText">
                 👉 Hello, dear visitor, my name is Friedrich482.<br><br>
                 
                 👉 I am a junior developper 👨‍💻.
