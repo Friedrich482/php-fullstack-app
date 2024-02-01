@@ -85,10 +85,10 @@
                 This page is my first try
                 on a CRUD (Create-Read-Update-Delete) project. It was made with:
             
-                <ul class="list-disc ml-20 mr-20 mt-8 mb-8  sm:ml-36 sm:mr-36">
+                <ul class="list-disc flex items-center justify-center flex-col gap-1" id="toolsList">
                     <li>PHP</li>
                     <li>JavaScript</li>
-                    <li class="mysql-custom:w-full w-[200%]">MySQL (as the DB)</li>
+                    <li>MySQL (as the DB)</li>
                     <li>Tailwind CSS</li>
                 </ul>            
 
