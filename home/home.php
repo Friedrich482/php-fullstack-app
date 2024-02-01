@@ -61,7 +61,7 @@
 
     <!-- <i class="fi fi-rr-menu-burger"></i> -->
     <div>
-        <h1 class="flex flex-row text-3xl sm:text-5xl text-center animated-text  gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-36 sm:h-28" id="animatedText">
+        <h1 class="flex flex-row text-3xl sm:text-5xl text-center animated-text gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-36 sm:h-28" id="animatedText">
             Welcome <?php echo "{$_SESSION['username']}"?>, on my site 
         </h1>
     </div>
@@ -69,23 +69,32 @@
     <!-- <lord-icon style="display:inline-block"  src="https://cdn.lordicon.com/pcwupfyl.json" trigger="loop" style="width:100px;height:100px"></lord-icon> -->
     <!-- <i class="fi fi-rr-cross-small"></i> -->
 
-    <main class="flex items-center justify-center flex-col gap-3">
+    <main class="flex items-center justify-center flex-col gap-3 sm:w-[640px]">
         <div class="flex items-center justify-center flex-col gap-5 m-3">
-            <p class="text-lg sm:text-2xl">
+            <div class="text-lg sm:text-2xl" id="mainText">
                 👉 Hello, dear visitor, my name is Friedrich482.<br><br>
                 
-                👉 I am a junior developper 👨‍💻.<br><br>
+                👉 I am a junior developper 👨‍💻.
+                
+                <br><br>
                 👉 I am currently learning TypeScript and how to use it in my projects.<br><br>
                 👉 ... Nothing more than that to say about me, except the fact that I like 🤩 videos games 🎮.<br>
                 👉 And really enjoy learn new things in programmation, 👨‍💻 especially Web Developpement and machine learning .
 
                 <br><br>
-
                 This page is my first try
-                on a CRUD (Create-Read-Update-Delete) project. It was made with PHP, JavaScript, MySQL and Tailwind CSS.
-                Here you will find some of the projects I have done with JavaScript when learning it. Enjoy them and have a nice day.
+                on a CRUD (Create-Read-Update-Delete) project. It was made with:
+            
+                <ul class="list-disc ml-20 mr-20 mt-8 mb-8  sm:ml-36 sm:mr-36">
+                    <li>PHP</li>
+                    <li>JavaScript</li>
+                    <li>MySQL (as the DB)</li>
+                    <li>Tailwind CSS</li>
+                </ul>            
+
+                You will also find some of the projects I have done with JavaScript when learning it. Enjoy them and have a nice day.
                 <br>(If you don't see them, scroll down or use the navbar)
-            </p>
+            </div>
             
             <div class="animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
                 <svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -99,7 +108,6 @@
             <input type="button" value="Logout" id="logout" name="logout" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
         </div>
     </main>
-    
     
 
     <dialog id="confirmDeconnexionDialog" class="hidden items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] h-80">
