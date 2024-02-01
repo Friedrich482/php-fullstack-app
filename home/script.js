@@ -99,10 +99,12 @@ function animatemainText() {
    const currentChar = animatedTextContent.charAt(mainTextCharIndex);
    const isLineBreak = currentChar === '<' && animatedTextContent.charAt(mainTextCharIndex + 1) === 'b';
 
-   mainText.innerHTML = `${animatedTextContent.slice(0, mainTextCharIndex + 1)}<span class="relative inline-block bg-gradient-to-tr cursor animate-ping from-purple-500 via-teal-500 to-pink-500  sm:w-5 sm:h-5"></span>`;
+   mainText.innerHTML = `${animatedTextContent.slice(0, mainTextCharIndex + 1)}<span class="relative inline-block  bg-gray-200 cursor1 animate-ping sm:w-5 sm:h-5" id="mainCursor"></span>`;
    mainTextCharIndex = reverseMain ? mainTextCharIndex - 1 : mainTextCharIndex + 1;
 
    if(mainTextCharIndex > animatedTextContent.length){
+      const mainCursor = document.querySelector("#mainCursor");
+      mainCursor.classList.add("hidden");
       return;
    }
    const delay = isLineBreak ? 1 : (mainTextCharIndex === 0 || mainTextCharIndex === animatedTextContent.length ? 1000 : 30);

@@ -88,7 +88,7 @@
                 <ul class="list-disc ml-20 mr-20 mt-8 mb-8  sm:ml-36 sm:mr-36">
                     <li>PHP</li>
                     <li>JavaScript</li>
-                    <li>MySQL (as the DB)</li>
+                    <li class="mysql-custom:w-full w-[200%]">MySQL (as the DB)</li>
                     <li>Tailwind CSS</li>
                 </ul>            
 

@@ -568,8 +568,8 @@ video {
   margin: 0.75rem;
 }
 
-.m-8 {
-  margin: 2rem;
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .ml-20 {
@@ -578,18 +578,6 @@ video {
 
 .mr-20 {
   margin-right: 5rem;
-}
-
-.mb-1 {
-  margin-bottom: 0.25rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
 }
 
 .mt-8 {
@@ -610,10 +598,6 @@ video {
 
 .flex {
   display: flex;
-}
-
-.list-item {
-  display: list-item;
 }
 
 .hidden {
@@ -688,12 +672,24 @@ video {
   width: 1.25rem;
 }
 
+.w-\[150\%\] {
+  width: 150%;
+}
+
 .w-\[8\.25rem\] {
   width: 8.25rem;
 }
 
 .w-full {
   width: 100%;
+}
+
+.w-\[1000\%\] {
+  width: 1000%;
+}
+
+.w-\[200\%\] {
+  width: 200%;
 }
 
 .min-w-16 {
@@ -757,10 +753,6 @@ video {
           user-select: none;
 }
 
-.list-decimal {
-  list-style-type: decimal;
-}
-
 .list-disc {
   list-style-type: disc;
 }
@@ -811,10 +803,6 @@ video {
 
 .gap-\[1\.25rem\] {
   gap: 1.25rem;
-}
-
-.self-center {
-  align-self: center;
 }
 
 .rounded-2xl {
@@ -892,6 +880,11 @@ video {
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .bg-gray-800 {
@@ -974,10 +967,6 @@ video {
 
 .p-\[2px\] {
   padding: 2px;
-}
-
-.p-8 {
-  padding: 2rem;
 }
 
 .pr-5 {
@@ -1163,12 +1152,18 @@ video {
   }
 }
 
+/* Here a mixin in scss is a better idea for the cursors*/
+
 .cursor {
-  /* position: absolute; */
-  /* top: 1rem; */
   width: 1rem;
   height: 1rem;
-  /* font-size: 2px; */
+  background-color: whitesmoke;
+  border-radius: 100%;
+}
+
+.cursor1{
+  width: 1rem;
+  height: 1rem;
   background-color: whitesmoke;
   border-radius: 100%;
 }
@@ -1280,6 +1275,12 @@ video {
   }
 }
 
+@media (min-width: 358px) {
+  .mysql-custom\:w-full {
+    width: 100%;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:bottom-0 {
     bottom: 0px;
@@ -1337,10 +1338,6 @@ video {
     min-width: 18rem;
   }
 
-  .sm\:list-inside {
-    list-style-position: inside;
-  }
-
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -1375,4 +1372,3 @@ video {
     --tw-ring-color: rgb(226 232 240 / 0.2);
   }
 }
-

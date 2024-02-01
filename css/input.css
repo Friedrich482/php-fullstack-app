@@ -49,14 +49,19 @@
       width: 0;
     }
   }
+/* Here a mixin in scss is a better idea for the cursors*/
 
 .cursor {
-    /* position: absolute; */
-    /* top: 1rem; */
     width: 1rem;
     height: 1rem;
-    /* font-size: 2px; */
     background-color: whitesmoke;
     border-radius: 100%;
 }
 
+.cursor1{
+    width: 1rem;
+    height: 1rem;
+    background-color: whitesmoke;
+    border-radius: 100%;
+
+}
