@@ -69,7 +69,7 @@
     <!-- <lord-icon style="display:inline-block"  src="https://cdn.lordicon.com/pcwupfyl.json" trigger="loop" style="width:100px;height:100px"></lord-icon> -->
     <!-- <i class="fi fi-rr-cross-small"></i> -->
 
-    <main class="flex items-center justify-center flex-col gap-3 sm:w-[640px] m-1">
+    <main class="flex items-center justify-center flex-col gap-3 sm:w-[620px]">
         <div class="flex items-center justify-center flex-col gap-5 m-3">
             <div class="text-lg sm:text-2xl h-[1150px] mysql-custom:h-[1000px]" id="mainText">
                 👉 Hello, dear visitor, my name is Friedrich482.<br><br>
@@ -106,16 +106,17 @@
         
         
         <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6">
-            <div class="w-5/6 bg-red-300 aspect-square text-center flex items-center justify-center text-black text-3xl">Calculator</div>
-            <div class="w-5/6  bg-yellow-300 aspect-square text-center flex items-center justify-center text-black text-3xl">Fetch Weather App</div>
-            <div class="w-5/6  bg-blue-300 aspect-square text-center flex items-center justify-center text-black text-3xl">Snake Game</div>
-            <div class="w-5/6  bg-purple-300 aspect-square text-center flex items-center justify-center text-black text-3xl">Tic Tac Toe</div>
-            <div class="w-5/6  bg-orange-300 aspect-square text-center flex items-center justify-center text-black text-3xl">Shifumi (against the computer only)</div>
-            <div class="w-5/6  bg-sky-300 aspect-square text-center flex items-center justify-center text-black text-3xl">Images Slider</div>
-            <div class="w-5/6  bg-green-300 aspect-square text-center flex items-center justify-center text-black text-3xl">Stopwatch</div>
-            <div class="w-5/6  bg-rose-300 aspect-square text-center flex items-center justify-center text-black text-3xl">Clock</div>
-            <div class="w-5/6  bg-slate-300 aspect-square text-center flex items-center justify-center text-black text-3xl">To-do-List</div>
+            <div class="w-5/6 max-w-96 bg-red-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Calculator</div>
+            <div class="w-5/6 max-w-96 bg-yellow-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Fetch Weather App</div>
+            <div class="w-5/6 max-w-96 bg-blue-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Snake Game</div>
+            <div class="w-5/6 max-w-96 bg-purple-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Tic Tac Toe</div>
+            <div class="w-5/6 max-w-96 bg-orange-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Shifumi (against the computer only)</div>
+            <div class="w-5/6 max-w-96 bg-sky-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Images Slider</div>
+            <div class="w-5/6 max-w-96 bg-green-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Stopwatch</div>
+            <div class="w-5/6 max-w-96 bg-rose-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Clock</div>
+            <div class="w-5/6 max-w-96 bg-slate-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">To-do-List</div>
         </div>
+        <br><br>
         <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
             <input type="button" value="Logout" id="logout" name="logout" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
         </div>
