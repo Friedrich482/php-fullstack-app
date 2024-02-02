@@ -104,6 +104,18 @@
         
         </div>
         
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6">
+            <div class="w-5/6 h-72 bg-red-300">Calculator</div>
+            <div class="w-5/6 h-72 bg-yellow-300">Fetch Weather App</div>
+            <div class="w-5/6 h-72 bg-blue-300">Snake Game</div>
+            <div class="w-5/6 h-72 bg-purple-300">Tic Tac Toe</div>
+            <div class="w-5/6 h-72 bg-orange-300">Rock-Paper-Scissors (against the computer only)</div>
+            <div class="w-5/6 h-72 bg-sky-300">Images Slider</div>
+            <div class="w-5/6 h-72 bg-green-300">Stopwatch</div>
+            <div class="w-5/6 h-72 bg-rose-300">Clock</div>
+            <div class="w-5/6 h-72 bg-slate-300">To-do-List</div>
+        </div>
         <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
             <input type="button" value="Logout" id="logout" name="logout" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
         </div>

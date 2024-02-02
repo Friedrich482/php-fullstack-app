@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       screens: {
         'sm-custom': '310px', 
-        'mysql-custom' : '358px', 
+        'mysql-custom' : '358px',
+        // 'utils-custom' : 
       },
     },
   },
