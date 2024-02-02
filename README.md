@@ -14,7 +14,7 @@ Technologies/tools/languages used :
 - [ ] Add a forgot password 🔑
 - [x] a nice animation to the welcome message 👋 when logging or registering. It needs to be multicolor and chars will display one after the other
 - [ ] a navbar (if possible) on the home page (the tools will be classified by category : game 🎮, weather app ☀, calculator 🖩, to do-list, and so on)
-- [ ] All the games and utilities as ~~flex~~ grid 💪 elements (and their behavior should be responsive)
+- [x] All the games and utilities as ~~flex~~ grid 💪 elements (and their behavior should be responsive) (Here improvements are coming )
 - [ ] a different page for each tool
 - [ ] the background image may change depending of the moment of the day : sunrise 🌅, day ☀, sunset 🌇, night 🌙
 - [ ] The counter of visits will be attached to an other element (possibly the navbar, and so it will no more be so messy positionned)
