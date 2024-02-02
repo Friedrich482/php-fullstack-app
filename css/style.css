@@ -1420,6 +1420,10 @@ video {
     height: 1.25rem;
   }
 
+  .sm\:h-\[640px\] {
+    height: 640px;
+  }
+
   .sm\:w-0 {
     width: 0px;
   }
@@ -1438,6 +1442,10 @@ video {
 
   .sm\:w-\[640px\] {
     width: 640px;
+  }
+
+  .sm\:w-\[620px\] {
+    width: 620px;
   }
 
   .sm\:min-w-72 {
