@@ -106,15 +106,15 @@
         
         
         <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6">
-            <div class="w-5/6 max-w-96 bg-red-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md">Calculator</div>
-            <div class="w-5/6 max-w-96 bg-yellow-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md">Fetch Weather App</div>
-            <div class="w-5/6 max-w-96 bg-blue-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md">Snake Game</div>
-            <div class="w-5/6 max-w-96 bg-purple-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md">Tic Tac Toe</div>
-            <div class="w-5/6 max-w-96 bg-orange-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md">Shifumi (against the computer only)</div>
-            <div class="w-5/6 max-w-96 bg-sky-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md">Images Slider</div>
-            <div class="w-5/6 max-w-96 bg-green-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md">Stopwatch</div>
-            <div class="w-5/6 max-w-96 bg-rose-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md">Clock</div>
-            <div class="w-5/6 max-w-96 bg-slate-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md">To-do-List</div>
+            <div class="w-5/6 max-w-96 bg-red-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Calculator</div>
+            <div class="w-5/6 max-w-96 bg-yellow-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Fetch Weather App</div>
+            <div class="w-5/6 max-w-96 bg-blue-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Snake Game</div>
+            <div class="w-5/6 max-w-96 bg-purple-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Tic Tac Toe</div>
+            <div class="w-5/6 max-w-96 bg-orange-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Shifumi (against the computer only)</div>
+            <div class="w-5/6 max-w-96 bg-sky-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Images Slider</div>
+            <div class="w-5/6 max-w-96 bg-green-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Stopwatch</div>
+            <div class="w-5/6 max-w-96 bg-rose-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Clock</div>
+            <div class="w-5/6 max-w-96 bg-slate-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">To-do-List</div>
         </div>
         <br><br>
         <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">

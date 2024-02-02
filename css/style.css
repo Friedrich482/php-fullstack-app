@@ -1209,6 +1209,10 @@ video {
   transition-duration: 500ms;
 }
 
+.duration-700 {
+  transition-duration: 700ms;
+}
+
 .gradient-text:hover {
   -webkit-background-clip: text;
           background-clip: text;
