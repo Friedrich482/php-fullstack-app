@@ -23,4 +23,5 @@ Technologies/tools/languages used :
 - [ ] the to-do-list must use the LocalStorage
 - [x] For the log out, a dialog 💬 should pop up ( maybe a blur effect will be interesting, in background )
 - [ ] The navbar should contain profile with infos about user, tools ( in many sections ) and logout
+
 This list will be updated depending on my progression through it.
