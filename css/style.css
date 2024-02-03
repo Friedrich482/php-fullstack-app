@@ -620,6 +620,14 @@ video {
   height: 2.5rem;
 }
 
+.h-2\/5 {
+  height: 40%;
+}
+
+.h-3\/5 {
+  height: 60%;
+}
+
 .h-36 {
   height: 9rem;
 }
@@ -849,6 +857,16 @@ video {
   border-radius: 0.375rem;
 }
 
+.rounded-b-md {
+  border-bottom-right-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.rounded-t-md {
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
 .rounded-bl-\[100px\] {
   border-bottom-left-radius: 100px;
 }
@@ -953,9 +971,9 @@ video {
   background-color: rgb(216 180 254 / var(--tw-bg-opacity));
 }
 
-.bg-red-300 {
+.bg-red-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 .bg-rose-300 {
@@ -1266,42 +1284,12 @@ video {
   border-radius: 100%;
 }
 
-@keyframes flip {
-  from {
-    transform: rotateY(0deg);
-  }
-
-  to {
-    transform: rotateY(180deg);
-  }
-}
-
-.wipe-container {
-  position: relative;
-  overflow: hidden;
-  perspective: 1000px;
-}
-
-.content {
-  position: relative;
-  z-index: 1;
-}
-
-.wipe-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, transparent 50%, white 50%);
-  transform-origin: 0% 50%;
-  transform: scaleX(2);
-  transition: transform 0.5s ease-in-out;
-}
-
-.wipe-container:hover::before {
-  transform: scaleX(0);
+.calcImg{
+  background-image: url("../assets/bg-img/calc2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .hover\:scale-110:hover {
@@ -1316,12 +1304,29 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:gap-3:hover {
+  gap: 0.75rem;
+}
+
 .hover\:border-b-4:hover {
   border-bottom-width: 4px;
 }
 
+.hover\:border-b-8:hover {
+  border-bottom-width: 8px;
+}
+
+.hover\:border-solid:hover {
+  border-style: solid;
+}
+
 .hover\:border-transparent:hover {
   border-color: transparent;
+}
+
+.hover\:border-b-red-600:hover {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(220 38 38 / var(--tw-border-opacity));
 }
 
 .hover\:bg-slate-700:hover {

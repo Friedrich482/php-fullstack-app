@@ -114,21 +114,21 @@ function animatemainText() {
 animatemainText();
 
 // 
-const calculatorWrapper = document.querySelector("#calculator-wrapper");
-const calculator = document.querySelector("#calculator");
-let oldContent = calculator.textContent
-calculatorWrapper.addEventListener('mouseover', () =>{
-   setTimeout(changeText, 500);
-})
+// const calculatorWrapper = document.querySelector("#calculator-wrapper");
+// const calculator = document.querySelector("#calculator");
+// let oldContent = calculator.textContent
+// calculatorWrapper.addEventListener('mouseover', () =>{
+//    setTimeout(changeText, 500);
+// })
 
-calculatorWrapper.addEventListener('mouseout', () =>{
-   setTimeout(setOriginText, 500);
-})
+// calculatorWrapper.addEventListener('mouseout', () =>{
+//    setTimeout(setOriginText, 500);
+// })
 
-function changeText(){
-   calculator.textContent = "New content";
-}
+// function changeText(){
+//    calculator.textContent = "New content";
+// }
 
-function setOriginText(){
-   calculator.textContent = oldContent;
-}
+// function setOriginText(){
+//    calculator.textContent = oldContent;
+// }

@@ -106,7 +106,15 @@
         
         
         <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6">
-            <div class="w-5/6 max-w-96 bg-red-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md transform duration-700 hover:scale-110 wipe-container" id="calculator-wrapper"><div class="content" id="calculator">Calculator</div></div>
+            
+            <div class=" bg-red-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col text-3xl rounded-md transform duration-1000 hover:scale-110  text-black hover:border-b-8 hover:border-solid hover:border-b-red-600 hover:gap-3">
+                <div class="calcImg h-3/5 w-full rounded-t-md  transition duration-700 ">
+
+                </div>
+                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md">
+                    <p class="text-center">This is my space calculator !</p>
+                </div>
+            </div>
             <div class="w-5/6 max-w-96 bg-yellow-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Fetch Weather App</div>
             <div class="w-5/6 max-w-96 bg-blue-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Snake Game</div>
             <div class="w-5/6 max-w-96 bg-purple-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Tic Tac Toe</div>
