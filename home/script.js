@@ -107,8 +107,28 @@ function animatemainText() {
       mainCursor.classList.add("hidden");
       return;
    }
-   const delay = isLineBreak ? 1 : (mainTextCharIndex === 0 || mainTextCharIndex === animatedTextContent.length ? 1000 : 30);
+   const delay = isLineBreak ? 1 : (mainTextCharIndex === 0 || mainTextCharIndex === animatedTextContent.length ? 1000 : 1);
    setTimeout(animatemainText, delay);
 }
 
 animatemainText();
+
+// 
+// const calculatorWrapper = document.querySelector("#calculator-wrapper");
+// const calculator = document.querySelector("#calculator");
+// let oldContent = calculator.textContent
+// calculatorWrapper.addEventListener('mouseover', () =>{
+//    setTimeout(changeText, 500);
+// })
+
+// calculatorWrapper.addEventListener('mouseout', () =>{
+//    setTimeout(setOriginText, 500);
+// })
+
+// function changeText(){
+//    calculator.textContent = "New content";
+// }
+
+// function setOriginText(){
+//    calculator.textContent = oldContent;
+// }

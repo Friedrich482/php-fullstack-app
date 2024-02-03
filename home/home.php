@@ -96,27 +96,39 @@
                 <br>(If you don't see them, scroll down or use the navbar)
             </div>
             
-            <div class="animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
+            <!-- <div class="animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
                 <svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
-              </div>
+              </div> -->
         
         </div>
         
         
         <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6">
-            <div class="w-5/6 max-w-96 bg-red-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Calculator</div>
+            
+            <div class="group w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col text-3xl rounded-md transform duration-700 hover:scale-110 text-black">
+
+                <div class="calcImg h-3/5 w-full rounded-t-md  transition duration-700 group-hover:border-b-4 group-hover:border-b-red-500">
+
+                </div>
+
+                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md">
+                    <p class="text-center">This is my space calculator !</p>
+                </div>
+
+            </div>
+
             <div class="w-5/6 max-w-96 bg-yellow-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Fetch Weather App</div>
             <div class="w-5/6 max-w-96 bg-blue-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Snake Game</div>
             <div class="w-5/6 max-w-96 bg-purple-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Tic Tac Toe</div>
-            <div class="w-5/6 max-w-96 bg-orange-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Shifumi (against the computer only)</div>
+            <div class="w-5/6 max-w-96 bg-orange-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700 p-5">Shifumi (against the computer only)</div>
             <div class="w-5/6 max-w-96 bg-sky-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Images Slider</div>
             <div class="w-5/6 max-w-96 bg-green-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Stopwatch</div>
             <div class="w-5/6 max-w-96 bg-rose-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Clock</div>
             <div class="w-5/6 max-w-96 bg-slate-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">To-do-List</div>
         </div>
-        <br><br>
+        <div class="h-7"></div>
         <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
             <input type="button" value="Logout" id="logout" name="logout" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
         </div>
