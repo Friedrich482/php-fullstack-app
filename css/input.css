@@ -67,13 +67,19 @@
 }
   
 .calcImg{
-    background-image: url("../assets/bg-img/calc2.jpg");
+    background-image: url("../assets/gridProjects/calc2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
-  
+.weatherImg{
+    background-image: url("../assets/gridProjects/weather1.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
   
   
