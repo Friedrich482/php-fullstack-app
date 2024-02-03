@@ -131,8 +131,19 @@
 
             </div>
 
+            <div class="group bg-lime-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
+
+                <div class="snakeImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-lime-600">
+
+                </div>
+
+                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700 shadow-sm shadow-white group-hover:shadow-none">
+                    <p class="text-center">Welcome in my snake game !</p>
+                </div>
+
+            </div>
             <!-- <div class="w-5/6 max-w-96 bg-yellow-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Fetch Weather App</div> -->
-            <div class="w-5/6 max-w-96 bg-blue-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Snake Game</div>
+            <!-- <div class="w-5/6 max-w-96 bg-blue-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Snake Game</div> -->
             <div class="w-5/6 max-w-96 bg-purple-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Tic Tac Toe</div>
             <div class="w-5/6 max-w-96 bg-orange-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700 p-5">Shifumi (against the computer only)</div>
             <div class="w-5/6 max-w-96 bg-sky-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Images Slider</div>

@@ -82,4 +82,11 @@
     background-attachment: fixed;
 }
   
-  
+.snakeImg{
+    background-image: url("../assets/gridProjects/snake1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}

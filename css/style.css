@@ -1010,6 +1010,16 @@ video {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+
+.bg-lime-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(101 163 13 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -1310,6 +1320,14 @@ video {
   background-attachment: fixed;
 }
 
+.snakeImg{
+  background-image: url("../assets/gridProjects/snake1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -1436,6 +1454,46 @@ video {
   border-bottom-color: rgb(253 224 71 / var(--tw-border-opacity));
 }
 
+.group:hover .group-hover\:border-b-green-300 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(134 239 172 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-green-500 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(34 197 94 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-green-400 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(74 222 128 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-lime-400 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(163 230 53 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-lime-800 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(63 98 18 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-lime-500 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(132 204 22 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-lime-300 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(190 242 100 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-lime-600 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(101 163 13 / var(--tw-border-opacity));
+}
+
 .group:hover .group-hover\:shadow-none {
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
@@ -1549,5 +1607,3 @@ video {
     --tw-ring-color: rgb(226 232 240 / 0.2);
   }
 }
-  
-  
