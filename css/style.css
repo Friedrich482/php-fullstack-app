@@ -813,6 +813,10 @@ video {
   justify-content: center;
 }
 
+.gap-0 {
+  gap: 0px;
+}
+
 .gap-1 {
   gap: 0.25rem;
 }
@@ -971,11 +975,6 @@ video {
   background-color: rgb(216 180 254 / var(--tw-bg-opacity));
 }
 
-.bg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
 .bg-rose-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 164 175 / var(--tw-bg-opacity));
@@ -1009,6 +1008,16 @@ video {
 .bg-yellow-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+}
+
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+
+.bg-lime-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(101 163 13 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-br {
@@ -1169,8 +1178,19 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-rose-800 {
   --tw-shadow-color: #9f1239;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-white {
+  --tw-shadow-color: #fff;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -1217,10 +1237,6 @@ video {
 
 .duration-700 {
   transition-duration: 700ms;
-}
-
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gradient-text:hover {
@@ -1289,7 +1305,23 @@ video {
 }
 
 .calcImg{
-  background-image: url("../assets/bg-img/calc2.jpg");
+  background-image: url("../assets/gridProjects/calc2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.weatherImg{
+  background-image: url("../assets/gridProjects/weather1.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.snakeImg{
+  background-image: url("../assets/gridProjects/snake1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1308,51 +1340,17 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:gap-1:hover {
-  gap: 0.25rem;
-}
-
-.hover\:gap-2:hover {
-  gap: 0.5rem;
-}
-
-.hover\:border-2:hover {
-  border-width: 2px;
-}
-
-.hover\:border-4:hover {
-  border-width: 4px;
-}
-
 .hover\:border-b-4:hover {
   border-bottom-width: 4px;
-}
-
-.hover\:border-t-2:hover {
-  border-top-width: 2px;
-}
-
-.hover\:border-t-4:hover {
-  border-top-width: 4px;
 }
 
 .hover\:border-transparent:hover {
   border-color: transparent;
 }
 
-.hover\:border-red-600:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(220 38 38 / var(--tw-border-opacity));
-}
-
 .hover\:bg-slate-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-red-600:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gradient-to-br:hover {
@@ -1374,6 +1372,12 @@ video {
   color: rgb(129 140 248 / var(--tw-text-opacity));
 }
 
+.hover\:shadow-lg:hover {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .hover\:shadow-xl:hover {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -1392,6 +1396,11 @@ video {
 
 .hover\:shadow-rose-800:hover {
   --tw-shadow-color: #9f1239;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.hover\:shadow-white:hover {
+  --tw-shadow-color: #fff;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -1435,9 +1444,60 @@ video {
   border-bottom-width: 4px;
 }
 
-.group:hover .group-hover\:border-b-red-500 {
+.group:hover .group-hover\:border-b-orange-300 {
   --tw-border-opacity: 1;
-  border-bottom-color: rgb(239 68 68 / var(--tw-border-opacity));
+  border-bottom-color: rgb(253 186 116 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-yellow-300 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(253 224 71 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-green-300 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(134 239 172 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-green-500 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(34 197 94 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-green-400 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(74 222 128 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-lime-400 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(163 230 53 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-lime-800 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(63 98 18 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-lime-500 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(132 204 22 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-lime-300 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(190 242 100 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-lime-600 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(101 163 13 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:shadow-none {
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 @media (min-width: 310px) {
@@ -1547,7 +1607,3 @@ video {
     --tw-ring-color: rgb(226 232 240 / 0.2);
   }
 }
-
-  
-  
-  

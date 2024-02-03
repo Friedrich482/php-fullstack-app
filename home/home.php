@@ -95,7 +95,7 @@
                 You will also find some of the projects I have done with JavaScript when learning it. Enjoy them and have a nice day.
                 <br>(If you don't see them, scroll down or use the navbar)
             </div>
-            
+            <br>
             <!-- <div class="animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
                 <svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -107,20 +107,43 @@
         
         <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6">
             
-            <div class="group w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col text-3xl rounded-md transform duration-700 hover:scale-110 text-black">
+            <div class="group bg-orange-300 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-lg hover:shadow-white">
 
-                <div class="calcImg h-3/5 w-full rounded-t-md  transition duration-700 group-hover:border-b-4 group-hover:border-b-red-500">
+                <div class="calcImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-orange-300">
 
                 </div>
 
-                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md">
+                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700  shadow-sm shadow-white group-hover:shadow-none">
                     <p class="text-center">This is my space calculator !</p>
                 </div>
 
             </div>
 
-            <div class="w-5/6 max-w-96 bg-yellow-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Fetch Weather App</div>
-            <div class="w-5/6 max-w-96 bg-blue-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Snake Game</div>
+            <div class="group bg-yellow-300 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
+
+                <div class="weatherImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-yellow-300">
+
+                </div>
+
+                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700 shadow-sm shadow-white group-hover:shadow-none">
+                    <p class="text-center">Comprehensive Fetch Weather App</p>
+                </div>
+
+            </div>
+
+            <div class="group bg-lime-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
+
+                <div class="snakeImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-lime-600">
+
+                </div>
+
+                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700 shadow-sm shadow-white group-hover:shadow-none">
+                    <p class="text-center">Welcome in my snake game !</p>
+                </div>
+
+            </div>
+            <!-- <div class="w-5/6 max-w-96 bg-yellow-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Fetch Weather App</div> -->
+            <!-- <div class="w-5/6 max-w-96 bg-blue-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Snake Game</div> -->
             <div class="w-5/6 max-w-96 bg-purple-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Tic Tac Toe</div>
             <div class="w-5/6 max-w-96 bg-orange-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700 p-5">Shifumi (against the computer only)</div>
             <div class="w-5/6 max-w-96 bg-sky-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Images Slider</div>
