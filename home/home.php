@@ -107,13 +107,13 @@
         
         <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6">
             
-            <div class="group w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col text-3xl rounded-md transform duration-700 hover:scale-110 text-black">
+            <div class="group bg-orange-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-3xl rounded-md transform duration-700 hover:scale-110 text-black">
 
-                <div class="calcImg h-3/5 w-full rounded-t-md  transition duration-700 group-hover:border-b-4 group-hover:border-b-red-500">
+                <div class="calcImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-orange-200">
 
                 </div>
 
-                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md">
+                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700 group-hover:border-2 group-hover:border-orange-200">
                     <p class="text-center">This is my space calculator !</p>
                 </div>
 
