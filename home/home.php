@@ -51,6 +51,18 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-[1.25rem] backgroundImg text-[whitesmoke] MV-boli">
+    <header class="w-full">
+        <div class="hidden sm:grid-cols-4 sm:grid sm:place-items-center sm:w-full sm:bg-black sm:text-white sm:h-20 sm:text-xl" id="navbar">
+            <div class="text-center flex items-center justify-center w-1/3">Profile</div>
+            <div class="text-center ">Tools</div>
+            <div class="text-center">About Us</div>
+            <div class="text-center ">
+                <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
+                    <input type="button" value="Logout" id="logout" name="logout" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
+                </div>
+            </div>
+        </div>
+    </header>
     
     <!-- <div class="flex items-center justify-center flex-col gap-2 w-full">
         <button id="visitsDisplayerButton" class="border-4 font-[cursive] rounded-2xl min-w-[5.625rem] text-2xl text-red-600 p-1 bg-black"><i class="fi fi-rr-angle-down"></i></button>
@@ -215,7 +227,6 @@
 
             </div>
 
-            <!-- <div class="w-5/6 max-w-96 bg-slate-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">To-do-List</div> -->
         </div>
         <div class="h-7"></div>
         <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
