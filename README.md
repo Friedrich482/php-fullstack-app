@@ -12,6 +12,9 @@ Technologies/tools/languages used :
 ## To do  
 
 - [ ] Add a forgot password 🔑
+- [ ] Inside the forgot password, I will ask your email address and send a random number with 6 digits (so between 100000 and 999999)
+- [ ] The user will enter that number and will pass only if the number matches. After that the number will be put to zero in the DB.
+- [ ] For the registration, I will do the same thing.
 - [x] a nice animation to the welcome message 👋 when logging or registering. It needs to be multicolor and chars will display one after the other
 - [ ] a navbar (if possible) on the home page (the tools will be classified by category : game 🎮, weather app ☀, calculator 🖩, to do-list, and so on)
 - [x] All the games and utilities as ~~flex~~ grid 💪 elements (and their behavior should be responsive) (Here improvements are coming )
