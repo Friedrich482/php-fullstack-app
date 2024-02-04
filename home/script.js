@@ -1,65 +1,30 @@
-// let visits = document.getElementById('visits');
-// let visitsDisplayerButton = document.getElementById('visitsDisplayerButton');
-
-// visitsDisplayerButton.addEventListener('click', () =>{
-//    if(visits.style.display == 'none'){
-//     visits.style.display = 'block';
-//     visits.style.fontSize = '22px';
-//     visits.style.border = '6px solid lightblue';
-//     visits.style.borderRadius = '20px';
-
-//     visitsDisplayerButton.innerHTML = '<i class="fi fi-rr-angle-up"></i>'
-    
-//     visitsDisplayerButton.style.color = 'red';
-//     visitsDisplayerButton.style.minWidth = '90px';
-//     visitsDisplayerButton.style.border = '6px solid lightblue';
-//     visitsDisplayerButton.style.fontFamily = 'cursive';
-//     visitsDisplayerButton.style.borderRadius = '20px';
-//     visitsDisplayerButton.style.fontWeight = 'bold';
-//     visitsDisplayerButton.style.fontSize = '22px';
-//     visits.style.backgroundColor = 'black';
-//     visitsDisplayerButton.style.backgroundColor = 'black';
-//     visitsDisplayerButton.style.textAlign = 'center';
-//    }
-   
-//    else{
-//     visits.style.display = 'none';
-//     visitsDisplayerButton.innerHTML = '<i class="fi fi-rr-angle-down">'
-//    }
-// })
-
-
 // Logout button
 const body = document.body
-let logoutButton = document.querySelector('#logout');
-let confirmDeconnexionDialog = document.querySelector('#confirmDeconnexionDialog');
-let denyButton = document.querySelector('#denyButton');
+const logoutButton = document.querySelector('#logout');
+const confirmDeconnexionDialog = document.querySelector('#confirmDeconnexionDialog');
+const denyButton = document.querySelector('#denyButton');
 
 logoutButton.addEventListener('click', () =>{
-   displayDialog()
+   confirmDeconnexionDialog.showModal();
+   toggleconfirmDeconnexionDialog();
 })
 
 denyButton.addEventListener('click', () =>{
-   hiddenDialog()
+   confirmDeconnexionDialog.close();
+   toggleconfirmDeconnexionDialog();
 })
 
 confirmDeconnexionDialog.addEventListener('cancel', () =>{
-   hiddenDialog()
+   confirmDeconnexionDialog.close();
+   toggleconfirmDeconnexionDialog();
 })
 
-function displayDialog(){
-   confirmDeconnexionDialog.showModal();
-   confirmDeconnexionDialog.classList.remove("hidden");
-   confirmDeconnexionDialog.classList.add("flex");
-   body.classList.add("blur-sm")
+function toggleconfirmDeconnexionDialog(){
+   confirmDeconnexionDialog.classList.toggle("hidden");
+   confirmDeconnexionDialog.classList.toggle("flex");
+   body.classList.toggle("blur-sm")
 }
-function hiddenDialog(){
-   confirmDeconnexionDialog.close();
-   confirmDeconnexionDialog.classList.add("hidden");
-   confirmDeconnexionDialog.classList.remove("flex");
-   body.classList.remove("blur-sm")
 
-}
 // Animation for the title 
 
 const animatedText = document.getElementById('animatedText');
@@ -113,22 +78,3 @@ function animatemainText() {
 
 animatemainText();
 
-// 
-// const calculatorWrapper = document.querySelector("#calculator-wrapper");
-// const calculator = document.querySelector("#calculator");
-// let oldContent = calculator.textContent
-// calculatorWrapper.addEventListener('mouseover', () =>{
-//    setTimeout(changeText, 500);
-// })
-
-// calculatorWrapper.addEventListener('mouseout', () =>{
-//    setTimeout(setOriginText, 500);
-// })
-
-// function changeText(){
-//    calculator.textContent = "New content";
-// }
-
-// function setOriginText(){
-//    calculator.textContent = oldContent;
-// }

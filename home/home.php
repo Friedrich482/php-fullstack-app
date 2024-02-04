@@ -142,14 +142,80 @@
                 </div>
 
             </div>
-            <!-- <div class="w-5/6 max-w-96 bg-yellow-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Fetch Weather App</div> -->
-            <!-- <div class="w-5/6 max-w-96 bg-blue-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Snake Game</div> -->
-            <div class="w-5/6 max-w-96 bg-purple-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Tic Tac Toe</div>
-            <div class="w-5/6 max-w-96 bg-orange-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700 p-5">Shifumi (against the computer only)</div>
-            <div class="w-5/6 max-w-96 bg-sky-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Images Slider</div>
-            <div class="w-5/6 max-w-96 bg-green-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Stopwatch</div>
-            <div class="w-5/6 max-w-96 bg-rose-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Clock</div>
-            <div class="w-5/6 max-w-96 bg-slate-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">To-do-List</div>
+
+            <div class="group bg-slate-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
+
+                <div class="ticImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-slate-200">
+
+                </div>
+
+                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700 shadow-sm shadow-white group-hover:shadow-none">
+                    <p class="text-center">Play Tic Tac Toe against someone!</p>
+                </div>
+
+            </div>
+
+            <div class="group bg-red-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
+
+                <div class="rpsImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-red-600">
+
+                </div>
+
+                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700 shadow-sm shadow-white group-hover:shadow-none">
+                    <p class="text-center">Shifumi (against the computer only)</p>
+                </div>
+
+            </div>
+
+            <div class="group bg-indigo-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
+
+                <div class="sliderImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-indigo-200">
+
+                </div>
+
+                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700 shadow-sm shadow-white group-hover:shadow-none">
+                    <p class="text-center">Welcome in my Images Slider !</p>
+                </div>
+
+            </div>
+
+            <div class="group bg-sky-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
+
+                <div class="stopwatchImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-sky-600">
+
+                </div>
+
+                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700 shadow-sm shadow-white group-hover:shadow-none">
+                    <p class="text-center">Dynamic Stopwatch. Play with time !</p>
+                </div>
+
+            </div>
+
+            <div class="group bg-blue-900 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
+
+                <div class="clockImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-blue-900">
+
+                </div>
+
+                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700 shadow-sm shadow-white group-hover:shadow-none">
+                    <p class="text-center">My simple New York clock !</p>
+                </div>
+
+            </div>
+
+            <div class="group bg-rose-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
+
+                <div class="todoImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-rose-200">
+
+                </div>
+
+                <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700 shadow-sm shadow-white group-hover:shadow-none">
+                    <p class="text-center">Classic To-do-List. Write down your tasks !</p>
+                </div>
+
+            </div>
+
+            <!-- <div class="w-5/6 max-w-96 bg-slate-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">To-do-List</div> -->
         </div>
         <div class="h-7"></div>
         <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
