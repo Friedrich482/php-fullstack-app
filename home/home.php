@@ -167,7 +167,7 @@
 
             </div>
 
-            <!-- <div class="group bg-indigo-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
+            <div class="group bg-indigo-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
 
                 <div class="sliderImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-indigo-200">
 
@@ -177,10 +177,9 @@
                     <p class="text-center">Welcome in my Images Slider !</p>
                 </div>
 
-            </div> -->
+            </div>
 
 
-            <div class="w-5/6 max-w-96 bg-sky-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Images Slider</div>
             <div class="w-5/6 max-w-96 bg-green-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Stopwatch</div>
             <div class="w-5/6 max-w-96 bg-rose-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">Clock</div>
             <div class="w-5/6 max-w-96 bg-slate-300 aspect-square text-center flex items-center justify-center text-black text-3xl rounded-md hover:scale-110 transition duration-700">To-do-List</div>
