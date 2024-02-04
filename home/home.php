@@ -53,22 +53,32 @@
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-[1.25rem] backgroundImg text-[whitesmoke] MV-boli">
     <header class="w-full">
         <div class="hidden sm:grid grid-cols-5 gap-0 place-items-center w-full bg-black text-white h-20 text-xl" id="navbar">
-            <div class="group text-center flex items-center justify-center h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950">Home</div>
+            
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950">
 
-            <div class="group text-center flex items-center justify-center h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbar icons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
+                <span>Home</span>
+
+            </div>
+
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbar icons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Profile</span>
             </div>
 
-            <div class="group text-center flex items-center justify-center h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbar icons/wrench.png" alt="tool icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Tools</span>
             </div>
 
-            <div class="group text-center flex items-center justify-center h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
-                <span>About Us</span>
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbar icons/info.png" alt="info icon" class="w-6 h-6 relative bottom-1">
+                <span class="">About Us</span>
             </div>
 
-            <div class="group text-center flex items-center justify-center h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-r-8 hover:border-b-white hover:border-r-white hover:bg-gray-800 active:bg-slate-950">
-                Logout
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-r-8 hover:border-b-white hover:border-r-white hover:bg-gray-800 active:bg-slate-950">
+                <span class="">Logout</span>
+                <img src="../assets/icons/navbar icons/exit.png" alt="info icon" class="w-6 h-6 relative bottom-1">
             </div>
         </div>
     </header>
