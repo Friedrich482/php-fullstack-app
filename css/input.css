@@ -65,9 +65,9 @@
     border-radius: 100%;
 
 }
-  
+/* Another mixin here would be welcome ... */
 .calcImg{
-    background-image: url("../assets/gridProjects/calc2.jpg");
+    background-image: url("../assets/gridProjects/calc.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -75,7 +75,7 @@
 }
 
 .weatherImg{
-    background-image: url("../assets/gridProjects/weather1.gif");
+    background-image: url("../assets/gridProjects/weather.gif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -83,7 +83,7 @@
 }
   
 .snakeImg{
-    background-image: url("../assets/gridProjects/snake1.jpg");
+    background-image: url("../assets/gridProjects/snake.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -92,7 +92,7 @@
 }
 
 .ticImg{
-    background-image: url("../assets/gridProjects/tic4.jpg");
+    background-image: url("../assets/gridProjects/tic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -101,7 +101,7 @@
 }
 
 .rpsImg{
-    background-image: url("../assets/gridProjects/rps2.jpg");
+    background-image: url("../assets/gridProjects/rps.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -110,7 +110,7 @@
 }
 
 .sliderImg{
-    background-image: url("../assets/gridProjects/slider1.png");
+    background-image: url("../assets/gridProjects/slider.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -119,7 +119,7 @@
 }
 
 .stopwatchImg{
-    background-image: url("../assets/gridProjects/stopwatch1.jpeg");
+    background-image: url("../assets/gridProjects/stopwatch.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -128,7 +128,16 @@
 }
 
 .clockImg{
-    background-image: url("../assets/gridProjects/clock1.jpg");
+    background-image: url("../assets/gridProjects/clock.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+.todoImg{
+    background-image: url("../assets/gridProjects/todo.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -932,6 +932,11 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-blue-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+}
+
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -967,9 +972,9 @@ video {
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
-.bg-rose-300 {
+.bg-rose-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(253 164 175 / var(--tw-bg-opacity));
+  background-color: rgb(254 205 211 / var(--tw-bg-opacity));
 }
 
 .bg-sky-600 {
@@ -1005,11 +1010,6 @@ video {
 .bg-yellow-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
-}
-
-.bg-blue-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-br {
@@ -1292,8 +1292,10 @@ video {
   border-radius: 100%;
 }
 
+/* Another mixin here would be welcome ... */
+
 .calcImg{
-  background-image: url("../assets/gridProjects/calc2.jpg");
+  background-image: url("../assets/gridProjects/calc.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1301,7 +1303,7 @@ video {
 }
 
 .weatherImg{
-  background-image: url("../assets/gridProjects/weather1.gif");
+  background-image: url("../assets/gridProjects/weather.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1309,7 +1311,7 @@ video {
 }
 
 .snakeImg{
-  background-image: url("../assets/gridProjects/snake1.jpg");
+  background-image: url("../assets/gridProjects/snake.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1317,7 +1319,7 @@ video {
 }
 
 .ticImg{
-  background-image: url("../assets/gridProjects/tic4.jpg");
+  background-image: url("../assets/gridProjects/tic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1325,7 +1327,7 @@ video {
 }
 
 .rpsImg{
-  background-image: url("../assets/gridProjects/rps2.jpg");
+  background-image: url("../assets/gridProjects/rps.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1333,7 +1335,7 @@ video {
 }
 
 .sliderImg{
-  background-image: url("../assets/gridProjects/slider1.png");
+  background-image: url("../assets/gridProjects/slider.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1341,7 +1343,7 @@ video {
 }
 
 .stopwatchImg{
-  background-image: url("../assets/gridProjects/stopwatch1.jpeg");
+  background-image: url("../assets/gridProjects/stopwatch.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1349,7 +1351,15 @@ video {
 }
 
 .clockImg{
-  background-image: url("../assets/gridProjects/clock1.jpg");
+  background-image: url("../assets/gridProjects/clock.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.todoImg{
+  background-image: url("../assets/gridProjects/todo.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1472,9 +1482,9 @@ video {
   border-bottom-width: 4px;
 }
 
-.group:hover .group-hover\:border-b-blue-500 {
+.group:hover .group-hover\:border-b-blue-900 {
   --tw-border-opacity: 1;
-  border-bottom-color: rgb(59 130 246 / var(--tw-border-opacity));
+  border-bottom-color: rgb(30 58 138 / var(--tw-border-opacity));
 }
 
 .group:hover .group-hover\:border-b-indigo-200 {
@@ -1497,6 +1507,11 @@ video {
   border-bottom-color: rgb(220 38 38 / var(--tw-border-opacity));
 }
 
+.group:hover .group-hover\:border-b-rose-200 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(254 205 211 / var(--tw-border-opacity));
+}
+
 .group:hover .group-hover\:border-b-sky-600 {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(2 132 199 / var(--tw-border-opacity));
@@ -1510,11 +1525,6 @@ video {
 .group:hover .group-hover\:border-b-yellow-300 {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(253 224 71 / var(--tw-border-opacity));
-}
-
-.group:hover .group-hover\:border-b-blue-900 {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(30 58 138 / var(--tw-border-opacity));
 }
 
 .group:hover .group-hover\:shadow-none {
