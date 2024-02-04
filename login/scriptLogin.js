@@ -2,11 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Form submission intercepted');
     
     const loginForm = document.getElementById('loginForm');
-
     const usernameError = document.getElementById('usernameError');
     const passwordError = document.getElementById('passwordError');
     const defaultError = document.querySelector('#defaultError');
-
     const usernameInput = document.getElementById('username'); 
     const passwordInput = document.getElementById('password');
 

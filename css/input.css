@@ -90,3 +90,12 @@
     background-attachment: fixed;
     
 }
+
+.ticImg{
+    background-image: url("../assets/gridProjects/tic4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
