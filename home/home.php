@@ -52,14 +52,18 @@
 </head>
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-[1.25rem] backgroundImg text-[whitesmoke] MV-boli">
     <header class="w-full">
-        <div class="hidden sm:grid-cols-4 sm:grid sm:place-items-center sm:w-full sm:bg-black sm:text-white sm:h-20 sm:text-xl" id="navbar">
-            <div class="text-center flex items-center justify-center w-1/3">Profile</div>
+        <div class="hidden sm:grid grid-cols-5 gap-0 place-items-center w-full bg-black text-white h-20 text-xl" id="navbar">
+            <div class="text-center">Home</div>
+            <div class=" group text-center flex items-center justify-center h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-b-violet-300 hover:bg-slate-800 active:bg-slate-900 ">
+                <span class="">Profile</span>
+            </div>
+
             <div class="text-center ">Tools</div>
+
             <div class="text-center">About Us</div>
+
             <div class="text-center ">
-                <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
-                    <input type="button" value="Logout" id="logout" name="logout" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
-                </div>
+                Logout
             </div>
         </div>
     </header>
