@@ -952,6 +952,11 @@ video {
   background-color: rgb(134 239 172 / var(--tw-bg-opacity));
 }
 
+.bg-indigo-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(199 210 254 / var(--tw-bg-opacity));
+}
+
 .bg-lime-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(101 163 13 / var(--tw-bg-opacity));
@@ -970,11 +975,6 @@ video {
 .bg-rose-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 164 175 / var(--tw-bg-opacity));
-}
-
-.bg-sky-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(125 211 252 / var(--tw-bg-opacity));
 }
 
 .bg-slate-200 {
@@ -1007,9 +1007,9 @@ video {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 
-.bg-indigo-200 {
+.bg-sky-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(199 210 254 / var(--tw-bg-opacity));
+  background-color: rgb(2 132 199 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-br {
@@ -1063,10 +1063,6 @@ video {
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-5 {
-  padding: 1.25rem;
 }
 
 .p-\[2px\] {
@@ -1344,6 +1340,14 @@ video {
   background-attachment: fixed;
 }
 
+.stopwatchImg{
+  background-image: url("../assets/gridProjects/stopwatch1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -1460,6 +1464,11 @@ video {
   border-bottom-width: 4px;
 }
 
+.group:hover .group-hover\:border-b-indigo-200 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(199 210 254 / var(--tw-border-opacity));
+}
+
 .group:hover .group-hover\:border-b-lime-600 {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(101 163 13 / var(--tw-border-opacity));
@@ -1485,34 +1494,44 @@ video {
   border-bottom-color: rgb(253 224 71 / var(--tw-border-opacity));
 }
 
-.group:hover .group-hover\:border-b-blue-300 {
+.group:hover .group-hover\:border-b-rose-500 {
   --tw-border-opacity: 1;
-  border-bottom-color: rgb(147 197 253 / var(--tw-border-opacity));
+  border-bottom-color: rgb(244 63 94 / var(--tw-border-opacity));
 }
 
-.group:hover .group-hover\:border-b-blue-100 {
+.group:hover .group-hover\:border-b-pink-500 {
   --tw-border-opacity: 1;
-  border-bottom-color: rgb(219 234 254 / var(--tw-border-opacity));
+  border-bottom-color: rgb(236 72 153 / var(--tw-border-opacity));
 }
 
-.group:hover .group-hover\:border-b-blue-900 {
+.group:hover .group-hover\:border-b-indigo-500 {
   --tw-border-opacity: 1;
-  border-bottom-color: rgb(30 58 138 / var(--tw-border-opacity));
+  border-bottom-color: rgb(99 102 241 / var(--tw-border-opacity));
 }
 
-.group:hover .group-hover\:border-b-blue-400 {
+.group:hover .group-hover\:border-b-indigo-800 {
   --tw-border-opacity: 1;
-  border-bottom-color: rgb(96 165 250 / var(--tw-border-opacity));
+  border-bottom-color: rgb(55 48 163 / var(--tw-border-opacity));
 }
 
-.group:hover .group-hover\:border-b-blue-200 {
+.group:hover .group-hover\:border-b-indigo-300 {
   --tw-border-opacity: 1;
-  border-bottom-color: rgb(191 219 254 / var(--tw-border-opacity));
+  border-bottom-color: rgb(165 180 252 / var(--tw-border-opacity));
 }
 
-.group:hover .group-hover\:border-b-indigo-200 {
+.group:hover .group-hover\:border-b-sky-300 {
   --tw-border-opacity: 1;
-  border-bottom-color: rgb(199 210 254 / var(--tw-border-opacity));
+  border-bottom-color: rgb(125 211 252 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-sky-900 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(12 74 110 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:border-b-sky-600 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(2 132 199 / var(--tw-border-opacity));
 }
 
 .group:hover .group-hover\:shadow-none {
