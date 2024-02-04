@@ -99,3 +99,21 @@
     background-attachment: fixed;
     
 }
+
+.rpsImg{
+    background-image: url("../assets/gridProjects/rps2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+.sliderImg{
+    background-image: url("../assets/gridProjects/slider1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
