@@ -91,15 +91,16 @@
     </div> -->
 
     <!-- <i class="fi fi-rr-menu-burger"></i> -->
+    <button class="sm:hidden h-6 w-6 bg-black p-1 border-[0.5px] border-gray-500 rounded-sm hover:border-white">
+        <img src="../assets/icons/navbar icons/menu-burger.png" alt="menu-burger icon" class="">
+    </button>
+
     <div>
         <h1 class="flex flex-row text-3xl sm:text-5xl text-center animated-text gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-36 sm:h-28" id="animatedText">
             Welcome <?php echo "{$_SESSION['username']}"?>, on my site 
         </h1>
     </div>
         
-    <!-- <lord-icon style="display:inline-block"  src="https://cdn.lordicon.com/pcwupfyl.json" trigger="loop" style="width:100px;height:100px"></lord-icon> -->
-    <!-- <i class="fi fi-rr-cross-small"></i> -->
-
     <main class="flex items-center justify-center flex-col gap-3 sm:w-[620px]">
         <div class="flex items-center justify-center flex-col gap-5 m-3">
             <div class="text-lg sm:text-2xl h-[1150px] mysql-custom:h-[1000px]" id="mainText">
