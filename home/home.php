@@ -53,16 +53,21 @@
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-[1.25rem] backgroundImg text-[whitesmoke] MV-boli">
     <header class="w-full">
         <div class="hidden sm:grid grid-cols-5 gap-0 place-items-center w-full bg-black text-white h-20 text-xl" id="navbar">
-            <div class="text-center">Home</div>
-            <div class=" group text-center flex items-center justify-center h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-b-violet-300 hover:bg-slate-800 active:bg-slate-900 ">
+            <div class="group text-center flex items-center justify-center h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950">Home</div>
+
+            <div class="group text-center flex items-center justify-center h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
                 <span class="">Profile</span>
             </div>
 
-            <div class="text-center ">Tools</div>
+            <div class="group text-center flex items-center justify-center h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+                <span class="">Tools</span>
+            </div>
 
-            <div class="text-center">About Us</div>
+            <div class="group text-center flex items-center justify-center h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+                <span>About Us</span>
+            </div>
 
-            <div class="text-center ">
+            <div class="group text-center flex items-center justify-center h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-r-8 hover:border-b-white hover:border-r-white hover:bg-gray-800 active:bg-slate-950">
                 Logout
             </div>
         </div>
