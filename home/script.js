@@ -93,19 +93,29 @@ menuBurgerButton.addEventListener("click", () =>{
    if(menuburgerImgAlt === "menu-burger icon"){
       menuburgerImg.src = "../assets/icons/navbarIcons/cross.png";
       menuburgerImgAlt = "cross icon";
-      toggleVerticalNavbar()
+      addVerticalNavbar()
    }
    
    else{
       menuburgerImg.src = "../assets/icons/navbarIcons/menu-burger.png";
       menuburgerImgAlt = "menu-burger icon";
-      toggleVerticalNavbar()
+      removeVerticalNavbar()
    }  
    
 })
 
-function toggleVerticalNavbar(){
-   verticalNavbar.classList.toggle("flex");
-   verticalNavbar.classList.toggle("hidden");
-   verticalNavbar.classList.toggle("h-96");
+function addVerticalNavbar(){
+   verticalNavbar.classList.toggle("opacity-0");
+   verticalNavbar.classList.toggle("transit-final");
+
 }
+
+function removeVerticalNavbar(){
+   verticalNavbar.classList.toggle("transit-final");
+   setTimeout(() =>{
+      verticalNavbar.classList.toggle("opacity-0");
+   }, 150)
+}
+
+
+
