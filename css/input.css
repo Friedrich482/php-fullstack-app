@@ -144,3 +144,11 @@
     background-attachment: fixed;
     
 }
+
+.navbar-transition-enter-active, .navbar-transition-leave-active {
+    transition: opacity 0.5s;
+}
+
+.navbar-transition-enter, .navbar-transition-leave-to {
+    opacity: 0;
+}

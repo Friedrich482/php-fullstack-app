@@ -48,41 +48,82 @@
     <title>Home 🏠</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="script.js" defer></script>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-[1.25rem] backgroundImg text-[whitesmoke] MV-boli">
-    <header class="w-full">
+    
+
+    <header class="w-full flex gap-3 flex-col">
+
+        <!-- Navbar for big screens -->
+
         <div class="hidden sm:grid grid-cols-5 gap-0 place-items-center w-full bg-black text-white h-20 text-xl" id="navbar">
             
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950">
-
-                <img src="../assets/icons/navbar icons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-r-2  border-r-white transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
                 <span>Home</span>
-
             </div>
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
-                <img src="../assets/icons/navbar icons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Profile</span>
             </div>
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
-                <img src="../assets/icons/navbar icons/wrench.png" alt="tool icon" class="w-6 h-6 relative bottom-1">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbarIcons/wrench.png" alt="tool icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Tools</span>
             </div>
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
-                <img src="../assets/icons/navbar icons/info.png" alt="info icon" class="w-6 h-6 relative bottom-1">
-                <span class="">About Us</span>
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="w-6 h-6 relative bottom-1">
+                <span class="">About</span>
             </div>
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-r-8 hover:border-b-white hover:border-r-white hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-r-8 hover:border-b-white hover border-r-2:border-r-white hover:bg-gray-800 active:bg-slate-950">
                 <span class="">Logout</span>
-                <img src="../assets/icons/navbar icons/exit.png" alt="info icon" class="w-6 h-6 relative bottom-1">
+                <img src="../assets/icons/navbarIcons/exit.png" alt="info icon" class="w-6 h-6 relative bottom-1">
+            </div>
+
+        </div>
+
+        <!-- Navbar for small screens -->
+
+        <button class=" sm:hidden h-9 w-9 bg-black p-1 border-[0.5px] border-gray-500 rounded-sm hover:border-white relative left-4" id="menuBurgerButton">
+            <img src="../assets/icons/navbarIcons/menu-burger.png" alt="menu-burger icon" class="" id="menuBurgerImg">
+        </button>
+        
+        <div class=" group hidden sm:hidden w-full bg-black items-center justify-center flex-col transition duration-1000" id="verticalNavbar">
+            
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
+                <span>Home</span>
+                
+            </div>
+        
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
+                <span class="">Profile</span>
+            </div>
+
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbarIcons/wrench.png" alt="tool icon" class="w-6 h-6 relative bottom-1">
+                <span class="">Tools</span>
+            </div>
+
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="w-6 h-6 relative bottom-1">
+                <span class="">About</span>
+            </div>
+
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+                <span class="">Logout</span>
+                <img src="../assets/icons/navbarIcons/exit.png" alt="info icon" class="w-6 h-6 relative bottom-1">
+            
             </div>
         </div>
     </header>
+
     
+
     <!-- <div class="flex items-center justify-center flex-col gap-2 w-full">
         <button id="visitsDisplayerButton" class="border-4 font-[cursive] rounded-2xl min-w-[5.625rem] text-2xl text-red-600 p-1 bg-black"><i class="fi fi-rr-angle-down"></i></button>
         <div id="visits" style="display: none;" class="text-4xl text-center min-w-24 min-h-3">
@@ -90,17 +131,15 @@
         </div>
     </div> -->
 
-    <!-- <i class="fi fi-rr-menu-burger"></i> -->
+    <!-- Title with animation -->
+
     <div>
-        <h1 class="flex flex-row text-3xl sm:text-5xl text-center animated-text gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-36 sm:h-28" id="animatedText">
+        <h1 class=" flex flex-row text-3xl sm:text-5xl text-center animated-text gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-36 sm:h-28" id="animatedText">
             Welcome <?php echo "{$_SESSION['username']}"?>, on my site 
         </h1>
     </div>
         
-    <!-- <lord-icon style="display:inline-block"  src="https://cdn.lordicon.com/pcwupfyl.json" trigger="loop" style="width:100px;height:100px"></lord-icon> -->
-    <!-- <i class="fi fi-rr-cross-small"></i> -->
-
-    <main class="flex items-center justify-center flex-col gap-3 sm:w-[620px]">
+    <main class="flex items-center justify-center flex-col gap-3 sm:w-[620px] z-0">
         <div class="flex items-center justify-center flex-col gap-5 m-3">
             <div class="text-lg sm:text-2xl h-[1150px] mysql-custom:h-[1000px]" id="mainText">
                 👉 Hello, dear visitor, my name is Friedrich482.<br><br>
@@ -134,10 +173,11 @@
               </div> -->
         
         </div>
-        
-        
+        <!-- Tools grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6">
             
+            <!-- Calculator card -->
+
             <div class="group bg-orange-300 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-lg hover:shadow-white">
 
                 <div class="calcImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-orange-300">
@@ -149,6 +189,8 @@
                 </div>
 
             </div>
+
+            <!-- Comprehensive fetch weather app card -->
 
             <div class="group bg-yellow-300 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
 
@@ -162,6 +204,8 @@
 
             </div>
 
+            <!-- Snake game card -->
+
             <div class="group bg-lime-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
 
                 <div class="snakeImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-lime-600">
@@ -173,6 +217,8 @@
                 </div>
 
             </div>
+
+            <!-- Tic tac toe game card -->
 
             <div class="group bg-slate-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
 
@@ -186,6 +232,8 @@
 
             </div>
 
+            <!-- Shifumi game card -->
+
             <div class="group bg-red-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
 
                 <div class="rpsImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-red-600">
@@ -197,6 +245,8 @@
                 </div>
 
             </div>
+
+            <!-- Images slider card -->
 
             <div class="group bg-indigo-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
 
@@ -210,6 +260,8 @@
 
             </div>
 
+            <!-- Stopwatch card -->
+
             <div class="group bg-sky-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
 
                 <div class="stopwatchImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-sky-600">
@@ -222,6 +274,8 @@
 
             </div>
 
+            <!-- Clock card -->
+
             <div class="group bg-blue-900 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
 
                 <div class="clockImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-blue-900">
@@ -233,6 +287,8 @@
                 </div>
 
             </div>
+
+            <!-- To-do-list -->
 
             <div class="group bg-rose-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
 
@@ -247,22 +303,33 @@
             </div>
 
         </div>
+
         <div class="h-7"></div>
+
+        <!-- Logout button -->
+
         <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
             <input type="button" value="Logout" id="logout" name="logout" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
         </div>
     </main>
     
 
+    <!-- Dialog for logout -->
+
     <dialog id="confirmDeconnexionDialog" class="hidden items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] h-80">
         <form action="" method="post">
             <label class="text-2xl">Are you sure to log out ?</label>
 
             <div class="flex items-center justify-center flex-col gap-5">
+
+                <!-- Yes button -->
+
                 <div class="p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
                     <input type="submit" value="Yes ✅" class="cursor-pointer bg-slate-700 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2 hover:bg-slate-700 hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
                 </div>
                 
+                <!-- No button -->
+
                 <div class="p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
                     <input type="button" value="No ❌" id="denyButton" class="cursor-pointer bg-slate-700 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2 hover:bg-slate-700 hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
                 </div>
@@ -272,8 +339,7 @@
         </form>
     </dialog>
 
-   <br><br>
-   <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
 </body>
 </html>
 <?php

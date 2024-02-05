@@ -54,9 +54,11 @@ function animateText() {
 
 animateText();
 
+// animation for the tag main text
+
 const mainText = document.getElementById('mainText');
 const animatedTextContent = mainText.innerHTML;
-console.log(animatedTextContent)
+// console.log(animatedTextContent)
 let mainTextCharIndex = 0;
 let reverseMain = false;
 
@@ -72,9 +74,38 @@ function animatemainText() {
       mainCursor.classList.add("hidden");
       return;
    }
+
    const delay = isLineBreak ? 1 : (mainTextCharIndex === 0 || mainTextCharIndex === animatedTextContent.length ? 1000 : 1);
    setTimeout(animatemainText, delay);
 }
 
 animatemainText();
 
+// js for the menu burger button
+
+const menuBurgerButton = document.querySelector("#menuBurgerButton");
+const menuburgerImg = document.querySelector("#menuBurgerImg");
+let menuburgerImgAlt = menuburgerImg.alt
+const verticalNavbar = document.querySelector("#verticalNavbar");
+
+menuBurgerButton.addEventListener("click", () =>{
+
+   if(menuburgerImgAlt === "menu-burger icon"){
+      menuburgerImg.src = "../assets/icons/navbarIcons/cross.png";
+      menuburgerImgAlt = "cross icon";
+      toggleVerticalNavbar()
+   }
+   
+   else{
+      menuburgerImg.src = "../assets/icons/navbarIcons/menu-burger.png";
+      menuburgerImgAlt = "menu-burger icon";
+      toggleVerticalNavbar()
+   }  
+   
+})
+
+function toggleVerticalNavbar(){
+   verticalNavbar.classList.toggle("flex");
+   verticalNavbar.classList.toggle("hidden");
+   verticalNavbar.classList.toggle("h-96");
+}
