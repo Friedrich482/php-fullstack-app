@@ -16,7 +16,8 @@ Technologies/tools/languages used :
 - [ ] The user will enter that number and will pass only if the number matches. After that the number will be put to zero in the DB.
 - [ ] For the registration, I will do the same thing.
 - [x] a nice animation to the welcome message 👋 when logging or registering. It needs to be multicolor and chars will display one after the other
-- [ ] a navbar (if possible) on the home page (the tools will be classified by category : game 🎮, weather app ☀, calculator 🖩, to do-list, and so on)
+- [x] a navbar (if possible) on the home page
+- [ ] ~~the tools will be classified by category : game 🎮, weather app ☀, calculator 🖩, to do-list, and so on~~
 - [x] All the games and utilities as ~~flex~~ grid 💪 elements (and their behavior should be responsive) (Here improvements are coming )
 - [ ] a different page for each tool
 - [ ] the background image may change depending of the moment of the day : sunrise 🌅, day ☀, sunset 🌇, night 🌙
@@ -25,6 +26,7 @@ Technologies/tools/languages used :
 - [ ] display the time in the navbar, eventually
 - [ ] the to-do-list must use the LocalStorage
 - [x] For the log out, a dialog 💬 should pop up ( maybe a blur effect will be interesting, in background )
-- [ ] The navbar should contain profile with infos about user, tools ( in many sections ) and logout
+- [x] The navbar should contain profile with infos about user, tools ( in many sections ) and logout
+- [ ] The infos like counter of visits will be in Profile
 
 This list will be updated depending on my progression through it.
