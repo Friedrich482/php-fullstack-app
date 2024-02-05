@@ -48,20 +48,19 @@
     <title>Home 🏠</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="script.js" defer></script>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-[1.25rem] backgroundImg text-[whitesmoke] MV-boli">
     
-    <!-- Navbar for big screens -->
 
     <header class="w-full">
+
+        <!-- Navbar for big screens -->
+
         <div class="hidden sm:grid grid-cols-5 gap-0 place-items-center w-full bg-black text-white h-20 text-xl" id="navbar">
             
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-r-2  border-r-white transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950">
-
                 <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
                 <span>Home</span>
-
             </div>
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
@@ -83,9 +82,48 @@
                 <span class="">Logout</span>
                 <img src="../assets/icons/navbarIcons/exit.png" alt="info icon" class="w-6 h-6 relative bottom-1">
             </div>
+
+        </div>
+
+        <!-- Navbar for small screens -->
+
+        <button class=" sm:hidden h-6 w-6 bg-black p-1 border-[0.5px] border-gray-500 rounded-sm hover:border-white" id="menuBurgerButton">
+            <img src="../assets/icons/navbarIcons/menu-burger.png" alt="menu-burger icon" class="" id="menuBurgerImg">
+        </button>
+        
+        <div class=" group hidden sm:hidden w-full bg-black items-center justify-center flex-col" id="verticalNavbar">
+            
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
+                <span>Home</span>
+                
+            </div>
+        
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
+                <span class="">Profile</span>
+            </div>
+
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbarIcons/wrench.png" alt="tool icon" class="w-6 h-6 relative bottom-1">
+                <span class="">Tools</span>
+            </div>
+
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+                <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="w-6 h-6 relative bottom-1">
+                <span class="">About</span>
+            </div>
+
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+                <span class="">Logout</span>
+                <img src="../assets/icons/navbarIcons/exit.png" alt="info icon" class="w-6 h-6 relative bottom-1">
+            
+            </div>
         </div>
     </header>
+
     
+
     <!-- <div class="flex items-center justify-center flex-col gap-2 w-full">
         <button id="visitsDisplayerButton" class="border-4 font-[cursive] rounded-2xl min-w-[5.625rem] text-2xl text-red-600 p-1 bg-black"><i class="fi fi-rr-angle-down"></i></button>
         <div id="visits" style="display: none;" class="text-4xl text-center min-w-24 min-h-3">
@@ -93,23 +131,15 @@
         </div>
     </div> -->
 
-    <!-- <i class="fi fi-rr-menu-burger"></i> -->
-
-    <!-- Navbar for small screens -->
-
-    <button class="group sm:hidden h-6 w-6 bg-black p-1 border-[0.5px] border-gray-500 rounded-sm hover:border-white" id="menuBurgerButton">
-        <img src="../assets/icons/navbarIcons/menu-burger.png" alt="menu-burger icon" class="" id="menuBurgerImg">
-    </button>
-
     <!-- Title with animation -->
 
     <div>
-        <h1 class="flex flex-row text-3xl sm:text-5xl text-center animated-text gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-36 sm:h-28" id="animatedText">
+        <h1 class=" flex flex-row text-3xl sm:text-5xl text-center animated-text gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-36 sm:h-28" id="animatedText">
             Welcome <?php echo "{$_SESSION['username']}"?>, on my site 
         </h1>
     </div>
         
-    <main class="flex items-center justify-center flex-col gap-3 sm:w-[620px]">
+    <main class="flex items-center justify-center flex-col gap-3 sm:w-[620px] z-0">
         <div class="flex items-center justify-center flex-col gap-5 m-3">
             <div class="text-lg sm:text-2xl h-[1150px] mysql-custom:h-[1000px]" id="mainText">
                 👉 Hello, dear visitor, my name is Friedrich482.<br><br>

@@ -86,17 +86,26 @@ animatemainText();
 const menuBurgerButton = document.querySelector("#menuBurgerButton");
 const menuburgerImg = document.querySelector("#menuBurgerImg");
 let menuburgerImgAlt = menuburgerImg.alt
+const verticalNavbar = document.querySelector("#verticalNavbar");
 
 menuBurgerButton.addEventListener("click", () =>{
-   
+
    if(menuburgerImgAlt === "menu-burger icon"){
       menuburgerImg.src = "../assets/icons/navbarIcons/cross.png";
-      menuburgerImgAlt = "cross icon"
+      menuburgerImgAlt = "cross icon";
+      toggleVerticalNavbar()
    }
    
    else{
       menuburgerImg.src = "../assets/icons/navbarIcons/menu-burger.png";
-      menuburgerImgAlt = "menu-burger icon"
+      menuburgerImgAlt = "menu-burger icon";
+      toggleVerticalNavbar()
    }  
    
 })
+
+function toggleVerticalNavbar(){
+   verticalNavbar.classList.toggle("flex");
+   verticalNavbar.classList.toggle("hidden");
+   verticalNavbar.classList.toggle("h-96");
+}
