@@ -158,7 +158,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .transit{
-    transition: height 200ms ease-in-out;
+    transition: height 300ms ease-in-out;
     height: 0;
 }
 .transit-final{

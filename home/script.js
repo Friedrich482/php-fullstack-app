@@ -114,7 +114,7 @@ function removeVerticalNavbar(){
    verticalNavbar.classList.toggle("transit-final");
    setTimeout(() =>{
       verticalNavbar.classList.toggle("opacity-0");
-   }, 150)
+   }, 250);
 }
 
 

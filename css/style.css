@@ -664,10 +664,6 @@ video {
   height: 2.25rem;
 }
 
-.h-96 {
-  height: 24rem;
-}
-
 .h-\[1\.25rem\] {
   height: 1.25rem;
 }
@@ -678,10 +674,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-0 {
-  height: 0px;
 }
 
 .min-h-3 {
@@ -1211,16 +1203,16 @@ video {
   text-decoration-line: none;
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .opacity-75 {
   opacity: 0.75;
 }
 
 .opacity-95 {
   opacity: 0.95;
-}
-
-.opacity-0 {
-  opacity: 0;
 }
 
 .shadow-lg {
@@ -1442,7 +1434,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .transit{
-  transition: height 200ms ease-in-out;
+  transition: height 300ms ease-in-out;
   height: 0;
 }
 
