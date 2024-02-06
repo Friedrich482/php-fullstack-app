@@ -87,7 +87,7 @@
 
         <!-- Navbar for small screens -->
 
-        <button class=" sm:hidden h-9 w-9 bg-black p-1 border-[0.5px] border-gray-500 rounded-sm hover:border-white relative left-4" id="menuBurgerButton">
+        <button class=" sm:hidden h-9 w-9 bg-black p-1 border-[0.5px] border-gray-500 rounded-sm hover:border-white relative left-4 top-2" id="menuBurgerButton">
             <img src="../assets/icons/navbarIcons/menu-burger.png" alt="menu-burger icon" class="" id="menuBurgerImg">
         </button>
         

@@ -23,7 +23,8 @@ Technologies/tools/languages used :
 - [ ] the background image may change depending of the moment of the day : sunrise 🌅, day ☀, sunset 🌇, night 🌙
 - [ ] The counter of visits will be attached to an other element (possibly the navbar, and so it will no more be so messy positionned)
 - [ ] I should think to make the footer 🦶 mobile (animation 🎞)
-- [ ] display the time in the navbar, eventually
+- [ ]  ~~display the time in the navbar, eventually~~
+- [ ]  The time will now appear in the Profile tab.
 - [ ] the to-do-list must use the LocalStorage
 - [x] For the log out, a dialog 💬 should pop up ( maybe a blur effect will be interesting, in background )
 - [x] The navbar should contain profile with infos about user, tools ( in many sections ) and logout
