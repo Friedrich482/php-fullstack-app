@@ -145,10 +145,23 @@
     
 }
 
-.navbar-transition-enter-active, .navbar-transition-leave-active {
-    transition: opacity 0.5s;
+body::-webkit-scrollbar{
+    width: 0.25rem;
 }
 
-.navbar-transition-enter, .navbar-transition-leave-to {
-    opacity: 0;
+body::-webkit-scrollbar-track{
+    background-color: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #6649b8;
+}
+
+.transit{
+    transition: height 300ms ease-in-out;
+    height: 0;
+}
+.transit-final{
+    display: flex;
+    height: 20rem;
 }

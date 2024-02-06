@@ -91,7 +91,7 @@
             <img src="../assets/icons/navbarIcons/menu-burger.png" alt="menu-burger icon" class="" id="menuBurgerImg">
         </button>
         
-        <div class=" group hidden sm:hidden w-full bg-black items-center justify-center flex-col transition duration-1000" id="verticalNavbar">
+        <div class=" group opacity-0 sm:hidden w-full bg-black items-center justify-center flex-col transit" id="verticalNavbar">
             
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
                 <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
