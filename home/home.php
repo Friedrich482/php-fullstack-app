@@ -54,7 +54,7 @@
 
     <header class="w-full flex gap-3 flex-col">
 
-        <!-- Navbar for big screens -->
+        <!-- Navbar for large screens -->
 
         <div class="hidden sm:grid grid-cols-5 gap-0 place-items-center w-full bg-black text-white h-20 text-xl" id="navbar">
             
@@ -78,7 +78,7 @@
                 <span class="">About</span>
             </div>
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-r-8 hover:border-b-white hover border-r-2:border-r-white hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 cursor-pointer transform duration-500 hover:border-b-8 hover:border-r-8 hover:border-b-white hover border-r-2:border-r-white hover:bg-gray-800 active:bg-slate-950" id="logoutLargeScreens">
                 <span class="">Logout</span>
                 <img src="../assets/icons/navbarIcons/exit.png" alt="info icon" class="w-6 h-6 relative bottom-1">
             </div>
@@ -114,7 +114,7 @@
                 <span class=""><a href="#footer">About</a></span>
             </div>
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 cursor-pointer border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="logoutSmallScreens">
                 <span class="">Logout</span>
                 <img src="../assets/icons/navbarIcons/exit.png" alt="info icon" class="w-6 h-6 relative bottom-1">
             
