@@ -11,7 +11,7 @@ const logoutLargeScreens = document.querySelector("#logoutLargeScreens");
 const confirmDeconnexionDialog = document.querySelector('#confirmDeconnexionDialog');
 const denyButton = document.querySelector('#denyButton');
 
-const logoutItems = [logoutLargeScreens, logoutSmallScreens, logoutButton];  // The third elt will be added soon 😉
+let logoutItems = [logoutLargeScreens, logoutSmallScreens, logoutButton]; 
 
 logoutItems.forEach((item) =>{
    
@@ -45,6 +45,27 @@ function toggleconfirmDeconnexionDialog(){
    body.classList.toggle("blur-sm")
 
 }
+// Click on the navbars elements triggers the redirection to the liks inside them
+
+// Large screens (large navbar)
+const LargeHome = document.querySelector("#LargeHome");
+const largeTools = document.querySelector("#largeTools");
+const largeAbout = document.querySelector("#largeAbout");
+
+// Small screens (small navbar)
+const smallHome = document.querySelector("#smallHome");
+const smallTools = document.querySelector("#smallTools");
+const smallAbout = document.querySelector("#smallAbout");
+
+let navbarSections = [LargeHome, largeTools, largeAbout, smallHome, smallTools, smallAbout];
+
+navbarSections.forEach((section) =>{
+   section.addEventListener("click", () =>{
+      const link = section.querySelector("a");
+      const redirectUrl = link.getAttribute("href");
+      window.location.href = redirectUrl
+   })
+})
 
 // Animation for the title 
 
