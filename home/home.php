@@ -95,7 +95,7 @@
             
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
                 <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
-                <span>Home</span>
+                <span><a href="#animatedText" class="no-underline">Home</a></span>
                 
             </div>
         
@@ -106,12 +106,12 @@
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
                 <img src="../assets/icons/navbarIcons/wrench.png" alt="tool icon" class="w-6 h-6 relative bottom-1">
-                <span class="">Tools</span>
+                <span class=""><a href="#toolsGrid">Tools</a></span>
             </div>
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
                 <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="w-6 h-6 relative bottom-1">
-                <span class="">About</span>
+                <span class=""><a href="#footer">About</a></span>
             </div>
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
@@ -174,7 +174,7 @@
         
         </div>
         <!-- Tools grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6" id="toolsGrid">
             
             <!-- Calculator card -->
 
