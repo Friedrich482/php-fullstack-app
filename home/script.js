@@ -1,29 +1,71 @@
-// Logout button
-const body = document.body
+// Logout buttons (one at the bottom of the page and 
+// the two others in the navbars 
+// (vertical and horizontal))
+
+const body = document.body;
+
 const logoutButton = document.querySelector('#logout');
+const logoutSmallScreens = document.querySelector("#logoutSmallScreens");
+const logoutLargeScreens = document.querySelector("#logoutLargeScreens");
+
 const confirmDeconnexionDialog = document.querySelector('#confirmDeconnexionDialog');
 const denyButton = document.querySelector('#denyButton');
 
-logoutButton.addEventListener('click', () =>{
-   confirmDeconnexionDialog.showModal();
-   toggleconfirmDeconnexionDialog();
+let logoutItems = [logoutLargeScreens, logoutSmallScreens, logoutButton]; 
+
+logoutItems.forEach((item) =>{
+   
+   item.addEventListener('click', () =>{
+
+      confirmDeconnexionDialog.showModal();
+      toggleconfirmDeconnexionDialog();
+   
+   })
 })
 
+
 denyButton.addEventListener('click', () =>{
+
    confirmDeconnexionDialog.close();
    toggleconfirmDeconnexionDialog();
+
 })
 
 confirmDeconnexionDialog.addEventListener('cancel', () =>{
+
    confirmDeconnexionDialog.close();
    toggleconfirmDeconnexionDialog();
+
 })
 
 function toggleconfirmDeconnexionDialog(){
+
    confirmDeconnexionDialog.classList.toggle("hidden");
    confirmDeconnexionDialog.classList.toggle("flex");
    body.classList.toggle("blur-sm")
+
 }
+// Click on the navbars elements triggers the redirection to the liks inside them
+
+// Large screens (large navbar)
+const LargeHome = document.querySelector("#LargeHome");
+const largeTools = document.querySelector("#largeTools");
+const largeAbout = document.querySelector("#largeAbout");
+
+// Small screens (small navbar)
+const smallHome = document.querySelector("#smallHome");
+const smallTools = document.querySelector("#smallTools");
+const smallAbout = document.querySelector("#smallAbout");
+
+let navbarSections = [LargeHome, largeTools, largeAbout, smallHome, smallTools, smallAbout];
+
+navbarSections.forEach((section) =>{
+   section.addEventListener("click", () =>{
+      const link = section.querySelector("a");
+      const redirectUrl = link.getAttribute("href");
+      window.location.href = redirectUrl
+   })
+})
 
 // Animation for the title 
 
@@ -44,6 +86,7 @@ function animateText() {
    if (charIndex > textLength) {
       reverse = true;
    } 
+
    else if (charIndex < 0) {
       reverse = false;
    }
@@ -58,7 +101,6 @@ animateText();
 
 const mainText = document.getElementById('mainText');
 const animatedTextContent = mainText.innerHTML;
-// console.log(animatedTextContent)
 let mainTextCharIndex = 0;
 let reverseMain = false;
 

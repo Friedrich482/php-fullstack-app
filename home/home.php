@@ -54,31 +54,31 @@
 
     <header class="w-full flex gap-3 flex-col">
 
-        <!-- Navbar for big screens -->
+        <!-- Navbar for large screens -->
 
         <div class="hidden sm:grid grid-cols-5 gap-0 place-items-center w-full bg-black text-white h-20 text-xl" id="navbar">
             
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-r-2  border-r-white transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2  border-r-white transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950" id="LargeHome">
                 <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
-                <span>Home</span>
+                <span><a href="#animatedText" class="no-underline">Home</a></span>
             </div>
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
                 <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Profile</span>
             </div>
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950" id="largeTools">
                 <img src="../assets/icons/navbarIcons/wrench.png" alt="tool icon" class="w-6 h-6 relative bottom-1">
-                <span class="">Tools</span>
+                <span class=""><a href="#toolsGrid">Tools</a></span>
             </div>
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950" id="largeAbout">
                 <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="w-6 h-6 relative bottom-1">
-                <span class="">About</span>
+                <span class=""><a href="#footer">About</a></span>
             </div>
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 transform duration-500 hover:border-b-8 hover:border-r-8 hover:border-b-white hover border-r-2:border-r-white hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full  p-0 cursor-pointer transform duration-500 hover:border-b-8 hover:border-r-8 hover:border-b-white hover border-r-2:border-r-white hover:bg-gray-800 active:bg-slate-950" id="logoutLargeScreens">
                 <span class="">Logout</span>
                 <img src="../assets/icons/navbarIcons/exit.png" alt="info icon" class="w-6 h-6 relative bottom-1">
             </div>
@@ -93,28 +93,28 @@
         
         <div class=" group opacity-0 sm:hidden w-full bg-black items-center justify-center flex-col transit" id="verticalNavbar">
             
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallHome">
                 <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
-                <span>Home</span>
+                <span><a href="#animatedText" class="no-underline">Home</a></span>
                 
             </div>
         
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
                 <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Profile</span>
             </div>
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallTools">
                 <img src="../assets/icons/navbarIcons/wrench.png" alt="tool icon" class="w-6 h-6 relative bottom-1">
-                <span class="">Tools</span>
+                <span class=""><a href="#toolsGrid">Tools</a></span>
             </div>
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallAbout">
                 <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="w-6 h-6 relative bottom-1">
-                <span class="">About</span>
+                <span class=""><a href="#footer">About</a></span>
             </div>
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full  p-0 cursor-pointer border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="logoutSmallScreens">
                 <span class="">Logout</span>
                 <img src="../assets/icons/navbarIcons/exit.png" alt="info icon" class="w-6 h-6 relative bottom-1">
             
@@ -174,7 +174,7 @@
         
         </div>
         <!-- Tools grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6" id="toolsGrid">
             
             <!-- Calculator card -->
 
