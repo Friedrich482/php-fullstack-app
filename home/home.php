@@ -327,13 +327,15 @@
         <div class="h-7"></div>
 
          <!-- Logout button -->
+
          <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500">
             <input type="button" value="Logout" id="logout" name="logout" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
         </div>
 
          <!-- "Go back to top" button-->
-         <div class=" h-16 w-16 bg-white rounded-2xl flex items-center justify-center  cursor-pointer hover:bg-slate-200">
-            <a href="#header" id="backToTop"><img src="../assets/icons/top.png" alt="back to up !" class="scroll-smooth h-7 w-7"></a>
+
+         <div class=" h-12 w-12 sm:h-16 sm:w-16 bg-white rounded-2xl flex items-center justify-center cursor-pointer ml-auto mr-6 hover:bg-slate-200 hover:animate-bounce" title="Go back to the top">
+            <a href="#header" id="backToTop"><img src="../assets/icons/top.png" alt="back to up !" class="scroll-smooth h-5 w-5 sm:h-7 sm:w-7"></a>
         </div>
 
     </main>
