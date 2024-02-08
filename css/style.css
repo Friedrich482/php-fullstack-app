@@ -568,6 +568,10 @@ video {
   top: 0.5rem;
 }
 
+.right-2 {
+  right: 0.5rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -588,16 +592,8 @@ video {
   margin-bottom: 2rem;
 }
 
-.ml-0 {
-  margin-left: 0px;
-}
-
 .ml-20 {
   margin-left: 5rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
 }
 
 .mr-20 {
@@ -618,6 +614,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
 }
 
 .grid {
@@ -692,6 +692,10 @@ video {
   height: 100%;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
 .min-h-3 {
   min-height: 0.75rem;
 }
@@ -738,6 +742,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-16 {
+  width: 4rem;
 }
 
 .min-w-16 {
@@ -799,8 +807,16 @@ video {
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
 .cursor-pointer {
   cursor: pointer;
+}
+
+.cursor-wait {
+  cursor: wait;
 }
 
 .select-none {
@@ -885,6 +901,10 @@ video {
   row-gap: 2.5rem;
 }
 
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
 .text-wrap {
   text-wrap: wrap;
 }
@@ -903,6 +923,14 @@ video {
 
 .rounded-sm {
   border-radius: 0.125rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .rounded-b-md {
@@ -1080,6 +1108,11 @@ video {
 .bg-yellow-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+}
+
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-br {
@@ -1533,6 +1566,16 @@ body::-webkit-scrollbar-thumb{
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-slate-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-slate-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-gradient-to-br:hover {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -1685,24 +1728,8 @@ body::-webkit-scrollbar-thumb{
 }
 
 @media (min-width: 310px) {
-  .sm-custom\:relative {
-    position: relative;
-  }
-
-  .sm-custom\:left-11 {
-    left: 2.75rem;
-  }
-
-  .sm-custom\:ml-auto {
-    margin-left: auto;
-  }
-
   .sm-custom\:flex-row {
     flex-direction: row;
-  }
-
-  .sm-custom\:gap-0 {
-    gap: 0px;
   }
 
   .sm-custom\:gap-1 {
@@ -1723,10 +1750,6 @@ body::-webkit-scrollbar-thumb{
 
   .sm\:ml-36 {
     margin-left: 9rem;
-  }
-
-  .sm\:mr-10 {
-    margin-right: 2.5rem;
   }
 
   .sm\:mr-36 {
