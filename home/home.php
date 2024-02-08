@@ -52,7 +52,7 @@
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-[1.25rem] backgroundImg text-[whitesmoke] MV-boli">
     
 
-    <header class="w-full flex gap-3 flex-col">
+    <header class="w-full flex gap-3 flex-col" id="header">
 
         <!-- Navbar for large screens -->
 
@@ -305,17 +305,18 @@
         </div>
 
         <div class="h-7"></div>
-        <div class="flex items-center justify-center w-full">
-
-            <div class="absolute w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
+        <div class="flex items-center justify-center w-full text-wrap flex-col sm-custom:flex-row gap-3 sm-custom:gap-1">
+            
+            <!-- Logout button -->
+            <div class="sm-custom:relative sm-custom:left-11 ml-0 sm-custom:ml-auto w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500">
                 <input type="button" value="Logout" id="logout" name="logout" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
             </div>
 
-            <div class="ml-auto">
-                <img src="../assets/icons/angle-circle-up.png" alt="back to up !">
+            <!-- "Go back to top" button -->
+            <div class="h-12 w-12 ml-0 sm-custom:ml-auto mr-2 sm:mr-10 bg-white rounded-full hover:scale-125 hover:border-2 hover:border-white">
+                <a href="#header"><img src="../assets/icons/angle-circle-up.png" alt="back to up !"></a>
             </div>
         </div>
-        <!-- Logout button -->
 
         
     </main>
