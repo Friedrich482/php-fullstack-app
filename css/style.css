@@ -588,8 +588,16 @@ video {
   margin-bottom: 2rem;
 }
 
+.ml-0 {
+  margin-left: 0px;
+}
+
 .ml-20 {
   margin-left: 5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .mr-20 {
@@ -626,6 +634,10 @@ video {
 
 .h-10 {
   height: 2.5rem;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .h-2\/5 {
@@ -690,6 +702,10 @@ video {
 
 .w-11\/12 {
   width: 91.666667%;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .w-5 {
@@ -867,6 +883,10 @@ video {
 
 .gap-y-10 {
   row-gap: 2.5rem;
+}
+
+.text-wrap {
+  text-wrap: wrap;
 }
 
 .rounded-2xl {
@@ -1459,6 +1479,10 @@ body::-webkit-scrollbar-thumb{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:border-2:hover {
+  border-width: 2px;
+}
+
 .hover\:border-b-4:hover {
   border-bottom-width: 4px;
 }
@@ -1661,8 +1685,28 @@ body::-webkit-scrollbar-thumb{
 }
 
 @media (min-width: 310px) {
+  .sm-custom\:relative {
+    position: relative;
+  }
+
+  .sm-custom\:left-11 {
+    left: 2.75rem;
+  }
+
+  .sm-custom\:ml-auto {
+    margin-left: auto;
+  }
+
   .sm-custom\:flex-row {
     flex-direction: row;
+  }
+
+  .sm-custom\:gap-0 {
+    gap: 0px;
+  }
+
+  .sm-custom\:gap-1 {
+    gap: 0.25rem;
   }
 }
 
@@ -1679,6 +1723,10 @@ body::-webkit-scrollbar-thumb{
 
   .sm\:ml-36 {
     margin-left: 9rem;
+  }
+
+  .sm\:mr-10 {
+    margin-right: 2.5rem;
   }
 
   .sm\:mr-36 {
