@@ -20,7 +20,7 @@ Technologies/tools/languages used :
 - [ ] ~~the tools will be classified by category : game 🎮, weather app ☀, calculator 🖩, to do-list, and so on~~
 - [x] All the games and utilities as ~~flex~~ grid 💪 elements (and their behavior should be responsive) (Here improvements are coming )
 - [ ] a different page for each tool
-- [ ] the background image may change depending of the moment of the day : sunrise 🌅, day ☀, sunset 🌇, night 🌙
+- [ ] ~~the background image may change depending of the moment of the day : sunrise 🌅, day ☀, sunset 🌇, night 🌙~~ (*canceled*)
 - [ ] The counter of visits will be attached to an other element (possibly the navbar, and so it will no more be so messy positionned)
 - [ ] I should think to make the footer 🦶 mobile (animation 🎞)
 - [ ]  ~~display the time in the navbar, eventually~~
@@ -29,5 +29,6 @@ Technologies/tools/languages used :
 - [x] For the log out, a dialog 💬 should pop up ( maybe a blur effect will be interesting, in background )
 - [x] The navbar should contain profile with infos about user, tools ( in many sections ) and logout
 - [ ] The infos like counter of visits will be in Profile
+- [ ] The "go back to top" button may be set as fixed element, so it will display at the bottom of the page as soon as we quit the top  
 
 This list will be updated depending on my progression through it.
