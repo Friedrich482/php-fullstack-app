@@ -716,6 +716,10 @@ video {
   height: 100%;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .min-h-3 {
   min-height: 0.75rem;
 }
@@ -959,6 +963,14 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
 .scroll-smooth {
@@ -1860,6 +1872,10 @@ body::-webkit-scrollbar-thumb{
 
   .sm\:h-6 {
     height: 1.5rem;
+  }
+
+  .sm\:h-80 {
+    height: 20rem;
   }
 
   .sm\:w-0 {
