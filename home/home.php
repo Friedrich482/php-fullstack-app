@@ -164,8 +164,23 @@
             </div>
         </div>
 
-        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] h-80">
+        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] h-80 overflow-hidden">
+            <div class="flex items-center justify-items-center sm:gap-4 w-full">
+                <span>
+                    <img src="../assets/icons/navbarIcons/circle-user.png" alt="User" class="h-12 w-12 sm:w-6 sm:h-6">
+                </span>
+                <span>Username : <span class="text-blue-500"><?php echo "{$_SESSION['username']}"?></span></span>
+            </div>
             
+            <div class="flex items-center justify-items-center sm:gap-4 w-full">
+                <span>
+                    <img src="../assets/icons/stats.png" alt="stats icon" class="h-12 w-12 sm:w-6 sm:h-6">
+                </span>
+                <span>Number of visits : <span class="text-blue-500"><?php echo $number_of_visits ?></span></span>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
         </dialog>
         
     </header>
