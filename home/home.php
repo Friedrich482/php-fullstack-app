@@ -97,9 +97,18 @@
 
         <!-- Navbar for small screens -->
 
+        <!-- Menu Burger button -->
+
         <button class=" sm:hidden h-9 w-9 bg-black p-1 border-[0.5px] border-gray-500 rounded-sm hover:border-white relative left-4 top-2" id="menuBurgerButton">
             <img src="../assets/icons/navbarIcons/menu-burger.png" alt="menu-burger icon" class="" id="menuBurgerImg">
         </button>
+
+        <!-- Ping element for notification (here for the menu burger button) -->
+
+        <span class="sm:hidden flex relative bottom-11 left-11 w-4">
+            <span class="h-3 w-3 rounded-full bg-sky-400 absolute inline-flex animate-ping z-0 opacity-75"></span>
+            <span class="h-3 w-3 rounded-full bg-sky-500 relative inline-flex z-10"></span>    
+        </span>
         
         <div class=" group opacity-0 sm:hidden w-full bg-black items-center justify-center flex-col transit" id="verticalNavbar">
             
