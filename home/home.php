@@ -165,19 +165,42 @@
         </div>
 
         <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] h-80 overflow-hidden">
-            <div class="flex items-center justify-items-center sm:gap-4 w-full">
-                <span>
+            <h2 class="text-3xl sm:text-4xl">About Me</h2>
+            <hr class="text-white w-5/6">
+
+            <div class="flex items-center justify-center w-full sm:justify-center">
+
+                <span class="sm:w-1/4 sm:flex sm:items-center sm:justify-center">
                     <img src="../assets/icons/navbarIcons/circle-user.png" alt="User" class="h-12 w-12 sm:w-6 sm:h-6">
                 </span>
-                <span>Username : <span class="text-blue-500"><?php echo "{$_SESSION['username']}"?></span></span>
+
+                <span class="sm:w-3/4 sm:flex sm:items-start">
+
+                    Username : &VeryThinSpace;
+                        <span class="text-blue-500">
+                        <?php echo "{$_SESSION['username']}"?>
+                    </span> 
+
+                </span>
+
             </div>
-            
-            <div class="flex items-center justify-items-center sm:gap-4 w-full">
-                <span>
+
+            <div class="flex items-center justify-center w-full sm:justify-center">
+                
+                <span class="sm:w-1/4 sm:flex sm:items-center sm:justify-center">
                     <img src="../assets/icons/stats.png" alt="stats icon" class="h-12 w-12 sm:w-6 sm:h-6">
                 </span>
-                <span>Number of visits : <span class="text-blue-500"><?php echo $number_of_visits ?></span></span>
+
+                <span class="sm:w-3/4 sm:flex sm:items-start">
+                Number of visits : &VeryThinSpace;
+                    <span class="text-blue-500">
+                        <?php echo $number_of_visits ?>
+                    </span>
+                </span>
+
             </div>
+
+
             <div></div>
             <div></div>
             <div></div>
