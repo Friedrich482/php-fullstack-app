@@ -188,3 +188,26 @@ function removeVerticalNavbar(){
 }
 
 
+// Dialog profile 
+const profileDialog = document.querySelector("#profileDialog");
+let profile = [smallProfile, largeProfile];
+
+profile.forEach((element) =>{
+   element.addEventListener('click', () =>{
+      profileDialog.showModal()
+      toggleProfileDialog();
+   })
+})
+
+profileDialog.addEventListener('cancel', () =>{
+   profileDialog.close();
+   toggleProfileDialog()
+})
+
+function toggleProfileDialog(){
+
+   profileDialog.classList.toggle("hidden");
+   profileDialog.classList.toggle("flex");
+   body.classList.toggle("blur-sm")
+
+}

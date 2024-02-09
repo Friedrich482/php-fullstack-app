@@ -130,7 +130,7 @@
             <!-- Profile -->
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallProfile">
-                <div class="w-4"></div>
+                <div class="w-3"></div>
                 <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Profile</span>
 
@@ -163,16 +163,22 @@
                 <span class="">Logout</span>
             </div>
         </div>
+
+        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] h-80">
+            
+        </dialog>
+        
     </header>
-
     
-
-    <!-- <div class="flex items-center justify-center flex-col gap-2 w-full">
-        <button id="visitsDisplayerButton" class="border-4 font-[cursive] rounded-2xl min-w-[5.625rem] text-2xl text-red-600 p-1 bg-black"><i class="fi fi-rr-angle-down"></i></button>
-        <div id="visits" style="display: none;" class="text-4xl text-center min-w-24 min-h-3">
+            <!-- <div class="flex items-center justify-center flex-col gap-2 w-full">
+                <button id="visitsDisplayerButton" class="border-4 font-[cursive] rounded-2xl min-w-[5.625rem] text-2xl text-red-600 p-1 bg-black"><i class="fi fi-rr-angle-down"></i></button>
+                <div id="visits" style="display: none;" class="text-4xl text-center min-w-24 min-h-3">
             You have visited this page <label><?php echo $number_of_visits?></label> times
         </div>
-    </div> -->
+        </div> -->
+    
+
+    
 
     <!-- Title with animation -->
 
