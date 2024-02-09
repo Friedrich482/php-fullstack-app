@@ -30,5 +30,6 @@ Technologies/tools/languages used :
 - [x] The navbar should contain profile with infos about user, tools ( in many sections ) and logout
 - [ ] The infos like counter of visits will be in Profile
 - [ ] The "go back to top" button may be set as fixed element, so it will display at the bottom of the page as soon as we quit the top  
+- [ ] If we click on the DOM elements that have the notification **ping**, it disappears and for the *Profile* sections, a dialog 💬 will open and display infos about the users  
 
 This list will be updated depending on my progression through it.

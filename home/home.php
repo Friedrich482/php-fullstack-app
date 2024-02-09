@@ -67,9 +67,16 @@
 
             <!-- Profile -->
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950" id="largeProfile">
                 <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Profile</span>
+
+                 <!-- Ping element for notification -->
+                 <span class="flex relative" id="bigNotification">
+                    <span class="h-3 w-3 rounded-full bg-sky-400 absolute inline-flex animate-ping z-0 opacity-75"></span>
+                    <span class="h-3 w-3 rounded-full bg-sky-500 relative inline-flex z-10"></span>    
+                </span>
+
             </div>
 
             <!-- Tools -->
@@ -89,17 +96,26 @@
             <!-- Logout -->
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full  p-0 cursor-pointer transform duration-500 hover:border-b-8 hover:border-r-8 hover:border-b-white hover border-r-2:border-r-white hover:bg-gray-800 active:bg-slate-950" id="logoutLargeScreens">
-                <span class="">Logout</span>
                 <img src="../assets/icons/navbarIcons/exit.png" alt="info icon" class="w-6 h-6 relative bottom-1">
+                <span class="">Logout</span>
             </div>
 
         </div>
 
         <!-- Navbar for small screens -->
 
+        <!-- Menu Burger button -->
+
         <button class=" sm:hidden h-9 w-9 bg-black p-1 border-[0.5px] border-gray-500 rounded-sm hover:border-white relative left-4 top-2" id="menuBurgerButton">
             <img src="../assets/icons/navbarIcons/menu-burger.png" alt="menu-burger icon" class="" id="menuBurgerImg">
         </button>
+
+        <!-- Ping element for notification (here for the menu burger button) -->
+
+        <span class="sm:hidden flex relative bottom-11 left-11 w-4" id="pingNotificationBurger">
+            <span class="h-3 w-3 rounded-full bg-sky-400 absolute inline-flex animate-ping z-0 opacity-75"></span>
+            <span class="h-3 w-3 rounded-full bg-sky-500 relative inline-flex z-10"></span>    
+        </span>
         
         <div class=" group opacity-0 sm:hidden w-full bg-black items-center justify-center flex-col transit" id="verticalNavbar">
             
@@ -113,9 +129,17 @@
         
             <!-- Profile -->
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallProfile">
+                <div class="w-4"></div>
                 <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Profile</span>
+
+                <!-- Ping element for notification -->
+                <span class="flex relative left-1/4" id="smallNotification">
+                    <span class="h-3 w-3 rounded-full bg-sky-400 absolute inline-flex animate-ping z-0 opacity-75"></span>
+                    <span class="h-3 w-3 rounded-full bg-sky-500 relative inline-flex z-10"></span>    
+                </span>
+
             </div>
 
             <!-- Tools -->
@@ -135,9 +159,8 @@
             <!-- Logout -->
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full  p-0 cursor-pointer border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="logoutSmallScreens">
-                <span class="">Logout</span>
                 <img src="../assets/icons/navbarIcons/exit.png" alt="info icon" class="w-6 h-6 relative bottom-1">
-            
+                <span class="">Logout</span>
             </div>
         </div>
     </header>

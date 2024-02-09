@@ -73,6 +73,29 @@ navbarSections.forEach((section) =>{
    })
 })
 
+// Ping notification management
+
+const menuBurgerButton = document.querySelector("#menuBurgerButton");
+const smallProfile = document.querySelector("#smallProfile");
+const largeProfile = document.querySelector("#largeProfile");
+
+let domElements = [menuBurgerButton, smallProfile, largeProfile];
+
+const pingNotificationBurger = document.querySelector("#pingNotificationBurger");
+const smallScreensNotification = document.querySelector("#smallNotification")
+const bigScreensNotification = document.querySelector("#bigNotification");
+
+let notifications = [pingNotificationBurger, smallScreensNotification, bigScreensNotification];
+
+domElements.forEach((element) =>{
+   let index = domElements.indexOf(element);
+
+   element.addEventListener('click', () =>{
+      notifications[index].classList.remove("flex");
+      notifications[index].classList.add("hidden")
+   })
+})
+
 // Animation for the title 
 
 const animatedText = document.getElementById('animatedText');
@@ -131,7 +154,6 @@ animatemainText();
 
 // js for the menu burger button
 
-const menuBurgerButton = document.querySelector("#menuBurgerButton");
 const menuburgerImg = document.querySelector("#menuBurgerImg");
 let menuburgerImgAlt = menuburgerImg.alt
 const verticalNavbar = document.querySelector("#verticalNavbar");
