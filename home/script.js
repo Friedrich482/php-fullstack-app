@@ -48,16 +48,22 @@ function toggleconfirmDeconnexionDialog(){
 // Click on the navbars elements triggers the redirection to the liks inside them
 
 // Large screens (large navbar)
+
 const LargeHome = document.querySelector("#LargeHome");
 const largeTools = document.querySelector("#largeTools");
 const largeAbout = document.querySelector("#largeAbout");
 
 // Small screens (small navbar)
+
 const smallHome = document.querySelector("#smallHome");
 const smallTools = document.querySelector("#smallTools");
 const smallAbout = document.querySelector("#smallAbout");
 
-let navbarSections = [LargeHome, largeTools, largeAbout, smallHome, smallTools, smallAbout];
+// The "go back to top" wrapper is also in this case, so I include it here
+
+const backToTopWrapper = document.querySelector("#backToTop");
+
+let navbarSections = [LargeHome, largeTools, largeAbout, smallHome, smallTools, smallAbout, backToTopWrapper];
 
 navbarSections.forEach((section) =>{
    section.addEventListener("click", () =>{
@@ -158,6 +164,5 @@ function removeVerticalNavbar(){
       verticalNavbar.classList.toggle("opacity-0");
    }, 250);
 }
-
 
 

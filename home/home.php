@@ -41,7 +41,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,25 +58,35 @@
 
         <div class="hidden sm:grid grid-cols-5 gap-0 place-items-center w-full bg-black text-white h-20 text-xl" id="navbar">
             
+            <!-- Home -->
+
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2  border-r-white transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950" id="LargeHome">
                 <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
                 <span><a href="#animatedText" class="no-underline">Home</a></span>
             </div>
+
+            <!-- Profile -->
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
                 <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Profile</span>
             </div>
 
+            <!-- Tools -->
+
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950" id="largeTools">
                 <img src="../assets/icons/navbarIcons/wrench.png" alt="tool icon" class="w-6 h-6 relative bottom-1">
                 <span class=""><a href="#toolsGrid">Tools</a></span>
             </div>
 
+            <!-- About -->
+
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950" id="largeAbout">
                 <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="w-6 h-6 relative bottom-1">
                 <span class=""><a href="#footer">About</a></span>
             </div>
+
+            <!-- Logout -->
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full  p-0 cursor-pointer transform duration-500 hover:border-b-8 hover:border-r-8 hover:border-b-white hover border-r-2:border-r-white hover:bg-gray-800 active:bg-slate-950" id="logoutLargeScreens">
                 <span class="">Logout</span>
@@ -93,26 +103,36 @@
         
         <div class=" group opacity-0 sm:hidden w-full bg-black items-center justify-center flex-col transit" id="verticalNavbar">
             
+            <!-- Home -->
+
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallHome">
                 <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
                 <span><a href="#animatedText" class="no-underline">Home</a></span>
                 
             </div>
         
+            <!-- Profile -->
+
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
                 <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Profile</span>
             </div>
+
+            <!-- Tools -->
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallTools">
                 <img src="../assets/icons/navbarIcons/wrench.png" alt="tool icon" class="w-6 h-6 relative bottom-1">
                 <span class=""><a href="#toolsGrid">Tools</a></span>
             </div>
 
+            <!-- About -->
+
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallAbout">
                 <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="w-6 h-6 relative bottom-1">
                 <span class=""><a href="#footer">About</a></span>
             </div>
+
+            <!-- Logout -->
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full  p-0 cursor-pointer border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="logoutSmallScreens">
                 <span class="">Logout</span>
@@ -305,20 +325,19 @@
         </div>
 
         <div class="h-7"></div>
-        <div class="flex items-center justify-center w-full text-wrap flex-col sm-custom:flex-row gap-3 sm-custom:gap-1">
-            
-            <!-- Logout button -->
-            <div class="sm-custom:relative sm-custom:left-11 ml-0 sm-custom:ml-auto w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500">
-                <input type="button" value="Logout" id="logout" name="logout" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
-            </div>
 
-            <!-- "Go back to top" button -->
-            <div class="h-12 w-12 ml-0 sm-custom:ml-auto mr-2 sm:mr-10 bg-white rounded-full hover:scale-125 hover:border-2 hover:border-white">
-                <a href="#header"><img src="../assets/icons/angle-circle-up.png" alt="back to up !"></a>
-            </div>
+         <!-- Logout button -->
+
+         <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500">
+            <input type="button" value="Logout" id="logout" name="logout" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
         </div>
 
-        
+         <!-- "Go back to top" button-->
+
+         <div class="group h-12 w-12 sm:h-16 sm:w-16 bg-white rounded-2xl flex items-center justify-center cursor-pointer ml-auto mr-6 hover:bg-slate-200" title="Go back to the top" id="backToTop">
+            <a href="#header"><img src="../assets/icons/top.png" alt="back to up !" class="scroll-smooth h-5 w-5 sm:h-7 sm:w-7 group-hover:animate-bounce"></a>
+        </div>
+
     </main>
     
 
