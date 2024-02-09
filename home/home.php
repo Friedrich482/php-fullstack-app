@@ -67,12 +67,12 @@
 
             <!-- Profile -->
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2 border-r-white transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950" id="largeProfile">
                 <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Profile</span>
 
                  <!-- Ping element for notification -->
-                 <span class="flex relative">
+                 <span class="flex relative" id="bigNotification">
                     <span class="h-3 w-3 rounded-full bg-sky-400 absolute inline-flex animate-ping z-0 opacity-75"></span>
                     <span class="h-3 w-3 rounded-full bg-sky-500 relative inline-flex z-10"></span>    
                 </span>
@@ -112,7 +112,7 @@
 
         <!-- Ping element for notification (here for the menu burger button) -->
 
-        <span class="sm:hidden flex relative bottom-11 left-11 w-4">
+        <span class="sm:hidden flex relative bottom-11 left-11 w-4" id="pingNotificationBurger">
             <span class="h-3 w-3 rounded-full bg-sky-400 absolute inline-flex animate-ping z-0 opacity-75"></span>
             <span class="h-3 w-3 rounded-full bg-sky-500 relative inline-flex z-10"></span>    
         </span>
@@ -129,13 +129,13 @@
         
             <!-- Profile -->
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallProfile">
                 <div class="w-4"></div>
                 <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Profile</span>
 
                 <!-- Ping element for notification -->
-                <span class="flex relative left-1/4">
+                <span class="flex relative left-1/4" id="smallNotification">
                     <span class="h-3 w-3 rounded-full bg-sky-400 absolute inline-flex animate-ping z-0 opacity-75"></span>
                     <span class="h-3 w-3 rounded-full bg-sky-500 relative inline-flex z-10"></span>    
                 </span>
