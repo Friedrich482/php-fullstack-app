@@ -190,24 +190,57 @@ function removeVerticalNavbar(){
 
 // Dialog profile 
 const profileDialog = document.querySelector("#profileDialog");
+const dateDiv = document.querySelector("#dateDiv");
+
 let profile = [smallProfile, largeProfile];
 
 profile.forEach((element) =>{
    element.addEventListener('click', () =>{
       profileDialog.showModal()
       toggleProfileDialog();
+      setInterval(displayDate, 1000)
    })
 })
 
 profileDialog.addEventListener('cancel', () =>{
    profileDialog.close();
-   toggleProfileDialog()
+   toggleProfileDialog();
 })
 
 function toggleProfileDialog(){
 
    profileDialog.classList.toggle("hidden");
    profileDialog.classList.toggle("flex");
-   body.classList.toggle("blur-sm")
+   body.classList.toggle("blur-sm");
+
    // body.classList.toggle("")
+}
+
+function displayDate(){
+   let actualDate = new Date();
+   let year = actualDate.getFullYear();
+   let month = actualDate.getMonth(); 
+   let date = actualDate.getDate();
+   let day = actualDate.getDay(); 
+   
+   let hours = actualDate.getHours();
+   let minutes = actualDate.getMinutes();
+   let seconds = actualDate.getSeconds();
+
+   function padUnit(unit){
+      return unit >= 10 ? unit : "0" + unit;
+   }
+
+   hours = padUnit(hours);
+   minutes = padUnit(minutes);
+   seconds = padUnit(seconds);
+
+   // console.log(units)
+   let months = ["January", "February", "March", "April", "May", "Juni", "July", "August", "September", "October", "November", "December"];
+   let daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+   month = months[Number(month)];
+   day = daysOfWeek[Number(day) - 1];
+
+   dateDiv.textContent = `${day}, The ${month} ${date} ${year} ${hours}:${minutes}:${seconds}`
 }

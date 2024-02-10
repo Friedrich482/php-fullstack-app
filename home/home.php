@@ -255,10 +255,15 @@
                 </span>
 
             </div>
+            
+            <div class="text-sm" id="dateDiv"></div>
+
 
             <div></div>
             <div></div>
             <div></div>
+
+
         </dialog>
         
     </header>
