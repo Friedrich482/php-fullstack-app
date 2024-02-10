@@ -166,8 +166,10 @@
         <!-- Dialog for user's profile -->
 
         <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 w-[330px]  gap-6 z-10 text-[whitesmoke]">
-            <!-- <div class="h-5"></div> -->
-            <h2 class="text-3xl">About Me</h2>
+            <div class="flex items-center justify-center gap-3">
+                <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="h-12 w-12">
+                <h2 class="text-3xl text-blue-500">About Me</h2>
+            </div>
             <hr class="text-white w-11/12">
 
             <!-- Username section -->
