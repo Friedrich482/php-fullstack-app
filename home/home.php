@@ -201,11 +201,11 @@
 
             </div>
 
-            <div class="flex items-center justify-center w-full sm:justify-center">
+            <div class="flex items-center justify-center w-full sm:justify-center sm:h-6">
                 
                 <span class="sm:w-1/4 sm:flex sm:items-center sm:justify-center">
                     
-                    <svg class="h-12 w-12 sm:w-6 sm:h-6" viewBox="0 0 430 430" fill="green" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="h-12 w-12 sm:w-8 sm:h-8" viewBox="0 0 430 430" fill="green" xmlns="http://www.w3.org/2000/svg">
                         <path d="M80.6 98.0996H50" stroke="red" stroke-width="12" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M164.9 120H296.6C318.2 120 336.5 137.7 336.3 159.3C336.2 170 331.9 179.6 324.9 186.6C317.8 193.7 308.1 198 297.3 198H167C165.4 198 163.9 198 162.4 198.1C141.7 199.3 123 208.1 109.2 221.9C94.2 236.9 85 257.7 85.3 280.6C85.8 325.5 123.1 361.4 168 361.4H303.1C303.1 337.9 284 318.8 260.5 318.8H168.9C147.3 318.8 129 301.1 129.2 279.5C129.3 268.8 133.6 259.2 140.6 252.2C147.7 245.1 157.4 240.8 168.2 240.8H298.5C300.1 240.8 301.6 240.8 303.1 240.7C323.8 239.5 342.5 230.7 356.2 216.9C371.2 201.9 380.4 181.2 380.1 158.2C379.6 113.3 342.3 77.4004 297.4 77.4004H164.9" stroke="#FFF" stroke-width="12" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M164.9 120C158.4 126.7 148.9 130.5 138.8 129.1L99.3 123.8C88.7 122.4 80.7 113.3 80.7 102.6V94.7C80.7 84 88.6 74.9 99.3 73.5L138.8 68.2C140.1 68.1 141.5 68 142.8 68C151.4 68 159.2 71.6 164.8 77.4" stroke="#FFF" stroke-width="12" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -215,8 +215,8 @@
                         
                 </span>
 
-                <span class="sm:w-3/4 sm:flex sm:items-start">
-                Best score at snake game: &VeryThinSpace;
+                <span class="sm:w-3/4 sm:flex sm:items-start sm:h-full">
+                Best score at snake: &VeryThinSpace;
                     <span class="text-blue-500">
                         <?php echo $number_of_visits ?> 
                         <!-- For the moment, I display that by default , but I will track that value later -->

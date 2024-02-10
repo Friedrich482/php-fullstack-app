@@ -1878,6 +1878,14 @@ body::-webkit-scrollbar-thumb{
     height: 20rem;
   }
 
+  .sm\:h-8 {
+    height: 2rem;
+  }
+
+  .sm\:h-full {
+    height: 100%;
+  }
+
   .sm\:w-0 {
     width: 0px;
   }
@@ -1916,6 +1924,10 @@ body::-webkit-scrollbar-thumb{
 
   .sm\:w-3\/4 {
     width: 75%;
+  }
+
+  .sm\:w-8 {
+    width: 2rem;
   }
 
   .sm\:min-w-72 {
