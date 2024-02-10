@@ -163,9 +163,10 @@
                 <span class="">Logout</span>
             </div>
         </div>
+
         <!-- Dialog for user's profile -->
 
-        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 w-[330px] gap-6 z-10 text-[whitesmoke]">
+        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 w-[330px] min-h-[560px] gap-6 z-10 text-[whitesmoke]">
             <div class="flex items-center justify-center gap-3">
                 <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="h-12 w-12 sm:h-10 sm:w-10">
                 <h2 class="text-3xl text-violet-500">About Me</h2>

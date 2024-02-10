@@ -716,12 +716,29 @@ video {
   height: 100%;
 }
 
+.h-svh {
+  height: 100svh;
+}
+
+.h-max {
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
 .min-h-3 {
   min-height: 0.75rem;
 }
 
 .min-h-\[650px\] {
   min-height: 650px;
+}
+
+.min-h-\[560px\] {
+  min-height: 560px;
 }
 
 .w-1\/4 {
@@ -967,6 +984,10 @@ video {
 
 .gap-y-10 {
   row-gap: 2.5rem;
+}
+
+.overflow-auto {
+  overflow: auto;
 }
 
 .scroll-smooth {
