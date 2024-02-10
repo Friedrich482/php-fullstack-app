@@ -24,12 +24,13 @@ Technologies/tools/languages used :
 - [ ] ~~The counter of visits will be attached to an other element (possibly the navbar, and so it will no more be so messy positionned)~~
 - [ ] I should think to make the footer 🦶 mobile (animation 🎞)
 - [ ]  ~~display the time in the navbar, eventually~~
-- [ ]  The time will now appear in the Profile tab.
+- [x]  The time will now appear in the Profile tab.
 - [ ] the to-do-list must use the LocalStorage
 - [x] For the log out, a dialog 💬 should pop up ( maybe a blur effect will be interesting, in background )
 - [x] The navbar should contain profile with infos about user, tools ( in many sections ) and logout
-- [ ] The infos like counter of visits will be in Profile
+- [x] The infos like counter of visits will be in Profile
 - [ ] The "go back to top" button may be set as fixed element, so it will display at the bottom of the page as soon as we quit the top  
 - [x] If we click on the DOM elements that have the notification **ping**, it disappears and for the *Profile* sections, a dialog 💬 will open and display infos about the users  
 - [ ] If the user has alredy checked the one of the ping elements(especially the logout elements for the small and large screens navbars), if he reduce or increase the size of his screen and so, for example the display for small or large sreens occurs, the ping **WILL NO LONGER BE PRESENT**  
+
 This list will be updated depending on my progression through it.
