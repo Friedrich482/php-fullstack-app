@@ -164,7 +164,7 @@
             </div>
         </div>
 
-        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] h-96 sm:h-80">
+        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] ">
             <div class="h-5"></div>
             <h2 class="text-3xl sm:text-4xl">About Me</h2>
             <hr class="text-white w-11/12">
@@ -216,7 +216,7 @@
                 </span>
 
                 <span class="sm:w-3/4 sm:flex sm:items-start sm:h-full">
-                Best score at snake: &VeryThinSpace;
+                Best score at Snake : &VeryThinSpace;
                     <span class="text-blue-500">
                         <?php echo $number_of_visits ?> 
                         <!-- For the moment, I display that by default , but I will track that value later -->
@@ -224,6 +224,23 @@
                 </span>
 
             </div>
+
+            <div class="flex items-center justify-center w-full sm:justify-center">
+                
+                <span class="sm:w-1/4 sm:flex sm:items-center sm:justify-center">
+                    <img src="../assets/icons/hand-horns.png" alt="rock icon" class="h-12 w-12 sm:w-6 sm:h-6">
+                </span>
+
+                <span class="sm:w-3/4 sm:flex sm:items-start">
+                Best score at RPC : &VeryThinSpace;
+                    <span class="text-blue-500">
+                        <?php echo $number_of_visits ?>
+                        <!-- Here as well ... -->
+                    </span>
+                </span>
+
+            </div>
+
             <div></div>
             <div></div>
             <div></div>
