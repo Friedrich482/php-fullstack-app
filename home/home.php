@@ -163,19 +163,22 @@
                 <span class="">Logout</span>
             </div>
         </div>
+        <!-- Dialog for user's profile -->
 
-        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] ">
+        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 w-[330px] sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] ">
             <div class="h-5"></div>
             <h2 class="text-3xl sm:text-4xl">About Me</h2>
             <hr class="text-white w-11/12">
 
+            <!-- Username section -->
+
             <div class="flex items-center justify-center w-full sm:justify-center">
 
-                <span class="sm:w-1/4 sm:flex sm:items-center sm:justify-center">
+                <span class="w-1/4 flex items-center justify-center">
                     <img src="../assets/icons/navbarIcons/circle-user.png" alt="User" class="h-12 w-12 sm:w-6 sm:h-6">
                 </span>
 
-                <span class="sm:w-3/4 sm:flex sm:items-start">
+                <span class="w-3/4 flex items-start">
 
                     Username : &VeryThinSpace;
                         <span class="text-blue-500">
@@ -186,24 +189,30 @@
 
             </div>
 
+            <!-- Counter of visits -->
+
             <div class="flex items-center justify-center w-full sm:justify-center">
                 
-                <span class="sm:w-1/4 sm:flex sm:items-center sm:justify-center">
+                <span class="w-1/4 flex items-center justify-center">
                     <img src="../assets/icons/stats.png" alt="stats icon" class="h-12 w-12 sm:w-6 sm:h-6">
                 </span>
 
-                <span class="sm:w-3/4 sm:flex sm:items-start">
-                Number of visits : &VeryThinSpace;
+                <span class="w-3/4 flex items-start">
+
+                    Number of visits : &VeryThinSpace;
                     <span class="text-blue-500">
                         <?php echo $number_of_visits ?>
                     </span>
+
                 </span>
 
             </div>
 
+            <!-- Best Score at Snake Game section -->
+
             <div class="flex items-center justify-center w-full sm:justify-center sm:h-6">
                 
-                <span class="sm:w-1/4 sm:flex sm:items-center sm:justify-center">
+                <span class="w-1/4 flex items-center justify-center">
                     
                     <svg class="h-12 w-12 sm:w-8 sm:h-8" viewBox="0 0 430 430" fill="green" xmlns="http://www.w3.org/2000/svg">
                         <path d="M80.6 98.0996H50" stroke="red" stroke-width="12" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -215,28 +224,34 @@
                         
                 </span>
 
-                <span class="sm:w-3/4 sm:flex sm:items-start sm:h-full">
-                Best score at Snake : &VeryThinSpace;
+                <span class="w-3/4 flex items-start h-full">
+                    
+                    Best score at Snake : &VeryThinSpace;
                     <span class="text-blue-500">
                         <?php echo $number_of_visits ?> 
                         <!-- For the moment, I display that by default , but I will track that value later -->
                     </span>
+
                 </span>
 
             </div>
 
+            <!-- Best score at Shifumi Section -->
+
             <div class="flex items-center justify-center w-full sm:justify-center">
                 
-                <span class="sm:w-1/4 sm:flex sm:items-center sm:justify-center">
+                <span class="w-1/4 flex items-center justify-center">
                     <img src="../assets/icons/hand-horns.png" alt="rock icon" class="h-12 w-12 sm:w-6 sm:h-6">
                 </span>
 
-                <span class="sm:w-3/4 sm:flex sm:items-start">
-                Best score at RPC : &VeryThinSpace;
+                <span class="w-3/4 flex items-start">
+
+                    Best score at RPC : &VeryThinSpace;
                     <span class="text-blue-500">
                         <?php echo $number_of_visits ?>
                         <!-- Here as well ... -->
                     </span>
+
                 </span>
 
             </div>
