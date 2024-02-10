@@ -130,7 +130,7 @@
             <!-- Profile -->
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallProfile">
-                <div class="w-3"></div>
+                <!-- <div class="w-3"></div> -->
                 <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Profile</span>
 
@@ -165,9 +165,11 @@
         </div>
         <!-- Dialog for user's profile -->
 
-        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 w-[330px]  gap-6 z-10 text-[whitesmoke] ">
-            <div class="h-5"></div>
-            <h2 class="text-3xl">About Me</h2>
+        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 w-[330px] gap-6 z-10 text-[whitesmoke]">
+            <div class="flex items-center justify-center gap-3">
+                <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="h-12 w-12 sm:h-10 sm:w-10">
+                <h2 class="text-3xl text-violet-500">About Me</h2>
+            </div>
             <hr class="text-white w-11/12">
 
             <!-- Username section -->
@@ -178,9 +180,9 @@
                     <img src="../assets/icons/navbarIcons/circle-user.png" alt="User" class="h-12 w-12">
                 </span>
 
-                <span class="w-3/4 flex items-start">
+                <span class="w-3/4 text-start items-start">
 
-                    Username : &VeryThinSpace;
+                    Username :
                         <span class="text-blue-500">
                         <?php echo "{$_SESSION['username']}"?>
                     </span> 
@@ -197,9 +199,9 @@
                     <img src="../assets/icons/stats.png" alt="stats icon" class="h-12 w-12">
                 </span>
 
-                <span class="w-3/4 flex items-start">
+                <span class="w-3/4 text-start items-start">
 
-                    Number of visits : &VeryThinSpace;
+                    Number of visits : 
                     <span class="text-blue-500">
                         <?php echo $number_of_visits ?>
                     </span>
@@ -224,9 +226,9 @@
                         
                 </span>
 
-                <span class="w-3/4 flex items-start h-full">
+                <span class="w-3/4  text-start items-start h-full">
                     
-                    Best score at Snake : &VeryThinSpace;
+                    Best score at Snake :
                     <span class="text-blue-500">
                         <?php echo $number_of_visits ?> 
                         <!-- For the moment, I display that by default , but I will track that value later -->
@@ -244,9 +246,9 @@
                     <img src="../assets/icons/hand-horns.png" alt="rock icon" class="h-12 w-12">
                 </span>
 
-                <span class="w-3/4 flex items-start">
+                <span class="w-3/4 text-start items-start">
 
-                    Best score at RPC : &VeryThinSpace;
+                    Best score at RPC : 
                     <span class="text-blue-500">
                         <?php echo $number_of_visits ?>
                         <!-- Here as well ... -->
@@ -255,19 +257,21 @@
                 </span>
 
             </div>
+
+            <!-- Clock section 🕐 -->
             
-            <div class="text-sm h-20 w-full" id="dateDiv">
+            <div class="text-sm h-20 flex items-center justify-center flex-col" id="dateDiv">
                 <span class="opacity-0">date</span>
                 <br>
                 <span class="opacity-0">hour</span>
             </div>
 
+            <!-- Close button -->
 
-            <div></div>
-            <div></div>
-            <div></div>
-
-
+            <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500">
+                <input type="button" value="Close" id="closeProfile" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
+            </div>
+            <div class="h-3 hidden sm:flex"></div>
         </dialog>
         
     </header>

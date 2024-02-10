@@ -1,8 +1,11 @@
+setInterval(displayDate, 1000); // Calling the clock for the Profile
+
 // Logout buttons (one at the bottom of the page and 
 // the two others in the navbars 
 // (vertical and horizontal))
 
 const body = document.body;
+
 
 const logoutButton = document.querySelector('#logout');
 const logoutSmallScreens = document.querySelector("#logoutSmallScreens");
@@ -94,6 +97,18 @@ domElements.forEach((element) =>{
       notifications[index].classList.remove("flex");
       notifications[index].classList.add("hidden")
    })
+})
+
+smallProfile.addEventListener("click", () =>{
+   bigScreensNotification.classList.remove("flex");
+   bigScreensNotification.classList.add("hidden")
+})
+
+largeProfile.addEventListener("click", () =>{
+   pingNotificationBurger.classList.remove("flex");
+   pingNotificationBurger.classList.add("hidden")
+   smallScreensNotification.classList.remove("flex");
+   smallScreensNotification.classList.add("hidden")
 })
 
 // Animation for the title 
@@ -191,6 +206,7 @@ function removeVerticalNavbar(){
 // Dialog profile 
 const profileDialog = document.querySelector("#profileDialog");
 const dateDiv = document.querySelector("#dateDiv");
+const closeProfileButton = document.querySelector("#closeProfile");
 
 let profile = [smallProfile, largeProfile];
 
@@ -198,11 +214,15 @@ profile.forEach((element) =>{
    element.addEventListener('click', () =>{
       profileDialog.showModal()
       toggleProfileDialog();
-      setInterval(displayDate, 1000)
    })
 })
 
 profileDialog.addEventListener('cancel', () =>{
+   profileDialog.close();
+   toggleProfileDialog();
+})
+// Close the dialog
+closeProfileButton.addEventListener('click', () =>{
    profileDialog.close();
    toggleProfileDialog();
 })
@@ -213,10 +233,10 @@ function toggleProfileDialog(){
    profileDialog.classList.toggle("flex");
    body.classList.toggle("blur-sm");
 
-   // body.classList.toggle("")
 }
 
 function displayDate(){
+
    let actualDate = new Date();
    let year = actualDate.getFullYear();
    let month = actualDate.getMonth(); 
@@ -235,12 +255,17 @@ function displayDate(){
    minutes = padUnit(minutes);
    seconds = padUnit(seconds);
 
-   // console.log(units)
    let months = ["January", "February", "March", "April", "May", "Juni", "July", "August", "September", "October", "November", "December"];
    let daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
    month = months[Number(month)];
    day = daysOfWeek[Number(day) - 1];
 
-   dateDiv.textContent = `${day}, The ${month} ${date} ${year} ${hours}:${minutes}:${seconds}`
+   dateDiv.innerHTML = `${day} ${month} ${date}, ${year}
+
+   <div class="font-bold grid grid-cols-3 place-items-center w-2/5 gap-0">
+      <div class="w-6">${hours}:</div> 
+      <div class="w-6">${minutes}:</div>
+      <div class="w-6 text-start">${seconds}</div>
+   </div>`
 }
