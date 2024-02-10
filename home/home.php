@@ -256,7 +256,11 @@
 
             </div>
             
-            <div class="text-sm" id="dateDiv"></div>
+            <div class="text-sm h-20 w-full" id="dateDiv">
+                <span class="opacity-0">date</span>
+                <br>
+                <span class="opacity-0">hour</span>
+            </div>
 
 
             <div></div>
