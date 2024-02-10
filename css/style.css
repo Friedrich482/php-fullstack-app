@@ -1833,6 +1833,10 @@ body::-webkit-scrollbar-thumb{
     margin-right: 9rem;
   }
 
+  .sm\:flex {
+    display: flex;
+  }
+
   .sm\:grid {
     display: grid;
   }
@@ -1865,6 +1869,10 @@ body::-webkit-scrollbar-thumb{
     height: 1.75rem;
   }
 
+  .sm\:h-10 {
+    height: 2.5rem;
+  }
+
   .sm\:w-0 {
     width: 0px;
   }
@@ -1891,6 +1899,14 @@ body::-webkit-scrollbar-thumb{
 
   .sm\:w-\[620px\] {
     width: 620px;
+  }
+
+  .sm\:w-\[350px\] {
+    width: 350px;
+  }
+
+  .sm\:w-10 {
+    width: 2.5rem;
   }
 
   .sm\:min-w-72 {

@@ -99,6 +99,18 @@ domElements.forEach((element) =>{
    })
 })
 
+smallProfile.addEventListener("click", () =>{
+   bigScreensNotification.classList.remove("flex");
+   bigScreensNotification.classList.add("hidden")
+})
+
+largeProfile.addEventListener("click", () =>{
+   pingNotificationBurger.classList.remove("flex");
+   pingNotificationBurger.classList.add("hidden")
+   smallScreensNotification.classList.remove("flex");
+   smallScreensNotification.classList.add("hidden")
+})
+
 // Animation for the title 
 
 const animatedText = document.getElementById('animatedText');

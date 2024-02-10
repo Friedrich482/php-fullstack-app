@@ -130,7 +130,7 @@
             <!-- Profile -->
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallProfile">
-                <div class="w-3"></div>
+                <!-- <div class="w-3"></div> -->
                 <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Profile</span>
 
@@ -165,10 +165,10 @@
         </div>
         <!-- Dialog for user's profile -->
 
-        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 w-[330px]  gap-6 z-10 text-[whitesmoke]">
+        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 w-[330px] gap-6 z-10 text-[whitesmoke]">
             <div class="flex items-center justify-center gap-3">
-                <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="h-12 w-12">
-                <h2 class="text-3xl text-blue-500">About Me</h2>
+                <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="h-12 w-12 sm:h-10 sm:w-10">
+                <h2 class="text-3xl text-violet-500">About Me</h2>
             </div>
             <hr class="text-white w-11/12">
 
@@ -271,7 +271,7 @@
             <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500">
                 <input type="button" value="Close" id="closeProfile" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
             </div>
-    
+            <div class="h-3 hidden sm:flex"></div>
         </dialog>
         
     </header>
