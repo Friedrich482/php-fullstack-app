@@ -720,6 +720,10 @@ video {
   min-height: 0.75rem;
 }
 
+.min-h-\[650px\] {
+  min-height: 650px;
+}
+
 .w-1\/4 {
   width: 25%;
 }

@@ -165,8 +165,8 @@
         </div>
         <!-- Dialog for user's profile -->
 
-        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 w-[330px]  gap-6 z-10 text-[whitesmoke] ">
-            <div class="h-5"></div>
+        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 w-[330px]  gap-6 z-10 text-[whitesmoke]">
+            <!-- <div class="h-5"></div> -->
             <h2 class="text-3xl">About Me</h2>
             <hr class="text-white w-11/12">
 
@@ -255,6 +255,8 @@
                 </span>
 
             </div>
+
+            <!-- Clock section 🕐 -->
             
             <div class="text-sm h-20 flex items-center justify-center flex-col" id="dateDiv">
                 <span class="opacity-0">date</span>
@@ -262,12 +264,12 @@
                 <span class="opacity-0">hour</span>
             </div>
 
+            <!-- Close button -->
 
-            <div></div>
-            <div></div>
-            <div></div>
-
-
+            <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500">
+                <input type="button" value="Close" id="closeProfile" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
+            </div>
+    
         </dialog>
         
     </header>
