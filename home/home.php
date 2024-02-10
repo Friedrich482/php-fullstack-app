@@ -178,9 +178,9 @@
                     <img src="../assets/icons/navbarIcons/circle-user.png" alt="User" class="h-12 w-12">
                 </span>
 
-                <span class="w-3/4 flex items-start">
+                <span class="w-3/4 text-start items-start">
 
-                    Username : &VeryThinSpace;
+                    Username :
                         <span class="text-blue-500">
                         <?php echo "{$_SESSION['username']}"?>
                     </span> 
@@ -197,9 +197,9 @@
                     <img src="../assets/icons/stats.png" alt="stats icon" class="h-12 w-12">
                 </span>
 
-                <span class="w-3/4 flex items-start">
+                <span class="w-3/4 text-start items-start">
 
-                    Number of visits : &VeryThinSpace;
+                    Number of visits : 
                     <span class="text-blue-500">
                         <?php echo $number_of_visits ?>
                     </span>
@@ -224,9 +224,9 @@
                         
                 </span>
 
-                <span class="w-3/4 flex items-start h-full">
+                <span class="w-3/4  text-start items-start h-full">
                     
-                    Best score at Snake : &VeryThinSpace;
+                    Best score at Snake :
                     <span class="text-blue-500">
                         <?php echo $number_of_visits ?> 
                         <!-- For the moment, I display that by default , but I will track that value later -->
@@ -244,9 +244,9 @@
                     <img src="../assets/icons/hand-horns.png" alt="rock icon" class="h-12 w-12">
                 </span>
 
-                <span class="w-3/4 flex items-start">
+                <span class="w-3/4 text-start items-start">
 
-                    Best score at RPC : &VeryThinSpace;
+                    Best score at RPC : 
                     <span class="text-blue-500">
                         <?php echo $number_of_visits ?>
                         <!-- Here as well ... -->
