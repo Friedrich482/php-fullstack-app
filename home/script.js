@@ -4,6 +4,8 @@
 
 const body = document.body;
 
+setInterval(displayDate, 1000);
+
 const logoutButton = document.querySelector('#logout');
 const logoutSmallScreens = document.querySelector("#logoutSmallScreens");
 const logoutLargeScreens = document.querySelector("#logoutLargeScreens");
@@ -198,7 +200,7 @@ profile.forEach((element) =>{
    element.addEventListener('click', () =>{
       profileDialog.showModal()
       toggleProfileDialog();
-      setInterval(displayDate, 1000)
+      // setInterval(displayDate, 1000)
    })
 })
 
@@ -212,7 +214,7 @@ function toggleProfileDialog(){
    profileDialog.classList.toggle("hidden");
    profileDialog.classList.toggle("flex");
    body.classList.toggle("blur-sm");
-
+   // displayDate()
    // body.classList.toggle("")
 }
 
@@ -242,5 +244,11 @@ function displayDate(){
    month = months[Number(month)];
    day = daysOfWeek[Number(day) - 1];
 
-   dateDiv.textContent = `${day}, The ${month} ${date} ${year} ${hours}:${minutes}:${seconds}`
+   dateDiv.innerHTML = `${day} ${month} ${date}, ${year}
+
+   <div class=" grid grid-cols-3 place-items-center w-2/5 gap-0">
+      <div class="w-6">${hours}:</div> 
+      <div class="w-6">${minutes}:</div>
+      <div class="w-6 text-start">${seconds}</div>
+   </div>`
 }

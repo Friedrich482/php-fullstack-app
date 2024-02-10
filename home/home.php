@@ -256,7 +256,7 @@
 
             </div>
             
-            <div class="text-sm h-20 w-full" id="dateDiv">
+            <div class="text-sm h-20 flex items-center justify-center flex-col" id="dateDiv">
                 <span class="opacity-0">date</span>
                 <br>
                 <span class="opacity-0">hour</span>
