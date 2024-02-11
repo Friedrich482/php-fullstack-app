@@ -166,7 +166,7 @@
 
         <!-- Dialog for user's profile -->
 
-        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 w-[330px] min-h-[560px] gap-6 z-10 text-[whitesmoke]">
+        <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-64 w-[330px] min-h-[560px] gap-6 z-10 text-[whitesmoke]">
             <div class="flex items-center justify-center gap-3">
                 <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="h-12 w-12 sm:h-10 sm:w-10">
                 <h2 class="text-3xl text-violet-500">About Me</h2>
@@ -473,7 +473,7 @@
          <div class="group h-12 w-12 sm:h-16 sm:w-16 bg-white rounded-2xl flex items-center justify-center cursor-pointer ml-auto mr-6 hover:bg-slate-200" title="Go back to the top" id="backToTop">
             <a href="#header"><img src="../assets/icons/top.png" alt="back to up !" class="scroll-smooth h-5 w-5 sm:h-7 sm:w-7 group-hover:animate-bounce"></a>
         </div>
-
+        
     </main>
     
 
