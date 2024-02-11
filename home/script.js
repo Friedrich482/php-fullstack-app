@@ -259,8 +259,9 @@ function displayDate(){
    let daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
    month = months[Number(month)];
-   day = daysOfWeek[Number(day) - 1];
 
+   day === 0 ? day = daysOfWeek[daysOfWeek.length - 1] : day = daysOfWeek[Number(day) - 1];
+   console.log(day)
    dateDiv.innerHTML = `${day} ${month} ${date}, ${year}
 
    <div class="font-bold grid grid-cols-3 place-items-center w-2/5 gap-0">
