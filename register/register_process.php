@@ -20,15 +20,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = pg_execute($conn, "insert_user", array($email, $username, $hashedPassword));
 
         if ($result) {
+            $row = pg_fetch_assoc($result);
+            $id_user = $row['id'];
+            
             $_SESSION["username"] = $username;
             $_SESSION['loggedin'] = true;
-
-            $id_user = pg_last_oid($result);
             $_SESSION['id'] = $id_user;
 
             $response['redirect'] = "../home/home.php?username=$username&id=$id_user";
         } 
-
+        
         else {
             $error_message = pg_last_error($conn);
             // Check if the message contains specific keys words
@@ -49,6 +50,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
-pg_close($conn);
+// pg_close($conn);
 echo json_encode($response);
 ?>

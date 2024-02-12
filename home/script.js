@@ -31,7 +31,6 @@ denyButton.addEventListener('click', () =>{
 
    confirmDeconnexionDialog.close();
    toggleconfirmDeconnexionDialog();
-
 })
 
 confirmDeconnexionDialog.addEventListener('cancel', () =>{
@@ -261,7 +260,7 @@ function displayDate(){
    month = months[Number(month)];
 
    day === 0 ? day = daysOfWeek[daysOfWeek.length - 1] : day = daysOfWeek[Number(day) - 1];
-   console.log(day)
+   // console.log(day)
    dateDiv.innerHTML = `${day} ${month} ${date}, ${year}
 
    <div class="font-bold grid grid-cols-3 place-items-center w-2/5 gap-0">

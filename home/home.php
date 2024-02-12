@@ -13,31 +13,24 @@
 ?>
 
 <?php
-    // incrementation of the counter of visits everytime you visit the page
+    // Connexion à la base de données
 
-    $sql = "UPDATE users SET visits = visits + 1 WHERE id = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param('i', $_SESSION['id']);
+    // Incrementation of the counter of visits each time the page is visited by the user
+    $sql = "UPDATE users SET visits = visits + 1 WHERE id = $1";
+    $params = [$_SESSION['id']];
+    pg_prepare($conn, "update_visits", $sql);
+    pg_execute($conn, "update_visits", $params);
 
-    $stmt->execute();
-
-    $stmt->close();
-
-    // display of the actual value of the counter of visits
-
-    $sql = "SELECT visits FROM users WHERE id = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param('i', $_SESSION["id"]);
-    $stmt->execute();
-
-
-    $result = $stmt->get_result();
-    $row = $result->fetch_assoc();
-
+    // Recuperation of the updated value from the database 
+    $sql = "SELECT visits FROM users WHERE id = $1";
+    $params = [$_SESSION['id']];
+    pg_prepare($conn, "select_visits", $sql);
+    $result = pg_execute($conn, "select_visits", $params);
+    $row = pg_fetch_assoc($result);
     $number_of_visits = $row['visits'];
 
-    $stmt->close();
-    $conn->close();
+    // Close the connection
+    pg_close($conn);
 ?>
 
 <!DOCTYPE html>
