@@ -2,11 +2,10 @@
     session_start();
     include("../include/database.php");
 
-
     // Check if the user is logged in. Otherwise, redirect him to the login page.
 
-    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-        header('Location: ../login/login.php');
+    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+        header("Location: ../login/login.php");
         exit;
     }
 
@@ -14,7 +13,7 @@
 
 <?php
     // Connexion à la base de données
-
+    
     // Incrementation of the counter of visits each time the page is visited by the user
     $sql = "UPDATE users SET visits = visits + 1 WHERE id = $1";
     $params = [$_SESSION['id']];
@@ -22,6 +21,7 @@
     pg_execute($conn, "update_visits", $params);
 
     // Recuperation of the updated value from the database 
+
     $sql = "SELECT visits FROM users WHERE id = $1";
     $params = [$_SESSION['id']];
     pg_prepare($conn, "select_visits", $sql);
@@ -503,6 +503,7 @@
         $_SESSION['loggedin'] = false;
         session_destroy();
         header("Location: ../login/login.php");
+        
     }
 ?>
 <?php

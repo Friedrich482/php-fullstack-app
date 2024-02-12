@@ -26,8 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (password_verify($password, $user['password'])) {
                 $_SESSION["username"] = $username;
                 $_SESSION['id'] = $user["id"];
+                $id_user = $user["id"];
                 $_SESSION['loggedin'] = true;
-                $response = ['error' => false, 'redirect' => '../home/home.php'];
+                $response = ['error' => false, 'redirect' => "../home/home.php?username=$username&id=$id_user"];
             } 
 
             else {

@@ -50,6 +50,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
-// pg_close($conn);
+pg_close($conn);
 echo json_encode($response);
 ?>
