@@ -231,7 +231,15 @@
                     
                     Best score at Snake :
                     <span class="text-blue-500">
-                        <?php echo $number_of_visits ?> 
+                    <?php 
+                        if($number_of_visits !== null){
+                            echo $number_of_visits;
+                        }
+
+                        else{
+                            echo '0';
+                        }
+                        ?>
                         <!-- For the moment, I display that by default , but I will track that value later -->
                     </span>
 
@@ -251,7 +259,15 @@
 
                     Best score at RPC : 
                     <span class="text-blue-500">
-                        <?php echo $number_of_visits ?>
+                    <?php 
+                        if($number_of_visits !== null){
+                            echo $number_of_visits;
+                        }
+
+                        else{
+                            echo '0';
+                        }
+                        ?>
                         <!-- Here as well ... -->
                     </span>
 
@@ -314,7 +330,7 @@
                 <ul class="list-disc ml-20 mr-20 mt-8 mb-8  sm:ml-36 sm:mr-36 gap-1">
                     <li class="mb-2">PHP</li>
                     <li class="mb-2">JavaScript</li>
-                    <li class="mb-2">MySQL (as the DB)</li>
+                    <li class="mb-2">Postgresql (as the DB)</li>
                     <li class="mb-2">Tailwind CSS</li>
                 </ul>            
 
@@ -505,14 +521,7 @@
 
 </body>
 </html>
-<?php
-    // if($_SERVER["REQUEST_METHOD"] == "POST"){
-    //     $_SESSION['loggedin'] = false;
-    //     session_destroy();
-    //     header("Location: ../login/login.php");
-    //     exit;
-    // }
-?>
+
 <?php
     include("../include/footer.php");
 ?>
