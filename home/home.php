@@ -2,42 +2,34 @@
     session_start();
     include("../include/database.php");
 
+    // This section checks if the user click on logout button (it's a form)
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $_SESSION['loggedin'] = false;
+        session_destroy();
+        header("Location: ../login/login.php");
+        exit;
+    }
 
     // Check if the user is logged in. Otherwise, redirect him to the login page.
 
-    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-        header('Location: ../login/login.php');
+    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+        header("Location: ../login/login.php");
         exit;
     }
 
 ?>
 
 <?php
-    // incrementation of the counter of visits everytime you visit the page
+    
+    // Incrementation of the counter of visits each time the page is visited by the user
 
-    $sql = "UPDATE users SET visits = visits + 1 WHERE id = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param('i', $_SESSION['id']);
-
-    $stmt->execute();
-
-    $stmt->close();
-
-    // display of the actual value of the counter of visits
-
-    $sql = "SELECT visits FROM users WHERE id = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param('i', $_SESSION["id"]);
-    $stmt->execute();
-
-
-    $result = $stmt->get_result();
-    $row = $result->fetch_assoc();
-
+    $sql = "UPDATE users SET visits = visits + 1 WHERE id = $1 RETURNING visits";
+    $params = [$_SESSION['id']];
+    pg_prepare($conn, "update_and_select_visits", $sql);
+    $result = pg_execute($conn, "update_and_select_visits", $params);
+    $row = pg_fetch_assoc($result);
     $number_of_visits = $row['visits'];
 
-    $stmt->close();
-    $conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -204,7 +196,15 @@
 
                     Number of visits : 
                     <span class="text-blue-500">
-                        <?php echo $number_of_visits ?>
+                        <?php 
+                        if($number_of_visits !== null){
+                            echo $number_of_visits;
+                        }
+
+                        else{
+                            echo '0';
+                        }
+                        ?>
                     </span>
 
                 </span>
@@ -231,7 +231,15 @@
                     
                     Best score at Snake :
                     <span class="text-blue-500">
-                        <?php echo $number_of_visits ?> 
+                    <?php 
+                        if($number_of_visits !== null){
+                            echo $number_of_visits;
+                        }
+
+                        else{
+                            echo '0';
+                        }
+                        ?>
                         <!-- For the moment, I display that by default , but I will track that value later -->
                     </span>
 
@@ -251,7 +259,15 @@
 
                     Best score at RPC : 
                     <span class="text-blue-500">
-                        <?php echo $number_of_visits ?>
+                    <?php 
+                        if($number_of_visits !== null){
+                            echo $number_of_visits;
+                        }
+
+                        else{
+                            echo '0';
+                        }
+                        ?>
                         <!-- Here as well ... -->
                     </span>
 
@@ -314,7 +330,7 @@
                 <ul class="list-disc ml-20 mr-20 mt-8 mb-8  sm:ml-36 sm:mr-36 gap-1">
                     <li class="mb-2">PHP</li>
                     <li class="mb-2">JavaScript</li>
-                    <li class="mb-2">MySQL (as the DB)</li>
+                    <li class="mb-2">Postgresql (as the DB)</li>
                     <li class="mb-2">Tailwind CSS</li>
                 </ul>            
 
@@ -480,7 +496,7 @@
     <!-- Dialog for logout -->
 
     <dialog id="confirmDeconnexionDialog" class="hidden items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] h-80">
-        <form action="" method="post">
+        <form action="home.php" method="post">
             <label class="text-2xl">Are you sure to log out ?</label>
 
             <div class="flex items-center justify-center flex-col gap-5">
@@ -505,13 +521,7 @@
 
 </body>
 </html>
-<?php
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $_SESSION['loggedin'] = false;
-        session_destroy();
-        header("Location: ../login/login.php");
-    }
-?>
+
 <?php
     include("../include/footer.php");
 ?>
