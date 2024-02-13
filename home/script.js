@@ -307,12 +307,11 @@ function displayDate() {
 // The "go back to top" position is treated here ...
 
 window.onscroll = () => {
-   if(body.scrollTop > 20 || document.documentElement.scrollTop > 20){
-      backToTopWrapper.classList.add("flex");
-      backToTopWrapper.classList.remove("hidden");
-   }
-   else{
-      backToTopWrapper.classList.remove("flex");
-      backToTopWrapper.classList.add("hidden");
-   }
-}
+  if (body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    backToTopWrapper.classList.add("flex");
+    backToTopWrapper.classList.remove("hidden");
+  } else {
+    backToTopWrapper.classList.remove("flex");
+    backToTopWrapper.classList.add("hidden");
+  }
+};
