@@ -2,6 +2,14 @@
     session_start();
     include("../include/database.php");
 
+    // This section checks if the user click on logout button (it's a form)
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $_SESSION['loggedin'] = false;
+        session_destroy();
+        header("Location: ../login/login.php");
+        exit;
+    }
+
     // Check if the user is logged in. Otherwise, redirect him to the login page.
 
     if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
@@ -12,25 +20,16 @@
 ?>
 
 <?php
-    // Connexion à la base de données
     
     // Incrementation of the counter of visits each time the page is visited by the user
-    $sql = "UPDATE users SET visits = visits + 1 WHERE id = $1";
-    $params = [$_SESSION['id']];
-    pg_prepare($conn, "update_visits", $sql);
-    pg_execute($conn, "update_visits", $params);
 
-    // Recuperation of the updated value from the database 
-
-    $sql = "SELECT visits FROM users WHERE id = $1";
+    $sql = "UPDATE users SET visits = visits + 1 WHERE id = $1 RETURNING visits";
     $params = [$_SESSION['id']];
-    pg_prepare($conn, "select_visits", $sql);
-    $result = pg_execute($conn, "select_visits", $params);
+    pg_prepare($conn, "update_and_select_visits", $sql);
+    $result = pg_execute($conn, "update_and_select_visits", $params);
     $row = pg_fetch_assoc($result);
     $number_of_visits = $row['visits'];
 
-    // Close the connection
-    pg_close($conn);
 ?>
 
 <!DOCTYPE html>
@@ -197,7 +196,15 @@
 
                     Number of visits : 
                     <span class="text-blue-500">
-                        <?php echo $number_of_visits ?>
+                        <?php 
+                        if($number_of_visits !== null){
+                            echo $number_of_visits;
+                        }
+
+                        else{
+                            echo '0';
+                        }
+                        ?>
                     </span>
 
                 </span>
@@ -473,7 +480,7 @@
     <!-- Dialog for logout -->
 
     <dialog id="confirmDeconnexionDialog" class="hidden items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] h-80">
-        <form action="" method="post">
+        <form action="home.php" method="post">
             <label class="text-2xl">Are you sure to log out ?</label>
 
             <div class="flex items-center justify-center flex-col gap-5">
@@ -499,12 +506,12 @@
 </body>
 </html>
 <?php
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $_SESSION['loggedin'] = false;
-        session_destroy();
-        header("Location: ../login/login.php");
-        
-    }
+    // if($_SERVER["REQUEST_METHOD"] == "POST"){
+    //     $_SESSION['loggedin'] = false;
+    //     session_destroy();
+    //     header("Location: ../login/login.php");
+    //     exit;
+    // }
 ?>
 <?php
     include("../include/footer.php");
