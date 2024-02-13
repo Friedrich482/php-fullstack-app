@@ -1,39 +1,40 @@
 <?php
-    session_start();
-    include("../include/database.php");
+session_start();
+include("../include/database.php");
 
-    // This section checks if the user click on logout button (it's a form)
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $_SESSION['loggedin'] = false;
-        session_destroy();
-        header("Location: ../login/login.php");
-        exit;
-    }
+// This section checks if the user click on logout button (it's a form)
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $_SESSION['loggedin'] = false;
+    session_destroy();
+    header("Location: ../login/login.php");
+    exit;
+}
 
-    // Check if the user is logged in. Otherwise, redirect him to the login page.
+// Check if the user is logged in. Otherwise, redirect him to the login page.
 
-    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-        header("Location: ../login/login.php");
-        exit;
-    }
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("Location: ../login/login.php");
+    exit;
+}
 
 ?>
 
 <?php
-    
-    // Incrementation of the counter of visits each time the page is visited by the user
 
-    $sql = "UPDATE users SET visits = visits + 1 WHERE id = $1 RETURNING visits";
-    $params = [$_SESSION['id']];
-    pg_prepare($conn, "update_and_select_visits", $sql);
-    $result = pg_execute($conn, "update_and_select_visits", $params);
-    $row = pg_fetch_assoc($result);
-    $number_of_visits = $row['visits'];
+// Incrementation of the counter of visits each time the page is visited by the user
+
+$sql = "UPDATE users SET visits = visits + 1 WHERE id = $1 RETURNING visits";
+$params = [$_SESSION['id']];
+pg_prepare($conn, "update_and_select_visits", $sql);
+$result = pg_execute($conn, "update_and_select_visits", $params);
+$row = pg_fetch_assoc($result);
+$number_of_visits = $row['visits'];
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,15 +42,16 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-[1.25rem] backgroundImg text-[whitesmoke] MV-boli">
-    
+
 
     <header class="w-full flex gap-3 flex-col" id="header">
 
         <!-- Navbar for large screens -->
 
         <div class="hidden sm:grid grid-cols-5 gap-0 place-items-center w-full bg-black text-white h-20 text-xl" id="navbar">
-            
+
             <!-- Home -->
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2  border-r-white transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950" id="LargeHome">
@@ -63,10 +65,10 @@
                 <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1">
                 <span class="">Profile</span>
 
-                 <!-- Ping element for notification -->
-                 <span class="flex relative" id="bigNotification">
+                <!-- Ping element for notification -->
+                <span class="flex relative" id="bigNotification">
                     <span class="h-3 w-3 rounded-full bg-sky-400 absolute inline-flex animate-ping z-0 opacity-75"></span>
-                    <span class="h-3 w-3 rounded-full bg-sky-500 relative inline-flex z-10"></span>    
+                    <span class="h-3 w-3 rounded-full bg-sky-500 relative inline-flex z-10"></span>
                 </span>
 
             </div>
@@ -106,19 +108,19 @@
 
         <span class="sm:hidden flex relative bottom-11 left-11 w-4" id="pingNotificationBurger">
             <span class="h-3 w-3 rounded-full bg-sky-400 absolute inline-flex animate-ping z-0 opacity-75"></span>
-            <span class="h-3 w-3 rounded-full bg-sky-500 relative inline-flex z-10"></span>    
+            <span class="h-3 w-3 rounded-full bg-sky-500 relative inline-flex z-10"></span>
         </span>
-        
+
         <div class=" group opacity-0 sm:hidden w-full bg-black items-center justify-center flex-col transit" id="verticalNavbar">
-            
+
             <!-- Home -->
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallHome">
                 <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
                 <span><a href="#animatedText" class="no-underline">Home</a></span>
-                
+
             </div>
-        
+
             <!-- Profile -->
 
             <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallProfile">
@@ -129,7 +131,7 @@
                 <!-- Ping element for notification -->
                 <span class="flex relative left-1/4" id="smallNotification">
                     <span class="h-3 w-3 rounded-full bg-sky-400 absolute inline-flex animate-ping z-0 opacity-75"></span>
-                    <span class="h-3 w-3 rounded-full bg-sky-500 relative inline-flex z-10"></span>    
+                    <span class="h-3 w-3 rounded-full bg-sky-500 relative inline-flex z-10"></span>
                 </span>
 
             </div>
@@ -176,9 +178,9 @@
                 <span class="w-3/4 text-start items-start">
 
                     Username :
-                        <span class="text-blue-500">
-                        <?php echo "{$_SESSION['username']}"?>
-                    </span> 
+                    <span class="text-blue-500">
+                        <?php echo "{$_SESSION['username']}" ?>
+                    </span>
 
                 </span>
 
@@ -187,21 +189,19 @@
             <!-- Counter of visits -->
 
             <div class="flex items-center justify-center w-full">
-                
+
                 <span class="w-1/4 flex items-center justify-center">
                     <img src="../assets/icons/stats.png" alt="stats icon" class="h-12 w-12">
                 </span>
 
                 <span class="w-3/4 text-start items-start">
 
-                    Number of visits : 
+                    Number of visits :
                     <span class="text-blue-500">
-                        <?php 
-                        if($number_of_visits !== null){
+                        <?php
+                        if ($number_of_visits !== null) {
                             echo $number_of_visits;
-                        }
-
-                        else{
+                        } else {
                             echo '0';
                         }
                         ?>
@@ -214,29 +214,27 @@
             <!-- Best Score at Snake Game section -->
 
             <div class="flex items-center justify-center w-full">
-                
+
                 <span class="w-1/4 flex items-center justify-center">
-                    
+
                     <svg class="h-12 w-12" viewBox="0 0 430 430" fill="green" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M80.6 98.0996H50" stroke="red" stroke-width="12" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M164.9 120H296.6C318.2 120 336.5 137.7 336.3 159.3C336.2 170 331.9 179.6 324.9 186.6C317.8 193.7 308.1 198 297.3 198H167C165.4 198 163.9 198 162.4 198.1C141.7 199.3 123 208.1 109.2 221.9C94.2 236.9 85 257.7 85.3 280.6C85.8 325.5 123.1 361.4 168 361.4H303.1C303.1 337.9 284 318.8 260.5 318.8H168.9C147.3 318.8 129 301.1 129.2 279.5C129.3 268.8 133.6 259.2 140.6 252.2C147.7 245.1 157.4 240.8 168.2 240.8H298.5C300.1 240.8 301.6 240.8 303.1 240.7C323.8 239.5 342.5 230.7 356.2 216.9C371.2 201.9 380.4 181.2 380.1 158.2C379.6 113.3 342.3 77.4004 297.4 77.4004H164.9" stroke="#FFF" stroke-width="12" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M164.9 120C158.4 126.7 148.9 130.5 138.8 129.1L99.3 123.8C88.7 122.4 80.7 113.3 80.7 102.6V94.7C80.7 84 88.6 74.9 99.3 73.5L138.8 68.2C140.1 68.1 141.5 68 142.8 68C151.4 68 159.2 71.6 164.8 77.4" stroke="#FFF" stroke-width="12" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M124.4 70.2998V79.3998" stroke="#FFF" stroke-width="12" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M124.4 118.3V127.2" stroke="#FFF" stroke-width="12" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M80.6 98.0996H50" stroke="red" stroke-width="12" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M164.9 120H296.6C318.2 120 336.5 137.7 336.3 159.3C336.2 170 331.9 179.6 324.9 186.6C317.8 193.7 308.1 198 297.3 198H167C165.4 198 163.9 198 162.4 198.1C141.7 199.3 123 208.1 109.2 221.9C94.2 236.9 85 257.7 85.3 280.6C85.8 325.5 123.1 361.4 168 361.4H303.1C303.1 337.9 284 318.8 260.5 318.8H168.9C147.3 318.8 129 301.1 129.2 279.5C129.3 268.8 133.6 259.2 140.6 252.2C147.7 245.1 157.4 240.8 168.2 240.8H298.5C300.1 240.8 301.6 240.8 303.1 240.7C323.8 239.5 342.5 230.7 356.2 216.9C371.2 201.9 380.4 181.2 380.1 158.2C379.6 113.3 342.3 77.4004 297.4 77.4004H164.9" stroke="#FFF" stroke-width="12" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M164.9 120C158.4 126.7 148.9 130.5 138.8 129.1L99.3 123.8C88.7 122.4 80.7 113.3 80.7 102.6V94.7C80.7 84 88.6 74.9 99.3 73.5L138.8 68.2C140.1 68.1 141.5 68 142.8 68C151.4 68 159.2 71.6 164.8 77.4" stroke="#FFF" stroke-width="12" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M124.4 70.2998V79.3998" stroke="#FFF" stroke-width="12" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M124.4 118.3V127.2" stroke="#FFF" stroke-width="12" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                        
+
                 </span>
 
                 <span class="w-3/4  text-start items-start h-full">
-                    
+
                     Best score at Snake :
                     <span class="text-blue-500">
-                    <?php 
-                        if($number_of_visits !== null){
+                        <?php
+                        if ($number_of_visits !== null) {
                             echo $number_of_visits;
-                        }
-
-                        else{
+                        } else {
                             echo '0';
                         }
                         ?>
@@ -250,21 +248,19 @@
             <!-- Best score at Shifumi Section -->
 
             <div class="flex items-center justify-center w-full">
-                
+
                 <span class="w-1/4 flex items-center justify-center">
                     <img src="../assets/icons/hand-horns.png" alt="rock icon" class="h-12 w-12">
                 </span>
 
                 <span class="w-3/4 text-start items-start">
 
-                    Best score at RPC : 
+                    Best score at RPC :
                     <span class="text-blue-500">
-                    <?php 
-                        if($number_of_visits !== null){
+                        <?php
+                        if ($number_of_visits !== null) {
                             echo $number_of_visits;
-                        }
-
-                        else{
+                        } else {
                             echo '0';
                         }
                         ?>
@@ -276,7 +272,7 @@
             </div>
 
             <!-- Clock section 🕐 -->
-            
+
             <div class="text-sm h-20 flex items-center justify-center flex-col" id="dateDiv">
                 <span class="opacity-0">date</span>
                 <br>
@@ -290,34 +286,40 @@
             </div>
             <div class="h-3 hidden sm:flex"></div>
         </dialog>
-        
+
     </header>
-    
-            <!-- <div class="flex items-center justify-center flex-col gap-2 w-full">
+
+    <!-- <div class="flex items-center justify-center flex-col gap-2 w-full">
                 <button id="visitsDisplayerButton" class="border-4 font-[cursive] rounded-2xl min-w-[5.625rem] text-2xl text-red-600 p-1 bg-black"><i class="fi fi-rr-angle-down"></i></button>
                 <div id="visits" style="display: none;" class="text-4xl text-center min-w-24 min-h-3">
-            You have visited this page <label><?php echo $number_of_visits?></label> times
+            You have visited this page <label><?php echo $number_of_visits ?></label> times
         </div>
         </div> -->
-    
 
-    
+
+
 
     <!-- Title with animation -->
 
     <div>
         <h1 class=" flex flex-row text-3xl sm:text-5xl text-center animated-text gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-36 sm:h-28" id="animatedText">
-            Welcome <?php echo "{$_SESSION['username']}"?>, on my site 
+            Welcome <?php echo "{$_SESSION['username']}" ?>, on my site
         </h1>
     </div>
-        
+
+    <!-- "Go back to top" button-->
+
+    <div class="group h-12 w-12 sm:h-16 sm:w-16 bg-white rounded-2xl bottom-5 right-5 hidden fixed place-self-stretch z-50 items-center justify-center cursor-pointer  hover:bg-slate-200" title="Go back to the top" id="backToTop">
+            <a href="#header"><img src="../assets/icons/top.png" alt="back to up !" class="scroll-smooth h-5 w-5 sm:h-7 sm:w-7 group-hover:animate-bounce"></a>
+    </div>
+    
     <main class="flex items-center justify-center flex-col gap-3 sm:w-[620px] z-0">
         <div class="flex items-center justify-center flex-col gap-5 m-3">
             <div class="text-lg sm:text-2xl h-[1150px] mysql-custom:h-[1000px]" id="mainText">
                 👉 Hello, dear visitor, my name is Friedrich482.<br><br>
-                
+
                 👉 I am a junior developper 👨‍💻.
-                
+
                 <br><br>
                 👉 I am currently learning TypeScript and how to use it in my projects.<br><br>
                 👉 ... Nothing more than that to say about me, except the fact that I like 🤩 videos games 🎮.<br>
@@ -326,13 +328,13 @@
                 <br><br>
                 This page is my first try
                 on a CRUD (Create-Read-Update-Delete) project. It was made with:
-            
+
                 <ul class="list-disc ml-20 mr-20 mt-8 mb-8  sm:ml-36 sm:mr-36 gap-1">
                     <li class="mb-2">PHP</li>
                     <li class="mb-2">JavaScript</li>
                     <li class="mb-2">Postgresql (as the DB)</li>
                     <li class="mb-2">Tailwind CSS</li>
-                </ul>            
+                </ul>
 
                 You will also find some of the projects I have done with JavaScript when learning it. Enjoy them and have a nice day.
                 <br>(If you don't see them, scroll down or use the navbar)
@@ -343,11 +345,11 @@
                   <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
               </div> -->
-        
+
         </div>
         <!-- Tools grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6" id="toolsGrid">
-            
+
             <!-- Calculator card -->
 
             <div class="group bg-orange-300 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-lg hover:shadow-white">
@@ -478,20 +480,16 @@
 
         <div class="h-7"></div>
 
-         <!-- Logout button -->
+        <!-- Logout button -->
 
-         <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500">
+        <div class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500">
             <input type="button" value="Logout" id="logout" name="logout" class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2  hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
         </div>
 
-         <!-- "Go back to top" button-->
-
-         <div class="group h-12 w-12 sm:h-16 sm:w-16 bg-white rounded-2xl flex items-center justify-center cursor-pointer ml-auto mr-6 hover:bg-slate-200" title="Go back to the top" id="backToTop">
-            <a href="#header"><img src="../assets/icons/top.png" alt="back to up !" class="scroll-smooth h-5 w-5 sm:h-7 sm:w-7 group-hover:animate-bounce"></a>
-        </div>
         
+
     </main>
-    
+
 
     <!-- Dialog for logout -->
 
@@ -506,23 +504,23 @@
                 <div class="p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
                     <input type="submit" value="Yes ✅" class="cursor-pointer bg-slate-700 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2 hover:bg-slate-700 hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
                 </div>
-                
+
                 <!-- No button -->
 
                 <div class="p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
                     <input type="button" value="No ❌" id="denyButton" class="cursor-pointer bg-slate-700 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2 hover:bg-slate-700 hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800">
                 </div>
-                
+
             </div>
-            
+
         </form>
     </dialog>
 
 
 </body>
+
 </html>
 
 <?php
-    include("../include/footer.php");
+include("../include/footer.php");
 ?>
-
