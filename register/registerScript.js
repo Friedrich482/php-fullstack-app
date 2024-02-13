@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("Form submission intercepted");
-
+    
     const registerForm = document.getElementById('registerForm');
-
+    
     const emailInput = document.getElementById('email'); 
     const usernameInput = document.getElementById('username'); 
     const passwordInput = document.getElementById('password'); 
-
+    
     const emailError = document.querySelector('#emailError');
     const usernameError = document.getElementById('usernameError');
     const defaultError = document.querySelector('#defaultError');
-
-    registerForm.addEventListener('submit', function(e) {
+    
+    registerForm.addEventListener('submit', function(e) {        
+        console.log("Form submission intercepted");
         e.preventDefault();
         hidden(emailError);
         hidden(usernameError);
-
+        
         const formData = new FormData(registerForm);
         fetch('register_process.php', {
             method: 'POST',
@@ -23,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => response.json())
         .then(data => {
+
             if (data.error) {
+                
                 let elts = [emailInput, usernameInput, passwordInput];
                 elts.forEach((elt) =>{
                     removeErrorFieldStyle(elt);
@@ -34,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     display(emailError);
                     emailError.innerHTML = data.message
                 }
+                
                 else if(data.message.includes("This username is already taken ❌")){
                     usernameInput.focus();
                     errorFieldStyle(usernameInput);
@@ -58,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Error:', error));
     });
 });
+
 function display(element){
     element.classList.remove('hidden')
     element.classList.add('visibleItem')

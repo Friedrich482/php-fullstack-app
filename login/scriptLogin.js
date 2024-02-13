@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Form submission intercepted');
     
     const loginForm = document.getElementById('loginForm');
     const usernameError = document.getElementById('usernameError');
@@ -7,8 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const defaultError = document.querySelector('#defaultError');
     const usernameInput = document.getElementById('username'); 
     const passwordInput = document.getElementById('password');
-
+    
     loginForm.addEventListener('submit', function(e) {
+        console.log('Form submission intercepted');
         e.preventDefault();
         hidden(usernameError);
         hidden(passwordError);
