@@ -289,16 +289,6 @@ $number_of_visits = $row['visits'];
 
     </header>
 
-    <!-- <div class="flex items-center justify-center flex-col gap-2 w-full">
-                <button id="visitsDisplayerButton" class="border-4 font-[cursive] rounded-2xl min-w-[5.625rem] text-2xl text-red-600 p-1 bg-black"><i class="fi fi-rr-angle-down"></i></button>
-                <div id="visits" style="display: none;" class="text-4xl text-center min-w-24 min-h-3">
-            You have visited this page <label><?php echo $number_of_visits ?></label> times
-        </div>
-        </div> -->
-
-
-
-
     <!-- Title with animation -->
 
     <div>
@@ -309,13 +299,13 @@ $number_of_visits = $row['visits'];
 
     <!-- "Go back to top" button-->
 
-    <div class="group h-12 w-12 sm:h-16 sm:w-16 bg-white rounded-2xl bottom-5 right-5 hidden fixed place-self-stretch z-50 items-center justify-center cursor-pointer  hover:bg-slate-200" title="Go back to the top" id="backToTop">
+    <div class="group h-12 w-12 sm:h-16 sm:w-16 bg-white rounded-2xl bottom-5 right-5 hidden fixed z-50 items-center justify-center cursor-pointer  hover:bg-slate-200" title="Go back to the top" id="backToTop">
             <a href="#header"><img src="../assets/icons/top.png" alt="back to up !" class="scroll-smooth h-5 w-5 sm:h-7 sm:w-7 group-hover:animate-bounce"></a>
     </div>
     
     <main class="flex items-center justify-center flex-col gap-3 sm:w-[620px] z-0">
         <div class="flex items-center justify-center flex-col gap-5 m-3">
-            <div class="text-lg sm:text-2xl h-[1150px] mysql-custom:h-[1000px]" id="mainText">
+            <div class="text-lg sm:text-2xl h-[1150px] mysql-custom:h-[1000px] text-pretty" id="mainText">
                 👉 Hello, dear visitor, my name is Friedrich482.<br><br>
 
                 👉 I am a junior developper 👨‍💻.
@@ -332,19 +322,20 @@ $number_of_visits = $row['visits'];
                 <ul class="list-disc ml-20 mr-20 mt-8 mb-8  sm:ml-36 sm:mr-36 gap-1">
                     <li class="mb-2">PHP</li>
                     <li class="mb-2">JavaScript</li>
-                    <li class="mb-2">Postgresql (as the DB)</li>
+                    <li class="mb-2">PostgreSQL (as the DB)</li>
                     <li class="mb-2">Tailwind CSS</li>
                 </ul>
 
                 You will also find some of the projects I have done with JavaScript when learning it. Enjoy them and have a nice day.
-                <br>(If you don't see them, scroll down or use the navbar)
+                <br>(If you don't see them, scroll down or click on the bouncing button)
             </div>
-            <br>
-            <!-- <div class="animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
+            <div class="animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full  items-center justify-center relative sm:bottom-32 mysql-custom:bottom-10 sm-custom:bottom-0" id="arrowDownbutton">
                 <svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
-              </div> -->
+                <a href="#toolsGrid"></a>
+              </div>
+            
 
         </div>
         <!-- Tools grid -->

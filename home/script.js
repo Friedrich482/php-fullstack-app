@@ -175,7 +175,7 @@ function animatemainText() {
   }
 
   const delay = isLineBreak
-    ? 1
+    ? 0.5
     : mainTextCharIndex === 0 ||
       mainTextCharIndex === animatedTextContent.length
     ? 1000
