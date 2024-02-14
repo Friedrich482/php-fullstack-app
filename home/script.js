@@ -54,10 +54,11 @@ const smallTools = document.querySelector("#smallTools");
 const smallAbout = document.querySelector("#smallAbout");
 
 /*The "go back to top" wrapper is also in this case, so I include it here.
-  The bouncing button too*/
+  The bouncing button too all the grid tools also*/
 
 const backToTopWrapper = document.querySelector("#backToTop");
 const arrowDownbutton = document.querySelector("#arrowDownbutton");
+const spaceCalculator = document.querySelector("#spaceCalculator");
 
 let navbarSections = [
   LargeHome,
@@ -67,7 +68,8 @@ let navbarSections = [
   smallTools,
   smallAbout,
   backToTopWrapper,
-  arrowDownbutton
+  arrowDownbutton,
+  spaceCalculator,
 ];
 
 navbarSections.forEach((section) => {
