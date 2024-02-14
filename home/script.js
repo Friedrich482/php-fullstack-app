@@ -53,9 +53,11 @@ const smallHome = document.querySelector("#smallHome");
 const smallTools = document.querySelector("#smallTools");
 const smallAbout = document.querySelector("#smallAbout");
 
-// The "go back to top" wrapper is also in this case, so I include it here
+/*The "go back to top" wrapper is also in this case, so I include it here.
+  The bouncing button too*/
 
 const backToTopWrapper = document.querySelector("#backToTop");
+const arrowDownbutton = document.querySelector("#arrowDownbutton");
 
 let navbarSections = [
   LargeHome,
@@ -65,6 +67,7 @@ let navbarSections = [
   smallTools,
   smallAbout,
   backToTopWrapper,
+  arrowDownbutton
 ];
 
 navbarSections.forEach((section) => {
@@ -175,7 +178,7 @@ function animatemainText() {
   }
 
   const delay = isLineBreak
-    ? 1
+    ? 0.5
     : mainTextCharIndex === 0 ||
       mainTextCharIndex === animatedTextContent.length
     ? 1000

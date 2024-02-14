@@ -596,6 +596,30 @@ video {
   bottom: 1.25rem;
 }
 
+.bottom-2 {
+  bottom: 0.5rem;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.bottom-6 {
+  bottom: 1.5rem;
+}
+
+.bottom-12 {
+  bottom: 3rem;
+}
+
+.bottom-20 {
+  bottom: 5rem;
+}
+
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -967,6 +991,10 @@ video {
 
 .scroll-smooth {
   scroll-behavior: smooth;
+}
+
+.text-pretty {
+  text-wrap: pretty;
 }
 
 .rounded-2xl {
@@ -1810,12 +1838,52 @@ body::-webkit-scrollbar-thumb{
 }
 
 @media (min-width: 310px) {
+  .sm-custom\:bottom-0 {
+    bottom: 0px;
+  }
+
   .sm-custom\:flex-row {
     flex-direction: row;
   }
 }
 
 @media (min-width: 358px) {
+  .mysql-custom\:bottom-20 {
+    bottom: 5rem;
+  }
+
+  .mysql-custom\:bottom-48 {
+    bottom: 12rem;
+  }
+
+  .mysql-custom\:bottom-64 {
+    bottom: 16rem;
+  }
+
+  .mysql-custom\:bottom-72 {
+    bottom: 18rem;
+  }
+
+  .mysql-custom\:bottom-36 {
+    bottom: 9rem;
+  }
+
+  .mysql-custom\:bottom-28 {
+    bottom: 7rem;
+  }
+
+  .mysql-custom\:bottom-24 {
+    bottom: 6rem;
+  }
+
+  .mysql-custom\:bottom-0 {
+    bottom: 0px;
+  }
+
+  .mysql-custom\:bottom-10 {
+    bottom: 2.5rem;
+  }
+
   .mysql-custom\:h-\[1000px\] {
     height: 1000px;
   }
@@ -1824,6 +1892,22 @@ body::-webkit-scrollbar-thumb{
 @media (min-width: 640px) {
   .sm\:bottom-0 {
     bottom: 0px;
+  }
+
+  .sm\:bottom-20 {
+    bottom: 5rem;
+  }
+
+  .sm\:bottom-24 {
+    bottom: 6rem;
+  }
+
+  .sm\:bottom-28 {
+    bottom: 7rem;
+  }
+
+  .sm\:bottom-32 {
+    bottom: 8rem;
   }
 
   .sm\:ml-36 {
