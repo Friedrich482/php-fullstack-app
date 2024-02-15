@@ -81,7 +81,7 @@ button{
     border-radius: 20px;
     font-family: 'consolas';
     max-width: 65px;
-    border: 5px double hsla(178, 83%, 44%, 0.737);
+    border: 5px double #13cdc7bc;
     cursor: pointer;
 }
 button:hover{

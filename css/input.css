@@ -6,6 +6,12 @@
     font-family: "MV Boli";
 }
 
+.seven-segment{
+    font-family: 'seven segment';
+}
+.consolas{
+    font-family: 'consolas';
+}
 .backgroundImg{
     background-image: url("../assets/bg-img/02.jpeg");
     background-repeat: no-repeat;
@@ -44,9 +50,6 @@
     font-family: "MV Boli";
 }
 
-.seven-segment{
-    font-family: 'seven segment';
-}
 
 @keyframes textAnimation {
     from {
