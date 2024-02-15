@@ -299,7 +299,7 @@ $number_of_visits = $row['visits'];
 
     <!-- "Go back to top" button-->
 
-    <div class="group h-12 w-12 sm:h-16 sm:w-16 bg-white rounded-2xl bottom-5 right-5 hidden fixed z-50 items-center justify-center cursor-pointer  hover:bg-slate-200" title="Go back to the top" id="backToTop">
+    <div class="group h-12 w-12 sm:h-16 sm:w-16 bg-white rounded-2xl bottom-5 right-5 hidden fixed z-50 items-center justify-center cursor-pointer hover:bg-slate-200" title="Go back to the top" id="backToTop">
             <a href="#header"><img src="../assets/icons/top.png" alt="back to up !" class="scroll-smooth h-5 w-5 sm:h-7 sm:w-7 group-hover:animate-bounce"></a>
     </div>
     
@@ -332,7 +332,7 @@ $number_of_visits = $row['visits'];
 
             <!-- Boucing button ⬇ -->
 
-            <div class="animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full  items-center justify-center relative sm:bottom-32 mysql-custom:bottom-10 sm-custom:bottom-0 " id="arrowDownbutton">
+            <div class="cursor-pointer animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full  items-center justify-center relative sm:bottom-32 mysql-custom:bottom-10 sm-custom:bottom-0 " id="arrowDownbutton">
                 <svg class="w-6 h-6 text-violet-500 transition duration-500 hover:scale-110" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
@@ -346,8 +346,8 @@ $number_of_visits = $row['visits'];
 
             <!-- Calculator card -->
 
-            <div class="group bg-orange-300 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-lg hover:shadow-white">
-
+            <div class="group bg-orange-300 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-lg hover:shadow-white" id="spaceCalculator">
+                <a href="../space_calculator/calculator.php"></a>
                 <div class="calcImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-orange-300">
 
                 </div>
