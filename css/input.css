@@ -44,6 +44,10 @@
     font-family: "MV Boli";
 }
 
+.seven-segment{
+    font-family: 'seven segment';
+}
+
 @keyframes textAnimation {
     from {
       width: 0;
@@ -143,6 +147,15 @@
     background-position: center;
     background-attachment: fixed;
     
+}
+
+.spaceImg{
+    background-image: url("../space_calculator/blackSky.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
 }
 
 body::-webkit-scrollbar{
