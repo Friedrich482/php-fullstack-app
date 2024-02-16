@@ -105,7 +105,7 @@ button:active{
 }
 
 #clearButton{
-    background-color: hsla(293, 74%, 17%, 0.468);
+    background-color: hwb(293 4% 71% / 0.468);
 }
 
 #clearButton:hover{
