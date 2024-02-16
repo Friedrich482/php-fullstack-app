@@ -33,6 +33,12 @@
       </div>
 
       <div
+        id="date"
+        class="hidden rounded-lg relative self-end bottom-2 border-none text-lg text-center font-extrabold bg-[#4d4848d3] text-red-500 seven-segment w-24 h-7 hover:shadow-sm"
+      >
+      </div>
+
+      <div
         id="displayScreen" 
         class="bg-[#4d4848d3] rounded-xl border-none text-right indent-1 text-7xl seven-segment overflow-hidden text-gray-950 min-h-[72px] hover:shadow-md hover:shadow-black w-full"
         ></div>
