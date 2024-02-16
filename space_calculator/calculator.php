@@ -16,11 +16,11 @@
     <script src="script.js" defer></script>
   </head>
 
-  <body class="flex items-center justify-center spaceImg">
+  <body class="flex items-center justify-center spaceImg min-h-[576px]">
 
     <div
       id="container"
-      class="rounded-2xl p-2 text-center bg-gradient-to-tr from-green-500 via-pink-400 to-yellow-200 w-10/12 min-w-[19.05rem] max-w-[21rem]"
+      class="calc-border rounded-2xl p-2 text-center calc-gradient w-10/12 min-w-[19.05rem] max-w-[21rem] "
     >
       <div
         id="clock"
@@ -31,7 +31,7 @@
 
       <div
         id="displayScreen" 
-        class="bg-[#585050d3] rounded-xl border-none bg-gray-400 text-right indent-1 text-7xl seven-segment overflow-hidden text-gray-950 min-h-[72px] hover:shadow-md hover:shadow-black"
+        class="bg-[#4d4848d3] rounded-xl border-none text-right indent-1 text-7xl seven-segment overflow-hidden text-gray-950 min-h-[72px] hover:shadow-md hover:shadow-black"
         ></div>
       <br />
 

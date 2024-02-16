@@ -181,3 +181,11 @@ body::-webkit-scrollbar-thumb{
     display: flex;
     height: 20rem;
 }
+.calc-border{
+    border-right: 5px outset rgb(205, 187, 187);
+    border-bottom: 10px outset rgb(96, 89, 89);
+}
+.calc-gradient{
+    background:linear-gradient(23deg,hsla(106, 63%, 57%, 0.664), pink, rgba(211, 211, 27, 0.632));
+    backdrop-filter: blur(10px);
+}
