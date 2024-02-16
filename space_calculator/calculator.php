@@ -24,7 +24,7 @@
     >
       <div
         id="clock"
-        class="rounded-lg relative self-end bottom-2 border-none text-lg text-center font-extrabold bg-[#4d4848d3] text-red-500 seven-segment w-24 h-7 grid grid-cols-3 hover:shadow-sm"
+        class="rounded-lg relative self-end bottom-2 border-none text-lg text-center font-extrabold bg-[#4d4848d3] text-red-500 seven-segment w-24 h-7 grid grid-cols-3 hover:shadow-md hover:shadow-black"
       >
       <div id="hours" class="text-right">00 <span class="relative bottom-[3.5px]">:</span></div>
       <div id="mins" class="text-center">00 <span class="relative bottom-[3.5px]">:</span></div>
@@ -34,7 +34,7 @@
 
       <div
         id="date"
-        class="hidden rounded-lg relative self-end bottom-2 border-none text-lg text-center font-extrabold bg-[#4d4848d3] text-red-500 seven-segment w-24 h-7 hover:shadow-sm"
+        class="hidden rounded-lg relative self-end bottom-2 border-none text-lg text-center font-extrabold bg-[#4d4848d3] text-red-500 seven-segment w-24 h-7 hover:shadow-md hover:shadow-black"
       >
       </div>
 
