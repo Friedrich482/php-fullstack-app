@@ -49,9 +49,14 @@ function eraser(){
 }
 
 //Defining a clock for the calculator
-let clock = document.getElementById('clock');
-let switched = false;
+
 function clocker(){
+    const clock = document.getElementById('clock');
+    const hoursDiv = document.querySelector("#hours");
+    const minsDiv = document.querySelector("#mins");
+    const secondsDiv = document.querySelector("#seconds");
+
+    let switched = false;
     let date = new Date();
     let hours = date.getHours();
     let minutes = date.getMinutes();
@@ -65,7 +70,10 @@ function clocker(){
     minutes = pad(minutes);
     seconds = pad(seconds);
 
-    clock.textContent = `${hours}:${minutes}:${seconds}`;
+    hoursDiv.innerHTML = `${hours}<span class="relative bottom-[3.5px]"> : &nbsp;</span>`;
+    minsDiv.innerHTML = `${minutes}<span class="relative bottom-[3.5px]"> :</span>`;
+    secondsDiv.innerHTML = `${seconds}`
+
 }
 
 let realTime = setInterval(clocker, 1000);
