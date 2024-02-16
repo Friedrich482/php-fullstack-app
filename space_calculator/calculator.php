@@ -17,10 +17,10 @@
   </head>
 
   <body class="flex items-center justify-center spaceImg">
-    <br /><br />
+
     <div
       id="container"
-      class="rounded-2xl p-2 text-center bg-gradient-to-tr from-green-500 via-pink-400 to-yellow-200 w-3/5"
+      class="rounded-2xl p-2 text-center bg-gradient-to-tr from-green-500 via-pink-400 to-yellow-200 w-10/12 min-w-[19.05rem] max-w-[21rem]"
     >
       <div
         id="clock"
@@ -30,138 +30,138 @@
       </div>
 
       <div
-        id="displayScreen"
-        class="rounded-xl border-none bg-gray-400 p-1 relative"
-      ></div>
+        id="displayScreen" 
+        class="bg-[#585050d3] rounded-xl border-none bg-gray-400 text-right indent-1 text-7xl seven-segment overflow-hidden text-gray-950 min-h-[72px] hover:shadow-md hover:shadow-black"
+        ></div>
       <br />
 
       <div
         id="buttons"
-        class="grid grid-cols-4 grid-rows-5 place-items-center h-96 gap-2 p-4"
+        class="grid grid-cols-4 grid-rows-5 place-items-center h-96 gap-4 p-4"
       >
         <button
-          class="digitButton h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
-          onclick="appendToDisplay('7')"
+        onclick="appendToDisplay('7')"
+        class="bg-[#080707bf] text-white h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
         >
           7
         </button>
         <button
-          class="digitButton h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="bg-[#080707bf] text-white h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="appendToDisplay('8')"
         >
           8
         </button>
         <button
-          class="digitButton h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="bg-[#080707bf] text-white h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="appendToDisplay('9')"
         >
           9
         </button>
 
         <button
-          class="operationButton h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="operationButton bg-white h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="appendToDisplay('/')"
         >
           &div;
         </button>
 
         <button
-          class="digitButton h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="bg-[#080707bf] text-white h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="appendToDisplay('4')"
         >
           4
         </button>
         <button
-          class="digitButton h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="bg-[#080707bf] text-white h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="appendToDisplay('5')"
         >
           5
         </button>
         <button
-          class="digitButton h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="bg-[#080707bf] text-white h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="appendToDisplay('6')"
         >
           6
         </button>
 
         <button
-          class="operationButton h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="operationButton bg-white h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="appendToDisplay('*')"
         >
           &times;
         </button>
 
         <button
-          class="digitButton h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="bg-[#080707bf] text-white h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="appendToDisplay('1')"
         >
           1
         </button>
         <button
-          class="digitButton h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="bg-[#080707bf] text-white h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="appendToDisplay('2')"
         >
           2
         </button>
         <button
-          class="digitButton h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="bg-[#080707bf] text-white h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="appendToDisplay('3')"
         >
           3
         </button>
 
         <button
-          class="operationButton h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="operationButton bg-white h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="appendToDisplay('-')"
         >
           &minus;
         </button>
 
         <button
-          class="digitButton h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="bg-[#080707bf] text-white h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="appendToDisplay('0')"
         >
           0
         </button>
         <button
-          class="commaButton h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="commaButton bg-white flex items-center justify-center h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="appendToDisplay('.')"
         >
-          &dot;
+            <div class="h-[6px] w-[6px] bg-black rounded-full"></div>
         </button>
         <button
-          class="h-16 text-4xl aspect-square rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="bg-[#440b4b77] h-16 text-4xl aspect-square rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="clearDisplay()"
           id="clearButton"
         >
           C
         </button>
         <button
-          class="operationButton h-16 text-4xl aspect-square rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="operationButton bg-white h-16 text-4xl aspect-square rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="appendToDisplay('+')"
         >
           &plus;
         </button>
 
         <button
-          class="parButton h-16 text-4xl aspect-square rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="parButton bg-white h-16 text-4xl aspect-square rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
         >
           &lpar;
         </button>
         <button
-          class="parButton h-16 text-4xl aspect-square rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="parButton bg-white h-16 text-4xl aspect-square rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
         >
           &rpar;
         </button>
 
         <button
-          class="eraseButton h-16 text-4xl aspect-square rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="eraseButton bg-white h-16 text-4xl aspect-square rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="eraser()"
         >
           &LeftArrow;
         </button>
         <button
-          class="equalityButton h-16 text-4xl aspect-square rounded-2xl consolas border-4 border-double border-sky-400 cursor-pointer hover:border-sky-100 hover:bg-cyan-400 hover:text-indigo-600 active:border-4 active:border-blue-300 active:bg-slate-200 active:text-indigo-600"
+          class="equalityButton  bg-white h-16 text-4xl aspect-square rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300"
           onclick="calculate()"
         >
           &equals;

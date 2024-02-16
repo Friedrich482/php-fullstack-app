@@ -50,7 +50,7 @@
 #displayScreen{
     border-radius: 10px;
     border: none;
-    background-color: hsla(0, 5%, 33%, 0.826);
+    background-color: #585050d3;
     padding: 1px;
     position: relative;
     top: 10px;
@@ -81,7 +81,7 @@ button{
     border-radius: 20px;
     font-family: 'consolas';
     max-width: 65px;
-    border: 5px double hsla(178, 83%, 44%, 0.737);
+    border: 5px double #13cdc7bc;
     cursor: pointer;
 }
 button:hover{
@@ -105,7 +105,7 @@ button:active{
 }
 
 #clearButton{
-    background-color: hsla(293, 74%, 17%, 0.468);
+    background-color: hwb(293 4% 71% / 0.468);
 }
 
 #clearButton:hover{
