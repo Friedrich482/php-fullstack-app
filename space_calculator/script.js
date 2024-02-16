@@ -52,13 +52,6 @@ const minsDiv = document.querySelector("#mins");
 const secondsDiv = document.querySelector("#seconds");
 const dateDiv = document.querySelector("#date");
 
-const hoursSpan = document.querySelector("#hoursSpan");
-const minutesSpan = document.querySelector("#mins");
-
-hoursSpan.textContent = hours;
-minutesSpan.textContent = minutes;
-secondsDiv.textContent = seconds;
-
 let timeDivs = [clock, dateDiv];
 
 function clocker() {
@@ -66,7 +59,7 @@ function clocker() {
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let seconds = date.getSeconds();
-  
+
   function pad(unit) {
     return unit < 10 ? "0" + unit : unit;
   }
