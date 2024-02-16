@@ -678,6 +678,10 @@ video {
   margin-top: 2rem;
 }
 
+.ml-0 {
+  margin-left: 0px;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -794,8 +798,20 @@ video {
   height: 6px;
 }
 
+.h-28 {
+  height: 7rem;
+}
+
 .min-h-\[560px\] {
   min-height: 560px;
+}
+
+.min-h-\[7\E9px\] {
+  min-height: 7épx;
+}
+
+.min-h-\[72px\] {
+  min-height: 72px;
 }
 
 .w-1\/4 {
@@ -886,6 +902,14 @@ video {
   width: 6px;
 }
 
+.w-9\/12 {
+  width: 75%;
+}
+
+.w-10\/12 {
+  width: 83.333333%;
+}
+
 .min-w-16 {
   min-width: 4rem;
 }
@@ -898,12 +922,28 @@ video {
   min-width: 16rem;
 }
 
+.min-w-72 {
+  min-width: 18rem;
+}
+
+.min-w-\[19\.05rem\] {
+  min-width: 19.05rem;
+}
+
 .max-w-60 {
   max-width: 15rem;
 }
 
 .max-w-96 {
   max-width: 24rem;
+}
+
+.max-w-\[22rem\] {
+  max-width: 22rem;
+}
+
+.max-w-\[21rem\] {
+  max-width: 21rem;
 }
 
 .flex-shrink-0 {
@@ -1047,8 +1087,24 @@ video {
   row-gap: 2.5rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-clip {
+  overflow: clip;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
 .scroll-smooth {
   scroll-behavior: smooth;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
 }
 
 .text-pretty {
@@ -1303,6 +1359,10 @@ video {
   background-color: rgb(190 24 93 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#585050d3\] {
+  background-color: #585050d3;
+}
+
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -1383,12 +1443,24 @@ video {
   padding-top: 1.5rem;
 }
 
+.pl-0 {
+  padding-left: 0px;
+}
+
 .text-center {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-start {
   text-align: start;
+}
+
+.indent-1 {
+  text-indent: 0.25rem;
 }
 
 .text-2xl {
@@ -1429,6 +1501,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1461,6 +1538,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-950 {
+  --tw-text-opacity: 1;
+  color: rgb(3 7 18 / var(--tw-text-opacity));
 }
 
 .no-underline {
@@ -1857,6 +1939,12 @@ body::-webkit-scrollbar-thumb{
 .hover\:shadow-xl:hover {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-md:hover {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 

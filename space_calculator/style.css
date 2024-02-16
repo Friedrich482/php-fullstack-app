@@ -50,7 +50,7 @@
 #displayScreen{
     border-radius: 10px;
     border: none;
-    background-color: hsla(0, 5%, 33%, 0.826);
+    background-color: #585050d3;
     padding: 1px;
     position: relative;
     top: 10px;
