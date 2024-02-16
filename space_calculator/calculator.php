@@ -20,18 +20,27 @@
 
     <div
       id="container"
-      class="rounded-2xl p-2 text-center bg-gradient-to-tr from-green-500 via-pink-400 to-yellow-200 w-10/12 min-w-[19.05rem] max-w-[21rem]"
+      class="flex items-center justify-center relative top-4 flex-col calc-border rounded-3xl p-4 text-center calc-gradient w-10/12 min-w-[19.05rem] max-w-[21rem] "
     >
       <div
         id="clock"
-        class="rounded-xl relative inline-block border-none text-xl p-1 font-bold bg-gray-400 seven-segment w-24 hover:shadow-sm"
+        class="rounded-lg relative self-end bottom-2 border-none text-lg text-center font-extrabold bg-[#4d4848d3] text-red-500 seven-segment w-24 h-7 grid grid-cols-3 hover:shadow-md hover:shadow-black"
       >
-        00:00:00
+      <div id="hours" class="text-right">00 <span class="relative bottom-[3.5px]">:</span></div>
+      <div id="mins" class="text-center">00 <span class="relative bottom-[3.5px]">:</span></div>
+      <div id="seconds" class="text-left">00</div>
+        
+      </div>
+
+      <div
+        id="date"
+        class="hidden rounded-lg relative self-end bottom-2 border-none text-lg text-center font-extrabold bg-[#4d4848d3] text-red-500 seven-segment w-24 h-7 hover:shadow-md hover:shadow-black"
+      >
       </div>
 
       <div
         id="displayScreen" 
-        class="bg-[#585050d3] rounded-xl border-none bg-gray-400 text-right indent-1 text-7xl seven-segment overflow-hidden text-gray-950 min-h-[72px] hover:shadow-md hover:shadow-black"
+        class="bg-[#4d4848d3] rounded-xl border-none text-right indent-1 text-7xl seven-segment overflow-hidden text-gray-950 min-h-[72px] hover:shadow-md hover:shadow-black w-full"
         ></div>
       <br />
 
