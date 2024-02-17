@@ -33,5 +33,6 @@ Technologies/tools/languages used :
 - [x] If we click on the DOM elements that have the notification **ping**, it disappears and for the *Profile* sections, a dialog 💬 will open and display infos about the users  
 - [x] If the user has alredy checked the one of the ping elements(especially the logout elements for the small and large screens navbars), if he reduce or increase the size of his screen and so, for example the display for small or large sreens occurs, the ping **WILL NO LONGER BE PRESENT**  
 - [x] Added the simple calculator file  
+- [x] Add Typescript instead of vanilla JavaScript for the calculator
 
 This list will be updated depending on my progression through it.
