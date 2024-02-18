@@ -1,10 +1,12 @@
-let displayScreen = document.getElementById("displayScreen");
-let egal = false;
-function appendToDisplay(element) {
+let displayScreen = document.getElementById("displayScreen") as HTMLDivElement;
+let egal: boolean = false;
+
+function appendToDisplay(element: string) {
   if (egal) {
     clearDisplay();
     egal = false;
   }
+
   displayScreen.textContent += element;
 }
 
@@ -13,6 +15,7 @@ function clearDisplay() {
 }
 
 function calculate() {
+  let displayScreenContent: string = displayScreen.textContent;
   try {
     if (String(eval(displayScreen.textContent)).length > 8) {
       displayScreen.textContent = eval(displayScreen.textContent).toFixed(7);
