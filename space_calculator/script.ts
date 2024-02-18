@@ -1,59 +1,62 @@
-let displayScreen = document.getElementById("displayScreen") as HTMLDivElement;
-let egal: boolean = false;
+const displayScreen = document.getElementById("displayScreen") as HTMLDivElement;
+let displayScreenContent = displayScreen.textContent || "";
+let egal = false;
 
-function appendToDisplay(element: string) {
+managePar();
+
+function appendToDisplay(element: string): void {
   if (egal) {
     clearDisplay();
     egal = false;
   }
 
-  displayScreen.textContent += element;
+  displayScreenContent += element;
 }
 
-function clearDisplay() {
-  displayScreen.textContent = "";
+function clearDisplay(): void {
+  displayScreenContent = "";
 }
 
 function calculate() {
-  let displayScreenContent: string = displayScreen.textContent;
   try {
-    if (String(eval(displayScreen.textContent)).length > 8) {
-      displayScreen.textContent = eval(displayScreen.textContent).toFixed(7);
+    if ((eval(displayScreenContent) as string).length > 8) {
+      displayScreenContent = eval(displayScreenContent).toFixed(7);
       egal = true;
     } else {
-      displayScreen.textContent = eval(displayScreen.textContent);
+      displayScreenContent = eval(displayScreenContent) as string;
       egal = true;
     }
   } catch (error) {
-    displayScreen.textContent = "ERROR";
+    displayScreenContent = "ERROR";
     egal = true;
   }
 }
 
 function managePar() {
-  const par = document.querySelectorAll(".parButton");
+  const par: NodeListOf<HTMLButtonElement>  = document.querySelectorAll(".parButton");
   par.forEach((elt) =>
     elt.addEventListener("click", () => {
-      let value = elt.textContent;
+      let value = elt.textContent as string;
       if (value === "(") {
-        displayScreen.textContent += value;
+        displayScreenContent += value;
       } else {
-        displayScreen.textContent += value;
+        displayScreenContent += value;
       }
     })
   );
 }
-managePar();
+
+
 function eraser() {
-  displayScreen.textContent = displayScreen.textContent.slice(0, -1);
+  displayScreenContent = displayScreenContent.slice(0, -1);
 }
 
 //Defining a clock for the calculator
-const clock = document.querySelector("#clock");
-const hoursDiv = document.querySelector("#hours");
-const minsDiv = document.querySelector("#mins");
-const secondsDiv = document.querySelector("#seconds");
-const dateDiv = document.querySelector("#date");
+const clock = document.querySelector<HTMLDivElement>("#clock");
+const hoursDiv = document.querySelector<HTMLDivElement>("#hours");
+const minsDiv = document.querySelector<HTMLDivElement>("#mins");
+const secondsDiv = document.querySelector<HTMLDivElement>("#seconds");
+const dateDiv = document.querySelector<HTMLDivElement>("#date");
 
 let timeDivs = [clock, dateDiv];
 

@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
     <title>Simple Calculator</title>
-    <script src="script.js" defer></script>
+    <script src="../dist/script.js" defer></script>
   </head>
 
   <body class="flex items-center justify-center spaceImg">

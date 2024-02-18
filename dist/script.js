@@ -1,30 +1,31 @@
 "use strict";
-let displayScreen = document.getElementById("displayScreen");
+const displayScreen = document.getElementById("displayScreen");
+let displayScreenContent = displayScreen.textContent || "";
 let egal = false;
+managePar();
 function appendToDisplay(element) {
     if (egal) {
         clearDisplay();
         egal = false;
     }
-    displayScreen.textContent += element;
+    displayScreenContent += element;
 }
 function clearDisplay() {
-    displayScreen.textContent = "";
+    displayScreenContent = "";
 }
 function calculate() {
-    let displayScreenContent = displayScreen.textContent;
     try {
-        if (String(eval(displayScreen.textContent)).length > 8) {
-            displayScreen.textContent = eval(displayScreen.textContent).toFixed(7);
+        if (eval(displayScreenContent).length > 8) {
+            displayScreenContent = eval(displayScreenContent).toFixed(7);
             egal = true;
         }
         else {
-            displayScreen.textContent = eval(displayScreen.textContent);
+            displayScreenContent = eval(displayScreenContent);
             egal = true;
         }
     }
     catch (error) {
-        displayScreen.textContent = "ERROR";
+        displayScreenContent = "ERROR";
         egal = true;
     }
 }
@@ -33,16 +34,15 @@ function managePar() {
     par.forEach((elt) => elt.addEventListener("click", () => {
         let value = elt.textContent;
         if (value === "(") {
-            displayScreen.textContent += value;
+            displayScreenContent += value;
         }
         else {
-            displayScreen.textContent += value;
+            displayScreenContent += value;
         }
     }));
 }
-managePar();
 function eraser() {
-    displayScreen.textContent = displayScreen.textContent.slice(0, -1);
+    displayScreenContent = displayScreenContent.slice(0, -1);
 }
 //Defining a clock for the calculator
 const clock = document.querySelector("#clock");
