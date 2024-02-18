@@ -1,0 +1,81 @@
+"use strict";
+const displayScreen = document.getElementById("displayScreen");
+let egal = false;
+managePar();
+function appendToDisplay(element) {
+    if (egal) {
+        clearDisplay();
+        egal = false;
+    }
+    displayScreen.textContent += element;
+}
+function clearDisplay() {
+    displayScreen.textContent = "";
+}
+function calculate() {
+    try {
+        if (String(eval(displayScreen.textContent || "")).length > 8)
+            displayScreen.textContent = eval(displayScreen.textContent || "").toFixed(7);
+        else
+            displayScreen.textContent = eval(displayScreen.textContent || "");
+    }
+    catch (error) {
+        displayScreen.textContent = "ERROR";
+    }
+    egal = true;
+}
+function managePar() {
+    const parButtons = document.querySelectorAll(".parButton");
+    for (const button of parButtons) {
+        button.addEventListener("click", () => {
+            const value = button.textContent || "";
+            displayScreen.textContent += value;
+        });
+    }
+}
+function eraser() {
+    displayScreen.textContent = displayScreen.textContent.slice(0, -1);
+}
+//Defining a clock for the calculator
+const clock = document.querySelector("#clock");
+const hoursDiv = document.querySelector("#hours");
+const minsDiv = document.querySelector("#mins");
+const secondsDiv = document.querySelector("#seconds");
+const dateDiv = document.querySelector("#date");
+let timeDivs = [clock, dateDiv];
+function clocker() {
+    let date = new Date();
+    let hours = pad(date.getHours());
+    let minutes = pad(date.getMinutes());
+    let seconds = pad(date.getSeconds());
+    function pad(unit) {
+        return unit < 10 ? "0" + unit : unit.toString();
+    }
+    if (hoursDiv)
+        hoursDiv.innerHTML = `${hours} <span class="relative bottom-[3.5px]"> : &nbsp;</span>`;
+    if (minsDiv)
+        minsDiv.innerHTML = `${minutes} <span class="relative bottom-[3.5px]"> :</span>`;
+    if (secondsDiv)
+        secondsDiv.textContent = `${seconds}`;
+}
+let switched = false;
+let realTime = setInterval(clocker, 1000);
+function toggleTime() {
+    if (!switched) {
+        const date = new Date();
+        if (dateDiv)
+            dateDiv.textContent = `${date.toLocaleDateString()}`;
+        clearInterval(realTime);
+    }
+    switched = !switched;
+    toogleTimeDivs();
+}
+timeDivs.forEach((timeDiv) => {
+    timeDiv === null || timeDiv === void 0 ? void 0 : timeDiv.addEventListener("click", toggleTime);
+});
+function toogleTimeDivs() {
+    timeDivs.forEach((timeDiv) => {
+        timeDiv === null || timeDiv === void 0 ? void 0 : timeDiv.classList.toggle("hidden");
+        timeDiv === null || timeDiv === void 0 ? void 0 : timeDiv.classList.toggle("flex");
+    });
+}
