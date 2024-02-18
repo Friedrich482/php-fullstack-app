@@ -12,6 +12,7 @@ function clearDisplay() {
     displayScreen.textContent = "";
 }
 function calculate() {
+    let displayScreenContent = displayScreen.textContent;
     try {
         if (String(eval(displayScreen.textContent)).length > 8) {
             displayScreen.textContent = eval(displayScreen.textContent).toFixed(7);
