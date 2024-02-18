@@ -19,12 +19,13 @@ function clearDisplay(): void {
 }
 
 function calculate(): void {
+  if(displayScreen.textContent === "") return ;
   try {
-    if (String(eval(displayScreen.textContent || "")).length > 8)
-      displayScreen.textContent = eval(
-        displayScreen.textContent || ""
-      ).toFixed(7);
-    else displayScreen.textContent = eval(displayScreen.textContent || "");
+    if (String(eval(displayScreen.textContent || "")).length > 8) {
+      displayScreen.textContent = eval(displayScreen.textContent || "").toFixed(
+        7
+      );
+    } else displayScreen.textContent = eval(displayScreen.textContent || "");
   } catch (error) {
     displayScreen.textContent = "ERROR";
   }
@@ -98,3 +99,36 @@ function toogleTimeDivs() {
     timeDiv?.classList.toggle("flex");
   });
 }
+
+window.addEventListener("keydown", (event) => {
+  const key = event.key;
+  if (Number(key) || key === "0") {
+    appendToDisplay(key);
+  }
+
+  const otherKeys = ["(", ")", ".", "+", "-", "*", "/"];
+  for (const otherKey of otherKeys) {
+    if (key === otherKey) appendToDisplay(otherKey);
+  }
+
+  switch (key) {
+    case "=":
+      calculate();
+      break;
+
+    case "Enter":
+      calculate()
+      break;
+
+    case "Backspace":
+      eraser();
+      break;
+
+    case " ":
+      clearDisplay();
+      break;
+    
+    default:
+      break;
+  }
+});
