@@ -6,14 +6,14 @@ setInterval(displayDate, 1000); // Calling the clock for the Profile
 
 const body = document.body;
 
-const logoutButton = document.querySelector("#logout");
-const logoutSmallScreens = document.querySelector("#logoutSmallScreens");
-const logoutLargeScreens = document.querySelector("#logoutLargeScreens");
+const logoutButton = document.querySelector<HTMLInputElement>("#logout");
+const logoutSmallScreens = document.querySelector<HTMLDivElement>("#logoutSmallScreens");
+const logoutLargeScreens = document.querySelector<HTMLDivElement>("#logoutLargeScreens");
 
-const confirmDeconnexionDialog = document.querySelector(
+const confirmDeconnexionDialog = document.querySelector<HTMLDialogElement>(
   "#confirmDeconnexionDialog"
 );
-const denyButton = document.querySelector("#denyButton");
+const denyButton = document.querySelector<HTMLInputElement>("#denyButton");
 
 let logoutItems = [logoutLargeScreens, logoutSmallScreens, logoutButton];
 
