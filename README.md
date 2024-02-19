@@ -34,5 +34,7 @@ Technologies/tools/languages used :
 - [x] If the user has alredy checked the one of the ping elements(especially the logout elements for the small and large screens navbars), if he reduce or increase the size of his screen and so, for example the display for small or large sreens occurs, the ping **WILL NO LONGER BE PRESENT**  
 - [x] Added the simple calculator file  
 - [x] Add Typescript instead of vanilla JavaScript for the calculator
-
+- [x] Add Typescript instead of vanilla JavaScript for the home page
+- [ ] Correct all the errors 💪  
+  
 This list will be updated depending on my progression through it.
