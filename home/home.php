@@ -300,7 +300,7 @@ $number_of_visits = $row['visits'];
     <!-- "Go back to top" button-->
 
     <div class="group h-12 w-12 sm:h-16 sm:w-16 bg-white rounded-2xl bottom-5 right-5 hidden fixed z-50 items-center justify-center cursor-pointer hover:bg-slate-200" title="Go back to the top" id="backToTop">
-            <a href="#header"><img src="../assets/icons/top.png" alt="back to up !" class="scroll-smooth h-5 w-5 sm:h-7 sm:w-7 group-hover:animate-bounce"></a>
+        <a href="#header"><img src="../assets/icons/top.png" alt="back to up !" class="scroll-smooth h-5 w-5 sm:h-7 sm:w-7 group-hover:animate-bounce"></a>
     </div>
     
     <main class="flex items-center justify-center flex-col gap-3 sm:w-[620px] z-0">

@@ -100,9 +100,15 @@ let domElements = [menuBurgerButton, smallProfile, largeProfile];
 
 const pingNotificationBurger = document.querySelector(
   "#pingNotificationBurger"
-);
-const smallScreensNotification = document.querySelector("#smallNotification");
-const bigScreensNotification = document.querySelector("#bigNotification");
+) as HTMLSpanElement;
+
+const smallScreensNotification = document.querySelector(
+  "#smallNotification"
+) as HTMLSpanElement;
+
+const bigScreensNotification = document.querySelector(
+  "#bigNotification"
+) as HTMLSpanElement;
 
 let notifications = [
   pingNotificationBurger,
@@ -113,34 +119,37 @@ let notifications = [
 domElements.forEach((element) => {
   let index = domElements.indexOf(element);
 
-  element.addEventListener("click", () => {
+  element.addEventListener("click", (): void => {
     notifications[index].classList.remove("flex");
     notifications[index].classList.add("hidden");
   });
 });
 
 smallProfile.addEventListener("click", () => {
-  bigScreensNotification.classList.remove("flex");
-  bigScreensNotification.classList.add("hidden");
+  toggleFlexHidden(bigScreensNotification);
 });
 
 largeProfile.addEventListener("click", () => {
-  pingNotificationBurger.classList.remove("flex");
-  pingNotificationBurger.classList.add("hidden");
-  smallScreensNotification.classList.remove("flex");
-  smallScreensNotification.classList.add("hidden");
+  toggleFlexHidden(pingNotificationBurger);
+  toggleFlexHidden(smallScreensNotification);
 });
 
+function toggleFlexHidden(element: HTMLSpanElement): void {
+  element.classList.remove("flex");
+  element.classList.add("hidden");
+}
 // Animation for the title
 
-const animatedText = document.getElementById("animatedText");
-const cursor = document.querySelector(".cursor");
+const animatedText = document.getElementById(
+  "animatedText"
+) as HTMLTitleElement;
+const cursor = document.querySelector(".cursor") as HTMLSpanElement;
 const textContent = animatedText.innerText;
 const textLength = textContent.length;
 let charIndex = 0;
 let reverse = false;
 
-function animateText() {
+function animateText(): void {
   animatedText.innerHTML =
     `<img src="../assets/icons/wave1.gif" alt="greeting" class="h-9 w-9 rounded-full sm:h-12 sm:w-12 relative bottom-1 sm:bottom-0 inline-block">` +
     `<div class="inline-block">${textContent.slice(
@@ -164,12 +173,12 @@ animateText();
 
 // animation for the tag main text
 
-const mainText = document.getElementById("mainText");
+const mainText = document.getElementById("mainText") as HTMLDivElement;
 const animatedTextContent = mainText.innerHTML;
 let mainTextCharIndex = 0;
 let reverseMain = false;
 
-function animatemainText() {
+function animatemainText(): void {
   const currentChar = animatedTextContent.charAt(mainTextCharIndex);
   const isLineBreak =
     currentChar === "<" &&
@@ -184,7 +193,7 @@ function animatemainText() {
     : mainTextCharIndex + 1;
 
   if (mainTextCharIndex > animatedTextContent.length) {
-    const mainCursor = document.querySelector("#mainCursor");
+    const mainCursor = document.querySelector("#mainCursor") as HTMLSpanElement;
     mainCursor.classList.add("hidden");
     return;
   }
