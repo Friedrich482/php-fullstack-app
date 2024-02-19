@@ -12,10 +12,17 @@ function appendToDisplay(element) {
 function clearDisplay() {
     displayScreen.textContent = "";
 }
+function removeTrailingZeros(numberString, precision) {
+    let regex = new RegExp(`\\.?0{${precision},}$`);
+    return numberString.replace(regex, "");
+}
 function calculate() {
+    if (displayScreen.textContent === "")
+        return;
     try {
-        if (String(eval(displayScreen.textContent || "")).length > 8)
-            displayScreen.textContent = eval(displayScreen.textContent || "").toFixed(7);
+        if (String(eval(displayScreen.textContent || "")).length > 8) {
+            displayScreen.textContent = removeTrailingZeros(eval(displayScreen.textContent || "").toFixed(7), 4);
+        }
         else
             displayScreen.textContent = eval(displayScreen.textContent || "");
     }
@@ -79,3 +86,30 @@ function toogleTimeDivs() {
         timeDiv === null || timeDiv === void 0 ? void 0 : timeDiv.classList.toggle("flex");
     });
 }
+window.addEventListener("keydown", (event) => {
+    const key = event.key;
+    if (Number(key) || key === "0") {
+        appendToDisplay(key);
+    }
+    const otherKeys = ["(", ")", ".", "+", "-", "*", "/"];
+    for (const otherKey of otherKeys) {
+        if (key === otherKey)
+            appendToDisplay(otherKey);
+    }
+    switch (key) {
+        case "=":
+            calculate();
+            break;
+        case "Enter":
+            calculate();
+            break;
+        case "Backspace":
+            eraser();
+            break;
+        case " ":
+            clearDisplay();
+            break;
+        default:
+            break;
+    }
+});
