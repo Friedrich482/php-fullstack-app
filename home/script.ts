@@ -6,30 +6,34 @@ setInterval(displayDate, 1000); // Calling the clock for the Profile
 
 const body = document.body;
 
-const logoutButton = document.querySelector<HTMLInputElement>("#logout");
-const logoutSmallScreens = document.querySelector<HTMLDivElement>("#logoutSmallScreens");
-const logoutLargeScreens = document.querySelector<HTMLDivElement>("#logoutLargeScreens");
+const logoutButton = document.querySelector("#logout") as HTMLInputElement;
+const logoutSmallScreens = document.querySelector(
+  "#logoutSmallScreens"
+) as HTMLDivElement;
+const logoutLargeScreens = document.querySelector(
+  "#logoutLargeScreens"
+) as HTMLDivElement;
 
-const confirmDeconnexionDialog = document.querySelector<HTMLDialogElement>(
+const confirmDeconnexionDialog = document.querySelector(
   "#confirmDeconnexionDialog"
-);
-const denyButton = document.querySelector<HTMLInputElement>("#denyButton");
+) as HTMLDialogElement;
+const denyButton = document.querySelector("#denyButton") as HTMLInputElement;
 
 let logoutItems = [logoutLargeScreens, logoutSmallScreens, logoutButton];
 
 logoutItems.forEach((item) => {
-  item.addEventListener("click", () => {
+  item.addEventListener("click", (): void => {
     confirmDeconnexionDialog.showModal();
     toggleconfirmDeconnexionDialog();
   });
 });
 
-denyButton.addEventListener("click", () => {
+denyButton.addEventListener("click", (): void => {
   confirmDeconnexionDialog.close();
   toggleconfirmDeconnexionDialog();
 });
 
-confirmDeconnexionDialog.addEventListener("cancel", () => {
+confirmDeconnexionDialog.addEventListener("cancel", (): void => {
   confirmDeconnexionDialog.close();
   toggleconfirmDeconnexionDialog();
 });
@@ -39,29 +43,33 @@ function toggleconfirmDeconnexionDialog() {
   confirmDeconnexionDialog.classList.toggle("flex");
   body.classList.toggle("blur-sm");
 }
-// Click on the navbars elements triggers the redirection to the liks inside them
+// Click on the navbars elements triggers the redirection to the links inside them
 
 // Large screens (large navbar)
 
-const LargeHome = document.querySelector("#LargeHome");
-const largeTools = document.querySelector("#largeTools");
-const largeAbout = document.querySelector("#largeAbout");
+const largeHome = document.querySelector("#largeHome") as HTMLDivElement;
+const largeTools = document.querySelector("#largeTools") as HTMLDivElement;
+const largeAbout = document.querySelector("#largeAbout") as HTMLDivElement;
 
 // Small screens (small navbar)
 
-const smallHome = document.querySelector("#smallHome");
-const smallTools = document.querySelector("#smallTools");
-const smallAbout = document.querySelector("#smallAbout");
+const smallHome = document.querySelector("#smallHome") as HTMLDivElement;
+const smallTools = document.querySelector("#smallTools") as HTMLDivElement;
+const smallAbout = document.querySelector("#smallAbout") as HTMLDivElement;
 
 /*The "go back to top" wrapper is also in this case, so I include it here.
   The bouncing button too all the grid tools also*/
 
-const backToTopWrapper = document.querySelector("#backToTop");
-const arrowDownbutton = document.querySelector("#arrowDownbutton");
-const spaceCalculator = document.querySelector("#spaceCalculator");
+const backToTopWrapper = document.querySelector("#backToTop") as HTMLDivElement;
+const arrowDownbutton = document.querySelector(
+  "#arrowDownbutton"
+) as HTMLDivElement;
+const spaceCalculator = document.querySelector(
+  "#spaceCalculator"
+) as HTMLDivElement;
 
 let navbarSections = [
-  LargeHome,
+  largeHome,
   largeTools,
   largeAbout,
   smallHome,
@@ -72,19 +80,21 @@ let navbarSections = [
   spaceCalculator,
 ];
 
-navbarSections.forEach((section) => {
-  section.addEventListener("click", () => {
-    const link = section.querySelector("a");
-    const redirectUrl = link.getAttribute("href");
+navbarSections.forEach((section: HTMLDivElement) => {
+  section.addEventListener("click", (): void => {
+    const link = section.querySelector("a") as HTMLAnchorElement;
+    const redirectUrl = link.getAttribute("href") as string;
     window.location.href = redirectUrl;
   });
 });
 
 // Ping notification management
 
-const menuBurgerButton = document.querySelector("#menuBurgerButton");
-const smallProfile = document.querySelector("#smallProfile");
-const largeProfile = document.querySelector("#largeProfile");
+const menuBurgerButton = document.querySelector(
+  "#menuBurgerButton"
+) as HTMLButtonElement;
+const smallProfile = document.querySelector("#smallProfile") as HTMLDivElement;
+const largeProfile = document.querySelector("#largeProfile") as HTMLDivElement;
 
 let domElements = [menuBurgerButton, smallProfile, largeProfile];
 

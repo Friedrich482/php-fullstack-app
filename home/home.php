@@ -54,7 +54,7 @@ $number_of_visits = $row['visits'];
 
             <!-- Home -->
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2  border-r-white transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950" id="LargeHome">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2  border-r-white transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950" id="largeHome">
                 <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
                 <span><a href="#animatedText" class="no-underline">Home</a></span>
             </div>
