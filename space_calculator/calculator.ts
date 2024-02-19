@@ -18,13 +18,21 @@ function clearDisplay(): void {
   displayScreen.textContent = "";
 }
 
+function removeTrailingZeros(numberString: string, precision: number): string {
+  let regex = new RegExp(`\\.?0{${precision},}$`);
+  return numberString.replace(regex, "");
+}
+
 function calculate(): void {
-  if(displayScreen.textContent === "") return ;
+  if (displayScreen.textContent === "") return;
+
   try {
     if (String(eval(displayScreen.textContent || "")).length > 8) {
-      displayScreen.textContent = eval(displayScreen.textContent || "").toFixed(
-        7
+      displayScreen.textContent = removeTrailingZeros(
+        eval(displayScreen.textContent || "").toFixed(7),
+        4
       );
+      console.log(displayScreen.textContent);
     } else displayScreen.textContent = eval(displayScreen.textContent || "");
   } catch (error) {
     displayScreen.textContent = "ERROR";
@@ -117,7 +125,7 @@ window.addEventListener("keydown", (event) => {
       break;
 
     case "Enter":
-      calculate()
+      calculate();
       break;
 
     case "Backspace":
@@ -127,7 +135,7 @@ window.addEventListener("keydown", (event) => {
     case " ":
       clearDisplay();
       break;
-    
+
     default:
       break;
   }
