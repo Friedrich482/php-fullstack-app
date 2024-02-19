@@ -22,7 +22,6 @@ function calculate() {
     try {
         if (String(eval(displayScreen.textContent || "")).length > 8) {
             displayScreen.textContent = removeTrailingZeros(eval(displayScreen.textContent || "").toFixed(7), 4);
-            console.log(displayScreen.textContent);
         }
         else
             displayScreen.textContent = eval(displayScreen.textContent || "");

@@ -32,7 +32,6 @@ function calculate(): void {
         eval(displayScreen.textContent || "").toFixed(7),
         4
       );
-      console.log(displayScreen.textContent);
     } else displayScreen.textContent = eval(displayScreen.textContent || "");
   } catch (error) {
     displayScreen.textContent = "ERROR";
