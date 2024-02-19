@@ -1,4 +1,3 @@
-"use strict";
 const displayScreen = document.getElementById("displayScreen");
 let egal = false;
 managePar();
@@ -113,3 +112,4 @@ window.addEventListener("keydown", (event) => {
             break;
     }
 });
+export {};

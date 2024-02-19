@@ -1,7 +1,7 @@
 <?php 
     session_start();
     include("../include/database.php");
-    
+
     // Check if the user is logged in. Otherwise, redirect him to the login page.
 
   if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
@@ -10,7 +10,7 @@
 }
 
 ?>
-?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,7 +22,7 @@
       rel="stylesheet"
     />
     <title>Simple Calculator</title>
-    <script src="../dist/calculator.js" defer></script>
+    <script src="../dist/space_calculator/script.js" defer></script>
   </head>
 
   <body class="flex items-center justify-center spaceImg">

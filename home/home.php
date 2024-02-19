@@ -40,7 +40,7 @@ $number_of_visits = $row['visits'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home 🏠</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="script.js" defer></script>
+    <script src="../dist/home/script.js" defer></script>
 </head>
 
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-[1.25rem] backgroundImg text-[whitesmoke] MV-boli">
