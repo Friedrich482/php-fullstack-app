@@ -196,8 +196,8 @@ function displayDate() {
     let actualDate = new Date();
     let year = actualDate.getFullYear();
     let month = actualDate.getMonth();
-    let date = actualDate.getDate();
     let day = actualDate.getDay();
+    let date = actualDate.getDate();
     function padUnit(unit) {
         return unit >= 10 ? unit.toString() : "0" + unit;
     }
@@ -246,7 +246,8 @@ window.onscroll = () => {
         backToTopWrapper.classList.remove("hidden");
     }
     else {
-        backToTopWrapper.classList.remove("flex");
-        backToTopWrapper.classList.add("hidden");
+        // backToTopWrapper.classList.remove("flex");
+        // backToTopWrapper.classList.add("hidden");
+        toggleFlexHidden(backToTopWrapper);
     }
 };

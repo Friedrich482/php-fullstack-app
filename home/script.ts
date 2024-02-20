@@ -286,11 +286,13 @@ function toggleProfileDialog(): void {
 function displayDate() {
   let actualDate = new Date();
   let year = actualDate.getFullYear();
-  let month = actualDate.getMonth();
+
+  let month: string | number = actualDate.getMonth();
+  let day: string | number = actualDate.getDay();
+
   let date = actualDate.getDate();
-  let day = actualDate.getDay();
-  
-  function padUnit(unit: number) {
+
+  function padUnit(unit: number): string {
     return unit >= 10 ? unit.toString() : "0" + unit;
   }
 
@@ -312,6 +314,7 @@ function displayDate() {
     "November",
     "December",
   ];
+
   let daysOfWeek = [
     "Monday",
     "Tuesday",
@@ -327,6 +330,7 @@ function displayDate() {
   day === 0
     ? (day = daysOfWeek[daysOfWeek.length - 1])
     : (day = daysOfWeek[Number(day) - 1]);
+    
   dateDiv.innerHTML = `${day} ${month} ${date}, ${year}
 
    <div class="font-bold grid grid-cols-3 place-items-center w-2/5 gap-0">
@@ -343,7 +347,8 @@ window.onscroll = () => {
     backToTopWrapper.classList.add("flex");
     backToTopWrapper.classList.remove("hidden");
   } else {
-    backToTopWrapper.classList.remove("flex");
-    backToTopWrapper.classList.add("hidden");
+    // backToTopWrapper.classList.remove("flex");
+    // backToTopWrapper.classList.add("hidden");
+    toggleFlexHidden(backToTopWrapper)
   }
 };
