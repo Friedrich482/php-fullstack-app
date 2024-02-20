@@ -8,6 +8,7 @@ Technologies/tools/languages used :
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)  
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)  
 
 ## To do  
 
@@ -35,6 +36,8 @@ Technologies/tools/languages used :
 - [x] Added the simple calculator file  
 - [x] Add Typescript instead of vanilla JavaScript for the calculator
 - [x] Add Typescript instead of vanilla JavaScript for the home page
-- [ ] Correct all the errors 💪  
+- [x] Correct all the errors for the home.ts page
+- [ ] Now the next mission is to add ts for the login page
+- [ ] And correct all the (**potential**)  errors
   
 This list will be updated depending on my progression through it.
