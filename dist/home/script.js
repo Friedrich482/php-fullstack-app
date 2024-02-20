@@ -29,9 +29,9 @@ function toggleconfirmDeconnexionDialog() {
     confirmDeconnexionDialog.classList.toggle("flex");
     body.classList.toggle("blur-sm");
 }
-// Click on the navbars elements triggers the redirection to the liks inside them
+// Click on the navbars elements triggers the redirection to the links inside them
 // Large screens (large navbar)
-const LargeHome = document.querySelector("#LargeHome");
+const largeHome = document.querySelector("#largeHome");
 const largeTools = document.querySelector("#largeTools");
 const largeAbout = document.querySelector("#largeAbout");
 // Small screens (small navbar)
@@ -44,7 +44,7 @@ const backToTopWrapper = document.querySelector("#backToTop");
 const arrowDownbutton = document.querySelector("#arrowDownbutton");
 const spaceCalculator = document.querySelector("#spaceCalculator");
 let navbarSections = [
-    LargeHome,
+    largeHome,
     largeTools,
     largeAbout,
     smallHome,
@@ -82,15 +82,16 @@ domElements.forEach((element) => {
     });
 });
 smallProfile.addEventListener("click", () => {
-    bigScreensNotification.classList.remove("flex");
-    bigScreensNotification.classList.add("hidden");
+    toggleFlexHidden(bigScreensNotification);
 });
 largeProfile.addEventListener("click", () => {
-    pingNotificationBurger.classList.remove("flex");
-    pingNotificationBurger.classList.add("hidden");
-    smallScreensNotification.classList.remove("flex");
-    smallScreensNotification.classList.add("hidden");
+    toggleFlexHidden(pingNotificationBurger);
+    toggleFlexHidden(smallScreensNotification);
 });
+function toggleFlexHidden(element) {
+    element.classList.remove("flex");
+    element.classList.add("hidden");
+}
 // Animation for the title
 const animatedText = document.getElementById("animatedText");
 const cursor = document.querySelector(".cursor");
@@ -181,7 +182,7 @@ profileDialog.addEventListener("cancel", () => {
     profileDialog.close();
     toggleProfileDialog();
 });
-// Close the dialog
+// Close the dialog (the button to perform that action)
 closeProfileButton.addEventListener("click", () => {
     profileDialog.close();
     toggleProfileDialog();
@@ -195,17 +196,14 @@ function displayDate() {
     let actualDate = new Date();
     let year = actualDate.getFullYear();
     let month = actualDate.getMonth();
-    let date = actualDate.getDate();
     let day = actualDate.getDay();
-    let hours = actualDate.getHours();
-    let minutes = actualDate.getMinutes();
-    let seconds = actualDate.getSeconds();
+    let date = actualDate.getDate();
     function padUnit(unit) {
-        return unit >= 10 ? unit : "0" + unit;
+        return unit >= 10 ? unit.toString() : "0" + unit;
     }
-    hours = padUnit(hours);
-    minutes = padUnit(minutes);
-    seconds = padUnit(seconds);
+    let hours = padUnit(actualDate.getHours());
+    let minutes = padUnit(actualDate.getMinutes());
+    let seconds = padUnit(actualDate.getSeconds());
     let months = [
         "January",
         "February",
@@ -248,7 +246,8 @@ window.onscroll = () => {
         backToTopWrapper.classList.remove("hidden");
     }
     else {
-        backToTopWrapper.classList.remove("flex");
-        backToTopWrapper.classList.add("hidden");
+        // backToTopWrapper.classList.remove("flex");
+        // backToTopWrapper.classList.add("hidden");
+        toggleFlexHidden(backToTopWrapper);
     }
 };

@@ -54,7 +54,7 @@ $number_of_visits = $row['visits'];
 
             <!-- Home -->
 
-            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2  border-r-white transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950" id="LargeHome">
+            <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-r-2  border-r-white transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950" id="largeHome">
                 <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1">
                 <span><a href="#animatedText" class="no-underline">Home</a></span>
             </div>
@@ -300,7 +300,7 @@ $number_of_visits = $row['visits'];
     <!-- "Go back to top" button-->
 
     <div class="group h-12 w-12 sm:h-16 sm:w-16 bg-white rounded-2xl bottom-5 right-5 hidden fixed z-50 items-center justify-center cursor-pointer hover:bg-slate-200" title="Go back to the top" id="backToTop">
-            <a href="#header"><img src="../assets/icons/top.png" alt="back to up !" class="scroll-smooth h-5 w-5 sm:h-7 sm:w-7 group-hover:animate-bounce"></a>
+        <a href="#header"><img src="../assets/icons/top.png" alt="back to up !" class="scroll-smooth h-5 w-5 sm:h-7 sm:w-7 group-hover:animate-bounce"></a>
     </div>
     
     <main class="flex items-center justify-center flex-col gap-3 sm:w-[620px] z-0">
