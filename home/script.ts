@@ -211,9 +211,15 @@ animatemainText();
 
 // js for the menu burger button
 
-const menuburgerImg = document.querySelector("#menuBurgerImg");
-let menuburgerImgAlt = menuburgerImg.alt;
-const verticalNavbar = document.querySelector("#verticalNavbar");
+const menuburgerImg = document.querySelector(
+  "#menuBurgerImg"
+) as HTMLImageElement;
+
+let menuburgerImgAlt: string = menuburgerImg.alt;
+
+const verticalNavbar = document.querySelector(
+  "#verticalNavbar"
+) as HTMLDivElement;
 
 menuBurgerButton.addEventListener("click", () => {
   if (menuburgerImgAlt === "menu-burger icon") {
@@ -227,12 +233,12 @@ menuBurgerButton.addEventListener("click", () => {
   }
 });
 
-function addVerticalNavbar() {
+function addVerticalNavbar(): void {
   verticalNavbar.classList.toggle("opacity-0");
   verticalNavbar.classList.toggle("transit-final");
 }
 
-function removeVerticalNavbar() {
+function removeVerticalNavbar(): void {
   verticalNavbar.classList.toggle("transit-final");
 
   setTimeout(() => {
@@ -241,9 +247,14 @@ function removeVerticalNavbar() {
 }
 
 // Dialog profile
-const profileDialog = document.querySelector("#profileDialog");
-const dateDiv = document.querySelector("#dateDiv");
-const closeProfileButton = document.querySelector("#closeProfile");
+
+const profileDialog = document.querySelector(
+  "#profileDialog"
+) as HTMLDialogElement;
+const dateDiv = document.querySelector("#dateDiv") as HTMLDivElement;
+const closeProfileButton = document.querySelector(
+  "#closeProfile"
+) as HTMLInputElement;
 
 let profile = [smallProfile, largeProfile];
 
@@ -259,13 +270,14 @@ profileDialog.addEventListener("cancel", () => {
   toggleProfileDialog();
 });
 
-// Close the dialog
+// Close the dialog (the button to perform that action)
+
 closeProfileButton.addEventListener("click", () => {
   profileDialog.close();
   toggleProfileDialog();
 });
 
-function toggleProfileDialog() {
+function toggleProfileDialog(): void {
   profileDialog.classList.toggle("hidden");
   profileDialog.classList.toggle("flex");
   body.classList.toggle("blur-sm");
@@ -277,18 +289,14 @@ function displayDate() {
   let month = actualDate.getMonth();
   let date = actualDate.getDate();
   let day = actualDate.getDay();
-
-  let hours = actualDate.getHours();
-  let minutes = actualDate.getMinutes();
-  let seconds = actualDate.getSeconds();
-
-  function padUnit(unit) {
-    return unit >= 10 ? unit : "0" + unit;
+  
+  function padUnit(unit: number) {
+    return unit >= 10 ? unit.toString() : "0" + unit;
   }
 
-  hours = padUnit(hours);
-  minutes = padUnit(minutes);
-  seconds = padUnit(seconds);
+  let hours = padUnit(actualDate.getHours());
+  let minutes = padUnit(actualDate.getMinutes());
+  let seconds = padUnit(actualDate.getSeconds());
 
   let months = [
     "January",
