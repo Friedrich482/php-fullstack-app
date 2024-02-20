@@ -1,3 +1,4 @@
+"use strict";
 const displayScreen = document.getElementById("displayScreen");
 let egal = false;
 managePar();
@@ -47,8 +48,8 @@ const clock = document.querySelector("#clock");
 const hoursDiv = document.querySelector("#hours");
 const minsDiv = document.querySelector("#mins");
 const secondsDiv = document.querySelector("#seconds");
-const dateDiv = document.querySelector("#date");
-let timeDivs = [clock, dateDiv];
+const calcDateDiv = document.querySelector("#date");
+let timeDivs = [clock, calcDateDiv];
 function clocker() {
     let date = new Date();
     let hours = pad(date.getHours());
@@ -69,8 +70,8 @@ let realTime = setInterval(clocker, 1000);
 function toggleTime() {
     if (!switched) {
         const date = new Date();
-        if (dateDiv)
-            dateDiv.textContent = `${date.toLocaleDateString()}`;
+        if (calcDateDiv)
+            calcDateDiv.textContent = `${date.toLocaleDateString()}`;
         clearInterval(realTime);
     }
     switched = !switched;
@@ -112,4 +113,3 @@ window.addEventListener("keydown", (event) => {
             break;
     }
 });
-export {};

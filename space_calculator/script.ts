@@ -61,9 +61,9 @@ const clock = document.querySelector<HTMLDivElement>("#clock");
 const hoursDiv = document.querySelector<HTMLDivElement>("#hours");
 const minsDiv = document.querySelector<HTMLDivElement>("#mins");
 const secondsDiv = document.querySelector<HTMLDivElement>("#seconds");
-const dateDiv = document.querySelector<HTMLDivElement>("#date");
+const calcDateDiv = document.querySelector("#date") as HTMLDivElement;
 
-let timeDivs = [clock, dateDiv];
+let timeDivs = [clock, calcDateDiv];
 
 function clocker() {
   let date = new Date();
@@ -89,7 +89,7 @@ let realTime = setInterval(clocker, 1000);
 function toggleTime() {
   if (!switched) {
     const date = new Date();
-    if (dateDiv) dateDiv.textContent = `${date.toLocaleDateString()}`;
+    if (calcDateDiv) calcDateDiv.textContent = `${date.toLocaleDateString()}`;
     clearInterval(realTime);
   }
   switched = !switched;
@@ -136,8 +136,6 @@ window.addEventListener("keydown", (event) => {
       break;
 
     default:
-      break;
+      break; 
   }
 });
-// It is a temporal solution or definitive 🤔 ??????
-export {} 
