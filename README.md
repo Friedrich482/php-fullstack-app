@@ -38,6 +38,8 @@ Technologies/tools/languages used :
 - [x] Add Typescript instead of vanilla JavaScript for the home page
 - [x] Correct all the errors for the home.ts page
 - [ ] Now the next mission is to add ts for the login page
-- [ ] And correct all the (**potential**)  errors
+- [ ] And correct all the (**potential**)  errors;
+- [ ] An d after that the login page
+- [ ] And there too, fix every single squiggled line 
   
 This list will be updated depending on my progression through it.
