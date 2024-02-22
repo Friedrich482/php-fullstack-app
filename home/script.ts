@@ -347,8 +347,6 @@ window.onscroll = () => {
     backToTopWrapper.classList.add("flex");
     backToTopWrapper.classList.remove("hidden");
   } else {
-    // backToTopWrapper.classList.remove("flex");
-    // backToTopWrapper.classList.add("hidden");
     toggleFlexHidden(backToTopWrapper)
   }
 };
