@@ -1,8 +1,4 @@
 "use strict";
-// type Data = {
-//   error: boolean;
-//   message: string;
-// };
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("loginForm");
     const usernameError = document.getElementById("usernameError");
@@ -63,19 +59,19 @@ function toggleElement(element) {
 }
 function errorFieldStyle(element) {
     element.classList.add("border-red-600");
-    element.classList.add("shadow-lg"); // 0
-    element.classList.add("shadow-rose-800"); // 1
-    element.classList.remove("hover:shadow-black"); // 2
-    element.classList.add("hover:shadow-rose-800"); // 3
+    element.classList.add("shadow-lg");
+    element.classList.add("shadow-rose-800");
+    element.classList.remove("hover:shadow-black");
+    element.classList.add("hover:shadow-rose-800");
     element.classList.remove("border-b-purple-600");
     element.classList.remove("hover:border-b-4");
 }
 function removeErrorFieldStyle(element) {
     element.classList.remove("border-red-600");
-    element.classList.remove("shadow-lg"); // 0
-    element.classList.remove("shadow-rose-800"); // 1
-    element.classList.add("hover:shadow-black"); // 2
-    element.classList.remove("hover:shadow-rose-800"); // 3
+    element.classList.remove("shadow-lg");
+    element.classList.remove("shadow-rose-800");
+    element.classList.add("hover:shadow-black");
+    element.classList.remove("hover:shadow-rose-800");
     element.classList.add("border-b-purple-600");
     element.classList.add("hover:border-b-4");
 }
