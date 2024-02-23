@@ -43,6 +43,7 @@ function toggleconfirmDeconnexionDialog() {
   confirmDeconnexionDialog.classList.toggle("flex");
   body.classList.toggle("blur-sm");
 }
+
 // Click on the navbars elements triggers the redirection to the links inside them
 
 // Large screens (large navbar)
@@ -61,14 +62,20 @@ const smallAbout = document.querySelector("#smallAbout") as HTMLDivElement;
   The bouncing button too all the grid tools also*/
 
 const backToTopWrapper = document.querySelector("#backToTop") as HTMLDivElement;
+
 const arrowDownbutton = document.querySelector(
   "#arrowDownbutton"
 ) as HTMLDivElement;
+
 const spaceCalculator = document.querySelector(
   "#spaceCalculator"
 ) as HTMLDivElement;
 
-let navbarSections = [
+const fetchWeatherApp = document.querySelector(
+  "#fetchWeatherApp"
+) as HTMLDivElement;
+
+let linkDivs = [
   largeHome,
   largeTools,
   largeAbout,
@@ -78,9 +85,10 @@ let navbarSections = [
   backToTopWrapper,
   arrowDownbutton,
   spaceCalculator,
+  fetchWeatherApp,
 ];
 
-navbarSections.forEach((section: HTMLDivElement) => {
+linkDivs.forEach((section: HTMLDivElement) => {
   section.addEventListener("click", (): void => {
     const link = section.querySelector("a") as HTMLAnchorElement;
     const redirectUrl = link.getAttribute("href") as string;
@@ -330,7 +338,7 @@ function displayDate() {
   day === 0
     ? (day = daysOfWeek[daysOfWeek.length - 1])
     : (day = daysOfWeek[Number(day) - 1]);
-    
+
   dateDiv.innerHTML = `${day} ${month} ${date}, ${year}
 
    <div class="font-bold grid grid-cols-3 place-items-center w-2/5 gap-0">
@@ -347,6 +355,6 @@ window.onscroll = () => {
     backToTopWrapper.classList.add("flex");
     backToTopWrapper.classList.remove("hidden");
   } else {
-    toggleFlexHidden(backToTopWrapper)
+    toggleFlexHidden(backToTopWrapper);
   }
 };

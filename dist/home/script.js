@@ -43,7 +43,8 @@ const smallAbout = document.querySelector("#smallAbout");
 const backToTopWrapper = document.querySelector("#backToTop");
 const arrowDownbutton = document.querySelector("#arrowDownbutton");
 const spaceCalculator = document.querySelector("#spaceCalculator");
-let navbarSections = [
+const fetchWeatherApp = document.querySelector("#fetchWeatherApp");
+let linkDivs = [
     largeHome,
     largeTools,
     largeAbout,
@@ -53,8 +54,9 @@ let navbarSections = [
     backToTopWrapper,
     arrowDownbutton,
     spaceCalculator,
+    fetchWeatherApp,
 ];
-navbarSections.forEach((section) => {
+linkDivs.forEach((section) => {
     section.addEventListener("click", () => {
         const link = section.querySelector("a");
         const redirectUrl = link.getAttribute("href");

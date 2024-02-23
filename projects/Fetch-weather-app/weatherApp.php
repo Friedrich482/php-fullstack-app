@@ -1,5 +1,16 @@
+<?php
+session_start();
+include("../include/database.php");
+// Checks if the user is logged in. Otherwise, redirect him to the login page.
+
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("Location: ../login/login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +26,12 @@
         <label for="apiKeyField">Enter your <a href="https://openweathermap.org/" style="color: rgba(18, 227, 178, 0.829); text-decoration: none;" target="_blank">openweathermap.org</a> API key :</label>
         <div class="passField">
             <input type="password" name="" class="apiKeyField" required>
-            <img src="icons/passwordIcons/eye.svg" alt="eye" class="eye"  title="Show API key">
+            <img srcscr="icons/passwordIcons/eye.svg" alt="eye" class="eye" title="Show API key">
         </div>
         <input type="submit" value="Submit" class="submitButtons">
     </form>
     <span class="helpSpan">
-        <a class="helpSpan" href="https://github.com/Friedrich482/Comprehensive-Weather-Fetch-App/tree/main?tab=readme-ov-file#how-to-get-an-api-from-openweathermaporg" target="_blank" >How top get an openweathermap API key ?</a>
+        <a class="helpSpan" href="https://github.com/Friedrich482/Comprehensive-Weather-Fetch-App/tree/main?tab=readme-ov-file#how-to-get-an-api-from-openweathermaporg" target="_blank">How top get an openweathermap API key ?</a>
     </span>
 </dialog>
 
@@ -34,24 +45,25 @@
         <input type="text" placeholder="Enter a city..." id="cityEntered" required>
         <input type="submit" value="Submit" class="submitButtons">
     </form>
-    
+
     <div id="card" style="display:none">
-      
-        
+
+
     </div>
     <p id="errorDisplay">
-    
+
     </p>
 
     <footer style="display:none;">
-        <p>&copy<label id="yearLabel"></label>, <a href="https://github.com/Friedrich482" id="gitLink" target="_blank">@Friedrich482</a> <img src="./icons/cardIcons/rocket.gif" id="footerImg" alt ="🚀">,<b><span style = "color: hsl(16, 96%, 45%);"> All</span> Rights Reserved</b></p>
+        <p>&copy<label id="yearLabel"></label>, <a href="https://github.com/Friedrich482" id="gitLink" target="_blank">@Friedrich482</a> <img src="./icons/cardIcons/rocket.gif" id="footerImg" alt="🚀">,<b><span style="color: hsl(16, 96%, 45%);"> All</span> Rights Reserved</b></p>
         <script>
             let date = new Date();
             let year = date.getFullYear();
             let yearLabel = document.getElementById('yearLabel');
             yearLabel.textContent = year;
-    </script>
+        </script>
     </footer>
 
 </body>
+
 </html>
