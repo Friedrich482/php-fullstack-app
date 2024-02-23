@@ -16,13 +16,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
     <link
       href="https://fonts.cdnfonts.com/css/seven-segment"
       rel="stylesheet"
     />
     <title>Simple Calculator</title>
-    <script src="../dist/space_calculator/script.js" defer></script>
+    <script src="../../dist/projects/space_calculator/script.js" defer></script>
   </head>
 
   <body class="flex items-center justify-center spaceImg">
@@ -35,7 +35,8 @@
         class="rounded-lg relative self-end bottom-2 border-none text-lg text-center font-extrabold bg-[#4d4848d3] text-red-500 seven-segment w-24 h-7 grid grid-cols-3 hover:shadow-md hover:shadow-black"
       >
         <div id="hours" class="text-right">
-          <span class="hoursSpan">00</span> <span class="relative bottom-[3.5px]">:</span>
+          <span class="hoursSpan">00</span>
+          <span class="relative bottom-[3.5px]">:</span>
         </div>
         <div id="mins" class="text-center">
           <span>00</span> <span class="relative bottom-[3.5px]">:</span>
