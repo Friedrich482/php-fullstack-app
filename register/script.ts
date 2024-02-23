@@ -20,8 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
 
     toggleLabel(emailError);
-    toggleLabel(usernameError);
+    emailError.textContent = "";
 
+    toggleLabel(usernameError);
+    usernameError.textContent = "";
+    
     const formData: FormData = new FormData(registerForm);
 
     fetch("register_process.php", {

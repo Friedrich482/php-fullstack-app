@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Form submission intercepted");
         event.preventDefault();
         toggleLabel(emailError);
+        emailError.textContent = "";
         toggleLabel(usernameError);
+        usernameError.textContent = "";
         const formData = new FormData(registerForm);
         fetch("register_process.php", {
             method: "POST",
@@ -28,13 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     emailInput.focus();
                     addErrorFieldStyle(emailInput);
                     toggleLabel(emailError);
-                    emailError.innerHTML = data.message;
+                    emailError.textContent = data.message;
                 }
                 else if (data.message.includes("This username is already taken ❌")) {
                     usernameInput.focus();
                     addErrorFieldStyle(usernameInput);
                     toggleLabel(usernameError);
-                    usernameError.innerHTML = data.message;
+                    usernameError.textContent = data.message;
                 }
                 else {
                     // In this case, (all the fields are empty), so it will display an appropriate message
