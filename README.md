@@ -40,6 +40,10 @@ Technologies/tools/languages used :
 - [x] Now the next mission is to add ts for the login page
 - [x] And correct all the (**potential**)  errors;
 - [x] And after that the register page
-- [x] And there too, fix every single squiggled line 
+- [x] And there too, fix every single squiggled line
+- [ ] Now it is the turn of the weather app. This is probably the biggest 💪 refactor of all
+- [ ] Firstly, let's use *tailwindcss* in the project
+- [ ] And after **typescript**
+- [ ] By the way refactor the structure of the page for a better experience
   
 This list will be updated depending on my progression through it.
