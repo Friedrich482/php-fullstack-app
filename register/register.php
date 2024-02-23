@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
     <script src="../assets/eye/eye.js" defer></script>
+    <script src="../dist/register/script.js"></script> 
 </head>
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-[1.25rem] backgroundImg text-[whitesmoke] MV-boli">
     <p><b>Please fill this form to <i class="text-pink-500">register</i></b></p>
@@ -41,7 +42,6 @@
         </div>
         <label id="defaultError" class="hidden"></label>
         <p></p>
-        <script src="registerScript.js"></script> 
     </form>
 
     <p class="h-7 flex items-center justify-center text-center flex-col sm-custom:flex-row"><span>Already registered? Click here to &ThinSpace;</span><span><a href="../login/login.php" class="text-pink-500 no-underline hover:text-indigo-400">login</a></span></p><br><p class="sm:h-0 sm:w-0 sm:hidden"></p>

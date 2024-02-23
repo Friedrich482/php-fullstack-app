@@ -39,7 +39,7 @@ Technologies/tools/languages used :
 - [x] Correct all the errors for the home.ts page
 - [x] Now the next mission is to add ts for the login page
 - [x] And correct all the (**potential**)  errors;
-- [ ] And after that the register page
-- [ ] And there too, fix every single squiggled line 
+- [x] And after that the register page
+- [x] And there too, fix every single squiggled line 
   
 This list will be updated depending on my progression through it.
