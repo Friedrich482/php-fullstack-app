@@ -105,7 +105,7 @@
   margin: 0; */
 }
 
-.nightBodyClass {
+/* .nightBodyClass {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -120,11 +120,11 @@
   min-height: 1rem;
   gap: 0rem;
   margin: 0;
-}
-
+} */
+/* 
 #spanTittle {
   text-align: center;
-}
+} */
 h1 {
   display: flex;
   text-align: center;

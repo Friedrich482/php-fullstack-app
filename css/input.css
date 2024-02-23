@@ -163,6 +163,7 @@
     background-attachment: fixed;
       
 }
+
 .weatherNightImg{
     background-image: url("../projects/fetch-weather-app/img/02.png");
     background-repeat: no-repeat;

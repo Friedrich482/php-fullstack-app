@@ -1,28 +1,30 @@
 <?php
 session_start();
-include("../include/database.php");
+include("../../include/database.php");
+
 // Checks if the user is logged in. Otherwise, redirect him to the login page.
 
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("Location: ../login/login.php");
-    exit;
+  header("Location: ../../login/login.php");
+  exit;
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fetch Weather App ❄🌨</title>
-    <link href="https://db.onlinewebfonts.com/c/a7e3822358f6dcb2f986a68cf24721b2?family=MV+Boli+V1" rel="stylesheet">
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link
+      href="https://db.onlinewebfonts.com/c/a7e3822358f6dcb2f986a68cf24721b2?family=MV+Boli+V1"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../css/style.css" />
     <script src="script.js" defer></script>
-</head>
+  </head>
 
-<!-- <dialog id="apiKeyDialog">
+  <!-- <dialog id="apiKeyDialog">
     <form action="" method="post" id="apiKeyForm">
         <label for="apiKeyField">Enter your <a href="https://openweathermap.org/" style="color: rgba(18, 227, 178, 0.829); text-decoration: none;" target="_blank">openweathermap.org</a> API key :</label>
         <div class="passField">
@@ -36,26 +38,32 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </span>
 </dialog> -->
 
-<body class="weatherDayImg flex items-center justify-between flex-col MV-boli flex-wrap text-black gap-0 m-0">
-    <h1><span id="spanTittle">Weather App</span>
-        <img src="icons/titleIcons/snow.svg" class="titleIcons">
-        <img src="icons/titleIcons/tornado.svg" class="titleIcons">
-        <img src="icons/titleIcons/clear-day.svg" class="titleIcons" id="sunOrMoon">
+  <body
+    class="weatherDayImg flex items-center justify-between flex-col MV-boli flex-wrap text-black gap-0 m-0"
+  >
+    <h1 class="">
+      <span id="spanTittle" class="text-center">Weather App</span>
+      <img src="icons/titleIcons/snow.svg" class="titleIcons" />
+      <img src="icons/titleIcons/tornado.svg" class="titleIcons" />
+      <img
+        src="icons/titleIcons/clear-day.svg"
+        class="titleIcons"
+        id="sunOrMoon"
+      />
     </h1>
     <form action="" method="post" id="weatherForm">
-        <input type="text" placeholder="Enter a city..." id="cityEntered" required>
-        <input type="submit" value="Submit" class="submitButtons">
+      <input
+        type="text"
+        placeholder="Enter a city..."
+        id="cityEntered"
+        required
+      />
+      <input type="submit" value="Submit" class="submitButtons" />
     </form>
 
-    <div id="card" style="display:none">
-
-
-    </div>
-    <p id="errorDisplay">
-
-    </p>
-</body>
-
+    <div id="card" style="display: none"></div>
+    <p id="errorDisplay"></p>
+  </body>
 </html>
 
 <?php 
