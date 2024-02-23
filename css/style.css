@@ -1168,11 +1168,6 @@ video {
   border-color: rgb(107 33 168 / var(--tw-border-opacity));
 }
 
-.border-red-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(220 38 38 / var(--tw-border-opacity));
-}
-
 .border-transparent {
   border-color: transparent;
 }
@@ -1485,11 +1480,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-rose-800 {
-  --tw-shadow-color: #9f1239;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
 .shadow-white {
   --tw-shadow-color: #fff;
   --tw-shadow: var(--tw-shadow-colored);
@@ -1683,7 +1673,7 @@ video {
 }
 
 .spaceImg{
-  background-image: url("../space_calculator/blackSky.jpg");
+  background-image: url("../projects/space_calculator/blackSky.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1852,11 +1842,6 @@ body::-webkit-scrollbar-thumb{
 
 .hover\:shadow-blue-500:hover {
   --tw-shadow-color: #3b82f6;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.hover\:shadow-rose-800:hover {
-  --tw-shadow-color: #9f1239;
   --tw-shadow: var(--tw-shadow-colored);
 }
 

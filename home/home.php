@@ -321,7 +321,7 @@ $number_of_visits = $row['visits'];
 
                 <ul class="list-disc ml-20 mr-20 mt-8 mb-8  sm:ml-36 sm:mr-36 gap-1">
                     <li class="mb-2">PHP</li>
-                    <li class="mb-2">JavaScript</li>
+                    <li class="mb-2">TypeScript</li>
                     <li class="mb-2">PostgreSQL (as the DB)</li>
                     <li class="mb-2">Tailwind CSS</li>
                 </ul>
@@ -347,7 +347,7 @@ $number_of_visits = $row['visits'];
             <!-- Calculator card -->
 
             <div class="group bg-orange-300 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-lg hover:shadow-white" id="spaceCalculator">
-                <a href="../space_calculator/calculator.php"></a>
+                <a href="../projects/space_calculator/calculator.php"></a>
                 <div class="calcImg h-3/5 w-full rounded-t-md  transform duration-700 group-hover:border-b-4 group-hover:border-b-orange-300">
 
                 </div>

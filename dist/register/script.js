@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     emailInput.focus();
                     addErrorFieldStyle(emailInput);
                     toggleLabel(emailError);
-                    emailError.textContent = data.message;
+                    emailError.innerHTML = data.message;
                 }
                 else if (data.message.includes("This username is already taken ❌")) {
                     usernameInput.focus();
                     addErrorFieldStyle(usernameInput);
                     toggleLabel(usernameError);
-                    usernameError.textContent = data.message;
+                    usernameError.innerHTML = data.message;
                 }
                 else {
                     // In this case, (all the fields are empty), so it will display an appropriate message
