@@ -7,6 +7,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: ../login/login.php");
     exit;
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,11 +18,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <title>Fetch Weather App ❄🌨</title>
     <link href="https://db.onlinewebfonts.com/c/a7e3822358f6dcb2f986a68cf24721b2?family=MV+Boli+V1" rel="stylesheet">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <script src="script.js" defer></script>
 </head>
 
-<dialog id="apiKeyDialog">
+<!-- <dialog id="apiKeyDialog">
     <form action="" method="post" id="apiKeyForm">
         <label for="apiKeyField">Enter your <a href="https://openweathermap.org/" style="color: rgba(18, 227, 178, 0.829); text-decoration: none;" target="_blank">openweathermap.org</a> API key :</label>
         <div class="passField">
@@ -33,9 +34,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <span class="helpSpan">
         <a class="helpSpan" href="https://github.com/Friedrich482/Comprehensive-Weather-Fetch-App/tree/main?tab=readme-ov-file#how-to-get-an-api-from-openweathermaporg" target="_blank">How top get an openweathermap API key ?</a>
     </span>
-</dialog>
+</dialog> -->
 
-<body class="dayBodyClass">
+<body class="weatherDayImg flex items-center justify-between flex-col MV-boli flex-wrap text-black gap-0 m-0">
     <h1><span id="spanTittle">Weather App</span>
         <img src="icons/titleIcons/snow.svg" class="titleIcons">
         <img src="icons/titleIcons/tornado.svg" class="titleIcons">
@@ -53,17 +54,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <p id="errorDisplay">
 
     </p>
-
-    <footer style="display:none;">
-        <p>&copy<label id="yearLabel"></label>, <a href="https://github.com/Friedrich482" id="gitLink" target="_blank">@Friedrich482</a> <img src="./icons/cardIcons/rocket.gif" id="footerImg" alt="🚀">,<b><span style="color: hsl(16, 96%, 45%);"> All</span> Rights Reserved</b></p>
-        <script>
-            let date = new Date();
-            let year = date.getFullYear();
-            let yearLabel = document.getElementById('yearLabel');
-            yearLabel.textContent = year;
-        </script>
-    </footer>
-
 </body>
 
 </html>
+
+<?php 
+    include("../../include/footer.php")
+?>

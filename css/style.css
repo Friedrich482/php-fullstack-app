@@ -1529,23 +1529,26 @@ video {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, #69caeb,#ce21e1);
-  /* Remplacez les couleurs selon vos préférences */
+  background-image: linear-gradient(
+      to right,
+      #69caeb,
+      #ce21e1
+    );
 }
 
-.MV-boli{
+.MV-boli {
   font-family: "MV Boli";
 }
 
-.seven-segment{
-  font-family: 'seven segment';
+.seven-segment {
+  font-family: "seven segment";
 }
 
-.consolas{
-  font-family: 'consolas';
+.consolas {
+  font-family: "consolas";
 }
 
-.backgroundImg{
+.backgroundImg {
   background-image: url("../assets/bg-img/02.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1553,12 +1556,12 @@ video {
   background-attachment: fixed;
 }
 
-.visibleItem{
+.visibleItem {
   display: flex;
   color: red;
   font-size: 1.25rem;
   padding: 0;
-  margin:0;
+  margin: 0;
 }
 
 .gradient-text {
@@ -1567,7 +1570,7 @@ video {
   color: transparent;
 }
 
-.fullElt{
+.fullElt {
   min-width: 0;
 }
 
@@ -1584,6 +1587,8 @@ video {
 
 /* Here a mixin in scss is a better idea for the cursors*/
 
+/* In resume, two mixins : one for the cursors and the other for all customized bg */
+
 .cursor {
   width: 1rem;
   height: 1rem;
@@ -1591,7 +1596,7 @@ video {
   border-radius: 100%;
 }
 
-.cursor1{
+.cursor1 {
   width: 1rem;
   height: 1rem;
   background-color: whitesmoke;
@@ -1600,7 +1605,7 @@ video {
 
 /* Another mixin here would be welcome ... */
 
-.calcImg{
+.calcImg {
   background-image: url("../assets/gridProjects/calc.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1608,7 +1613,7 @@ video {
   background-attachment: fixed;
 }
 
-.weatherImg{
+.weatherImg {
   background-image: url("../assets/gridProjects/weather.gif");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1616,7 +1621,7 @@ video {
   background-attachment: fixed;
 }
 
-.snakeImg{
+.snakeImg {
   background-image: url("../assets/gridProjects/snake.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1624,7 +1629,7 @@ video {
   background-attachment: fixed;
 }
 
-.ticImg{
+.ticImg {
   background-image: url("../assets/gridProjects/tic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1632,7 +1637,7 @@ video {
   background-attachment: fixed;
 }
 
-.rpsImg{
+.rpsImg {
   background-image: url("../assets/gridProjects/rps.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1640,7 +1645,7 @@ video {
   background-attachment: fixed;
 }
 
-.sliderImg{
+.sliderImg {
   background-image: url("../assets/gridProjects/slider.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1648,7 +1653,7 @@ video {
   background-attachment: fixed;
 }
 
-.stopwatchImg{
+.stopwatchImg {
   background-image: url("../assets/gridProjects/stopwatch.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1656,7 +1661,7 @@ video {
   background-attachment: fixed;
 }
 
-.clockImg{
+.clockImg {
   background-image: url("../assets/gridProjects/clock.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1664,7 +1669,7 @@ video {
   background-attachment: fixed;
 }
 
-.todoImg{
+.todoImg {
   background-image: url("../assets/gridProjects/todo.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1672,7 +1677,7 @@ video {
   background-attachment: fixed;
 }
 
-.spaceImg{
+.spaceImg {
   background-image: url("../projects/space_calculator/blackSky.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1680,35 +1685,56 @@ video {
   background-attachment: fixed;
 }
 
-body::-webkit-scrollbar{
+.weatherDayImg {
+  background-image: url("../projects/fetch-weather-app/img/01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.weatherNightImg{
+  background-image: url("../projects/fetch-weather-app/img/02.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body::-webkit-scrollbar {
   width: 0.25rem;
 }
 
-body::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track {
   background-color: #1e1e24;
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background: #6649b8;
 }
 
-.transit{
+.transit {
   transition: height 300ms ease-in-out;
   height: 0;
 }
 
-.transit-final{
+.transit-final {
   display: flex;
   height: 20rem;
 }
 
-.calc-border{
+.calc-border {
   border-right: 5px outset rgb(150, 138, 138);
   border-bottom: 10px outset rgb(62, 59, 59);
 }
 
-.calc-gradient{
-  background:linear-gradient(23deg,hsla(106, 63%, 57%, 0.664), pink, rgba(211, 211, 27, 0.632));
+.calc-gradient {
+  background: linear-gradient(
+    23deg,
+    hsla(106, 63%, 57%, 0.664),
+    pink,
+    rgba(211, 211, 27, 0.632)
+  );
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -1854,8 +1880,11 @@ body::-webkit-scrollbar-thumb{
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, #69caeb,#ce21e1);
-  /* Remplacez les couleurs selon vos préférences */
+  background-image: linear-gradient(
+      to right,
+      #69caeb,
+      #ce21e1
+    );
 }
 
 .focus\:outline-none:focus {
