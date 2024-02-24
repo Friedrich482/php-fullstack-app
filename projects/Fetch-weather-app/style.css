@@ -125,7 +125,7 @@
 #spanTittle {
   text-align: center;
 } */
-h1 {
+/* h1 {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -135,40 +135,40 @@ h1 {
   margin-bottom: 0;
   gap: 0vh;
   margin: 0rem;
-}
-.titleIcons {
+} */
+/* .titleIcons {
   height: 4.7rem;
   width: 4.7rem;
-}
-form {
+} */
+/* form {
   margin-top: 0.5vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-}
+} */
 #cityEntered {
-  font-size: 1.18rem;
+  /* font-size: 1.18rem;
   border-radius: 20px;
   border: 3px solid rgb(159, 18, 81);
   text-align: center;
   padding: 3px;
-  font-family: "MV Boli V1";
+  font-family: "MV Boli V1"; */
   max-width: 12rem;
   max-height: 4rem;
 }
 .submitButtons {
-  border: 3px solid transparent;
+  /* border: 3px solid transparent;
   font-size: 1.18rem;
   background-color: hsla(0, 0%, 0%, 0.899);
   border-radius: 20px;
   padding: 3px;
-  font-family: "MV Boli V1";
+  font-family: "MV Boli V1"; */
   min-width: 6rem;
   max-height: 4rem;
-  color: whitesmoke;
-  cursor: pointer;
+  /* color: whitesmoke;
+  cursor: pointer; */
 }
 
 .submitButtons:hover,

@@ -41,24 +41,32 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   <body
     class="weatherDayImg flex items-center justify-between flex-col MV-boli flex-wrap text-black gap-0 m-0"
   >
-    <h1 class="">
+    <h1
+      class="flex items-center justify-center flex-wrap text-6xl mb-0 gap-0 m-0"
+    >
       <span id="spanTittle" class="text-center">Weather App</span>
-      <img src="icons/titleIcons/snow.svg" class="titleIcons" />
-      <img src="icons/titleIcons/tornado.svg" class="titleIcons" />
+
+      <img src="icons/titleIcons/snow.svg" class="size-[4.5rem]" />
+      
+      <img src="icons/titleIcons/tornado.svg" class="size-[4.5rem]" />
+
       <img
         src="icons/titleIcons/clear-day.svg"
         class="titleIcons"
         id="sunOrMoon"
       />
+
     </h1>
-    <form action="" method="post" id="weatherForm">
+    <form action="" method="post" id="weatherForm" class="mt-1 flex items-center justify-center flex-wrap gap-4">
       <input
         type="text"
         placeholder="Enter a city..."
         id="cityEntered"
         required
+        class="text-lg rounded-lg border-2 border-pink-500 text-center p-1 MV-boli"
       />
-      <input type="submit" value="Submit" class="submitButtons" />
+      <input type="submit" value="Submit" class="text-lg bg-black rounded-lg p-1 MV-boli text-white cursor-pointer" />
+
     </form>
 
     <div id="card" style="display: none"></div>
