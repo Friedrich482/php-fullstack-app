@@ -21,7 +21,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../css/style.css" />
-    <script src="script.js" defer></script>
+    <script src="../../dist/projects/fetch-weather-app/script.js" defer></script>
   </head>
 
   <!-- <dialog id="apiKeyDialog">
