@@ -1,3 +1,50 @@
+// ! This is the interface for the data fetched
+interface WeatherData {
+  coord: {
+    lon: number;
+    lat: number;
+  };
+  weather: {
+    id: number;
+    main: string;
+    description: string;
+    icon: string;
+  }[];
+  base: string;
+  main: {
+    temp: number;
+    feels_like: number;
+    temp_min: number;
+    temp_max: number;
+    pressure: number;
+    humidity: number;
+  };
+  visibility: number;
+  wind: {
+    speed: number;
+    deg: number;
+  };
+  rain?: {
+    "1h": number;
+    "3h": number;
+  };
+  clouds: {
+    all: number;
+  };
+  dt: number;
+  sys: {
+    type: number;
+    id: number;
+    country: string;
+    sunrise: number;
+    sunset: number;
+  };
+  timezone: number;
+  id: number;
+  name: string;
+  cod: number;
+}
+
 const weatherForm = document.getElementById("weatherForm") as HTMLFormElement;
 const card = document.getElementById("card") as HTMLDivElement;
 const errorDisplay = document.querySelector(
@@ -83,7 +130,7 @@ weatherForm.addEventListener("submit", async (event) => {
 async function fetchData(city: string) {
   let ApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   let response: Response = await fetch(ApiUrl);
-  
+
   // if (response.statusText == "Unauthorized") {
   //   throw new Error("Couldn't fetch data ❌, your API key 🔑 may be invalid !");
   // }
@@ -95,51 +142,51 @@ async function fetchData(city: string) {
   }
 }
 
-function displayError(error) {
-  errorDisplay.textContent = error;
-  errorDisplay.style.display = "flex";
-  errorDisplay.style.flexWrap = "wrap";
-  errorDisplay.style.flexDirection = "column";
-  errorDisplay.style.alignItems = "center";
-  errorDisplay.style.gap = "1rem";
-  errorDisplay.style.justifyContent = "center";
-  errorDisplay.style.textAlign = "center";
-  errorDisplay.style.fontFamily = "MV Boli";
-  errorDisplay.style.fontSize = "1.25rem";
-  errorDisplay.style.color = "red";
+function displayError(error: unknown): void {
+  errorDisplay.textContent = String(error);
+  errorDisplay.classList.add("flex");
+  // errorDisplay.style.flexWrap = "wrap";
+  // errorDisplay.style.flexDirection = "column";
+  // errorDisplay.style.alignItems = "center";
+  // errorDisplay.style.gap = "1rem";
+  // errorDisplay.style.justifyContent = "center";
+  // errorDisplay.style.textAlign = "center";
+  // errorDisplay.style.fontFamily = "MV Boli";
+  // errorDisplay.style.fontSize = "1.25rem";
+  // errorDisplay.style.color = "red";
 
   if (error === "TypeError: Failed to fetch") {
     errorDisplay.textContent =
       "It seems that you're not connected to internet 🌐. Please check you connexion";
-    return;
   }
 
-//   if (
-//     error === "Error: Couldn't fetch data ❌, your API key 🔑 may be invalid !"
-//   ) {
-//     let retryButton = document.createElement("input");
-//     retryButton.type = "submit";
-//     retryButton.value = "Retry !";
-//     retryButton.classList.add("submitButtons");
-//     retryButton.addEventListener("click", () => {
-//       dialog.style.display = "flex";
-//       dialog.showModal();
-//       apiKeyField.value = "";
-//       apiKeyField.focus();
-//       errorDisplay.textContent = "";
-//       document.body.classList.add("dialogOpen");
-//       document.querySelector("#cityEntered").value = "";
-//     });
-//     errorDisplay.appendChild(retryButton);
-//   }
-// }
+  //   if (
+  //     error === "Error: Couldn't fetch data ❌, your API key 🔑 may be invalid !"
+  //   ) {
+  //     let retryButton = document.createElement("input");
+  //     retryButton.type = "submit";
+  //     retryButton.value = "Retry !";
+  //     retryButton.classList.add("submitButtons");
+  //     retryButton.addEventListener("click", () => {
+  //       dialog.style.display = "flex";
+  //       dialog.showModal();
+  //       apiKeyField.value = "";
+  //       apiKeyField.focus();
+  //       errorDisplay.textContent = "";
+  //       document.body.classList.add("dialogOpen");
+  //       document.querySelector("#cityEntered").value = "";
+  //     });
+  //     errorDisplay.appendChild(retryButton);
+  //   }
+  // }
+}
 
-async function displayData(data) {
+async function displayData(data: WeatherData) {
   const {
     name: city,
     main: { temp, humidity, feels_like },
     weather: [{ description, id, icon }],
-    sys: { country, sunrise, sunset },
+    sys: { country },
     timezone: timezone,
     wind: { deg, speed },
   } = data;

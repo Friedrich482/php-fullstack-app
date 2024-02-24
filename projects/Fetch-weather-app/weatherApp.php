@@ -77,7 +77,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </form>
 
     <div id="card" class="hidden mt-8 items-center justify-center"></div>
-    <p id="errorDisplay"></p>
+    <p id="errorDisplay" class="hidden flew-wrap flex-col items-center justify-center gap-4 text-center MV-boli text-xl text-red-600"></p>
   </body>
 </html>
 
