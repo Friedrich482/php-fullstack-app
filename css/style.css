@@ -674,6 +674,10 @@ video {
   margin: 0.75rem;
 }
 
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -690,16 +694,12 @@ video {
   margin-right: 5rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.mb-0 {
-  margin-bottom: 0px;
-}
-
 .mt-1 {
   margin-top: 0.25rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .box-border {
@@ -1184,6 +1184,11 @@ video {
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
 }
 
+.border-pink-950 {
+  --tw-border-opacity: 1;
+  border-color: rgb(80 7 36 / var(--tw-border-opacity));
+}
+
 .border-purple-800 {
   --tw-border-opacity: 1;
   border-color: rgb(107 33 168 / var(--tw-border-opacity));
@@ -1191,16 +1196,6 @@ video {
 
 .border-transparent {
   border-color: transparent;
-}
-
-.border-pink-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(236 72 153 / var(--tw-border-opacity));
-}
-
-.border-pink-950 {
-  --tw-border-opacity: 1;
-  border-color: rgb(80 7 36 / var(--tw-border-opacity));
 }
 
 .border-b-purple-600 {
@@ -1444,6 +1439,10 @@ video {
   line-height: 1.75rem;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .font-extrabold {
   font-weight: 800;
 }
@@ -1478,6 +1477,11 @@ video {
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 .text-violet-500 {
   --tw-text-opacity: 1;
   color: rgb(139 92 246 / var(--tw-text-opacity));
@@ -1486,11 +1490,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-red-600 {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
 .no-underline {
@@ -1948,24 +1947,14 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
-.active\:bg-slate-950:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(2 6 23 / var(--tw-bg-opacity));
-}
-
-.active\:bg-black:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.active\:bg-slate-600:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
-}
-
 .active\:bg-slate-900:active {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.active\:bg-slate-950:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 6 23 / var(--tw-bg-opacity));
 }
 
 .active\:bg-gradient-to-br:active {

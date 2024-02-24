@@ -50,7 +50,7 @@ const card = document.getElementById("card") as HTMLDivElement;
 const errorDisplay = document.querySelector(
   "#errorDisplay"
 ) as HTMLParagraphElement;
-let apiKey = "2232101b7a4c133da51de8620fc86462";
+
 // const apiKeyField = document.querySelector(".apiKeyField") as ;
 
 // const eye = document.querySelector(".eye");
@@ -81,6 +81,36 @@ let apiKey = "2232101b7a4c133da51de8620fc86462";
 //   closeDialog();
 // });
 
+let apiKey = "2232101b7a4c133da51de8620fc86462";
+
+// TODO This part allows me to create all the cards elements.
+// TODO Must be refactor !
+
+const cityDisplay = document.createElement("div");
+
+const marker = document.createElement("img");
+marker.src = "../../projects/fetch-weather-app/icons/cardIcons/marker.png";
+marker.classList.add("h-5");
+// marker.id = "marker";
+
+cityDisplay.classList.add("font-bold");
+cityDisplay.classList.add("text-2xl");
+// cityDisplay.id = "cityDisplay";
+
+const tempIcon = document.createElement("img");
+tempIcon.src = "./icons/cardIcons/thermometer.svg";
+tempIcon.classList.add("h-3");
+tempIcon.classList.add("w-4");
+// tempIcon.id = "tempIcon";
+
+const tempDisplay = document.createElement("p");
+tempDisplay.classList.add("flex");
+tempDisplay.classList.add("items-center");
+tempDisplay.classList.add("justify-center");
+tempDisplay.classList.add("flex-row");
+
+// tempDisplay.id = "tempDisplay";
+
 weatherForm.addEventListener("submit", async (event) => {
   card.textContent = "";
   event.preventDefault();
@@ -95,7 +125,7 @@ weatherForm.addEventListener("submit", async (event) => {
   }
 
   try {
-    const response = await fetchData(cityEntered);
+    const response: WeatherData = await fetchData(cityEntered);
     card.classList.add("flex");
     displayData(response);
     errorDisplay.style.display = "none";
@@ -145,15 +175,17 @@ async function fetchData(city: string) {
 function displayError(error: unknown): void {
   errorDisplay.textContent = String(error);
   errorDisplay.classList.add("flex");
-  // errorDisplay.style.flexWrap = "wrap";
-  // errorDisplay.style.flexDirection = "column";
-  // errorDisplay.style.alignItems = "center";
-  // errorDisplay.style.gap = "1rem";
-  // errorDisplay.style.justifyContent = "center";
-  // errorDisplay.style.textAlign = "center";
-  // errorDisplay.style.fontFamily = "MV Boli";
-  // errorDisplay.style.fontSize = "1.25rem";
-  // errorDisplay.style.color = "red";
+  {
+    // errorDisplay.style.flexWrap = "wrap";
+    // errorDisplay.style.flexDirection = "column";
+    // errorDisplay.style.alignItems = "center";
+    // errorDisplay.style.gap = "1rem";
+    // errorDisplay.style.justifyContent = "center";
+    // errorDisplay.style.textAlign = "center";
+    // errorDisplay.style.fontFamily = "MV Boli";
+    // errorDisplay.style.fontSize = "1.25rem";
+    // errorDisplay.style.color = "red";
+  }
 
   if (error === "TypeError: Failed to fetch") {
     errorDisplay.textContent =
@@ -191,25 +223,11 @@ async function displayData(data: WeatherData) {
     wind: { deg, speed },
   } = data;
 
-  let cityDisplay = document.createElement("div");
-  let marker = document.createElement("img");
-  marker.src = "./icons/cardIcons/marker.png";
-  marker.style.height = "20px";
-  marker.id = "marker";
-
-  cityDisplay.id = "cityDisplay";
-
   cityDisplay.textContent = `\u0009 ${city}`;
-
   card.appendChild(cityDisplay);
 
   // Standard temperature
-  let tempIcon = document.createElement("img");
-  tempIcon.src = "./icons/cardIcons/thermometer.svg";
-  tempIcon.id = "tempIcon";
 
-  let tempDisplay = document.createElement("p");
-  tempDisplay.id = "tempDisplay";
   tempDisplay.textContent = ` ${(temp - 273.15).toFixed()}°C`;
   tempDisplay.prepend(tempIcon);
   card.appendChild(tempDisplay);
@@ -282,7 +300,7 @@ async function displayData(data: WeatherData) {
   let actualCountry = await fetchCountry(countryCode);
   cityDisplay.textContent += `, ${actualCountry}`;
   cityDisplay.prepend(marker);
-  // Get the date of the location
+  //Get the date of the location
 
   let locationDateDisplay = document.createElement("p");
   locationDateDisplay.id = "locationDateDisplay";
