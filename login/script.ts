@@ -41,21 +41,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
           if (data.message.includes("User not found!<br> (ಥ _ ಥ)")) {
             usernameInput.focus();
-            errorFieldStyle(usernameInput);
             toggleElement(usernameError);
-            usernameError.textContent = data.message;
+            usernameError.innerHTML = data.message;
+            errorFieldStyle(usernameInput);
+
+            console.log("motherfucker !");
           } else if (data.message.includes("Incorrect password! ❌")) {
             passwordInput.focus();
-            errorFieldStyle(passwordInput);
             toggleElement(passwordError);
-            passwordError.textContent = data.message;
+            passwordError.innerHTML = data.message;
+            errorFieldStyle(passwordInput);
           } else {
             // In this case, (all the fields are empty), so it will display an appropriate message
             usernameInput.focus();
             errorFieldStyle(usernameInput);
             errorFieldStyle(passwordInput);
             toggleElement(defaultError);
-            defaultError.textContent = data.message;
+            defaultError.innerHTML = data.message;
           }
         } else {
           window.location.href = data.redirect;
@@ -69,23 +71,24 @@ function toggleElement(element: HTMLLabelElement): void {
   element.classList.remove("hidden");
   element.classList.add("visibleItem");
 }
+let cssProps1 = [
+  "border-red-600",
+  "shadow-lg",
+  "shadow-rose-800",
+  "hover:shadow-rose-800",
+];
+let cssProps2 = [
+  "hover:shadow-black",
+  "border-b-purple-600",
+  "hover:border-b-4",
+];
 
 function errorFieldStyle(element: HTMLInputElement): void {
-  element.classList.add("border-red-600");
-  element.classList.add("shadow-lg");
-  element.classList.add("shadow-rose-800");
-  element.classList.remove("hover:shadow-black");
-  element.classList.add("hover:shadow-rose-800");
-  element.classList.remove("border-b-purple-600");
-  element.classList.remove("hover:border-b-4");
+  element.classList.add(...cssProps1);
+  element.classList.remove(...cssProps2);
 }
 
 function removeErrorFieldStyle(element: HTMLInputElement): void {
-  element.classList.remove("border-red-600");
-  element.classList.remove("shadow-lg");
-  element.classList.remove("shadow-rose-800");
-  element.classList.add("hover:shadow-black");
-  element.classList.remove("hover:shadow-rose-800");
-  element.classList.add("border-b-purple-600");
-  element.classList.add("hover:border-b-4");
+  element.classList.remove(...cssProps1);
+  element.classList.add(...cssProps2);
 }

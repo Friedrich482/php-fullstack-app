@@ -59,21 +59,22 @@ function toggleLabel(element) {
     element.classList.remove("hidden");
     element.classList.add("visibleItem");
 }
+let registerCssProps1 = [
+    "border-red-600",
+    "shadow-lg",
+    "shadow-rose-800",
+    "hover:shadow-rose-800",
+];
+let registerCssProps2 = [
+    "hover:shadow-black",
+    "border-b-purple-600",
+    "hover:border-b-4",
+];
 function addErrorFieldStyle(element) {
-    element.classList.add("border-red-600");
-    element.classList.add("shadow-lg");
-    element.classList.add("shadow-rose-800");
-    element.classList.remove("hover:shadow-black");
-    element.classList.add("hover:shadow-rose-800");
-    element.classList.remove("border-b-purple-600");
-    element.classList.remove("hover:border-b-4");
+    element.classList.add(...registerCssProps1);
+    element.classList.remove(...registerCssProps2);
 }
 function deleteErrorFieldStyle(element) {
-    element.classList.remove("border-red-600");
-    element.classList.remove("shadow-lg");
-    element.classList.remove("shadow-rose-800");
-    element.classList.add("hover:shadow-black");
-    element.classList.remove("hover:shadow-rose-800");
-    element.classList.add("border-b-purple-600");
-    element.classList.add("hover:border-b-4");
+    element.classList.remove(...registerCssProps1);
+    element.classList.add(...registerCssProps2);
 }
