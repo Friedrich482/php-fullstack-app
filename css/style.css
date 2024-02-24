@@ -1198,6 +1198,11 @@ video {
   border-color: rgb(236 72 153 / var(--tw-border-opacity));
 }
 
+.border-pink-950 {
+  --tw-border-opacity: 1;
+  border-color: rgb(80 7 36 / var(--tw-border-opacity));
+}
+
 .border-b-purple-600 {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(147 51 234 / var(--tw-border-opacity));
@@ -1483,6 +1488,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 .no-underline {
   text-decoration-line: none;
 }
@@ -1514,6 +1524,11 @@ video {
 .shadow-white {
   --tw-shadow-color: #fff;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .ring-1 {
@@ -1936,6 +1951,21 @@ body::-webkit-scrollbar-thumb {
 .active\:bg-slate-950:active {
   --tw-bg-opacity: 1;
   background-color: rgb(2 6 23 / var(--tw-bg-opacity));
+}
+
+.active\:bg-black:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.active\:bg-slate-600:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
+.active\:bg-slate-900:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
 .active\:bg-gradient-to-br:active {

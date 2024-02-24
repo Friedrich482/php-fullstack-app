@@ -186,14 +186,14 @@
   color: rgb(248, 3, 44);
 }
 
-#card {
+/* #card {
   margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-}
+} */
 
 #descriptionDisplay {
   color: hsl(348, 5%, 19%);
@@ -281,7 +281,8 @@
   color: hsl(330, 84%, 46%);
   box-shadow: 0 0.5rem 8px black;
 }
-footer {
+
+/* footer {
   text-align: center;
   flex: 1;
   width: 100%;
@@ -313,4 +314,4 @@ footer p {
   top: 0.5rem;
   border: none;
   border-radius: 10px;
-}
+} */

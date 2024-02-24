@@ -1,43 +1,93 @@
-// Use const and let for variable declarations
-const weatherForm = document.getElementById("weatherForm");
-const card = document.getElementById("card");
-const errorDisplay = document.querySelector("#errorDisplay");
-const apiKeyField = document.querySelector(".apiKeyField");
-const eye = document.querySelector(".eye");
+// ! This is the interface for the data fetched
+interface WeatherData {
+  coord: {
+    lon: number;
+    lat: number;
+  };
+  weather: {
+    id: number;
+    main: string;
+    description: string;
+    icon: string;
+  }[];
+  base: string;
+  main: {
+    temp: number;
+    feels_like: number;
+    temp_min: number;
+    temp_max: number;
+    pressure: number;
+    humidity: number;
+  };
+  visibility: number;
+  wind: {
+    speed: number;
+    deg: number;
+  };
+  rain?: {
+    "1h": number;
+    "3h": number;
+  };
+  clouds: {
+    all: number;
+  };
+  dt: number;
+  sys: {
+    type: number;
+    id: number;
+    country: string;
+    sunrise: number;
+    sunset: number;
+  };
+  timezone: number;
+  id: number;
+  name: string;
+  cod: number;
+}
 
-let apiKey = null;
-let displayft = false;
+const weatherForm = document.getElementById("weatherForm") as HTMLFormElement;
+const card = document.getElementById("card") as HTMLDivElement;
+const errorDisplay = document.querySelector(
+  "#errorDisplay"
+) as HTMLParagraphElement;
+let apiKey = "2232101b7a4c133da51de8620fc86462";
+// const apiKeyField = document.querySelector(".apiKeyField") as ;
 
-card.textContent = "";
-const footer = document.querySelector("footer");
+// const eye = document.querySelector(".eye");
 
-const dialog = document.querySelector("dialog");
+// let apiKey = null;
+// let displayft = false;
 
-// Use arrow functions for event listeners
-document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("dialogOpen");
-  dialog.showModal();
-  apiKeyField.focus();
-});
+// card.textContent = "";
+// const dialog = document.querySelector("dialog");
 
-dialog.addEventListener("cancel", (event) => {
-  event.preventDefault();
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   document.body.classList.add("dialogOpen");
+//   dialog.showModal();
+//   apiKeyField.focus();
+// });
 
-eye.addEventListener("click", () => {
-  toggleApiKeyVisibility();
-});
+// dialog.addEventListener("cancel", (event) => {
+//   event.preventDefault();
+// });
 
-apiKeyForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  apiKey = apiKeyField.value;
-  closeDialog();
-});
+// eye.addEventListener("click", () => {
+//   toggleApiKeyVisibility();
+// });
+
+// apiKeyForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   apiKey = apiKeyField.value;
+//   closeDialog();
+// });
 
 weatherForm.addEventListener("submit", async (event) => {
   card.textContent = "";
   event.preventDefault();
-  const cityEntered = document.getElementById("cityEntered").value;
+
+  const cityEntered = (
+    document.getElementById("cityEntered") as HTMLInputElement
+  ).value;
 
   if (cityEntered === "") {
     displayError("Please enter a city 🏙️ !");
@@ -46,48 +96,45 @@ weatherForm.addEventListener("submit", async (event) => {
 
   try {
     const response = await fetchData(cityEntered);
-    card.style.display = "flex";
+    card.classList.add("flex");
     displayData(response);
     errorDisplay.style.display = "none";
-    displayft = true;
-    displayFooter(footer, displayft);
+    // displayft = true;
+    // displayFooter(footer, displayft);
   } catch (error) {
     displayError(error);
   }
 });
 
-// Extracted toggleApiKeyVisibility function
-function toggleApiKeyVisibility() {
-  apiKeyField.type = apiKeyField.type === "password" ? "text" : "password";
-  const eyeSrc =
-    apiKeyField.type === "password"
-      ? "icons/passwordIcons/eye.svg"
-      : "icons/passwordIcons/crossedEye.svg";
-  const eyeTitle =
-    apiKeyField.type === "password" ? "Show the API key" : "Hide the API key";
+// function toggleApiKeyVisibility() {
+//   apiKeyField.type = apiKeyField.type === "password" ? "text" : "password";
+//   const eyeSrc =
+//     apiKeyField.type === "password"
+//        "icons/passwordIcons/eye.svg"
+//       : "icons/passwordIcons/crossedEye.svg";
+//   const eyeTitle =
+//     apiKeyField.type === "password" ? "Show the API key" : "Hide the API key";
 
-  eye.src = eyeSrc;
-  eye.title = eyeTitle;
-  apiKeyField.classList.toggle("apiKeyFieldText");
-  apiKeyField.classList.toggle("apiKeyField");
-}
+//   eye.src = eyeSrc;
+//   eye.title = eyeTitle;
+//   apiKeyField.classList.toggle("apiKeyFieldText");
+//   apiKeyField.classList.toggle("apiKeyField");
+// }
 
-// Extracted closeDialog function
-function closeDialog() {
-  dialog.close();
-  dialog.style.display = "none";
-  document.body.classList.remove("dialogOpen");
-}
+// function closeDialog() {
+//   dialog.close();
+//   dialog.style.display = "none";
+//   document.body.classList.remove("dialogOpen");
+// }
 
-// Rest of the code remains unchanged
-
-async function fetchData(city) {
+async function fetchData(city: string) {
   let ApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-  let response = await fetch(ApiUrl);
-  // console.log(response);
-  if (response.statusText == "Unauthorized") {
-    throw new Error("Couldn't fetch data ❌, your API key 🔑 may be invalid !");
-  }
+  let response: Response = await fetch(ApiUrl);
+
+  // if (response.statusText == "Unauthorized") {
+  //   throw new Error("Couldn't fetch data ❌, your API key 🔑 may be invalid !");
+  // }
+
   if (!response.ok) {
     throw new Error("Couldn't fetch data ❌, try again !");
   } else {
@@ -95,51 +142,51 @@ async function fetchData(city) {
   }
 }
 
-function displayError(error) {
-  errorDisplay.textContent = error;
-  errorDisplay.style.display = "flex";
-  errorDisplay.style.flexWrap = "wrap";
-  errorDisplay.style.flexDirection = "column";
-  errorDisplay.style.alignItems = "center";
-  errorDisplay.style.gap = "1rem";
-  errorDisplay.style.justifyContent = "center";
-  errorDisplay.style.textAlign = "center";
-  errorDisplay.style.fontFamily = "MV Boli";
-  errorDisplay.style.fontSize = "1.25rem";
-  errorDisplay.style.color = "red";
+function displayError(error: unknown): void {
+  errorDisplay.textContent = String(error);
+  errorDisplay.classList.add("flex");
+  // errorDisplay.style.flexWrap = "wrap";
+  // errorDisplay.style.flexDirection = "column";
+  // errorDisplay.style.alignItems = "center";
+  // errorDisplay.style.gap = "1rem";
+  // errorDisplay.style.justifyContent = "center";
+  // errorDisplay.style.textAlign = "center";
+  // errorDisplay.style.fontFamily = "MV Boli";
+  // errorDisplay.style.fontSize = "1.25rem";
+  // errorDisplay.style.color = "red";
 
-  if (error == "TypeError: Failed to fetch") {
+  if (error === "TypeError: Failed to fetch") {
     errorDisplay.textContent =
       "It seems that you're not connected to internet 🌐. Please check you connexion";
-    return;
   }
 
-  if (
-    error == "Error: Couldn't fetch data ❌, your API key 🔑 may be invalid !"
-  ) {
-    let retryButton = document.createElement("input");
-    retryButton.type = "submit";
-    retryButton.value = "Retry !";
-    retryButton.classList.add("submitButtons");
-    retryButton.addEventListener("click", () => {
-      dialog.style.display = "flex";
-      dialog.showModal();
-      apiKeyField.value = "";
-      apiKeyField.focus();
-      errorDisplay.textContent = "";
-      document.body.classList.add("dialogOpen");
-      document.querySelector("#cityEntered").value = "";
-    });
-    errorDisplay.appendChild(retryButton);
-  }
+  //   if (
+  //     error === "Error: Couldn't fetch data ❌, your API key 🔑 may be invalid !"
+  //   ) {
+  //     let retryButton = document.createElement("input");
+  //     retryButton.type = "submit";
+  //     retryButton.value = "Retry !";
+  //     retryButton.classList.add("submitButtons");
+  //     retryButton.addEventListener("click", () => {
+  //       dialog.style.display = "flex";
+  //       dialog.showModal();
+  //       apiKeyField.value = "";
+  //       apiKeyField.focus();
+  //       errorDisplay.textContent = "";
+  //       document.body.classList.add("dialogOpen");
+  //       document.querySelector("#cityEntered").value = "";
+  //     });
+  //     errorDisplay.appendChild(retryButton);
+  //   }
+  // }
 }
 
-async function displayData(data) {
+async function displayData(data: WeatherData) {
   const {
     name: city,
     main: { temp, humidity, feels_like },
     weather: [{ description, id, icon }],
-    sys: { country, sunrise, sunset },
+    sys: { country },
     timezone: timezone,
     wind: { deg, speed },
   } = data;
@@ -374,8 +421,8 @@ function displayEmoji(icon, descriptionDisplay) {
   }
 }
 
-function displayFooter(footer, displayft) {
-  if (displayft) {
-    footer.style.display = "flex";
-  }
-}
+// function displayFooter(footer, displayft) {
+//   if (displayft) {
+//     footer.style.display = "flex";
+//   }
+// }

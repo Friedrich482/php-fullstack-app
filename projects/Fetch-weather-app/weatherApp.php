@@ -21,7 +21,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../css/style.css" />
-    <script src="script.js" defer></script>
+    <script src="../../dist/projects/fetch-weather-app/script.js" defer></script>
   </head>
 
   <!-- <dialog id="apiKeyDialog">
@@ -47,30 +47,37 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       <span id="spanTittle" class="text-center">Weather App</span>
 
       <img src="icons/titleIcons/snow.svg" class="size-[4.5rem]" />
-      
+
       <img src="icons/titleIcons/tornado.svg" class="size-[4.5rem]" />
 
       <img
         src="icons/titleIcons/clear-day.svg"
-        class="titleIcons"
+        class="size-[4.5rem]"
         id="sunOrMoon"
       />
-
     </h1>
-    <form action="" method="post" id="weatherForm" class="mt-1 flex items-center justify-center flex-wrap gap-4">
+    <form
+      action=""
+      method="post"
+      id="weatherForm"
+      class="mt-1 flex items-center justify-center flex-wrap gap-4"
+    >
       <input
         type="text"
         placeholder="Enter a city..."
         id="cityEntered"
         required
-        class="text-lg rounded-lg border-2 border-pink-500 text-center p-1 MV-boli"
+        class="text-lg rounded-lg border-2 outline-none border-pink-950 text-center p-1 MV-boli"
       />
-      <input type="submit" value="Submit" class="text-lg bg-black rounded-lg p-1 MV-boli text-white cursor-pointer" />
-
+      <input
+        type="submit"
+        value="Submit"
+        class="text-lg bg-black rounded-lg p-1 MV-boli text-white cursor-pointer hover:scale-110 border-black border-2 active:bg-slate-900"
+      />
     </form>
 
-    <div id="card" style="display: none"></div>
-    <p id="errorDisplay"></p>
+    <div id="card" class="hidden mt-8 items-center justify-center"></div>
+    <p id="errorDisplay" class="hidden flew-wrap flex-col items-center justify-center gap-4 text-center MV-boli text-xl text-red-600"></p>
   </body>
 </html>
 
