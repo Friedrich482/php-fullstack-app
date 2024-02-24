@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login 🔑</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../dist/login/script.js" defer></script>
     
 </head>
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-[1.25rem] backgroundImg text-[whitesmoke] MV-boli">
@@ -33,7 +34,6 @@
         </div>
         <label id="defaultError" class="hidden"></label>
         <p></p>
-        <script src="../dist/login/script.js"></script>
     </form>
     
     <p class="h-7 flex items-center justify-center flex-wrap text-center">Not yet registered? Click here to &thinsp;<a href="../register/register.php" class="text-pink-500 no-underline hover:text-indigo-400">register</a></p><br>
