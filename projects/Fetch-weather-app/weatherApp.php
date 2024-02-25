@@ -73,6 +73,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         type="submit"
         value="Submit"
         class="text-lg bg-black rounded-lg p-1 MV-boli text-white cursor-pointer hover:scale-110 border-black border-2 active:bg-slate-900"
+        id="submitButton"
       />
     </form>
 
@@ -82,5 +83,5 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </html>
 
 <?php 
-    include("../../include/footer.php")
+    // include("../../include/footer.php")
 ?>

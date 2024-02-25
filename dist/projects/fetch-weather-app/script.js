@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 const weatherForm = document.getElementById("weatherForm");
+const submitButton = document.querySelector("#submitButton");
 const card = document.getElementById("card");
 const errorDisplay = document.querySelector("#errorDisplay");
 let apiKey = "2232101b7a4c133da51de8620fc86462";
@@ -22,7 +23,12 @@ let humidityIconCssClasses = ["size-8", "relative"];
 let feelsIconCssClasses = ["h-7", "w-12"];
 let windSpeedIconCssClasses = ["size-7", "relative"];
 let windSpeedSpanCssClasses = ["relative", "bottom-1"];
-let descriptionDisplayCssClasses = ["flex", "max-h-10", "font-bold"];
+let descriptionDisplayCssClasses = [
+    "flex",
+    "max-h-10",
+    "font-bold",
+    "text-white",
+];
 // *CityDisplay
 const cityDisplay = document.createElement("div");
 const marker = document.createElement("img");
@@ -66,6 +72,17 @@ const descriptionDisplay = document.createElement("p");
 descriptionDisplay.classList.add(...descriptionDisplayCssClasses);
 // *country display
 const countryDisplay = document.createElement("p");
+// *location date display
+const locationDateDisplay = document.createElement("p");
+// *Time icon
+const timeIcon = document.createElement("img");
+timeIcon.src = "./icons/cardIcons/date.gif";
+// *Weather icon
+const weatherIcon = document.createElement("img");
+weatherForm.classList.add("size-12");
+// *Sun or Moon Image
+const sunOrMoon = document.querySelector("#sunOrMoon");
+// !The main form submission event 🚀
 weatherForm.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0, function* () {
     card.textContent = "";
     event.preventDefault();
@@ -143,24 +160,18 @@ function displayData(data) {
         let actualCountry = yield fetchCountry(countryCode);
         cityDisplay.textContent += `, ${actualCountry}`;
         cityDisplay.prepend(marker);
-        //Get the date of the location
-        let locationDateDisplay = document.createElement("p");
-        locationDateDisplay.id = "locationDateDisplay";
         card.appendChild(locationDateDisplay);
+        card.classList.toggle("hidden");
+        card.classList.toggle("flex");
         function setting() {
             let locationDate = getLocationDate(timezone);
             let day = locationDate.getDate();
-            let month = locationDate.getMonth();
             let year = locationDate.getFullYear();
-            let weekDay = locationDate.getDay();
-            month = stringMonths(month);
-            weekDay = stringWeekDay(weekDay);
+            let month = stringMonths(locationDate.getMonth());
+            let weekDay = stringWeekDay(locationDate.getDay());
             let locationHour = pad(locationDate.getHours());
             let locationMins = pad(locationDate.getMinutes());
             let locationsecs = pad(locationDate.getSeconds());
-            let timeIcon = document.createElement("img");
-            timeIcon.src = "./icons/cardIcons/date.gif";
-            timeIcon.id = "timeIcon";
             locationDateDisplay.textContent = ` ${weekDay} ${day} ${month} ${year}, ${locationHour}:${locationMins}:${locationsecs}`;
             locationDateDisplay.prepend(timeIcon);
         }
@@ -170,29 +181,28 @@ function displayData(data) {
 }
 function fetchCountry(countryCode) {
     return __awaiter(this, void 0, void 0, function* () {
-        let countriesCode = yield fetch("ISO3166-1.alpha2.json");
-        countriesCode = yield countriesCode.json();
-        const countryName = yield countriesCode[countryCode];
-        return yield countryName;
+        let countriesCodeResponse = yield fetch("ISO3166-1.alpha2.json");
+        let countriesCode = yield countriesCodeResponse.json();
+        const countryName = countriesCode[countryCode];
+        return countryName;
     });
 }
 function getLocationDate(timezone) {
     let locationDate;
     let actualDate = new Date().toString();
     let firstSlice;
-    let minus;
+    let minus = true;
     if (actualDate.indexOf("+") == -1) {
         firstSlice = actualDate.slice(actualDate.indexOf("-") + 1);
-        minus = true;
     }
     else {
         firstSlice = actualDate.slice(actualDate.indexOf("+") + 1);
+        minus = false;
     }
-    let gmt = firstSlice.slice(0, firstSlice.indexOf(" "));
-    gmt = Number(gmt);
+    let gmt = Number(firstSlice.slice(0, firstSlice.indexOf(" ")));
     gmt = gmt / 100;
-    /* The previous part get the user current gmt+value or gmt-value, I get this 'value'
-      So if somebody hasn't the same timezone than me, it still works.*/
+    // !The previous part get the user current gmt+`value` or gmt-`value`, I get this 'value'
+    // !So if somebody hasn't the same timezone than me, it still works.
     if (minus) {
         locationDate = new Date(Date.now() + timezone * 1000 + 3600000 * gmt);
     }
@@ -233,37 +243,22 @@ function stringWeekDay(day) {
     ];
     return days[day];
 }
-function padDate(day) {
-    return day <= 9 ? "0" + day : day;
-}
 function displayEmoji(icon, descriptionDisplay) {
-    let weatherIcon = document.createElement("img");
-    weatherIcon.style.height = "50px";
-    weatherIcon.style.width = "50px";
     weatherIcon.src = `./icons/Openweathermap/${icon}.svg`;
-    weatherIcon.id = "weatherIcon";
     descriptionDisplay.appendChild(weatherIcon);
-    let string = String(icon);
-    let body = document.body;
-    let sunOrMoon = document.querySelector("#sunOrMoon");
-    let submitButtons = document.querySelectorAll(".submitButtons");
-    if (string.indexOf("n") != -1) {
-        body.classList.remove("dayBodyClass");
-        body.classList.add("nightBodyClass");
-        descriptionDisplay.style.color = "whitesmoke";
+    function toggleBodyClass() {
+        document.body.classList.toggle("nightBodyClass");
+        document.body.classList.toggle("dayBodyClass");
+    }
+    if (icon.indexOf("n") != -1) {
+        toggleBodyClass();
         marker.src = "./icons/cardIcons/markerNight.png";
-        marker.style.height = "20px";
         sunOrMoon.src = "./icons/titleIcons/clear-night.svg";
-        submitButtons.forEach((submitButton) => {
-            submitButton.classList.add("submitNight");
-        });
+        submitButton.classList.add("submitNight");
     }
     else {
-        body.classList.remove("nightBodyClass");
-        body.classList.add("dayBodyClass");
+        toggleBodyClass();
         sunOrMoon.src = "./icons/titleIcons/clear-day.svg";
-        submitButtons.forEach((submitButton) => {
-            submitButton.classList.remove("submitNight");
-        });
+        submitButton.classList.remove("submitNight");
     }
 }
