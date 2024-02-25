@@ -718,10 +718,6 @@ video {
   display: inline-flex;
 }
 
-.table {
-  display: table;
-}
-
 .grid {
   display: grid;
 }
@@ -732,6 +728,11 @@ video {
 
 .aspect-square {
   aspect-ratio: 1 / 1;
+}
+
+.size-12 {
+  width: 3rem;
+  height: 3rem;
 }
 
 .size-7 {
@@ -749,9 +750,14 @@ video {
   height: 4.5rem;
 }
 
-.size-12 {
-  width: 3rem;
-  height: 3rem;
+.size-10 {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.size-9 {
+  width: 2.25rem;
+  height: 2.25rem;
 }
 
 .h-10 {
@@ -896,6 +902,10 @@ video {
 
 .w-7 {
   width: 1.75rem;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .w-9 {
