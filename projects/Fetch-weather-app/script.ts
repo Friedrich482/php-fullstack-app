@@ -54,27 +54,27 @@ const errorDisplay = document.querySelector(
   "#errorDisplay"
 ) as HTMLParagraphElement;
 
-let apiKey = "2232101b7a4c133da51de8620fc86462";
+const apiKey = "2232101b7a4c133da51de8620fc86462";
 
 // TODO This part allows me to create all the cards elements.
 // TODO Must be refactored !
 
 //?All Arrays for css classes
 
-let cityDisplayCssClasses = ["font-bold", "text-2xl"];
-let tempIconCssClasses = ["h-3", "w-4"];
+let cityDisplayCssClasses = ["font-bold", "text-2xl", "gap-3"];
+let tempIconCssClasses = ["size-10", "relative", "bottom-1"];
 let flexCssClasses = ["flex", "items-center", "justify-center", "flex-row"];
-let humidityIconCssClasses = ["size-8", "relative"];
-let feelsIconCssClasses = ["h-7", "w-12"];
-let windSpeedIconCssClasses = ["size-7", "relative"];
+let humidityIconCssClasses = ["size-10", "relative"];
+// let feelsIconCssClasses = ["h-7", "w-12"];
+let windSpeedIconCssClasses = ["size-10", "relative", "bottom-1"];
 let windSpeedSpanCssClasses = ["relative", "bottom-1"];
 let descriptionDisplayCssClasses = [
-  "flex",
   "max-h-10",
   "font-bold",
-  "text-white",
+  // "text-white"
+  "gap-2",
 ];
-
+let timeIconCssClasses = ["size-6", "rounded-lg"];
 // *CityDisplay
 const cityDisplay = document.createElement("div");
 
@@ -82,7 +82,7 @@ const marker = document.createElement("img");
 marker.src = "../../projects/fetch-weather-app/icons/cardIcons/marker.png";
 marker.classList.add("h-5");
 
-cityDisplay.classList.add(...cityDisplayCssClasses);
+cityDisplay.classList.add(...cityDisplayCssClasses, ...flexCssClasses);
 // *tempIcon
 const tempIcon = document.createElement("img");
 tempIcon.src = "./icons/cardIcons/thermometer.svg";
@@ -103,7 +103,7 @@ humidityDisplay.classList.add(...flexCssClasses);
 // *Feels Like
 const feelsIcon = document.createElement("img");
 feelsIcon.src = "./icons/cardIcons/thermometer.svg";
-feelsIcon.classList.add(...feelsIconCssClasses);
+feelsIcon.classList.add(...tempIconCssClasses);
 
 const feelsLikeDisplay = document.createElement("p");
 feelsLikeDisplay.classList.add(...flexCssClasses);
@@ -120,27 +120,31 @@ speedIcon.classList.add(...windSpeedIconCssClasses);
 const windDisplay = document.createElement("div");
 const windSpan = document.createElement("span");
 const speedSpan = document.createElement("span");
-
+windDisplay.classList.add(...flexCssClasses);
 windSpan.classList.add(...windSpeedSpanCssClasses);
 speedSpan.classList.add(...windSpeedSpanCssClasses);
 
 // *Description display
 const descriptionDisplay = document.createElement("p");
-descriptionDisplay.classList.add(...descriptionDisplayCssClasses);
+descriptionDisplay.classList.add(
+  ...descriptionDisplayCssClasses,
+  ...flexCssClasses
+);
 
 // *country display
 const countryDisplay = document.createElement("p");
 
 // *location date display
 const locationDateDisplay = document.createElement("p");
-
+locationDateDisplay.classList.add(...flexCssClasses, "gap-2", "flex-wrap");
 // *Time icon
 const timeIcon = document.createElement("img");
 timeIcon.src = "./icons/cardIcons/date.gif";
+timeIcon.classList.add(...timeIconCssClasses, "mr-1");
 
 // *Weather icon
 const weatherIcon = document.createElement("img");
-weatherForm.classList.add("size-12");
+weatherIcon.classList.add("size-12");
 
 // *Sun or Moon Image
 const sunOrMoon = document.querySelector("#sunOrMoon") as HTMLImageElement;
@@ -227,7 +231,7 @@ async function displayData(data: WeatherData) {
   feelsLikeDisplay.prepend(feelsIcon);
   card.appendChild(feelsLikeDisplay);
 
-  windSpan.textContent = `  ${deg} degrees \t||\u0009`;
+  windSpan.innerHTML = `${deg} degrees \t||&nbsp`;
   speedSpan.textContent = `${speed} meters/s`;
 
   windDisplay.prepend(windIcon);
@@ -245,7 +249,7 @@ async function displayData(data: WeatherData) {
 
   let actualCountry = await fetchCountry(countryCode);
 
-  cityDisplay.textContent += `, ${actualCountry}`;
+  cityDisplay.textContent += `,${actualCountry}`;
   cityDisplay.prepend(marker);
 
   card.appendChild(locationDateDisplay);
@@ -257,22 +261,30 @@ async function displayData(data: WeatherData) {
     let locationDate = getLocationDate(timezone);
     let day = locationDate.getDate();
     let year = locationDate.getFullYear();
-  
+
     let month = stringMonths(locationDate.getMonth());
     let weekDay = stringWeekDay(locationDate.getDay());
-  
+
     let locationHour = pad(locationDate.getHours());
     let locationMins = pad(locationDate.getMinutes());
     let locationsecs = pad(locationDate.getSeconds());
-  
-    locationDateDisplay.textContent = ` ${weekDay} ${day} ${month} ${year}, ${locationHour}:${locationMins}:${locationsecs}`;
+
+    locationDateDisplay.innerHTML = `<span>${weekDay}</span>
+    <span>${day}</span>
+    <span>${month}</span>
+    <span>${year}</span>,
+    <div class="flex items-center justify-center">
+      <span class="size-6 text-center">${locationHour}</span>:
+      <span class="size-6 text-center">${locationMins}</span>:
+      <span class="size-6 text-center">${locationsecs}</span
+    </div>`;
+
     locationDateDisplay.prepend(timeIcon);
   }
-  
+
   setInterval(setting, 1000);
   displayEmoji(icon, descriptionDisplay);
 }
-
 
 type CountryCodes = {
   [countryCode: string]: string;
@@ -365,3 +377,5 @@ function displayEmoji(icon: string, descriptionDisplay: HTMLParagraphElement) {
     submitButton.classList.remove("submitNight");
   }
 }
+
+// card.classList.add("after:blur-sm")
