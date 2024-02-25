@@ -69,12 +69,12 @@ let humidityIconCssClasses = ["size-10", "relative"];
 let windSpeedIconCssClasses = ["size-10", "relative", "bottom-1"];
 let windSpeedSpanCssClasses = ["relative", "bottom-1"];
 let descriptionDisplayCssClasses = [
-  "flex",
   "max-h-10",
   "font-bold",
-  "text-white",
+  // "text-white"
+  "gap-2",
 ];
-
+let timeIconCssClasses = ["size-6", "rounded-lg"];
 // *CityDisplay
 const cityDisplay = document.createElement("div");
 
@@ -126,17 +126,21 @@ speedSpan.classList.add(...windSpeedSpanCssClasses);
 
 // *Description display
 const descriptionDisplay = document.createElement("p");
-descriptionDisplay.classList.add(...descriptionDisplayCssClasses);
+descriptionDisplay.classList.add(
+  ...descriptionDisplayCssClasses,
+  ...flexCssClasses
+);
 
 // *country display
 const countryDisplay = document.createElement("p");
 
 // *location date display
 const locationDateDisplay = document.createElement("p");
-
+locationDateDisplay.classList.add(...flexCssClasses, "gap-2", "flex-wrap");
 // *Time icon
 const timeIcon = document.createElement("img");
 timeIcon.src = "./icons/cardIcons/date.gif";
+timeIcon.classList.add(...timeIconCssClasses, "mr-1");
 
 // *Weather icon
 const weatherIcon = document.createElement("img");
@@ -227,7 +231,7 @@ async function displayData(data: WeatherData) {
   feelsLikeDisplay.prepend(feelsIcon);
   card.appendChild(feelsLikeDisplay);
 
-  windSpan.textContent = `  ${deg} degrees \t||\u0009`;
+  windSpan.innerHTML = `${deg} degrees \t||&nbsp`;
   speedSpan.textContent = `${speed} meters/s`;
 
   windDisplay.prepend(windIcon);
@@ -265,7 +269,16 @@ async function displayData(data: WeatherData) {
     let locationMins = pad(locationDate.getMinutes());
     let locationsecs = pad(locationDate.getSeconds());
 
-    locationDateDisplay.textContent = ` ${weekDay} ${day} ${month} ${year}, ${locationHour}:${locationMins}:${locationsecs}`;
+    locationDateDisplay.innerHTML = `<span>${weekDay}</span>
+    <span>${day}</span>
+    <span>${month}</span>
+    <span>${year}</span>,
+    <div class="flex items-center justify-center">
+      <span class="size-6 text-center">${locationHour}</span>:
+      <span class="size-6 text-center">${locationMins}</span>:
+      <span class="size-6 text-center">${locationsecs}</span
+    </div>`;
+
     locationDateDisplay.prepend(timeIcon);
   }
 
@@ -364,3 +377,5 @@ function displayEmoji(icon: string, descriptionDisplay: HTMLParagraphElement) {
     submitButton.classList.remove("submitNight");
   }
 }
+
+// card.classList.add("after:blur-sm")
