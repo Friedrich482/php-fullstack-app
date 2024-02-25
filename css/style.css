@@ -718,6 +718,10 @@ video {
   display: inline-flex;
 }
 
+.table {
+  display: table;
+}
+
 .grid {
   display: grid;
 }
@@ -743,6 +747,11 @@ video {
 .size-\[4\.5rem\] {
   width: 4.5rem;
   height: 4.5rem;
+}
+
+.size-12 {
+  width: 3rem;
+  height: 3rem;
 }
 
 .h-10 {
@@ -819,6 +828,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.max-h-10 {
+  max-height: 2.5rem;
 }
 
 .min-h-\[560px\] {
