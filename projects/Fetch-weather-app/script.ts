@@ -55,7 +55,7 @@ const errorDisplay = document.querySelector(
 ) as HTMLParagraphElement;
 
 const apiKey = "2232101b7a4c133da51de8620fc86462";
-
+let interval: number;
 // TODO This part allows me to create all the cards elements.
 // TODO Must be refactored !
 
@@ -150,13 +150,14 @@ weatherIcon.classList.add("size-12");
 const sunOrMoon = document.querySelector("#sunOrMoon") as HTMLImageElement;
 
 // !The main form submission event 🚀
+
 weatherForm.addEventListener("submit", async (event) => {
+  clearInterval(interval);
+  let cityEntered = (document.getElementById("cityEntered") as HTMLInputElement)
+    .value;
+
   card.textContent = "";
   event.preventDefault();
-
-  const cityEntered = (
-    document.getElementById("cityEntered") as HTMLInputElement
-  ).value;
 
   if (cityEntered === "") {
     displayError("Please enter a city 🏙️ !");
@@ -165,7 +166,8 @@ weatherForm.addEventListener("submit", async (event) => {
 
   try {
     const response: WeatherData = await fetchData(cityEntered);
-    card.classList.add("flex");
+    card.classList.remove("hidden");
+    card.classList.add("flex", "flex-col");
     displayData(response);
     errorDisplay.style.display = "none";
   } catch (error) {
@@ -176,6 +178,7 @@ weatherForm.addEventListener("submit", async (event) => {
 async function fetchData(city: string) {
   let ApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   let response: Response = await fetch(ApiUrl);
+
 
   if (!response.ok) {
     throw new Error("Couldn't fetch data ❌, try again !");
@@ -254,10 +257,8 @@ async function displayData(data: WeatherData) {
 
   card.appendChild(locationDateDisplay);
 
-  card.classList.toggle("hidden");
-  card.classList.toggle("flex");
-
   function setting(): void {
+    locationDateDisplay.innerHTML = "";
     let locationDate = getLocationDate(timezone);
     let day = locationDate.getDate();
     let year = locationDate.getFullYear();
@@ -278,11 +279,11 @@ async function displayData(data: WeatherData) {
       <span class="size-6 text-center">${locationMins}</span>:
       <span class="size-6 text-center">${locationsecs}</span
     </div>`;
-
+    // console.log(locationDateDisplay.innerHTML)
     locationDateDisplay.prepend(timeIcon);
   }
 
-  setInterval(setting, 1000);
+  interval = setInterval(setting, 1000);
   displayEmoji(icon, descriptionDisplay);
 }
 
@@ -359,22 +360,23 @@ function stringWeekDay(day: number): string {
 function displayEmoji(icon: string, descriptionDisplay: HTMLParagraphElement) {
   weatherIcon.src = `./icons/Openweathermap/${icon}.svg`;
   descriptionDisplay.appendChild(weatherIcon);
-  function toggleBodyClass(): void {
-    document.body.classList.toggle("nightBodyClass");
-    document.body.classList.toggle("dayBodyClass");
-  }
+
   if (icon.indexOf("n") != -1) {
-    toggleBodyClass();
+    document.body.classList.add("weatherNightImg");
+    document.body.classList.remove("weatherDayImg");
+
     marker.src = "./icons/cardIcons/markerNight.png";
 
     sunOrMoon.src = "./icons/titleIcons/clear-night.svg";
 
-    submitButton.classList.add("submitNight");
+    // submitButton.classList.add("submitNight");
   } else {
-    toggleBodyClass();
+    document.body.classList.add("weatherDayImg");
+    document.body.classList.remove("weatherNightImg");
+
     sunOrMoon.src = "./icons/titleIcons/clear-day.svg";
 
-    submitButton.classList.remove("submitNight");
+    // submitButton.classList.remove("submitNight");
   }
 }
 
