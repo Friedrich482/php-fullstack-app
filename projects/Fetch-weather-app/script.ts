@@ -55,23 +55,29 @@ const errorDisplay = document.querySelector(
 ) as HTMLParagraphElement;
 
 const apiKey = "2232101b7a4c133da51de8620fc86462";
+let interval: number;
+
+const footer = document.querySelector("footer") as HTMLElement;
+const imageFooter = footer.querySelector("img") as HTMLImageElement;
+imageFooter.src =
+  "../../assets/icons/rocket.gif";
+
+footer.classList.add("hidden");
 
 // TODO This part allows me to create all the cards elements.
 // TODO Must be refactored !
 
 //?All Arrays for css classes
 
-let cityDisplayCssClasses = ["font-bold", "text-2xl", "gap-3"];
+let cityDisplayCssClasses = ["font-bold", "text-2xl", "gap-3", "text-center"];
 let tempIconCssClasses = ["size-10", "relative", "bottom-1"];
 let flexCssClasses = ["flex", "items-center", "justify-center", "flex-row"];
 let humidityIconCssClasses = ["size-10", "relative"];
-// let feelsIconCssClasses = ["h-7", "w-12"];
 let windSpeedIconCssClasses = ["size-10", "relative", "bottom-1"];
 let windSpeedSpanCssClasses = ["relative", "bottom-1"];
 let descriptionDisplayCssClasses = [
   "max-h-10",
   "font-bold",
-  // "text-white"
   "gap-2",
 ];
 let timeIconCssClasses = ["size-6", "rounded-lg"];
@@ -150,13 +156,14 @@ weatherIcon.classList.add("size-12");
 const sunOrMoon = document.querySelector("#sunOrMoon") as HTMLImageElement;
 
 // !The main form submission event 🚀
+
 weatherForm.addEventListener("submit", async (event) => {
+  clearInterval(interval);
+  let cityEntered = (document.getElementById("cityEntered") as HTMLInputElement)
+    .value;
+
   card.textContent = "";
   event.preventDefault();
-
-  const cityEntered = (
-    document.getElementById("cityEntered") as HTMLInputElement
-  ).value;
 
   if (cityEntered === "") {
     displayError("Please enter a city 🏙️ !");
@@ -165,8 +172,10 @@ weatherForm.addEventListener("submit", async (event) => {
 
   try {
     const response: WeatherData = await fetchData(cityEntered);
-    card.classList.add("flex");
+    card.classList.remove("hidden");
+    card.classList.add("flex", "flex-col");
     displayData(response);
+    footer.classList.remove("hidden");
     errorDisplay.style.display = "none";
   } catch (error) {
     displayError(error);
@@ -245,7 +254,7 @@ async function displayData(data: WeatherData) {
 
   let countryCode = country;
 
-  // Fetch the country from ISO3166-1.alpha2.json
+  //? Fetch the country from ISO3166-1.alpha2.json
 
   let actualCountry = await fetchCountry(countryCode);
 
@@ -254,10 +263,8 @@ async function displayData(data: WeatherData) {
 
   card.appendChild(locationDateDisplay);
 
-  card.classList.toggle("hidden");
-  card.classList.toggle("flex");
-
   function setting(): void {
+    locationDateDisplay.innerHTML = "";
     let locationDate = getLocationDate(timezone);
     let day = locationDate.getDate();
     let year = locationDate.getFullYear();
@@ -278,11 +285,11 @@ async function displayData(data: WeatherData) {
       <span class="size-6 text-center">${locationMins}</span>:
       <span class="size-6 text-center">${locationsecs}</span
     </div>`;
-
+    // console.log(locationDateDisplay.innerHTML)
     locationDateDisplay.prepend(timeIcon);
   }
 
-  setInterval(setting, 1000);
+  interval = setInterval(setting, 1000);
   displayEmoji(icon, descriptionDisplay);
 }
 
@@ -359,22 +366,25 @@ function stringWeekDay(day: number): string {
 function displayEmoji(icon: string, descriptionDisplay: HTMLParagraphElement) {
   weatherIcon.src = `./icons/Openweathermap/${icon}.svg`;
   descriptionDisplay.appendChild(weatherIcon);
-  function toggleBodyClass(): void {
-    document.body.classList.toggle("nightBodyClass");
-    document.body.classList.toggle("dayBodyClass");
-  }
+
   if (icon.indexOf("n") != -1) {
-    toggleBodyClass();
+    document.body.classList.add("weatherNightImg");
+    document.body.classList.remove("weatherDayImg");
+
     marker.src = "./icons/cardIcons/markerNight.png";
 
     sunOrMoon.src = "./icons/titleIcons/clear-night.svg";
 
-    submitButton.classList.add("submitNight");
+    // submitButton.classList.add("submitNight");
   } else {
-    toggleBodyClass();
+    document.body.classList.add("weatherDayImg");
+    document.body.classList.remove("weatherNightImg");
+
+    marker.src = "./icons/cardIcons/marker.png";
+
     sunOrMoon.src = "./icons/titleIcons/clear-day.svg";
 
-    submitButton.classList.remove("submitNight");
+    // submitButton.classList.remove("submitNight");
   }
 }
 

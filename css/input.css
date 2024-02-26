@@ -161,7 +161,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-      
+    color: black;  
 }
 
 .weatherNightImg{
@@ -170,7 +170,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
+    color: white;
 }
 body::-webkit-scrollbar {
   width: 0.25rem;
