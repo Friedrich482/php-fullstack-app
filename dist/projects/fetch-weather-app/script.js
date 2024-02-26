@@ -17,22 +17,20 @@ let interval;
 const footer = document.querySelector("footer");
 const imageFooter = footer.querySelector("img");
 imageFooter.src =
-    "http://localhost/php_form_registration/assets/icons/rocket.gif";
+    "../../assets/icons/rocket.gif";
 footer.classList.add("hidden");
 // TODO This part allows me to create all the cards elements.
 // TODO Must be refactored !
 //?All Arrays for css classes
-let cityDisplayCssClasses = ["font-bold", "text-2xl", "gap-3"];
+let cityDisplayCssClasses = ["font-bold", "text-2xl", "gap-3", "text-center"];
 let tempIconCssClasses = ["size-10", "relative", "bottom-1"];
 let flexCssClasses = ["flex", "items-center", "justify-center", "flex-row"];
 let humidityIconCssClasses = ["size-10", "relative"];
-// let feelsIconCssClasses = ["h-7", "w-12"];
 let windSpeedIconCssClasses = ["size-10", "relative", "bottom-1"];
 let windSpeedSpanCssClasses = ["relative", "bottom-1"];
 let descriptionDisplayCssClasses = [
     "max-h-10",
     "font-bold",
-    // "text-white"
     "gap-2",
 ];
 let timeIconCssClasses = ["size-6", "rounded-lg"];

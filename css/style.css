@@ -674,6 +674,10 @@ video {
   margin: 0.75rem;
 }
 
+.m-1 {
+  margin: 0.25rem;
+}
+
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -704,6 +708,10 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .box-border {

@@ -36,7 +36,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </span>
 </dialog> -->
 
-<body class="weatherDayImg flex items-center justify-between flex-col MV-boli flex-wrap text-black gap-0 m-0">
+<body class="weatherDayImg flex items-center justify-between flex-col MV-boli flex-wrap text-black gap-0 m-1">
   <h1 class="flex items-center justify-center flex-wrap text-6xl mb-0 gap-0 m-0">
     <span id="spanTittle" class="text-center">Weather App</span>
 
@@ -51,7 +51,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <input type="submit" value="Submit" class="text-lg bg-black rounded-lg p-1 MV-boli text-white cursor-pointer hover:scale-110 border-black border-2 active:bg-slate-900" id="submitButton" />
   </form>
 
-  <div id="card" class="hidden mt-8 items-center justify-center"></div>
+  <div id="card" class="hidden mt-8 items-center justify-center mb-8"></div>
   <p id="errorDisplay" class="hidden flew-wrap flex-col items-center justify-center gap-4 text-center MV-boli text-xl text-red-600"></p>
 </body>
 
