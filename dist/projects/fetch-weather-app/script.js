@@ -114,8 +114,7 @@ weatherForm.addEventListener("submit", (event) => __awaiter(void 0, void 0, void
         return;
     }
     try {
-        errorDisplay.classList.add("hidden");
-        errorDisplay.classList.remove("flex");
+        hiddenElement(errorDisplay);
         const response = yield fetchData(cityEntered);
         card.classList.remove("hidden");
         card.classList.add("flex", "flex-col");
@@ -139,15 +138,15 @@ function fetchData(city) {
     });
 }
 function displayError(error) {
-    card.classList.add("hidden");
-    card.classList.remove("flex");
+    hiddenElement(card);
     errorDisplay.classList.remove("hidden");
     errorDisplay.classList.add(...errorDisplayCssClasses);
-    errorDisplay.textContent = String(error);
-    if (error === "TypeError: Failed to fetch") {
+    if (error == "TypeError: NetworkError when attempting to fetch resource.") {
         errorDisplay.textContent =
             "It seems that you're not connected to internet 🌐. Please check you connexion";
+        return;
     }
+    errorDisplay.textContent = String(error);
 }
 function displayData(data) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -197,7 +196,6 @@ function displayData(data) {
       <span class="size-6 text-center">${locationMins}</span>:
       <span class="size-6 text-center">${locationsecs}</span
     </div>`;
-            // console.log(locationDateDisplay.innerHTML)
             locationDateDisplay.prepend(timeIcon);
         }
         interval = setInterval(setting, 1000);
@@ -276,14 +274,11 @@ function displayEmoji(icon, descriptionDisplay) {
         document.body.classList.remove("weatherDayImg");
         marker.src = "./icons/cardIcons/markerNight.png";
         sunOrMoon.src = "./icons/titleIcons/clear-night.svg";
-        // submitButton.classList.add("submitNight");
     }
     else {
         document.body.classList.add("weatherDayImg");
         document.body.classList.remove("weatherNightImg");
         marker.src = "./icons/cardIcons/marker.png";
         sunOrMoon.src = "./icons/titleIcons/clear-day.svg";
-        // submitButton.classList.remove("submitNight");
     }
 }
-// card.classList.add("after:blur-sm")

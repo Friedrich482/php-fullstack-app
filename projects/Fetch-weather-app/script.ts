@@ -184,8 +184,7 @@ weatherForm.addEventListener("submit", async (event) => {
   }
 
   try {
-    errorDisplay.classList.add("hidden");
-    errorDisplay.classList.remove("flex");
+    hiddenElement(errorDisplay);
     const response: WeatherData = await fetchData(cityEntered);
     card.classList.remove("hidden");
     card.classList.add("flex", "flex-col");
@@ -208,16 +207,16 @@ async function fetchData(city: string) {
 }
 
 function displayError(error: unknown): void {
-  card.classList.add("hidden");
-  card.classList.remove("flex");
+  hiddenElement(card);
   errorDisplay.classList.remove("hidden");
   errorDisplay.classList.add(...errorDisplayCssClasses);
-  errorDisplay.textContent = String(error);
-
-  if (error === "TypeError: Failed to fetch") {
+  if (error == "TypeError: NetworkError when attempting to fetch resource.") {
     errorDisplay.textContent =
       "It seems that you're not connected to internet 🌐. Please check you connexion";
+    return;
   }
+
+  errorDisplay.textContent = String(error);
 }
 
 async function displayData(data: WeatherData) {
@@ -291,7 +290,6 @@ async function displayData(data: WeatherData) {
       <span class="size-6 text-center">${locationMins}</span>:
       <span class="size-6 text-center">${locationsecs}</span
     </div>`;
-    // console.log(locationDateDisplay.innerHTML)
     locationDateDisplay.prepend(timeIcon);
   }
 
@@ -380,8 +378,6 @@ function displayEmoji(icon: string, descriptionDisplay: HTMLParagraphElement) {
     marker.src = "./icons/cardIcons/markerNight.png";
 
     sunOrMoon.src = "./icons/titleIcons/clear-night.svg";
-
-    // submitButton.classList.add("submitNight");
   } else {
     document.body.classList.add("weatherDayImg");
     document.body.classList.remove("weatherNightImg");
@@ -389,9 +385,5 @@ function displayEmoji(icon: string, descriptionDisplay: HTMLParagraphElement) {
     marker.src = "./icons/cardIcons/marker.png";
 
     sunOrMoon.src = "./icons/titleIcons/clear-day.svg";
-
-    // submitButton.classList.remove("submitNight");
   }
 }
-
-// card.classList.add("after:blur-sm")
