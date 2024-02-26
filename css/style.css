@@ -690,6 +690,10 @@ video {
   margin-left: 5rem;
 }
 
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
 .mr-20 {
   margin-right: 5rem;
 }
@@ -700,10 +704,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mr-1 {
-  margin-right: 0.25rem;
 }
 
 .box-border {
@@ -722,10 +722,6 @@ video {
   display: inline-flex;
 }
 
-.table {
-  display: table;
-}
-
 .grid {
   display: grid;
 }
@@ -738,34 +734,14 @@ video {
   aspect-ratio: 1 / 1;
 }
 
-.size-12 {
-  width: 3rem;
-  height: 3rem;
-}
-
-.size-7 {
-  width: 1.75rem;
-  height: 1.75rem;
-}
-
-.size-8 {
-  width: 2rem;
-  height: 2rem;
-}
-
-.size-\[4\.5rem\] {
-  width: 4.5rem;
-  height: 4.5rem;
-}
-
 .size-10 {
   width: 2.5rem;
   height: 2.5rem;
 }
 
-.size-9 {
-  width: 2.25rem;
-  height: 2.25rem;
+.size-12 {
+  width: 3rem;
+  height: 3rem;
 }
 
 .size-6 {
@@ -773,14 +749,9 @@ video {
   height: 1.5rem;
 }
 
-.size-3 {
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.size-1 {
-  width: 0.25rem;
-  height: 0.25rem;
+.size-\[4\.5rem\] {
+  width: 4.5rem;
+  height: 4.5rem;
 }
 
 .h-10 {
@@ -925,10 +896,6 @@ video {
 
 .w-7 {
   width: 1.75rem;
-}
-
-.w-8 {
-  width: 2rem;
 }
 
 .w-9 {
@@ -1172,10 +1139,6 @@ video {
   border-radius: 0.75rem;
 }
 
-.rounded {
-  border-radius: 0.25rem;
-}
-
 .rounded-b-md {
   border-bottom-right-radius: 0.375rem;
   border-bottom-left-radius: 0.375rem;
@@ -1388,6 +1351,21 @@ video {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 
+.bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -1451,10 +1429,6 @@ video {
 
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.pr-1 {
-  padding-right: 0.25rem;
 }
 
 .text-left {
@@ -1832,6 +1806,7 @@ video {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  color: black;
 }
 
 .weatherNightImg{
@@ -1840,6 +1815,7 @@ video {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  color: white;
 }
 
 body::-webkit-scrollbar {
@@ -1878,12 +1854,6 @@ body::-webkit-scrollbar-thumb {
   );
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-}
-
-.before\:blur-sm::before {
-  content: var(--tw-content);
-  --tw-blur: blur(4px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .after\:blur-sm::after {

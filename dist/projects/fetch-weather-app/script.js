@@ -14,6 +14,11 @@ const card = document.getElementById("card");
 const errorDisplay = document.querySelector("#errorDisplay");
 const apiKey = "2232101b7a4c133da51de8620fc86462";
 let interval;
+const footer = document.querySelector("footer");
+const imageFooter = footer.querySelector("img");
+imageFooter.src =
+    "http://localhost/php_form_registration/assets/icons/rocket.gif";
+footer.classList.add("hidden");
 // TODO This part allows me to create all the cards elements.
 // TODO Must be refactored !
 //?All Arrays for css classes
@@ -103,6 +108,7 @@ weatherForm.addEventListener("submit", (event) => __awaiter(void 0, void 0, void
         card.classList.remove("hidden");
         card.classList.add("flex", "flex-col");
         displayData(response);
+        footer.classList.remove("hidden");
         errorDisplay.style.display = "none";
     }
     catch (error) {
@@ -164,7 +170,7 @@ function displayData(data) {
         descriptionDisplay.textContent = description;
         card.appendChild(descriptionDisplay);
         let countryCode = country;
-        // Fetch the country from ISO3166-1.alpha2.json
+        //? Fetch the country from ISO3166-1.alpha2.json
         let actualCountry = yield fetchCountry(countryCode);
         cityDisplay.textContent += `,${actualCountry}`;
         cityDisplay.prepend(marker);
@@ -272,6 +278,7 @@ function displayEmoji(icon, descriptionDisplay) {
     else {
         document.body.classList.add("weatherDayImg");
         document.body.classList.remove("weatherNightImg");
+        marker.src = "./icons/cardIcons/marker.png";
         sunOrMoon.src = "./icons/titleIcons/clear-day.svg";
         // submitButton.classList.remove("submitNight");
     }

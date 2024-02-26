@@ -56,6 +56,14 @@ const errorDisplay = document.querySelector(
 
 const apiKey = "2232101b7a4c133da51de8620fc86462";
 let interval: number;
+
+const footer = document.querySelector("footer") as HTMLElement;
+const imageFooter = footer.querySelector("img") as HTMLImageElement;
+imageFooter.src =
+  "http://localhost/php_form_registration/assets/icons/rocket.gif";
+
+footer.classList.add("hidden");
+
 // TODO This part allows me to create all the cards elements.
 // TODO Must be refactored !
 
@@ -169,6 +177,7 @@ weatherForm.addEventListener("submit", async (event) => {
     card.classList.remove("hidden");
     card.classList.add("flex", "flex-col");
     displayData(response);
+    footer.classList.remove("hidden");
     errorDisplay.style.display = "none";
   } catch (error) {
     displayError(error);
@@ -178,7 +187,6 @@ weatherForm.addEventListener("submit", async (event) => {
 async function fetchData(city: string) {
   let ApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   let response: Response = await fetch(ApiUrl);
-
 
   if (!response.ok) {
     throw new Error("Couldn't fetch data ❌, try again !");
@@ -248,7 +256,7 @@ async function displayData(data: WeatherData) {
 
   let countryCode = country;
 
-  // Fetch the country from ISO3166-1.alpha2.json
+  //? Fetch the country from ISO3166-1.alpha2.json
 
   let actualCountry = await fetchCountry(countryCode);
 
@@ -373,6 +381,8 @@ function displayEmoji(icon: string, descriptionDisplay: HTMLParagraphElement) {
   } else {
     document.body.classList.add("weatherDayImg");
     document.body.classList.remove("weatherNightImg");
+
+    marker.src = "./icons/cardIcons/marker.png";
 
     sunOrMoon.src = "./icons/titleIcons/clear-day.svg";
 
