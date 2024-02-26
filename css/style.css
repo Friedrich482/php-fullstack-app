@@ -666,16 +666,20 @@ video {
   z-index: 50;
 }
 
+.-z-10 {
+  z-index: -10;
+}
+
 .m-0 {
   margin: 0px;
 }
 
-.m-3 {
-  margin: 0.75rem;
-}
-
 .m-1 {
   margin: 0.25rem;
+}
+
+.m-3 {
+  margin: 0.75rem;
 }
 
 .mb-0 {
@@ -710,10 +714,6 @@ video {
   margin-top: 2rem;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
 .box-border {
   box-sizing: border-box;
 }
@@ -728,6 +728,10 @@ video {
 
 .inline-flex {
   display: inline-flex;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -930,6 +934,14 @@ video {
   width: 100%;
 }
 
+.w-44 {
+  width: 11rem;
+}
+
+.w-56 {
+  width: 14rem;
+}
+
 .min-w-16 {
   min-width: 4rem;
 }
@@ -946,6 +958,14 @@ video {
   min-width: 19.05rem;
 }
 
+.min-w-44 {
+  min-width: 11rem;
+}
+
+.min-w-36 {
+  min-width: 9rem;
+}
+
 .max-w-60 {
   max-width: 15rem;
 }
@@ -956,6 +976,14 @@ video {
 
 .max-w-\[21rem\] {
   max-width: 21rem;
+}
+
+.max-w-44 {
+  max-width: 11rem;
+}
+
+.max-w-80 {
+  max-width: 20rem;
 }
 
 .flex-shrink-0 {
@@ -1339,6 +1367,11 @@ video {
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
 .bg-slate-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
@@ -1357,21 +1390,6 @@ video {
 .bg-yellow-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
-}
-
-.bg-slate-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-}
-
-.bg-slate-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
-}
-
-.bg-slate-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-br {
@@ -1864,6 +1882,27 @@ body::-webkit-scrollbar-thumb {
           backdrop-filter: blur(10px);
 }
 
+.backdrop\:blur-sm::backdrop {
+  --tw-blur: blur(4px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop\:blur-lg::backdrop {
+  --tw-blur: blur(16px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop\:blur-3xl::backdrop {
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.before\:blur-md::before {
+  content: var(--tw-content);
+  --tw-blur: blur(12px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .after\:blur-sm::after {
   content: var(--tw-content);
   --tw-blur: blur(4px);
@@ -2064,6 +2103,27 @@ body::-webkit-scrollbar-thumb {
 
 .active\:font-thin:active {
   font-weight: 100;
+}
+
+.active\:outline:active {
+  outline-style: solid;
+}
+
+.active\:outline-1:active {
+  outline-width: 1px;
+}
+
+.active\:outline-2:active {
+  outline-width: 2px;
+}
+
+.active\:outline-white:active {
+  outline-color: #fff;
+}
+
+.active\:blur-xl:active {
+  --tw-blur: blur(24px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 @keyframes bounce {

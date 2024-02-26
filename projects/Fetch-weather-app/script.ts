@@ -59,8 +59,7 @@ let interval: number;
 
 const footer = document.querySelector("footer") as HTMLElement;
 const imageFooter = footer.querySelector("img") as HTMLImageElement;
-imageFooter.src =
-  "../../assets/icons/rocket.gif";
+imageFooter.src = "../../assets/icons/rocket.gif";
 
 footer.classList.add("hidden");
 
@@ -75,12 +74,26 @@ let flexCssClasses = ["flex", "items-center", "justify-center", "flex-row"];
 let humidityIconCssClasses = ["size-10", "relative"];
 let windSpeedIconCssClasses = ["size-10", "relative", "bottom-1"];
 let windSpeedSpanCssClasses = ["relative", "bottom-1"];
-let descriptionDisplayCssClasses = [
-  "max-h-10",
-  "font-bold",
-  "gap-2",
-];
+let descriptionDisplayCssClasses = ["max-h-10", "font-bold", "gap-2"];
 let timeIconCssClasses = ["size-6", "rounded-lg"];
+let errorDisplayCssClasses = [
+  ...flexCssClasses,
+  "flex-wrap",
+  "flex-col",
+  "gap-1",
+  "text-center",
+  "text-red-600",
+];
+// *These two functions are specially created to hidden or display elements (not toggle because it may lead to inappropriate behaviour)
+function displayElement(element: HTMLElement): void {
+  element.classList.remove("hidden");
+  element.classList.add("flex");
+}
+
+function hiddenElement(element: HTMLElement): void {
+  element.classList.remove("flex");
+  element.classList.add("hidden");
+}
 // *CityDisplay
 const cityDisplay = document.createElement("div");
 
@@ -171,12 +184,12 @@ weatherForm.addEventListener("submit", async (event) => {
   }
 
   try {
+    hiddenElement(errorDisplay);
     const response: WeatherData = await fetchData(cityEntered);
     card.classList.remove("hidden");
     card.classList.add("flex", "flex-col");
     displayData(response);
     footer.classList.remove("hidden");
-    errorDisplay.style.display = "none";
   } catch (error) {
     displayError(error);
   }
@@ -194,24 +207,16 @@ async function fetchData(city: string) {
 }
 
 function displayError(error: unknown): void {
-  errorDisplay.textContent = String(error);
-  errorDisplay.classList.add("flex");
-  {
-    // errorDisplay.style.flexWrap = "wrap";
-    // errorDisplay.style.flexDirection = "column";
-    // errorDisplay.style.alignItems = "center";
-    // errorDisplay.style.gap = "1rem";
-    // errorDisplay.style.justifyContent = "center";
-    // errorDisplay.style.textAlign = "center";
-    // errorDisplay.style.fontFamily = "MV Boli";
-    // errorDisplay.style.fontSize = "1.25rem";
-    // errorDisplay.style.color = "red";
-  }
-
-  if (error === "TypeError: Failed to fetch") {
+  hiddenElement(card);
+  errorDisplay.classList.remove("hidden");
+  errorDisplay.classList.add(...errorDisplayCssClasses);
+  if (error == "TypeError: NetworkError when attempting to fetch resource.") {
     errorDisplay.textContent =
       "It seems that you're not connected to internet 🌐. Please check you connexion";
+    return;
   }
+
+  errorDisplay.textContent = String(error);
 }
 
 async function displayData(data: WeatherData) {
@@ -285,7 +290,6 @@ async function displayData(data: WeatherData) {
       <span class="size-6 text-center">${locationMins}</span>:
       <span class="size-6 text-center">${locationsecs}</span
     </div>`;
-    // console.log(locationDateDisplay.innerHTML)
     locationDateDisplay.prepend(timeIcon);
   }
 
@@ -374,8 +378,6 @@ function displayEmoji(icon: string, descriptionDisplay: HTMLParagraphElement) {
     marker.src = "./icons/cardIcons/markerNight.png";
 
     sunOrMoon.src = "./icons/titleIcons/clear-night.svg";
-
-    // submitButton.classList.add("submitNight");
   } else {
     document.body.classList.add("weatherDayImg");
     document.body.classList.remove("weatherNightImg");
@@ -383,9 +385,5 @@ function displayEmoji(icon: string, descriptionDisplay: HTMLParagraphElement) {
     marker.src = "./icons/cardIcons/marker.png";
 
     sunOrMoon.src = "./icons/titleIcons/clear-day.svg";
-
-    // submitButton.classList.remove("submitNight");
   }
 }
-
-// card.classList.add("after:blur-sm")
