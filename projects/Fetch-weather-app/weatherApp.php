@@ -22,20 +22,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   <script src="../../dist/projects/fetch-weather-app/script.js" defer></script>
 </head>
 
-<!-- <dialog id="apiKeyDialog">
-    <form action="" method="post" id="apiKeyForm">
-        <label for="apiKeyField">Enter your <a href="https://openweathermap.org/" style="color: rgba(18, 227, 178, 0.829); text-decoration: none;" target="_blank">openweathermap.org</a> API key :</label>
-        <div class="passField">
-            <input type="password" name="" class="apiKeyField" required>
-            <img srcscr="icons/passwordIcons/eye.svg" alt="eye" class="eye" title="Show API key">
-        </div>
-        <input type="submit" value="Submit" class="submitButtons">
-    </form>
-    <span class="helpSpan">
-        <a class="helpSpan" href="https://github.com/Friedrich482/Comprehensive-Weather-Fetch-App/tree/main?tab=readme-ov-file#how-to-get-an-api-from-openweathermaporg" target="_blank">How top get an openweathermap API key ?</a>
-    </span>
-</dialog> -->
-
 <body class="weatherDayImg flex items-center justify-between flex-col MV-boli flex-wrap text-black gap-0 m-1">
   <h1 class="flex items-center justify-center flex-wrap text-6xl mb-0 gap-0 m-0">
     <span id="spanTittle" class="text-center">Weather App</span>

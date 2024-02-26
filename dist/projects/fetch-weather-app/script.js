@@ -16,8 +16,7 @@ const apiKey = "2232101b7a4c133da51de8620fc86462";
 let interval;
 const footer = document.querySelector("footer");
 const imageFooter = footer.querySelector("img");
-imageFooter.src =
-    "../../assets/icons/rocket.gif";
+imageFooter.src = "../../assets/icons/rocket.gif";
 footer.classList.add("hidden");
 // TODO This part allows me to create all the cards elements.
 // TODO Must be refactored !
@@ -28,12 +27,25 @@ let flexCssClasses = ["flex", "items-center", "justify-center", "flex-row"];
 let humidityIconCssClasses = ["size-10", "relative"];
 let windSpeedIconCssClasses = ["size-10", "relative", "bottom-1"];
 let windSpeedSpanCssClasses = ["relative", "bottom-1"];
-let descriptionDisplayCssClasses = [
-    "max-h-10",
-    "font-bold",
-    "gap-2",
-];
+let descriptionDisplayCssClasses = ["max-h-10", "font-bold", "gap-2"];
 let timeIconCssClasses = ["size-6", "rounded-lg"];
+let errorDisplayCssClasses = [
+    ...flexCssClasses,
+    "flex-wrap",
+    "flex-col",
+    "gap-1",
+    "text-center",
+    "text-red-600",
+];
+// *These two functions are specially created to hidden or display elements (not toggle because it may lead to inappropriate behaviour)
+function displayElement(element) {
+    element.classList.remove("hidden");
+    element.classList.add("flex");
+}
+function hiddenElement(element) {
+    element.classList.remove("flex");
+    element.classList.add("hidden");
+}
 // *CityDisplay
 const cityDisplay = document.createElement("div");
 const marker = document.createElement("img");
@@ -102,12 +114,13 @@ weatherForm.addEventListener("submit", (event) => __awaiter(void 0, void 0, void
         return;
     }
     try {
+        errorDisplay.classList.add("hidden");
+        errorDisplay.classList.remove("flex");
         const response = yield fetchData(cityEntered);
         card.classList.remove("hidden");
         card.classList.add("flex", "flex-col");
         displayData(response);
         footer.classList.remove("hidden");
-        errorDisplay.style.display = "none";
     }
     catch (error) {
         displayError(error);
@@ -126,19 +139,11 @@ function fetchData(city) {
     });
 }
 function displayError(error) {
+    card.classList.add("hidden");
+    card.classList.remove("flex");
+    errorDisplay.classList.remove("hidden");
+    errorDisplay.classList.add(...errorDisplayCssClasses);
     errorDisplay.textContent = String(error);
-    errorDisplay.classList.add("flex");
-    {
-        // errorDisplay.style.flexWrap = "wrap";
-        // errorDisplay.style.flexDirection = "column";
-        // errorDisplay.style.alignItems = "center";
-        // errorDisplay.style.gap = "1rem";
-        // errorDisplay.style.justifyContent = "center";
-        // errorDisplay.style.textAlign = "center";
-        // errorDisplay.style.fontFamily = "MV Boli";
-        // errorDisplay.style.fontSize = "1.25rem";
-        // errorDisplay.style.color = "red";
-    }
     if (error === "TypeError: Failed to fetch") {
         errorDisplay.textContent =
             "It seems that you're not connected to internet 🌐. Please check you connexion";

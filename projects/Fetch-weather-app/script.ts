@@ -59,8 +59,7 @@ let interval: number;
 
 const footer = document.querySelector("footer") as HTMLElement;
 const imageFooter = footer.querySelector("img") as HTMLImageElement;
-imageFooter.src =
-  "../../assets/icons/rocket.gif";
+imageFooter.src = "../../assets/icons/rocket.gif";
 
 footer.classList.add("hidden");
 
@@ -75,12 +74,26 @@ let flexCssClasses = ["flex", "items-center", "justify-center", "flex-row"];
 let humidityIconCssClasses = ["size-10", "relative"];
 let windSpeedIconCssClasses = ["size-10", "relative", "bottom-1"];
 let windSpeedSpanCssClasses = ["relative", "bottom-1"];
-let descriptionDisplayCssClasses = [
-  "max-h-10",
-  "font-bold",
-  "gap-2",
-];
+let descriptionDisplayCssClasses = ["max-h-10", "font-bold", "gap-2"];
 let timeIconCssClasses = ["size-6", "rounded-lg"];
+let errorDisplayCssClasses = [
+  ...flexCssClasses,
+  "flex-wrap",
+  "flex-col",
+  "gap-1",
+  "text-center",
+  "text-red-600",
+];
+// *These two functions are specially created to hidden or display elements (not toggle because it may lead to inappropriate behaviour)
+function displayElement(element: HTMLElement): void {
+  element.classList.remove("hidden");
+  element.classList.add("flex");
+}
+
+function hiddenElement(element: HTMLElement): void {
+  element.classList.remove("flex");
+  element.classList.add("hidden");
+}
 // *CityDisplay
 const cityDisplay = document.createElement("div");
 
@@ -171,12 +184,13 @@ weatherForm.addEventListener("submit", async (event) => {
   }
 
   try {
+    errorDisplay.classList.add("hidden");
+    errorDisplay.classList.remove("flex");
     const response: WeatherData = await fetchData(cityEntered);
     card.classList.remove("hidden");
     card.classList.add("flex", "flex-col");
     displayData(response);
     footer.classList.remove("hidden");
-    errorDisplay.style.display = "none";
   } catch (error) {
     displayError(error);
   }
@@ -194,19 +208,11 @@ async function fetchData(city: string) {
 }
 
 function displayError(error: unknown): void {
+  card.classList.add("hidden");
+  card.classList.remove("flex");
+  errorDisplay.classList.remove("hidden");
+  errorDisplay.classList.add(...errorDisplayCssClasses);
   errorDisplay.textContent = String(error);
-  errorDisplay.classList.add("flex");
-  {
-    // errorDisplay.style.flexWrap = "wrap";
-    // errorDisplay.style.flexDirection = "column";
-    // errorDisplay.style.alignItems = "center";
-    // errorDisplay.style.gap = "1rem";
-    // errorDisplay.style.justifyContent = "center";
-    // errorDisplay.style.textAlign = "center";
-    // errorDisplay.style.fontFamily = "MV Boli";
-    // errorDisplay.style.fontSize = "1.25rem";
-    // errorDisplay.style.color = "red";
-  }
 
   if (error === "TypeError: Failed to fetch") {
     errorDisplay.textContent =
