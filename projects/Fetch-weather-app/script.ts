@@ -95,76 +95,100 @@ function hiddenElement(element: HTMLElement): void {
   element.classList.add("hidden");
 }
 // *CityDisplay
-const cityDisplay = document.createElement("div");
+const cityDisplay = document.querySelector("#cityDisplay") as HTMLDivElement;
+const cityText = document.querySelector("#cityText") as HTMLParagraphElement;
+const marker = document.querySelector("#marker") as HTMLImageElement;
+// marker.src = "../../projects/fetch-weather-app/icons/cardIcons/marker.png";
+// marker.classList.add("h-5");
 
-const marker = document.createElement("img");
-marker.src = "../../projects/fetch-weather-app/icons/cardIcons/marker.png";
-marker.classList.add("h-5");
-
-cityDisplay.classList.add(...cityDisplayCssClasses, ...flexCssClasses);
+// cityDisplay.classList.add(...cityDisplayCssClasses, ...flexCssClasses);
 // *tempIcon
-const tempIcon = document.createElement("img");
-tempIcon.src = "./icons/cardIcons/thermometer.svg";
-tempIcon.classList.add(...tempIconCssClasses);
+const tempIcon = document.querySelector("#tempIcon") as HTMLImageElement;
+// tempIcon.src = "./icons/cardIcons/thermometer.svg";
+// tempIcon.classList.add(...tempIconCssClasses);
 
 // *Standard temperature
-const tempDisplay = document.createElement("p");
-tempDisplay.classList.add(...flexCssClasses);
+const tempDisplay = document.querySelector("#tempDisplay") as HTMLDivElement;
+const tempText = document.querySelector(
+  "#temperatureText"
+) as HTMLParagraphElement;
+// tempDisplay.classList.add(...flexCssClasses);
 
 // *Humidity
-const humidityIcon = document.createElement("img");
-humidityIcon.src = "./icons/cardIcons/humidity.svg";
-humidityIcon.classList.add(...humidityIconCssClasses);
+const humidityIcon = document.querySelector(
+  "#humidityIcon"
+) as HTMLImageElement;
+// humidityIcon.src = "./icons/cardIcons/humidity.svg";
+// humidityIcon.classList.add(...humidityIconCssClasses);
 // *Humidity display
-const humidityDisplay = document.createElement("p");
-humidityDisplay.classList.add(...flexCssClasses);
+const humidityDisplay = document.querySelector(
+  "humidityDisplay"
+) as HTMLDivElement;
+const humidityText = document.querySelector(
+  "#humidityText"
+) as HTMLParagraphElement;
+// humidityDisplay.classList.add(...flexCssClasses);
 
 // *Feels Like
-const feelsIcon = document.createElement("img");
-feelsIcon.src = "./icons/cardIcons/thermometer.svg";
-feelsIcon.classList.add(...tempIconCssClasses);
+const feelsIcon = document.querySelector("#feelsIcon") as HTMLImageElement;
+// feelsIcon.src = "./icons/cardIcons/thermometer.svg";
+// feelsIcon.classList.add(...tempIconCssClasses);
 
-const feelsLikeDisplay = document.createElement("p");
-feelsLikeDisplay.classList.add(...flexCssClasses);
+const feelsLikeDisplay = document.querySelector(
+  "#feelsLikeDisplay"
+) as HTMLDivElement;
+const tempFlText = document.querySelector(
+  "#temperatureFlText"
+) as HTMLParagraphElement;
+// feelsLikeDisplay.classList.add(...flexCssClasses);
 
 //*Wind and speed icons
-const windIcon = document.createElement("img");
-windIcon.src = "./icons/cardIcons/wind.svg";
-windIcon.classList.add(...windSpeedIconCssClasses);
+const windIcon = document.querySelector("#windIcon") as HTMLImageElement;
+// windIcon.src = "./icons/cardIcons/wind.svg";
+// windIcon.classList.add(...windSpeedIconCssClasses);
 
-const speedIcon = document.createElement("img");
-speedIcon.src = "./icons/cardIcons/windsock.svg";
-speedIcon.classList.add(...windSpeedIconCssClasses);
+const speedIcon = document.querySelector("#speedIcon") as HTMLImageElement;
+// speedIcon.src = "./icons/cardIcons/windsock.svg";
+// speedIcon.classList.add(...windSpeedIconCssClasses);
 
-const windDisplay = document.createElement("div");
-const windSpan = document.createElement("span");
-const speedSpan = document.createElement("span");
-windDisplay.classList.add(...flexCssClasses);
-windSpan.classList.add(...windSpeedSpanCssClasses);
-speedSpan.classList.add(...windSpeedSpanCssClasses);
+const windDisplay = document.querySelector("#windDisplay") as HTMLDivElement;
+const windSpan = document.querySelector("#windSpan") as HTMLSpanElement;
+const speedSpan = document.querySelector("#speedSpan") as HTMLSpanElement;
+// windDisplay.classList.add(...flexCssClasses);
+// windSpan.classList.add(...windSpeedSpanCssClasses);
+// speedSpan.classList.add(...windSpeedSpanCssClasses);
 
 // *Description display
-const descriptionDisplay = document.createElement("p");
-descriptionDisplay.classList.add(
-  ...descriptionDisplayCssClasses,
-  ...flexCssClasses
-);
+const descriptionDisplay = document.querySelector(
+  "#descriptionDisplay"
+) as HTMLDivElement;
+const descriptionText = document.querySelector(
+  "#descriptionText"
+) as HTMLParagraphElement;
+// descriptionDisplay.classList.add(
+//   ...descriptionDisplayCssClasses,
+//   ...flexCssClasses
+// );
 
 // *country display
-const countryDisplay = document.createElement("p");
+const countryDisplay = document.querySelector(
+  "#countryText"
+) as HTMLParagraphElement;
 
 // *location date display
-const locationDateDisplay = document.createElement("p");
-locationDateDisplay.classList.add(...flexCssClasses, "gap-2", "flex-wrap", "invisible");
-locationDateDisplay.textContent = "A date of the place depending of your timezone..."
+const locationDateDisplay = document.querySelector(
+  "#locationDateDisplay"
+) as HTMLDivElement;
+// locationDateDisplay.classList.add(...flexCssClasses, "gap-2", "flex-wrap", "invisible");
+// locationDateDisplay.textContent = "A date of the place depending of your timezone..."
 // *Time icon
 const timeIcon = document.createElement("img");
 timeIcon.src = "./icons/cardIcons/date.gif";
 timeIcon.classList.add(...timeIconCssClasses, "mr-1");
 
 // *Weather icon
-const weatherIcon = document.createElement("img");
-weatherIcon.classList.add("size-12");
+const weatherIcon = document.querySelector("#weatherIcon") as HTMLImageElement;
+// weatherIcon.classList.add("size-12");
 
 // *Sun or Moon Image
 const sunOrMoon = document.querySelector("#sunOrMoon") as HTMLImageElement;
@@ -173,10 +197,11 @@ const sunOrMoon = document.querySelector("#sunOrMoon") as HTMLImageElement;
 
 weatherForm.addEventListener("submit", async (event) => {
   clearInterval(interval);
-  let cityEntered = (document.getElementById("cityEntered") as HTMLInputElement)
+  locationDateDisplay.classList.add("invisible");
+  let cityEntered = (document.querySelector("#cityEntered") as HTMLInputElement)
     .value;
 
-  card.textContent = "";
+  // card.textContent = "";
   event.preventDefault();
 
   if (cityEntered === "") {
@@ -187,8 +212,9 @@ weatherForm.addEventListener("submit", async (event) => {
   try {
     hiddenElement(errorDisplay);
     const response: WeatherData = await fetchData(cityEntered);
-    card.classList.remove("hidden");
-    card.classList.add("flex", "flex-col");
+    displayElement(card);
+    // card.classList.remove("hidden");
+    // card.classList.add("flex");
     displayData(response);
     footer.classList.remove("hidden");
   } catch (error) {
@@ -229,34 +255,32 @@ async function displayData(data: WeatherData) {
     timezone: timezone,
     wind: { deg, speed },
   } = data;
-  cityDisplay.textContent = `\u0009 ${city}`;
-  card.appendChild(cityDisplay);
+  cityText.innerHTML = `&nbsp;${city}`;
+  // card.appendChild(cityDisplay);
 
-  tempDisplay.textContent = ` ${(temp - 273.15).toFixed()}°C`;
-  tempDisplay.prepend(tempIcon);
-  card.appendChild(tempDisplay);
+  tempText.textContent = ` ${(temp - 273.15).toFixed()}°C`;
+  // tempDisplay.prepend(tempIcon);
+  // card.appendChild(tempDisplay);
 
-  humidityDisplay.textContent = ` Humidity : ${humidity} %`;
-  humidityDisplay.prepend(humidityIcon);
-  card.appendChild(humidityDisplay);
+  humidityText.textContent = ` Humidity : ${humidity} %`;
+  // humidityDisplay.prepend(humidityIcon);
+  // card.appendChild(humidityDisplay);
 
-  feelsLikeDisplay.textContent = ` Feels like : ${(
-    feels_like - 273.15
-  ).toFixed()}°C`;
-  feelsLikeDisplay.prepend(feelsIcon);
-  card.appendChild(feelsLikeDisplay);
+  tempFlText.textContent = ` Feels like : ${(feels_like - 273.15).toFixed()}°C`;
+  // feelsLikeDisplay.prepend(feelsIcon);
+  // card.appendChild(feelsLikeDisplay);
 
-  windSpan.innerHTML = `${deg} degrees \t||&nbsp`;
+  windSpan.innerHTML = `${deg} degrees ||&nbsp`;
   speedSpan.textContent = `${speed} meters/s`;
 
-  windDisplay.prepend(windIcon);
-  windDisplay.append(windSpan);
-  windDisplay.append(speedSpan);
-  windDisplay.append(speedIcon);
-  card.appendChild(windDisplay);
+  // windDisplay.prepend(windIcon);
+  // windDisplay.append(windSpan);
+  // windDisplay.append(speedSpan);
+  // windDisplay.append(speedIcon);
+  // card.appendChild(windDisplay);
 
-  descriptionDisplay.textContent = description;
-  card.appendChild(descriptionDisplay);
+  descriptionText.textContent = description;
+  // card.appendChild(descriptionDisplay);
 
   let countryCode = country;
 
@@ -264,12 +288,12 @@ async function displayData(data: WeatherData) {
 
   let actualCountry = await fetchCountry(countryCode);
 
-  cityDisplay.textContent += `,${actualCountry}`;
-  cityDisplay.prepend(marker);
+  cityText.textContent += `,${actualCountry}`;
+  // cityDisplay.prepend(marker);
 
-  card.appendChild(locationDateDisplay);
+  // card.appendChild(locationDateDisplay);
 
-  function setting(): void {
+  function setDate(): void {
     locationDateDisplay.innerHTML = "";
     let locationDate = getLocationDate(timezone);
     let day = locationDate.getDate();
@@ -291,11 +315,11 @@ async function displayData(data: WeatherData) {
       <span class="size-6 text-center">${locationMins}</span>:
       <span class="size-6 text-center">${locationsecs}</span
     </div>`;
-    locationDateDisplay.classList.remove("invisible")
+    locationDateDisplay.classList.remove("invisible");
     locationDateDisplay.prepend(timeIcon);
   }
 
-  interval = setInterval(setting, 1000);
+  interval = setInterval(setDate, 1000);
   displayEmoji(icon, descriptionDisplay);
 }
 
