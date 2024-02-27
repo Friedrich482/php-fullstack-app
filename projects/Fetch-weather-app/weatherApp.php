@@ -37,7 +37,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <input type="submit" value="Submit" class="outline-none text-lg bg-black rounded-lg p-1 MV-boli text-white cursor-pointer hover:scale-110 border-black border-2 active:bg-slate-900 active:outline active:outline-white active:outline-2" id="submitButton" />
   </form>
   
-  <div id="card" class="hidden mt-8 items-center justify-center mb-8 active:blur-xl"></div>
+  <div id="card" class="hidden mt-8 items-center justify-center mb-8"></div>
   <p id="errorDisplay" class="hidden flew-wrap flex-col items-center justify-center gap-4 text-center MV-boli text-xl text-red-600"></p>
 </body>
 
