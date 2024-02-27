@@ -66,20 +66,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       />
     </form>
 
-    <div id="card" class="hidden mt-8 items-center justify-center mb-8">
+    <div id="card" class="hidden mt-8 items-center justify-center flex-col mb-8">
       <div
         id="cityDisplay"
         class="font-bold text-2xl gap-3text-center flex items-center justify-center flex-row"
       >
-      <img
-        src="../fetch-weather-app/icons/cardIcons/marker.png"
-        alt="Location"
-        class="h-5"
-        id="marker"
-      />
-      <p id="cityText"></p>
-      <p id="countryText"></p>
-    </div>
+        <img
+          src="../fetch-weather-app/icons/cardIcons/marker.png"
+          alt="Location"
+          class="h-5"
+          id="marker"
+        />
+        <p id="cityText"></p>
+        <p id="countryText"></p>
+      </div>
 
       <div class="flex items-center justify-center flex-row" id="tempDisplay">
         <img
@@ -106,7 +106,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
       <div
         class="flex items-center justify-center flex-row"
-        id="feelsLikeDiaplay"
+        id="feelsLikeDisplay"
       >
         <img
           src="./icons/cardIcons/thermometer.svg"
@@ -135,18 +135,21 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       </div>
 
       <div
-      class="flex items-center justify-center flex-row max-h-10 font-bold gap-2"
-      id="descriptionDisplay"
-    >
-      <img
-        src="./icons/cardIcons/thermometer.svg"
-        alt="Thermometer icon"
-        class="size-10 relative bottom-1"
-        id="feelsIcon"
-      />
-      <p class="" id="temperatureFlText"></p>
-    </div>
+        class="flex items-center justify-center flex-row max-h-10 font-bold gap-2"
+        id="descriptionDisplay"
+      >
+        <img
+          src=""
+          alt="Weather icon"
+          class="size-12"
+          id="weatherIcon"
+        />
+        <p class="" id="descriptionText"></p>
+      </div>
 
+      <div class="flex items-center justify-center flex-row gap-2 flex-wrap invisible" id="locationDateDisplay">
+        A date of the place depending of your timezone..."
+      </div>
     </div>
     <p
       id="errorDisplay"

@@ -47,68 +47,76 @@ function hiddenElement(element) {
     element.classList.add("hidden");
 }
 // *CityDisplay
-const cityDisplay = document.createElement("div");
-const marker = document.createElement("img");
-marker.src = "../../projects/fetch-weather-app/icons/cardIcons/marker.png";
-marker.classList.add("h-5");
-cityDisplay.classList.add(...cityDisplayCssClasses, ...flexCssClasses);
+const cityDisplay = document.querySelector("#cityDisplay");
+const cityText = document.querySelector("#cityText");
+const marker = document.querySelector("#marker");
+// marker.src = "../../projects/fetch-weather-app/icons/cardIcons/marker.png";
+// marker.classList.add("h-5");
+// cityDisplay.classList.add(...cityDisplayCssClasses, ...flexCssClasses);
 // *tempIcon
-const tempIcon = document.createElement("img");
-tempIcon.src = "./icons/cardIcons/thermometer.svg";
-tempIcon.classList.add(...tempIconCssClasses);
+const tempIcon = document.querySelector("#tempIcon");
+// tempIcon.src = "./icons/cardIcons/thermometer.svg";
+// tempIcon.classList.add(...tempIconCssClasses);
 // *Standard temperature
-const tempDisplay = document.createElement("p");
-tempDisplay.classList.add(...flexCssClasses);
+const tempDisplay = document.querySelector("#tempDisplay");
+const tempText = document.querySelector("#temperatureText");
+// tempDisplay.classList.add(...flexCssClasses);
 // *Humidity
-const humidityIcon = document.createElement("img");
-humidityIcon.src = "./icons/cardIcons/humidity.svg";
-humidityIcon.classList.add(...humidityIconCssClasses);
+const humidityIcon = document.querySelector("#humidityIcon");
+// humidityIcon.src = "./icons/cardIcons/humidity.svg";
+// humidityIcon.classList.add(...humidityIconCssClasses);
 // *Humidity display
-const humidityDisplay = document.createElement("p");
-humidityDisplay.classList.add(...flexCssClasses);
+const humidityDisplay = document.querySelector("humidityDisplay");
+const humidityText = document.querySelector("#humidityText");
+// humidityDisplay.classList.add(...flexCssClasses);
 // *Feels Like
-const feelsIcon = document.createElement("img");
-feelsIcon.src = "./icons/cardIcons/thermometer.svg";
-feelsIcon.classList.add(...tempIconCssClasses);
-const feelsLikeDisplay = document.createElement("p");
-feelsLikeDisplay.classList.add(...flexCssClasses);
+const feelsIcon = document.querySelector("#feelsIcon");
+// feelsIcon.src = "./icons/cardIcons/thermometer.svg";
+// feelsIcon.classList.add(...tempIconCssClasses);
+const feelsLikeDisplay = document.querySelector("#feelsLikeDisplay");
+const tempFlText = document.querySelector("#temperatureFlText");
+// feelsLikeDisplay.classList.add(...flexCssClasses);
 //*Wind and speed icons
-const windIcon = document.createElement("img");
-windIcon.src = "./icons/cardIcons/wind.svg";
-windIcon.classList.add(...windSpeedIconCssClasses);
-const speedIcon = document.createElement("img");
-speedIcon.src = "./icons/cardIcons/windsock.svg";
-speedIcon.classList.add(...windSpeedIconCssClasses);
-const windDisplay = document.createElement("div");
-const windSpan = document.createElement("span");
-const speedSpan = document.createElement("span");
-windDisplay.classList.add(...flexCssClasses);
-windSpan.classList.add(...windSpeedSpanCssClasses);
-speedSpan.classList.add(...windSpeedSpanCssClasses);
+const windIcon = document.querySelector("#windIcon");
+// windIcon.src = "./icons/cardIcons/wind.svg";
+// windIcon.classList.add(...windSpeedIconCssClasses);
+const speedIcon = document.querySelector("#speedIcon");
+// speedIcon.src = "./icons/cardIcons/windsock.svg";
+// speedIcon.classList.add(...windSpeedIconCssClasses);
+const windDisplay = document.querySelector("#windDisplay");
+const windSpan = document.querySelector("#windSpan");
+const speedSpan = document.querySelector("#speedSpan");
+// windDisplay.classList.add(...flexCssClasses);
+// windSpan.classList.add(...windSpeedSpanCssClasses);
+// speedSpan.classList.add(...windSpeedSpanCssClasses);
 // *Description display
-const descriptionDisplay = document.createElement("p");
-descriptionDisplay.classList.add(...descriptionDisplayCssClasses, ...flexCssClasses);
+const descriptionDisplay = document.querySelector("#descriptionDisplay");
+const descriptionText = document.querySelector("#descriptionText");
+// descriptionDisplay.classList.add(
+//   ...descriptionDisplayCssClasses,
+//   ...flexCssClasses
+// );
 // *country display
-const countryDisplay = document.createElement("p");
+const countryDisplay = document.querySelector("#countryText");
 // *location date display
-const locationDateDisplay = document.createElement("p");
-locationDateDisplay.classList.add(...flexCssClasses, "gap-2", "flex-wrap", "invisible");
-locationDateDisplay.textContent = "A date of the place depending of your timezone...";
+const locationDateDisplay = document.querySelector("#locationDateDisplay");
+// locationDateDisplay.classList.add(...flexCssClasses, "gap-2", "flex-wrap", "invisible");
+// locationDateDisplay.textContent = "A date of the place depending of your timezone..."
 // *Time icon
 const timeIcon = document.createElement("img");
 timeIcon.src = "./icons/cardIcons/date.gif";
 timeIcon.classList.add(...timeIconCssClasses, "mr-1");
 // *Weather icon
-const weatherIcon = document.createElement("img");
-weatherIcon.classList.add("size-12");
+const weatherIcon = document.querySelector("#weatherIcon");
+// weatherIcon.classList.add("size-12");
 // *Sun or Moon Image
 const sunOrMoon = document.querySelector("#sunOrMoon");
 // !The main form submission event 🚀
 weatherForm.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0, function* () {
     clearInterval(interval);
-    let cityEntered = document.getElementById("cityEntered")
+    let cityEntered = document.querySelector("#cityEntered")
         .value;
-    card.textContent = "";
+    // card.textContent = "";
     event.preventDefault();
     if (cityEntered === "") {
         displayError("Please enter a city 🏙️ !");
@@ -117,8 +125,9 @@ weatherForm.addEventListener("submit", (event) => __awaiter(void 0, void 0, void
     try {
         hiddenElement(errorDisplay);
         const response = yield fetchData(cityEntered);
-        card.classList.remove("hidden");
-        card.classList.add("flex", "flex-col");
+        displayElement(card);
+        // card.classList.remove("hidden");
+        // card.classList.add("flex");
         displayData(response);
         footer.classList.remove("hidden");
     }
@@ -152,33 +161,33 @@ function displayError(error) {
 function displayData(data) {
     return __awaiter(this, void 0, void 0, function* () {
         const { name: city, main: { temp, humidity, feels_like }, weather: [{ description, icon }], sys: { country }, timezone: timezone, wind: { deg, speed }, } = data;
-        cityDisplay.textContent = `\u0009 ${city}`;
-        card.appendChild(cityDisplay);
-        tempDisplay.textContent = ` ${(temp - 273.15).toFixed()}°C`;
-        tempDisplay.prepend(tempIcon);
-        card.appendChild(tempDisplay);
-        humidityDisplay.textContent = ` Humidity : ${humidity} %`;
-        humidityDisplay.prepend(humidityIcon);
-        card.appendChild(humidityDisplay);
-        feelsLikeDisplay.textContent = ` Feels like : ${(feels_like - 273.15).toFixed()}°C`;
-        feelsLikeDisplay.prepend(feelsIcon);
-        card.appendChild(feelsLikeDisplay);
-        windSpan.innerHTML = `${deg} degrees \t||&nbsp`;
+        cityText.innerHTML = `&nbsp;${city}`;
+        // card.appendChild(cityDisplay);
+        tempText.textContent = ` ${(temp - 273.15).toFixed()}°C`;
+        // tempDisplay.prepend(tempIcon);
+        // card.appendChild(tempDisplay);
+        humidityText.textContent = ` Humidity : ${humidity} %`;
+        // humidityDisplay.prepend(humidityIcon);
+        // card.appendChild(humidityDisplay);
+        tempFlText.textContent = ` Feels like : ${(feels_like - 273.15).toFixed()}°C`;
+        // feelsLikeDisplay.prepend(feelsIcon);
+        // card.appendChild(feelsLikeDisplay);
+        windSpan.innerHTML = `${deg} degrees ||&nbsp`;
         speedSpan.textContent = `${speed} meters/s`;
-        windDisplay.prepend(windIcon);
-        windDisplay.append(windSpan);
-        windDisplay.append(speedSpan);
-        windDisplay.append(speedIcon);
-        card.appendChild(windDisplay);
-        descriptionDisplay.textContent = description;
-        card.appendChild(descriptionDisplay);
+        // windDisplay.prepend(windIcon);
+        // windDisplay.append(windSpan);
+        // windDisplay.append(speedSpan);
+        // windDisplay.append(speedIcon);
+        // card.appendChild(windDisplay);
+        descriptionText.textContent = description;
+        // card.appendChild(descriptionDisplay);
         let countryCode = country;
         //? Fetch the country from ISO3166-1.alpha2.json
         let actualCountry = yield fetchCountry(countryCode);
-        cityDisplay.textContent += `,${actualCountry}`;
-        cityDisplay.prepend(marker);
-        card.appendChild(locationDateDisplay);
-        function setting() {
+        cityText.textContent += `,${actualCountry}`;
+        // cityDisplay.prepend(marker);
+        // card.appendChild(locationDateDisplay);
+        function setDate() {
             locationDateDisplay.innerHTML = "";
             let locationDate = getLocationDate(timezone);
             let day = locationDate.getDate();
@@ -200,7 +209,7 @@ function displayData(data) {
             locationDateDisplay.classList.remove("invisible");
             locationDateDisplay.prepend(timeIcon);
         }
-        interval = setInterval(setting, 1000);
+        interval = setInterval(setDate, 1000);
         displayEmoji(icon, descriptionDisplay);
     });
 }
