@@ -95,29 +95,29 @@ function hiddenElement(element: HTMLElement): void {
   element.classList.add("hidden");
 }
 // *CityDisplay
-const cityDisplay = document.createElement("div");
+const cityDisplay = document.querySelector("#cityDisplay") as HTMLDivElement;
 
-const marker = document.createElement("img");
-marker.src = "../../projects/fetch-weather-app/icons/cardIcons/marker.png";
-marker.classList.add("h-5");
+const marker = document.querySelector("#marker") as HTMLImageElement;
+// marker.src = "../../projects/fetch-weather-app/icons/cardIcons/marker.png";
+// marker.classList.add("h-5");
 
-cityDisplay.classList.add(...cityDisplayCssClasses, ...flexCssClasses);
+// cityDisplay.classList.add(...cityDisplayCssClasses, ...flexCssClasses);
 // *tempIcon
-const tempIcon = document.createElement("img");
-tempIcon.src = "./icons/cardIcons/thermometer.svg";
-tempIcon.classList.add(...tempIconCssClasses);
+const tempIcon = document.querySelector("#tempIcon") as HTMLImageElement;
+// tempIcon.src = "./icons/cardIcons/thermometer.svg";
+// tempIcon.classList.add(...tempIconCssClasses);
 
 // *Standard temperature
-const tempDisplay = document.createElement("p");
-tempDisplay.classList.add(...flexCssClasses);
+const tempDisplay = document.querySelector("#tempDisplay") as HTMLDivElement;
+// tempDisplay.classList.add(...flexCssClasses);
 
 // *Humidity
-const humidityIcon = document.createElement("img");
-humidityIcon.src = "./icons/cardIcons/humidity.svg";
-humidityIcon.classList.add(...humidityIconCssClasses);
+const humidityIcon = document.querySelector("#humidityIcon") as HTMLImageElement;
+// humidityIcon.src = "./icons/cardIcons/humidity.svg";
+// humidityIcon.classList.add(...humidityIconCssClasses);
 // *Humidity display
-const humidityDisplay = document.createElement("p");
-humidityDisplay.classList.add(...flexCssClasses);
+const humidityDisplay = document.querySelector("humidityDisplay") as HTMLDivElement;
+// humidityDisplay.classList.add(...flexCssClasses);
 
 // *Feels Like
 const feelsIcon = document.createElement("img");
