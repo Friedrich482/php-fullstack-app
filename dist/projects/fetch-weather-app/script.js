@@ -114,6 +114,7 @@ const sunOrMoon = document.querySelector("#sunOrMoon");
 // !The main form submission event 🚀
 weatherForm.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0, function* () {
     clearInterval(interval);
+    locationDateDisplay.classList.add("invisible");
     let cityEntered = document.querySelector("#cityEntered")
         .value;
     // card.textContent = "";

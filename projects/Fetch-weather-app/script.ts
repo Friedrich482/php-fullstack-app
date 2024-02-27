@@ -197,6 +197,7 @@ const sunOrMoon = document.querySelector("#sunOrMoon") as HTMLImageElement;
 
 weatherForm.addEventListener("submit", async (event) => {
   clearInterval(interval);
+  locationDateDisplay.classList.add("invisible");
   let cityEntered = (document.querySelector("#cityEntered") as HTMLInputElement)
     .value;
 
