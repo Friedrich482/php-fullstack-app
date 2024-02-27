@@ -68,15 +68,15 @@ footer.classList.add("hidden");
 
 //?All Arrays for css classes
 
-let cityDisplayCssClasses = ["font-bold", "text-2xl", "gap-3", "text-center"];
-let tempIconCssClasses = ["size-10", "relative", "bottom-1"];
-let flexCssClasses = ["flex", "items-center", "justify-center", "flex-row"];
-let humidityIconCssClasses = ["size-10", "relative"];
-let windSpeedIconCssClasses = ["size-10", "relative", "bottom-1"];
-let windSpeedSpanCssClasses = ["relative", "bottom-1"];
-let descriptionDisplayCssClasses = ["max-h-10", "font-bold", "gap-2"];
-let timeIconCssClasses = ["size-6", "rounded-lg"];
-let errorDisplayCssClasses = [
+const cityDisplayCssClasses = ["font-bold", "text-2xl", "gap-3", "text-center"];
+const tempIconCssClasses = ["size-10", "relative", "bottom-1"];
+const flexCssClasses = ["flex", "items-center", "justify-center", "flex-row"];
+const humidityIconCssClasses = ["size-10", "relative"];
+const windSpeedIconCssClasses = ["size-10", "relative", "bottom-1"];
+const windSpeedSpanCssClasses = ["relative", "bottom-1"];
+const descriptionDisplayCssClasses = ["max-h-10", "font-bold", "gap-2"];
+const timeIconCssClasses = ["size-6", "rounded-lg"];
+const errorDisplayCssClasses = [
   ...flexCssClasses,
   "flex-wrap",
   "flex-col",
@@ -155,7 +155,8 @@ const countryDisplay = document.createElement("p");
 
 // *location date display
 const locationDateDisplay = document.createElement("p");
-locationDateDisplay.classList.add(...flexCssClasses, "gap-2", "flex-wrap");
+locationDateDisplay.classList.add(...flexCssClasses, "gap-2", "flex-wrap", "invisible");
+locationDateDisplay.textContent = "A date of the place depending of your timezone..."
 // *Time icon
 const timeIcon = document.createElement("img");
 timeIcon.src = "./icons/cardIcons/date.gif";
@@ -223,7 +224,7 @@ async function displayData(data: WeatherData) {
   const {
     name: city,
     main: { temp, humidity, feels_like },
-    weather: [{ description, id, icon }],
+    weather: [{ description, icon }],
     sys: { country },
     timezone: timezone,
     wind: { deg, speed },
@@ -290,6 +291,7 @@ async function displayData(data: WeatherData) {
       <span class="size-6 text-center">${locationMins}</span>:
       <span class="size-6 text-center">${locationsecs}</span
     </div>`;
+    locationDateDisplay.classList.remove("invisible")
     locationDateDisplay.prepend(timeIcon);
   }
 
