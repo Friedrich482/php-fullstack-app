@@ -120,38 +120,38 @@ const humidityDisplay = document.querySelector("humidityDisplay") as HTMLDivElem
 // humidityDisplay.classList.add(...flexCssClasses);
 
 // *Feels Like
-const feelsIcon = document.createElement("img");
-feelsIcon.src = "./icons/cardIcons/thermometer.svg";
-feelsIcon.classList.add(...tempIconCssClasses);
+const feelsIcon = document.querySelector("#feelsIcon") as HTMLImageElement;
+// feelsIcon.src = "./icons/cardIcons/thermometer.svg";
+// feelsIcon.classList.add(...tempIconCssClasses);
 
-const feelsLikeDisplay = document.createElement("p");
-feelsLikeDisplay.classList.add(...flexCssClasses);
+const feelsLikeDisplay = document.querySelector("#feelsLikeDiaplay") as HTMLDivElement;
+// feelsLikeDisplay.classList.add(...flexCssClasses);
 
 //*Wind and speed icons
-const windIcon = document.createElement("img");
-windIcon.src = "./icons/cardIcons/wind.svg";
-windIcon.classList.add(...windSpeedIconCssClasses);
+const windIcon = document.querySelector("#windIcon") as HTMLImageElement;
+// windIcon.src = "./icons/cardIcons/wind.svg";
+// windIcon.classList.add(...windSpeedIconCssClasses);
 
-const speedIcon = document.createElement("img");
-speedIcon.src = "./icons/cardIcons/windsock.svg";
-speedIcon.classList.add(...windSpeedIconCssClasses);
+const speedIcon = document.querySelector("#speedIcon") as HTMLImageElement;
+// speedIcon.src = "./icons/cardIcons/windsock.svg";
+// speedIcon.classList.add(...windSpeedIconCssClasses);
 
-const windDisplay = document.createElement("div");
-const windSpan = document.createElement("span");
-const speedSpan = document.createElement("span");
-windDisplay.classList.add(...flexCssClasses);
-windSpan.classList.add(...windSpeedSpanCssClasses);
-speedSpan.classList.add(...windSpeedSpanCssClasses);
+const windDisplay = document.querySelector("#windDisplay") as HTMLDivElement;
+const windSpan = document.querySelector("#windSpan") as HTMLSpanElement;
+const speedSpan = document.createElement("#speedSpan") as HTMLSpanElement;
+// windDisplay.classList.add(...flexCssClasses);
+// windSpan.classList.add(...windSpeedSpanCssClasses);
+// speedSpan.classList.add(...windSpeedSpanCssClasses);
 
 // *Description display
-const descriptionDisplay = document.createElement("p");
-descriptionDisplay.classList.add(
-  ...descriptionDisplayCssClasses,
-  ...flexCssClasses
-);
+const descriptionDisplay = document.querySelector("#descriptionDisplay") as HTMLDivElement;
+// descriptionDisplay.classList.add(
+//   ...descriptionDisplayCssClasses,
+//   ...flexCssClasses
+// );
 
 // *country display
-const countryDisplay = document.createElement("p");
+const countryDisplay = document.querySelector("#countryText") as HTMLParagraphElement;
 
 // *location date display
 const locationDateDisplay = document.createElement("p");

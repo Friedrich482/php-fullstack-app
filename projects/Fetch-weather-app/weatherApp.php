@@ -70,23 +70,82 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       <div
         id="cityDisplay"
         class="font-bold text-2xl gap-3text-center flex items-center justify-center flex-row"
-      ></div>
+      >
       <img
         src="../fetch-weather-app/icons/cardIcons/marker.png"
         alt="Location"
         class="h-5"
         id="marker"
       />
+      <p id="cityText"></p>
+      <p id="countryText"></p>
+    </div>
 
       <div class="flex items-center justify-center flex-row" id="tempDisplay">
-        <img src="./icons/cardIcons/thermometer.svg" alt="Thermometer icon" class="size-10 relative bottom-1" id="tempIcon">
+        <img
+          src="./icons/cardIcons/thermometer.svg"
+          alt="Thermometer icon"
+          class="size-10 relative bottom-1"
+          id="tempIcon"
+        />
         <p class="" id="temperatureText"></p>
       </div>
 
-      <div class="flex items-center justify-center flex-row" id="humidityDisplay">
-        <img src="./icons/cardIcons/humidity.svg" alt="Thermometer icon" class="size-10 relative" id="humidityIcon">
-        <p class="" id="temperatureText"></p>
+      <div
+        class="flex items-center justify-center flex-row"
+        id="humidityDisplay"
+      >
+        <img
+          src="./icons/cardIcons/humidity.svg"
+          alt="Humidity icon"
+          class="size-10 relative"
+          id="humidityIcon"
+        />
+        <p class="" id="humidityText"></p>
       </div>
+
+      <div
+        class="flex items-center justify-center flex-row"
+        id="feelsLikeDiaplay"
+      >
+        <img
+          src="./icons/cardIcons/thermometer.svg"
+          alt="Thermometer icon"
+          class="size-10 relative bottom-1"
+          id="feelsIcon"
+        />
+        <p class="" id="temperatureFlText"></p>
+      </div>
+
+      <div class="flex items-center justify-center flex-row" id="windDisplay">
+        <img
+          src="./icons/cardIcons/wind.svg"
+          alt="wind Icon"
+          class="size-10 relative bottom-1"
+          id="windIcon"
+        />
+        <span id="windSpan" class="relative bottom-1"></span>
+        <span id="speedSpan" class="relative bottom-1"></span>
+        <img
+          src="./icons/cardIcons/windsock.svg"
+          alt=""
+          class="size-10 relative bottom-1"
+          id="speedIcon"
+        />
+      </div>
+
+      <div
+      class="flex items-center justify-center flex-row max-h-10 font-bold gap-2"
+      id="descriptionDisplay"
+    >
+      <img
+        src="./icons/cardIcons/thermometer.svg"
+        alt="Thermometer icon"
+        class="size-10 relative bottom-1"
+        id="feelsIcon"
+      />
+      <p class="" id="temperatureFlText"></p>
+    </div>
 
     </div>
     <p
