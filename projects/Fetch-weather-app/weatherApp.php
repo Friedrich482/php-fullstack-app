@@ -121,7 +121,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <p class="text-center w-5/6 text-xl" id="humidityText"></p>
       </div>
 
-      <div class="flex items-center justify-center flex-col w-full" id="windDisplay">
+      <div
+        class="flex items-center justify-center flex-col w-full"
+        id="windDisplay"
+      >
         <div class="flex items-center justify-center w-full">
           <img
             src="./icons/cardIcons/wind.svg"
@@ -144,11 +147,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       </div>
 
       <div
-        class="flex items-center justify-center flex-row max-h-10 font-bold gap-1 w-full"
+        class="flex items-center justify-center flex-row max-h-10 font-bold gap-0 w-full"
         id="descriptionDisplay"
       >
-        <img src="" alt="Weather icon" class="size-12" id="weatherIcon" />
-        <p class="text-center w-7/12 text-xl" id="descriptionText"></p>
+        <p class="text-center text-xl w-3/5 flex-shrink-0 indent-12" id="descriptionText"></p>
+        <img src="" alt="Weather icon" class="size-12 flex-shrink-0" id="weatherIcon" />
       </div>
 
       <div

@@ -41,7 +41,6 @@ const imageElements = [
     "weatherIcon",
     "sunOrMoon",
 ];
-// const spanElements = ["windSpan", "speedSpan"];
 // ? At this level, I create objects made by key: value pairs, one for each type of node...
 const divsObject = {};
 const paragraphsObject = {};
@@ -56,15 +55,10 @@ function createHTMLElements(htmlElementsArray, htmlElementObject) {
 createHTMLElements(DivsElements, divsObject);
 createHTMLElements(paragraphElements, paragraphsObject);
 createHTMLElements(imageElements, imageObject);
-// createHTMLElements(spanElements, spanObject);
 // ? And lastly I use the object destructuring to access each node more easily (I dont want to write object.element to access the element)  
 const { card, cityDisplay, tempDisplay, humidityDisplay, feelsLikeDisplay, windDisplay, windDeg, windSpeed, descriptionDisplay, locationDateDisplay } = divsObject;
 const { errorDisplay, cityText, temperatureText, humidityText, temperatureFlText, descriptionText, countryText, } = paragraphsObject;
 const { marker, tempIcon, humidityIcon, feelsIcon, windIcon, speedIcon, weatherIcon, sunOrMoon } = imageObject;
-// const {
-//   windSpan, 
-//   speedSpan
-// } = spanObject
 // *The only form so no need to use the same technique than above...
 const weatherForm = document.getElementById("weatherForm");
 // *This input is alone here 
@@ -97,7 +91,7 @@ function hiddenElement(element) {
 }
 const timeIcon = document.createElement("img");
 timeIcon.src = "./icons/cardIcons/date.gif";
-timeIcon.classList.add(...timeIconCssClasses, "mr-1");
+timeIcon.classList.add(...timeIconCssClasses, "ml-3");
 //! The main form submission event 🚀
 weatherForm.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0, function* () {
     clearInterval(interval);
@@ -150,13 +144,13 @@ function displayData(data) {
         temperatureText.textContent = `Temperature : ${(temp - 273.15).toFixed()}°C`;
         humidityText.textContent = ` Humidity : ${humidity} %`;
         temperatureFlText.textContent = ` Feels like : ${(feels_like - 273.15).toFixed()}°C`;
-        windDeg.textContent = `${deg} degrees`;
-        windSpeed.textContent = `${speed} meters/s`;
+        windDeg.textContent = `Wind Direction : ${deg} degrees`;
+        windSpeed.textContent = `Wind Speed : ${speed} meters/s`;
         descriptionText.textContent = description;
         let countryCode = country;
         //? Fetch the country from ISO3166-1.alpha2.json
         let actualCountry = yield fetchCountry(countryCode);
-        cityText.textContent += `,${actualCountry}`;
+        cityText.innerHTML += `,&nbsp;${actualCountry}`;
         function setDate() {
             locationDateDisplay.innerHTML = "";
             let locationDate = getLocationDate(timezone);
@@ -170,7 +164,7 @@ function displayData(data) {
             locationDateDisplay.innerHTML = `<span>${weekDay}</span>
     <span>${day}</span>
     <span>${month}</span>
-    <span>${year}</span>,
+    <span>${year},</span>
     <div class="flex items-center justify-center">
       <span class="size-6 text-center">${locationHour}</span>:
       <span class="size-6 text-center">${locationMins}</span>:
