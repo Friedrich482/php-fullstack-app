@@ -44,6 +44,8 @@ interface WeatherData {
   name: string;
   cod: number;
 }
+// ! Here the goal is to reference all the dom Elements without using abusively the document.querySelector() method
+// ?I start by creating an array for each type of nodes ...
 const DivsElements = [
   "card",
   "cityDisplay",
@@ -76,11 +78,13 @@ const imageElements = [
   "sunOrMoon",
 ];
 const spanElements = ["windSpan", "speedSpan"];
-
+// ? At this level, I create objects made by key: value pairs, one for each type of node...
 const divsObject: { [key: string]: HTMLDivElement } = {};
 const paragraphsObject: { [key: string]: HTMLParagraphElement } = {};
 const imageObject: { [key: string]: HTMLImageElement } = {};
 const spanObject: { [key: string]: HTMLSpanElement } = {};
+
+//! This function allow me, for each value of each object, to make the value egal to the node
 
 function createHTMLElements(htmlElementsArray: string[], htmlElementObject: { [key: string]: HTMLElement }): void {
   htmlElementsArray.forEach((htmlElement) => {
@@ -94,6 +98,7 @@ createHTMLElements(paragraphElements, paragraphsObject);
 createHTMLElements(imageElements, imageObject);
 createHTMLElements(spanElements, spanObject);
 
+// ? And lastly I use the object destructuring to access each node more easily (I dont want to write object.element to access the element)  
 const {card,
 cityDisplay,
 tempDisplay,
@@ -127,32 +132,22 @@ const {
   speedSpan
 } = spanObject
 
-// *The only form
+// *The only form so no need to use the same technique than above...
 const weatherForm = document.getElementById("weatherForm") as HTMLFormElement;
-// *This input is alone here
+// *This input is alone here 
 const submitButton = document.querySelector(
   "#submitButton"
 ) as HTMLInputElement;
 
-// const card = document.querySelector("#card") as HTMLDivElement;
-// const errorDisplay = document.querySelector(
-//   "#errorDisplay"
-// ) as HTMLParagraphElement;
-
-const apiKey = "2232101b7a4c133da51de8620fc86462";
-let interval: number;
-
 const footer = document.querySelector("footer") as HTMLElement;
 const imageFooter = footer.querySelector("img") as HTMLImageElement;
 imageFooter.src = "../../assets/icons/rocket.gif";
-
 footer.classList.add("hidden");
 
-// TODO This part allows me to create all the cards elements.
-// TODO Must be refactored !
+const apiKey = "2232101b7a4c133da51de8620fc86462";
+let interval: number; // For the setInterval function later in the code
 
 //?All Arrays for css classes
-
 const flexCssClasses = ["flex", "items-center", "justify-center", "flex-row"];
 const timeIconCssClasses = ["size-6", "rounded-lg"];
 const errorDisplayCssClasses = [
@@ -163,7 +158,9 @@ const errorDisplayCssClasses = [
   "text-center",
   "text-red-600",
 ];
+
 // *These two functions are specially created to hidden or display elements (not toggle because it may lead to inappropriate behaviour)
+
 function displayElement(element: HTMLElement): void {
   element.classList.remove("hidden");
   element.classList.add("flex");
@@ -173,75 +170,11 @@ function hiddenElement(element: HTMLElement): void {
   element.classList.remove("flex");
   element.classList.add("hidden");
 }
-// const cityDisplay = document.querySelector("#cityDisplay") as HTMLDivElement;
-
-// const cityText = document.querySelector("#cityText") as HTMLParagraphElement;
-
-// const marker = document.querySelector("#marker") as HTMLImageElement;
-
-// const tempIcon = document.querySelector("#tempIcon") as HTMLImageElement;
-
-// const tempDisplay = document.querySelector("#tempDisplay") as HTMLDivElement;
-
-// const temperatureText = document.querySelector(
-//   "#temperatureText"
-// ) as HTMLParagraphElement;
-
-// const humidityIcon = document.querySelector(
-//   "#humidityIcon"
-// ) as HTMLImageElement;
-
-// const humidityDisplay = document.querySelector(
-//   "humidityDisplay"
-// ) as HTMLDivElement;
-
-// const humidityText = document.querySelector(
-//   "#humidityText"
-// ) as HTMLParagraphElement;
-
-// const feelsIcon = document.querySelector("#feelsIcon") as HTMLImageElement;
-
-// const feelsLikeDisplay = document.querySelector(
-//   "#feelsLikeDisplay"
-// ) as HTMLDivElement;
-// const temperatureFlText = document.querySelector(
-//   "#temperatureFlText"
-// ) as HTMLParagraphElement;
-
-// const windIcon = document.querySelector("#windIcon") as HTMLImageElement;
-
-// const speedIcon = document.querySelector("#speedIcon") as HTMLImageElement;
-
-// const windDisplay = document.querySelector("#windDisplay") as HTMLDivElement;
-
-// const windSpan = document.querySelector("#windSpan") as HTMLSpanElement;
-
-// const speedSpan = document.querySelector("#speedSpan") as HTMLSpanElement;
-
-// const descriptionDisplay = document.querySelector(
-//   "#descriptionDisplay"
-// ) as HTMLDivElement;
-// const descriptionText = document.querySelector(
-//   "#descriptionText"
-// ) as HTMLParagraphElement;
-
-// const countryText = document.querySelector(
-//   "#countryText"
-// ) as HTMLParagraphElement;
-
-// const locationDateDisplay = document.querySelector(
-//   "#locationDateDisplay"
-// ) as HTMLDivElement;
-
 const timeIcon = document.createElement("img");
 timeIcon.src = "./icons/cardIcons/date.gif";
 timeIcon.classList.add(...timeIconCssClasses, "mr-1");
 
-// const weatherIcon = document.querySelector("#weatherIcon") as HTMLImageElement;
-
-// const sunOrMoon = document.querySelector("#sunOrMoon") as HTMLImageElement;
-
-// !The main form submission event 🚀
+//! The main form submission event 🚀
 
 weatherForm.addEventListener("submit", async (event) => {
   clearInterval(interval);
