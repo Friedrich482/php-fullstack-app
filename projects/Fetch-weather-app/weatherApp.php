@@ -69,20 +69,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <div
       id="card"
-      class="hidden mt-8 items-center justify-center flex-col mb-8"
+      class="hidden mt-8 items-center justify-center flex-col mb-8 w-96"
     >
       <div
         id="cityDisplay"
-        class="font-bold text-2xl gap-3text-center flex items-center justify-center flex-row mb-2"
+        class="flex items-center justify-center w-full mb-2"
       >
         <img
           src="../fetch-weather-app/icons/cardIcons/marker.png"
           alt="Location"
-          class="h-5"
+          class="size-6"
           id="marker"
         />
-        <p id="cityText" class="text-center"></p>
-        <p id="countryText"></p>
+        <p id="cityText" class="font-bold text-center w-5/6 text-xl"></p>
+        <!-- <p id="countryText"></p> -->
       </div>
 
       <div class="flex w-full justify-center items-center" id="tempDisplay">
@@ -148,14 +148,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         id="descriptionDisplay"
       >
         <img src="" alt="Weather icon" class="size-12" id="weatherIcon" />
-        <p class="text-right w-5/12 text-2xl" id="descriptionText"></p>
+        <p class="text-right w-6/12 text-xl" id="descriptionText"></p>
       </div>
 
       <div
-        class="flex items-center justify-center flex-row gap-2 flex-wrap invisible h-14"
+        class="flex items-center justify-center flex-row gap-2 flex-wrap invisible w-full"
         id="locationDateDisplay"
       >
-        A date of the place depending of your timezone with all...
+        A date of the place depending of your.
       </div>
     </div>
     <p
