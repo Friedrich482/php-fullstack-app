@@ -53,6 +53,8 @@ const DivsElements = [
   "humidityDisplay",
   "feelsLikeDisplay",
   "windDisplay",
+  "windDeg",
+  "windSpeed",
   "descriptionDisplay",
   "locationDateDisplay",
 ];
@@ -77,7 +79,7 @@ const imageElements = [
   "weatherIcon",
   "sunOrMoon",
 ];
-const spanElements = ["windSpan", "speedSpan"];
+// const spanElements = ["windSpan", "speedSpan"];
 // ? At this level, I create objects made by key: value pairs, one for each type of node...
 const divsObject: { [key: string]: HTMLDivElement } = {};
 const paragraphsObject: { [key: string]: HTMLParagraphElement } = {};
@@ -96,7 +98,7 @@ function createHTMLElements(htmlElementsArray: string[], htmlElementObject: { [k
 createHTMLElements(DivsElements, divsObject);
 createHTMLElements(paragraphElements, paragraphsObject);
 createHTMLElements(imageElements, imageObject);
-createHTMLElements(spanElements, spanObject);
+// createHTMLElements(spanElements, spanObject);
 
 // ? And lastly I use the object destructuring to access each node more easily (I dont want to write object.element to access the element)  
 const {card,
@@ -105,6 +107,8 @@ tempDisplay,
 humidityDisplay,
 feelsLikeDisplay,
 windDisplay,
+windDeg,
+windSpeed,
 descriptionDisplay,
 locationDateDisplay} = divsObject
 
@@ -127,10 +131,10 @@ speedIcon,
 weatherIcon,
 sunOrMoon} = imageObject
 
-const {
-  windSpan, 
-  speedSpan
-} = spanObject
+// const {
+//   windSpan, 
+//   speedSpan
+// } = spanObject
 
 // *The only form so no need to use the same technique than above...
 const weatherForm = document.getElementById("weatherForm") as HTMLFormElement;
@@ -235,7 +239,7 @@ async function displayData(data: WeatherData) {
   } = data;
   cityText.innerHTML = `&nbsp;${city}`;
 
-  temperatureText.textContent = ` ${(temp - 273.15).toFixed()}°C`;
+  temperatureText.textContent = `Temperature : ${(temp - 273.15).toFixed()}°C`;
 
   humidityText.textContent = ` Humidity : ${humidity} %`;
 
@@ -243,8 +247,8 @@ async function displayData(data: WeatherData) {
     feels_like - 273.15
   ).toFixed()}°C`;
 
-  windSpan.innerHTML = `${deg} degrees ||&nbsp`;
-  speedSpan.textContent = `${speed} meters/s`;
+  windDeg.textContent = `${deg} degrees`;
+  windSpeed.textContent = `${speed} meters/s`;
 
   descriptionText.textContent = description;
 

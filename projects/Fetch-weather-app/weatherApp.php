@@ -28,22 +28,23 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   </head>
 
   <body
-    class="weatherDayImg flex items-center justify-between flex-col MV-boli flex-wrap text-black gap-0 m-1"
+    class="weatherDayImg flex items-center justify-between flex-col MV-boli flex-wrap text-black gap-0 m-1 min-w-80"
   >
     <h1
       class="flex items-center justify-center flex-wrap text-6xl mb-0 gap-0 m-0"
     >
       <span id="spanTittle" class="text-center">Weather App</span>
+      <div class="flex items-center justify-center flex-row">
+        <img src="icons/titleIcons/snow.svg" class="size-[4.5rem]" />
 
-      <img src="icons/titleIcons/snow.svg" class="size-[4.5rem]" />
+        <img src="icons/titleIcons/tornado.svg" class="size-[4.5rem]" />
 
-      <img src="icons/titleIcons/tornado.svg" class="size-[4.5rem]" />
-
-      <img
-        src="icons/titleIcons/clear-day.svg"
-        class="size-[4.5rem]"
-        id="sunOrMoon"
-      />
+        <img
+          src="icons/titleIcons/clear-day.svg"
+          class="size-[4.5rem]"
+          id="sunOrMoon"
+        />
+      </div>
     </h1>
     <form
       action=""
@@ -66,98 +67,103 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       />
     </form>
 
-    <div id="card" class="hidden mt-8 items-center justify-center flex-col mb-8">
+    <div
+      id="card"
+      class="hidden mt-8 items-center justify-center flex-col mb-8 w-96"
+    >
       <div
         id="cityDisplay"
-        class="font-bold text-2xl gap-3text-center flex items-center justify-center flex-row"
+        class="flex items-center justify-center w-full mb-2"
       >
         <img
           src="../fetch-weather-app/icons/cardIcons/marker.png"
           alt="Location"
-          class="h-5"
+          class="size-6"
           id="marker"
         />
-        <p id="cityText"></p>
-        <p id="countryText"></p>
+        <p id="cityText" class="font-bold text-center w-5/6 text-xl"></p>
+        <!-- <p id="countryText"></p> -->
       </div>
 
-      <div class="flex items-center justify-center flex-row" id="tempDisplay">
+      <div class="flex w-full justify-center items-center" id="tempDisplay">
         <img
           src="./icons/cardIcons/thermometer.svg"
           alt="Thermometer icon"
-          class="size-10 relative bottom-1"
+          class="size-10"
           id="tempIcon"
         />
-        <p class="" id="temperatureText"></p>
+        <p class="text-center w-5/6 text-xl" id="temperatureText"></p>
       </div>
 
       <div
-        class="flex items-center justify-center flex-row"
-        id="humidityDisplay"
-      >
-        <img
-          src="./icons/cardIcons/humidity.svg"
-          alt="Humidity icon"
-          class="size-10 relative"
-          id="humidityIcon"
-        />
-        <p class="" id="humidityText"></p>
-      </div>
-
-      <div
-        class="flex items-center justify-center flex-row"
+        class="flex items-center justify-center flex-row w-full"
         id="feelsLikeDisplay"
       >
         <img
           src="./icons/cardIcons/thermometer.svg"
           alt="Thermometer icon"
-          class="size-10 relative bottom-1"
+          class="size-10"
           id="feelsIcon"
         />
-        <p class="" id="temperatureFlText"></p>
-      </div>
-
-      <div class="flex items-center justify-center flex-row" id="windDisplay">
-        <img
-          src="./icons/cardIcons/wind.svg"
-          alt="wind Icon"
-          class="size-10 relative bottom-1"
-          id="windIcon"
-        />
-        <span id="windSpan" class="relative bottom-1"></span>
-        <span id="speedSpan" class="relative bottom-1"></span>
-        <img
-          src="./icons/cardIcons/windsock.svg"
-          alt=""
-          class="size-10 relative bottom-1"
-          id="speedIcon"
-        />
+        <p class="text-center w-5/6 text-xl" id="temperatureFlText"></p>
       </div>
 
       <div
-        class="flex items-center justify-center flex-row max-h-10 font-bold gap-2"
-        id="descriptionDisplay"
+        class="flex items-center justify-center flex-row w-full"
+        id="humidityDisplay"
       >
         <img
-          src=""
-          alt="Weather icon"
-          class="size-12"
-          id="weatherIcon"
+          src="./icons/cardIcons/humidity.svg"
+          alt="Humidity icon"
+          class="size-10"
+          id="humidityIcon"
         />
-        <p class="" id="descriptionText"></p>
+        <p class="text-center w-5/6 text-xl" id="humidityText"></p>
       </div>
 
-      <div class="flex items-center justify-center flex-row gap-2 flex-wrap invisible h-14" id="locationDateDisplay">
-        A date of the place depending of your timezone with all...
+      <div class="flex items-center justify-center flex-col w-full" id="windDisplay">
+        <div class="flex items-center justify-center w-full">
+          <img
+            src="./icons/cardIcons/wind.svg"
+            alt="wind Icon"
+            class="size-10"
+            id="windIcon"
+          />
+          <div id="windDeg" class="text-center w-5/6 text-xl"></div>
+        </div>
+        <div class="flex items-center justify-center w-full">
+          <img
+            src="./icons/cardIcons/windsock.svg"
+            alt="Wind Speed Icon"
+            class="size-10"
+            id="speedIcon"
+          />
+
+          <div id="windSpeed" class="text-center w-5/6 text-xl"></div>
+        </div>
+      </div>
+
+      <div
+        class="flex items-center justify-center flex-row max-h-10 font-bold gap-1 w-full"
+        id="descriptionDisplay"
+      >
+        <img src="" alt="Weather icon" class="size-12" id="weatherIcon" />
+        <p class="text-center w-7/12 text-xl" id="descriptionText"></p>
+      </div>
+
+      <div
+        class="flex items-center justify-center flex-row gap-2 flex-wrap invisible w-full"
+        id="locationDateDisplay"
+      >
+        A date of the place depending of your.
       </div>
     </div>
     <p
       id="errorDisplay"
-      class="hidden flew-wrap flex-col items-center justify-center gap-4 text-center MV-boli text-xl text-red-600"
+      class="hidden flew-wrap flex-col items-center justify-center gap-4 text-center MV-boli text-xl text-red-600 mt-20 mb-20"
     ></p>
   </body>
 </html>
-
 <?php
 include("../../include/footer.php");
 ?>

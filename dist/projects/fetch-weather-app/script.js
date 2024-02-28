@@ -17,6 +17,8 @@ const DivsElements = [
     "humidityDisplay",
     "feelsLikeDisplay",
     "windDisplay",
+    "windDeg",
+    "windSpeed",
     "descriptionDisplay",
     "locationDateDisplay",
 ];
@@ -39,7 +41,7 @@ const imageElements = [
     "weatherIcon",
     "sunOrMoon",
 ];
-const spanElements = ["windSpan", "speedSpan"];
+// const spanElements = ["windSpan", "speedSpan"];
 // ? At this level, I create objects made by key: value pairs, one for each type of node...
 const divsObject = {};
 const paragraphsObject = {};
@@ -54,12 +56,15 @@ function createHTMLElements(htmlElementsArray, htmlElementObject) {
 createHTMLElements(DivsElements, divsObject);
 createHTMLElements(paragraphElements, paragraphsObject);
 createHTMLElements(imageElements, imageObject);
-createHTMLElements(spanElements, spanObject);
+// createHTMLElements(spanElements, spanObject);
 // ? And lastly I use the object destructuring to access each node more easily (I dont want to write object.element to access the element)  
-const { card, cityDisplay, tempDisplay, humidityDisplay, feelsLikeDisplay, windDisplay, descriptionDisplay, locationDateDisplay } = divsObject;
+const { card, cityDisplay, tempDisplay, humidityDisplay, feelsLikeDisplay, windDisplay, windDeg, windSpeed, descriptionDisplay, locationDateDisplay } = divsObject;
 const { errorDisplay, cityText, temperatureText, humidityText, temperatureFlText, descriptionText, countryText, } = paragraphsObject;
 const { marker, tempIcon, humidityIcon, feelsIcon, windIcon, speedIcon, weatherIcon, sunOrMoon } = imageObject;
-const { windSpan, speedSpan } = spanObject;
+// const {
+//   windSpan, 
+//   speedSpan
+// } = spanObject
 // *The only form so no need to use the same technique than above...
 const weatherForm = document.getElementById("weatherForm");
 // *This input is alone here 
@@ -142,11 +147,11 @@ function displayData(data) {
     return __awaiter(this, void 0, void 0, function* () {
         const { name: city, main: { temp, humidity, feels_like }, weather: [{ description, icon }], sys: { country }, timezone: timezone, wind: { deg, speed }, } = data;
         cityText.innerHTML = `&nbsp;${city}`;
-        temperatureText.textContent = ` ${(temp - 273.15).toFixed()}°C`;
+        temperatureText.textContent = `Temperature : ${(temp - 273.15).toFixed()}°C`;
         humidityText.textContent = ` Humidity : ${humidity} %`;
         temperatureFlText.textContent = ` Feels like : ${(feels_like - 273.15).toFixed()}°C`;
-        windSpan.innerHTML = `${deg} degrees ||&nbsp`;
-        speedSpan.textContent = `${speed} meters/s`;
+        windDeg.textContent = `${deg} degrees`;
+        windSpeed.textContent = `${speed} meters/s`;
         descriptionText.textContent = description;
         let countryCode = country;
         //? Fetch the country from ISO3166-1.alpha2.json
