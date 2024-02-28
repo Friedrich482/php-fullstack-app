@@ -144,11 +144,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       </div>
 
       <div
-        class="flex items-center justify-center flex-row max-h-10 font-bold gap-0 w-full"
+        class="flex items-center justify-center flex-row max-h-10 font-bold gap-1 w-full"
         id="descriptionDisplay"
       >
         <img src="" alt="Weather icon" class="size-12" id="weatherIcon" />
-        <p class="text-right w-6/12 text-xl" id="descriptionText"></p>
+        <p class="text-center w-7/12 text-xl" id="descriptionText"></p>
       </div>
 
       <div

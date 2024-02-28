@@ -914,12 +914,12 @@ video {
   width: 1.5rem;
 }
 
-.w-6\/12 {
-  width: 50%;
-}
-
 .w-7 {
   width: 1.75rem;
+}
+
+.w-7\/12 {
+  width: 58.333333%;
 }
 
 .w-9 {
@@ -1831,7 +1831,7 @@ video {
 }
 
 .weatherNightImg{
-  background-image: url("../projects/fetch-weather-app/img/03.png");
+  background-image: url("../projects/fetch-weather-app/img/02.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
