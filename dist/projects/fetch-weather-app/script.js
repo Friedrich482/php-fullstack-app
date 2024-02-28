@@ -8,10 +8,61 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+const DivsElements = [
+    "card",
+    "cityDisplay",
+    "tempDisplay",
+    "humidityDisplay",
+    "feelsLikeDisplay",
+    "windDisplay",
+    "descriptionDisplay",
+    "locationDateDisplay",
+];
+const paragraphElements = [
+    "errorDisplay",
+    "cityText",
+    "temperatureText",
+    "humidityText",
+    "temperatureFlText",
+    "descriptionText",
+    "countryText",
+];
+const imageElements = [
+    "marker",
+    "tempIcon",
+    "humidityIcon",
+    "feelsIcon",
+    "windIcon",
+    "speedIcon",
+    "weatherIcon",
+    "sunOrMoon",
+];
+const spanElements = ["windSpan", "speedSpan"];
+const divsObject = {};
+const paragraphsObject = {};
+const imageObject = {};
+const spanObject = {};
+function createHTMLElements(htmlElementsArray, htmlElementObject) {
+    htmlElementsArray.forEach((htmlElement) => {
+        htmlElementObject[htmlElement] = document.querySelector(`#${htmlElement}`);
+    });
+}
+createHTMLElements(DivsElements, divsObject);
+createHTMLElements(paragraphElements, paragraphsObject);
+createHTMLElements(imageElements, imageObject);
+createHTMLElements(spanElements, spanObject);
+const { card, cityDisplay, tempDisplay, humidityDisplay, feelsLikeDisplay, windDisplay, descriptionDisplay, locationDateDisplay } = divsObject;
+const { errorDisplay, cityText, temperatureText, humidityText, temperatureFlText, descriptionText, countryText, } = paragraphsObject;
+const { marker, tempIcon, humidityIcon, feelsIcon, windIcon, speedIcon, weatherIcon, sunOrMoon } = imageObject;
+const { windSpan, speedSpan } = spanObject;
+// *The only form
 const weatherForm = document.getElementById("weatherForm");
+// *This input is alone here
 const submitButton = document.querySelector("#submitButton");
-const card = document.getElementById("card");
-const errorDisplay = document.querySelector("#errorDisplay");
+// const card = document.querySelector("#card") as HTMLDivElement;
+// const errorDisplay = document.querySelector(
+//   "#errorDisplay"
+// ) as HTMLParagraphElement;
 const apiKey = "2232101b7a4c133da51de8620fc86462";
 let interval;
 const footer = document.querySelector("footer");
@@ -40,32 +91,52 @@ function hiddenElement(element) {
     element.classList.remove("flex");
     element.classList.add("hidden");
 }
-const cityDisplay = document.querySelector("#cityDisplay");
-const cityText = document.querySelector("#cityText");
-const marker = document.querySelector("#marker");
-const tempIcon = document.querySelector("#tempIcon");
-const tempDisplay = document.querySelector("#tempDisplay");
-const temperatureText = document.querySelector("#temperatureText");
-const humidityIcon = document.querySelector("#humidityIcon");
-const humidityDisplay = document.querySelector("humidityDisplay");
-const humidityText = document.querySelector("#humidityText");
-const feelsIcon = document.querySelector("#feelsIcon");
-const feelsLikeDisplay = document.querySelector("#feelsLikeDisplay");
-const temperatureFlText = document.querySelector("#temperatureFlText");
-const windIcon = document.querySelector("#windIcon");
-const speedIcon = document.querySelector("#speedIcon");
-const windDisplay = document.querySelector("#windDisplay");
-const windSpan = document.querySelector("#windSpan");
-const speedSpan = document.querySelector("#speedSpan");
-const descriptionDisplay = document.querySelector("#descriptionDisplay");
-const descriptionText = document.querySelector("#descriptionText");
-const countryDisplay = document.querySelector("#countryText");
-const locationDateDisplay = document.querySelector("#locationDateDisplay");
+// const cityDisplay = document.querySelector("#cityDisplay") as HTMLDivElement;
+// const cityText = document.querySelector("#cityText") as HTMLParagraphElement;
+// const marker = document.querySelector("#marker") as HTMLImageElement;
+// const tempIcon = document.querySelector("#tempIcon") as HTMLImageElement;
+// const tempDisplay = document.querySelector("#tempDisplay") as HTMLDivElement;
+// const temperatureText = document.querySelector(
+//   "#temperatureText"
+// ) as HTMLParagraphElement;
+// const humidityIcon = document.querySelector(
+//   "#humidityIcon"
+// ) as HTMLImageElement;
+// const humidityDisplay = document.querySelector(
+//   "humidityDisplay"
+// ) as HTMLDivElement;
+// const humidityText = document.querySelector(
+//   "#humidityText"
+// ) as HTMLParagraphElement;
+// const feelsIcon = document.querySelector("#feelsIcon") as HTMLImageElement;
+// const feelsLikeDisplay = document.querySelector(
+//   "#feelsLikeDisplay"
+// ) as HTMLDivElement;
+// const temperatureFlText = document.querySelector(
+//   "#temperatureFlText"
+// ) as HTMLParagraphElement;
+// const windIcon = document.querySelector("#windIcon") as HTMLImageElement;
+// const speedIcon = document.querySelector("#speedIcon") as HTMLImageElement;
+// const windDisplay = document.querySelector("#windDisplay") as HTMLDivElement;
+// const windSpan = document.querySelector("#windSpan") as HTMLSpanElement;
+// const speedSpan = document.querySelector("#speedSpan") as HTMLSpanElement;
+// const descriptionDisplay = document.querySelector(
+//   "#descriptionDisplay"
+// ) as HTMLDivElement;
+// const descriptionText = document.querySelector(
+//   "#descriptionText"
+// ) as HTMLParagraphElement;
+// const countryText = document.querySelector(
+//   "#countryText"
+// ) as HTMLParagraphElement;
+// const locationDateDisplay = document.querySelector(
+//   "#locationDateDisplay"
+// ) as HTMLDivElement;
 const timeIcon = document.createElement("img");
 timeIcon.src = "./icons/cardIcons/date.gif";
 timeIcon.classList.add(...timeIconCssClasses, "mr-1");
-const weatherIcon = document.querySelector("#weatherIcon");
-const sunOrMoon = document.querySelector("#sunOrMoon");
+// const weatherIcon = document.querySelector("#weatherIcon") as HTMLImageElement;
+// const sunOrMoon = document.querySelector("#sunOrMoon") as HTMLImageElement;
 // !The main form submission event 🚀
 weatherForm.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0, function* () {
     clearInterval(interval);
