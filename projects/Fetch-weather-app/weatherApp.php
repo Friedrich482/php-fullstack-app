@@ -24,6 +24,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script
       src="../../dist/projects/fetch-weather-app/script.js"
       defer
+      type="module"
     ></script>
   </head>
 
@@ -150,8 +151,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         class="flex items-center justify-center flex-row max-h-10 font-bold gap-0 w-full"
         id="descriptionDisplay"
       >
-        <p class="text-center text-xl w-3/5 flex-shrink-0 indent-12" id="descriptionText"></p>
-        <img src="" alt="Weather icon" class="size-12 flex-shrink-0" id="weatherIcon" />
+        <p
+          class="text-center text-xl w-3/5 flex-shrink-0 indent-12"
+          id="descriptionText"
+        ></p>
+        <img
+          src=""
+          alt="Weather icon"
+          class="size-12 flex-shrink-0"
+          id="weatherIcon"
+        />
       </div>
 
       <div

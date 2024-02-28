@@ -702,8 +702,8 @@ video {
   margin-left: 5rem;
 }
 
-.mr-1 {
-  margin-right: 0.25rem;
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .mr-20 {
@@ -720,18 +720,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.ml-1 {
-  margin-left: 0.25rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-.ml-3 {
-  margin-left: 0.75rem;
 }
 
 .box-border {
@@ -906,6 +894,10 @@ video {
   width: 75%;
 }
 
+.w-3\/5 {
+  width: 60%;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -928,10 +920,6 @@ video {
 
 .w-7 {
   width: 1.75rem;
-}
-
-.w-7\/12 {
-  width: 58.333333%;
 }
 
 .w-9 {
@@ -960,18 +948,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-4\/6 {
-  width: 66.666667%;
-}
-
-.w-3\/6 {
-  width: 50%;
-}
-
-.w-3\/5 {
-  width: 60%;
 }
 
 .min-w-16 {
@@ -1099,16 +1075,8 @@ video {
   flex-wrap: nowrap;
 }
 
-.place-content-around {
-  place-content: space-around;
-}
-
 .place-items-center {
   place-items: center;
-}
-
-.content-between {
-  align-content: space-between;
 }
 
 .items-start {
@@ -1500,24 +1468,8 @@ video {
   text-align: start;
 }
 
-.text-end {
-  text-align: end;
-}
-
 .indent-1 {
   text-indent: 0.25rem;
-}
-
-.indent-3 {
-  text-indent: 0.75rem;
-}
-
-.indent-20 {
-  text-indent: 5rem;
-}
-
-.indent-10 {
-  text-indent: 2.5rem;
 }
 
 .indent-12 {

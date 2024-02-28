@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -8,6 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+// ? This is the interface for the data fetched
+import API_KEY from "./apiKey.js";
 // ! Here the goal is to reference all the dom Elements without using abusively the document.querySelector() method
 // ?I start by creating an array for each type of nodes ...
 const DivsElements = [
@@ -67,7 +68,7 @@ const footer = document.querySelector("footer");
 const imageFooter = footer.querySelector("img");
 imageFooter.src = "../../assets/icons/rocket.gif";
 footer.classList.add("hidden");
-const apiKey = "2232101b7a4c133da51de8620fc86462";
+const apiKey = API_KEY;
 let interval; // For the setInterval function later in the code
 //?All Arrays for css classes
 const flexCssClasses = ["flex", "items-center", "justify-center", "flex-row"];

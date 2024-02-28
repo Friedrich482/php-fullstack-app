@@ -1,4 +1,5 @@
 // ? This is the interface for the data fetched
+import API_KEY from "./apiKey.js"
 interface WeatherData {
   coord: {
     lon: number;
@@ -44,6 +45,7 @@ interface WeatherData {
   name: string;
   cod: number;
 }
+
 // ! Here the goal is to reference all the dom Elements without using abusively the document.querySelector() method
 // ?I start by creating an array for each type of nodes ...
 const DivsElements = [
@@ -142,7 +144,7 @@ const imageFooter = footer.querySelector("img") as HTMLImageElement;
 imageFooter.src = "../../assets/icons/rocket.gif";
 footer.classList.add("hidden");
 
-const apiKey = "2232101b7a4c133da51de8620fc86462";
+const apiKey: string = API_KEY;
 let interval: number; // For the setInterval function later in the code
 
 //?All Arrays for css classes
