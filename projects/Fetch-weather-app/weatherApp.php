@@ -147,8 +147,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <p class="" id="descriptionText"></p>
       </div>
 
-      <div class="flex items-center justify-center flex-row gap-2 flex-wrap invisible" id="locationDateDisplay">
-        A date of the place depending of your timezone..."
+      <div class="flex items-center justify-center flex-row gap-2 flex-wrap invisible h-14" id="locationDateDisplay">
+        A date of the place depending of your timezone with all...
       </div>
     </div>
     <p
