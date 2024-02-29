@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -8,15 +7,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+// ? This is the interface for the data fetched
+import API_KEY from "./apiKey.js";
 // ! Here the goal is to reference all the dom Elements without using abusively the document.querySelector() method
 // ?I start by creating an array for each type of nodes ...
 const DivsElements = [
     "card",
-    "cityDisplay",
-    "tempDisplay",
-    "humidityDisplay",
-    "feelsLikeDisplay",
-    "windDisplay",
     "windDeg",
     "windSpeed",
     "descriptionDisplay",
@@ -29,24 +25,12 @@ const paragraphElements = [
     "humidityText",
     "temperatureFlText",
     "descriptionText",
-    "countryText",
 ];
-const imageElements = [
-    "marker",
-    "tempIcon",
-    "humidityIcon",
-    "feelsIcon",
-    "windIcon",
-    "speedIcon",
-    "weatherIcon",
-    "sunOrMoon",
-];
-// const spanElements = ["windSpan", "speedSpan"];
+const imageElements = ["marker", "weatherIcon", "sunOrMoon"];
 // ? At this level, I create objects made by key: value pairs, one for each type of node...
 const divsObject = {};
 const paragraphsObject = {};
 const imageObject = {};
-const spanObject = {};
 //! This function allow me, for each value of each object, to make the value egal to the node
 function createHTMLElements(htmlElementsArray, htmlElementObject) {
     htmlElementsArray.forEach((htmlElement) => {
@@ -56,28 +40,21 @@ function createHTMLElements(htmlElementsArray, htmlElementObject) {
 createHTMLElements(DivsElements, divsObject);
 createHTMLElements(paragraphElements, paragraphsObject);
 createHTMLElements(imageElements, imageObject);
-// createHTMLElements(spanElements, spanObject);
-// ? And lastly I use the object destructuring to access each node more easily (I dont want to write object.element to access the element)  
-const { card, cityDisplay, tempDisplay, humidityDisplay, feelsLikeDisplay, windDisplay, windDeg, windSpeed, descriptionDisplay, locationDateDisplay } = divsObject;
-const { errorDisplay, cityText, temperatureText, humidityText, temperatureFlText, descriptionText, countryText, } = paragraphsObject;
-const { marker, tempIcon, humidityIcon, feelsIcon, windIcon, speedIcon, weatherIcon, sunOrMoon } = imageObject;
-// const {
-//   windSpan, 
-//   speedSpan
-// } = spanObject
+// ? And lastly I use the object destructuring to access each node more easily (I dont want to write object.element to access the element)
+const { card, windDeg, windSpeed, descriptionDisplay, locationDateDisplay } = divsObject;
+const { errorDisplay, cityText, temperatureText, humidityText, temperatureFlText, descriptionText, } = paragraphsObject;
+const { marker, weatherIcon, sunOrMoon } = imageObject;
 // *The only form so no need to use the same technique than above...
 const weatherForm = document.getElementById("weatherForm");
-// *This input is alone here 
-const submitButton = document.querySelector("#submitButton");
 const footer = document.querySelector("footer");
 const imageFooter = footer.querySelector("img");
 imageFooter.src = "../../assets/icons/rocket.gif";
 footer.classList.add("hidden");
-const apiKey = "2232101b7a4c133da51de8620fc86462";
+const apiKey = API_KEY;
 let interval; // For the setInterval function later in the code
 //?All Arrays for css classes
 const flexCssClasses = ["flex", "items-center", "justify-center", "flex-row"];
-const timeIconCssClasses = ["size-6", "rounded-lg"];
+const timeIconCssClasses = ["size-6", "rounded-lg", "ml-3"];
 const errorDisplayCssClasses = [
     ...flexCssClasses,
     "flex-wrap",
@@ -86,6 +63,9 @@ const errorDisplayCssClasses = [
     "text-center",
     "text-red-600",
 ];
+const timeIcon = document.createElement("img");
+timeIcon.src = "./icons/cardIcons/date.gif";
+timeIcon.classList.add(...timeIconCssClasses);
 // *These two functions are specially created to hidden or display elements (not toggle because it may lead to inappropriate behaviour)
 function displayElement(element) {
     element.classList.remove("hidden");
@@ -95,9 +75,6 @@ function hiddenElement(element) {
     element.classList.remove("flex");
     element.classList.add("hidden");
 }
-const timeIcon = document.createElement("img");
-timeIcon.src = "./icons/cardIcons/date.gif";
-timeIcon.classList.add(...timeIconCssClasses, "mr-1");
 //! The main form submission event 🚀
 weatherForm.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0, function* () {
     clearInterval(interval);
@@ -150,13 +127,13 @@ function displayData(data) {
         temperatureText.textContent = `Temperature : ${(temp - 273.15).toFixed()}°C`;
         humidityText.textContent = ` Humidity : ${humidity} %`;
         temperatureFlText.textContent = ` Feels like : ${(feels_like - 273.15).toFixed()}°C`;
-        windDeg.textContent = `${deg} degrees`;
-        windSpeed.textContent = `${speed} meters/s`;
+        windDeg.textContent = `Wind Direction : ${deg} degrees`;
+        windSpeed.textContent = `Wind Speed : ${speed} meters/s`;
         descriptionText.textContent = description;
         let countryCode = country;
         //? Fetch the country from ISO3166-1.alpha2.json
         let actualCountry = yield fetchCountry(countryCode);
-        cityText.textContent += `,${actualCountry}`;
+        cityText.innerHTML += `,&nbsp;${actualCountry}`;
         function setDate() {
             locationDateDisplay.innerHTML = "";
             let locationDate = getLocationDate(timezone);
@@ -170,7 +147,7 @@ function displayData(data) {
             locationDateDisplay.innerHTML = `<span>${weekDay}</span>
     <span>${day}</span>
     <span>${month}</span>
-    <span>${year}</span>,
+    <span>${year},</span>
     <div class="flex items-center justify-center">
       <span class="size-6 text-center">${locationHour}</span>:
       <span class="size-6 text-center">${locationMins}</span>:

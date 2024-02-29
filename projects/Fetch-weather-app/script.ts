@@ -1,4 +1,5 @@
 // ? This is the interface for the data fetched
+import API_KEY from "./apiKey.js";
 interface WeatherData {
   coord: {
     lon: number;
@@ -44,15 +45,11 @@ interface WeatherData {
   name: string;
   cod: number;
 }
+
 // ! Here the goal is to reference all the dom Elements without using abusively the document.querySelector() method
 // ?I start by creating an array for each type of nodes ...
 const DivsElements = [
   "card",
-  "cityDisplay",
-  "tempDisplay",
-  "humidityDisplay",
-  "feelsLikeDisplay",
-  "windDisplay",
   "windDeg",
   "windSpeed",
   "descriptionDisplay",
@@ -66,29 +63,20 @@ const paragraphElements = [
   "humidityText",
   "temperatureFlText",
   "descriptionText",
-  "countryText",
 ];
 
-const imageElements = [
-  "marker",
-  "tempIcon",
-  "humidityIcon",
-  "feelsIcon",
-  "windIcon",
-  "speedIcon",
-  "weatherIcon",
-  "sunOrMoon",
-];
-// const spanElements = ["windSpan", "speedSpan"];
+const imageElements = ["marker", "weatherIcon", "sunOrMoon"];
 // ? At this level, I create objects made by key: value pairs, one for each type of node...
 const divsObject: { [key: string]: HTMLDivElement } = {};
 const paragraphsObject: { [key: string]: HTMLParagraphElement } = {};
 const imageObject: { [key: string]: HTMLImageElement } = {};
-const spanObject: { [key: string]: HTMLSpanElement } = {};
 
 //! This function allow me, for each value of each object, to make the value egal to the node
 
-function createHTMLElements(htmlElementsArray: string[], htmlElementObject: { [key: string]: HTMLElement }): void {
+function createHTMLElements(
+  htmlElementsArray: string[],
+  htmlElementObject: { [key: string]: HTMLElement }
+): void {
   htmlElementsArray.forEach((htmlElement) => {
     htmlElementObject[htmlElement] = document.querySelector(
       `#${htmlElement}`
@@ -98,19 +86,10 @@ function createHTMLElements(htmlElementsArray: string[], htmlElementObject: { [k
 createHTMLElements(DivsElements, divsObject);
 createHTMLElements(paragraphElements, paragraphsObject);
 createHTMLElements(imageElements, imageObject);
-// createHTMLElements(spanElements, spanObject);
 
-// ? And lastly I use the object destructuring to access each node more easily (I dont want to write object.element to access the element)  
-const {card,
-cityDisplay,
-tempDisplay,
-humidityDisplay,
-feelsLikeDisplay,
-windDisplay,
-windDeg,
-windSpeed,
-descriptionDisplay,
-locationDateDisplay} = divsObject
+// ? And lastly I use the object destructuring to access each node more easily (I dont want to write object.element to access the element)
+const { card, windDeg, windSpeed, descriptionDisplay, locationDateDisplay } =
+  divsObject;
 
 const {
   errorDisplay,
@@ -119,41 +98,24 @@ const {
   humidityText,
   temperatureFlText,
   descriptionText,
-  countryText,
-} = paragraphsObject
+} = paragraphsObject;
 
-const {marker,
-tempIcon,
-humidityIcon,
-feelsIcon,
-windIcon,
-speedIcon,
-weatherIcon,
-sunOrMoon} = imageObject
-
-// const {
-//   windSpan, 
-//   speedSpan
-// } = spanObject
+const { marker, weatherIcon, sunOrMoon } = imageObject;
 
 // *The only form so no need to use the same technique than above...
 const weatherForm = document.getElementById("weatherForm") as HTMLFormElement;
-// *This input is alone here 
-const submitButton = document.querySelector(
-  "#submitButton"
-) as HTMLInputElement;
 
 const footer = document.querySelector("footer") as HTMLElement;
 const imageFooter = footer.querySelector("img") as HTMLImageElement;
 imageFooter.src = "../../assets/icons/rocket.gif";
 footer.classList.add("hidden");
 
-const apiKey = "2232101b7a4c133da51de8620fc86462";
+const apiKey: string = API_KEY;
 let interval: number; // For the setInterval function later in the code
 
 //?All Arrays for css classes
 const flexCssClasses = ["flex", "items-center", "justify-center", "flex-row"];
-const timeIconCssClasses = ["size-6", "rounded-lg"];
+const timeIconCssClasses = ["size-6", "rounded-lg", "ml-3"];
 const errorDisplayCssClasses = [
   ...flexCssClasses,
   "flex-wrap",
@@ -162,6 +124,10 @@ const errorDisplayCssClasses = [
   "text-center",
   "text-red-600",
 ];
+
+const timeIcon = document.createElement("img");
+timeIcon.src = "./icons/cardIcons/date.gif";
+timeIcon.classList.add(...timeIconCssClasses);
 
 // *These two functions are specially created to hidden or display elements (not toggle because it may lead to inappropriate behaviour)
 
@@ -174,9 +140,6 @@ function hiddenElement(element: HTMLElement): void {
   element.classList.remove("flex");
   element.classList.add("hidden");
 }
-const timeIcon = document.createElement("img");
-timeIcon.src = "./icons/cardIcons/date.gif";
-timeIcon.classList.add(...timeIconCssClasses, "mr-1");
 
 //! The main form submission event 🚀
 
@@ -247,8 +210,8 @@ async function displayData(data: WeatherData) {
     feels_like - 273.15
   ).toFixed()}°C`;
 
-  windDeg.textContent = `${deg} degrees`;
-  windSpeed.textContent = `${speed} meters/s`;
+  windDeg.textContent = `Wind Direction : ${deg} degrees`;
+  windSpeed.textContent = `Wind Speed : ${speed} meters/s`;
 
   descriptionText.textContent = description;
 
@@ -258,7 +221,7 @@ async function displayData(data: WeatherData) {
 
   let actualCountry = await fetchCountry(countryCode);
 
-  cityText.textContent += `,${actualCountry}`;
+  cityText.innerHTML += `,&nbsp;${actualCountry}`;
 
   function setDate(): void {
     locationDateDisplay.innerHTML = "";
@@ -276,7 +239,7 @@ async function displayData(data: WeatherData) {
     locationDateDisplay.innerHTML = `<span>${weekDay}</span>
     <span>${day}</span>
     <span>${month}</span>
-    <span>${year}</span>,
+    <span>${year},</span>
     <div class="flex items-center justify-center">
       <span class="size-6 text-center">${locationHour}</span>:
       <span class="size-6 text-center">${locationMins}</span>:

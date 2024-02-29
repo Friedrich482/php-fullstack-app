@@ -702,8 +702,8 @@ video {
   margin-left: 5rem;
 }
 
-.mr-1 {
-  margin-right: 0.25rem;
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .mr-20 {
@@ -894,6 +894,10 @@ video {
   width: 75%;
 }
 
+.w-3\/5 {
+  width: 60%;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -916,10 +920,6 @@ video {
 
 .w-7 {
   width: 1.75rem;
-}
-
-.w-7\/12 {
-  width: 58.333333%;
 }
 
 .w-9 {
@@ -1470,6 +1470,10 @@ video {
 
 .indent-1 {
   text-indent: 0.25rem;
+}
+
+.indent-12 {
+  text-indent: 3rem;
 }
 
 .text-2xl {
