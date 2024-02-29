@@ -1,15 +1,16 @@
 "use strict";
-let gameBoard = document.getElementById('gameBoard');
-let context = gameBoard.getContext("2d");
-let scoreText = document.getElementById('scoreText');
-let restartButton = document.getElementById('restartButton');
-let gameWidth = gameBoard.width;
-let gameHeight = gameBoard.height;
-let gameBackground = 'white';
-let snakeColor = 'lightgreen';
-let snakeBorder = 'black';
-let foodColor = 'red';
-let unitSize = 25;
+const gameBoard = document.getElementById("gameBoard");
+const context = gameBoard.getContext("2d");
+context.fillStyle = "blue";
+const scoreText = document.getElementById("scoreText");
+const restartButton = document.getElementById("restartButton");
+const gameWidth = gameBoard.width;
+const gameHeight = gameBoard.height;
+const gameBackground = "black";
+const snakeColor = "#3de320";
+const snakeBorder = "black";
+const foodColor = "red";
+const unitSize = 25;
 let running = false;
 let xVelocity = unitSize;
 let yVelocity = 0;
@@ -21,14 +22,14 @@ let snake = [
     { x: unitSize * 3, y: 0 },
     { x: unitSize * 2, y: 0 },
     { x: unitSize, y: 0 },
-    { x: 0, y: 0 }
+    { x: 0, y: 0 },
 ];
-window.addEventListener('keydown', changeDirection);
-restartButton.addEventListener('click', resetGame);
+window.addEventListener("keydown", changeDirection);
+restartButton.addEventListener("click", resetGame);
 gameStart();
 function gameStart() {
     running = true;
-    scoreText.textContent = score;
+    scoreText.textContent = `${score}`;
     createFood();
     nextTick();
 }
@@ -53,7 +54,7 @@ function clearBoard() {
 }
 function createFood() {
     function randomFood(min, max) {
-        const randNum = Math.round(Math.random() * ((max - min) + min) / unitSize) * unitSize;
+        const randNum = Math.round((Math.random() * (max - min + min)) / unitSize) * unitSize;
         return randNum;
     }
     foodX = randomFood(0, gameWidth - unitSize);
@@ -64,8 +65,7 @@ function drawFood() {
     context.fillRect(foodX, foodY, unitSize, unitSize);
 }
 function moveSnake() {
-    const head = { x: snake[0].x + xVelocity,
-        y: snake[0].y + yVelocity };
+    const head = { x: snake[0].x + xVelocity, y: snake[0].y + yVelocity };
     snake.unshift(head);
     if (snake[0].x == foodX && snake[0].y == foodY) {
         score++;
@@ -79,7 +79,7 @@ function moveSnake() {
 function drawSnake() {
     context.fillStyle = snakeColor;
     context.strokeStyle = snakeBorder;
-    snake.forEach(snakePart => {
+    snake.forEach((snakePart) => {
         context.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
         context.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize);
     });
@@ -90,24 +90,24 @@ function changeDirection(event) {
     let UP = 38;
     let RIGHT = 39;
     let DOWN = 40;
-    let MovingUp = (yVelocity == -unitSize);
-    let MovingDown = (yVelocity == unitSize);
-    let MovingRight = (xVelocity == unitSize);
-    let MovingLeft = (xVelocity == -unitSize);
+    let MovingUp = yVelocity == -unitSize;
+    let MovingDown = yVelocity == unitSize;
+    let MovingRight = xVelocity == unitSize;
+    let MovingLeft = xVelocity == -unitSize;
     switch (true) {
-        case (keyPressed == LEFT && !MovingRight):
+        case keyPressed == LEFT && !MovingRight:
             xVelocity = -unitSize;
             yVelocity = 0;
             break;
-        case (keyPressed == RIGHT && !MovingLeft):
+        case keyPressed == RIGHT && !MovingLeft:
             xVelocity = unitSize;
             yVelocity = 0;
             break;
-        case (keyPressed == UP && !MovingDown):
+        case keyPressed == UP && !MovingDown:
             xVelocity = 0;
             yVelocity = -unitSize;
             break;
-        case (keyPressed == DOWN && !MovingUp):
+        case keyPressed == DOWN && !MovingUp:
             xVelocity = 0;
             yVelocity = unitSize;
             break;
@@ -115,13 +115,13 @@ function changeDirection(event) {
 }
 function checkGameOver() {
     switch (true) {
-        case (snake[0].x < 0):
+        case snake[0].x < 0:
             running = false;
-        case (snake[0].x >= gameWidth):
+        case snake[0].x >= gameWidth:
             running = false;
-        case (snake[0].y < 0):
+        case snake[0].y < 0:
             running = false;
-        case (snake[0].y >= gameHeight):
+        case snake[0].y >= gameHeight:
             running = false;
     }
     for (let i = 1; i < snake.length; i++) {
@@ -132,8 +132,8 @@ function checkGameOver() {
 }
 function displayGameOver() {
     context.font = "40px Permanent Marker";
-    context.fillStyle = 'black';
-    context.textAlign = 'center';
+    context.fillStyle = "black";
+    context.textAlign = "center";
     context.fillText("GAME OVER !", gameWidth / 2, gameHeight / 2);
     running = false;
 }
@@ -146,7 +146,10 @@ function resetGame() {
         { x: unitSize * 3, y: 0 },
         { x: unitSize * 2, y: 0 },
         { x: unitSize, y: 0 },
-        { x: 0, y: 0 }
+        { x: 0, y: 0 },
     ];
     gameStart();
 }
+const footer = document.querySelector("footer");
+const imageFooter = footer.querySelector("img");
+imageFooter.src = "../../assets/icons/rocket.gif";
