@@ -38,12 +38,16 @@ Technologies/tools/languages used :
 - [x] Add Typescript instead of vanilla JavaScript for the home page
 - [x] Correct all the errors for the home.ts page
 - [x] Now the next mission is to add ts for the login page
-- [x] And correct all the (**potential**)  errors;
+- [x] And correct all the (**potential**)  errors
 - [x] And after that the register page
 - [x] And there too, fix every single squiggled line
-- [ ] Now it is the turn of the weather app. This is probably the biggest 💪 refactor of all
-- [ ] Firstly, let's use *tailwindcss* in the project
-- [ ] And after **typescript**
-- [ ] By the way refactor the structure of the page for a better experience
+- [x] Now it is the turn of the weather app. This is probably the biggest 💪 refactor of all
+- [x] Firstly, let's use *tailwindcss* in the project
+- [x] And after **typescript**
+- [x] By the way refactor the structure of the page for a better experience
+- [ ] Turn of the snake game
+- [ ] Much easier because it has less code
+- [ ] The same : tailwindcss first
+- [ ] And after typescript
   
 This list will be updated depending on my progression through it.
