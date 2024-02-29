@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./*.{html,js,php}', './projects/space_calculator/*{html,ts,php}', './projects/fetch-weather-app/*{html,ts,php}', './login/*{html,ts,php}', './home/*{html,ts,php}', './include/*{html,php,ts}', "./register/*{html,ts,php}"],
+  content: ['./*.{html,js,php}', './projects/space_calculator/*{html,ts,php}', './projects/fetch-weather-app/*{html,ts,php}','./projects/snake_game/*{html,ts,php}', './login/*{html,ts,php}', './home/*{html,ts,php}', './include/*{html,php,ts}', "./register/*{html,ts,php}"],
   theme: {
     extend: {
       screens: {

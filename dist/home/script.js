@@ -39,11 +39,12 @@ const smallHome = document.querySelector("#smallHome");
 const smallTools = document.querySelector("#smallTools");
 const smallAbout = document.querySelector("#smallAbout");
 /*The "go back to top" wrapper is also in this case, so I include it here.
-  The bouncing button too all the grid tools also*/
+  The bouncing button too and all the grid tools also*/
 const backToTopWrapper = document.querySelector("#backToTop");
 const arrowDownbutton = document.querySelector("#arrowDownbutton");
 const spaceCalculator = document.querySelector("#spaceCalculator");
 const fetchWeatherApp = document.querySelector("#fetchWeatherApp");
+const snakeGame = document.querySelector("#snakeGame");
 let linkDivs = [
     largeHome,
     largeTools,
@@ -55,6 +56,7 @@ let linkDivs = [
     arrowDownbutton,
     spaceCalculator,
     fetchWeatherApp,
+    snakeGame
 ];
 linkDivs.forEach((section) => {
     section.addEventListener("click", () => {
