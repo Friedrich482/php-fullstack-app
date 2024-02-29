@@ -15,10 +15,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fetch Weather App ❄🌨</title>
-    <link
-      href="https://db.onlinewebfonts.com/c/a7e3822358f6dcb2f986a68cf24721b2?family=MV+Boli+V1"
-      rel="stylesheet"
-    />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../css/style.css" />
     <script
@@ -167,7 +163,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         class="flex items-center justify-center flex-row gap-2 flex-wrap invisible w-full"
         id="locationDateDisplay"
       >
-        A date of the place depending of your.
+        Pass
       </div>
     </div>
     <p

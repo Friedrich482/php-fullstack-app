@@ -201,17 +201,25 @@ async function displayData(data: WeatherData) {
     wind: { deg, speed },
   } = data;
   cityText.innerHTML = `&nbsp;${city}`;
+  let temperature = (temp - 273.15).toFixed();
+  // Avoid display like {-0°C}
+  temperature === "-0" ? (temperature = "0") : true;
 
-  temperatureText.textContent = `Temperature : ${(temp - 273.15).toFixed()}°C`;
+  temperatureText.textContent = `Temperature : ${temperature}°C`;
+
+  let feels_like_fixed = (feels_like - 273.15).toFixed();
+  // Same thing here 
+  feels_like_fixed === "-0" ? (feels_like_fixed = "0") : true;
+
+  temperatureFlText.textContent = ` Feels like : ${feels_like_fixed}°C`;
 
   humidityText.textContent = ` Humidity : ${humidity} %`;
 
-  temperatureFlText.textContent = ` Feels like : ${(
-    feels_like - 273.15
-  ).toFixed()}°C`;
-
   windDeg.textContent = `Wind Direction : ${deg} degrees`;
   windSpeed.textContent = `Wind Speed : ${speed} meters/s`;
+  description.length > 17
+    ? descriptionText.classList.remove("indent-12")
+    : descriptionText.classList.add("indent-12");
 
   descriptionText.textContent = description;
 
