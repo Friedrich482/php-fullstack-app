@@ -20,6 +20,7 @@
     />
     <title>Snake Game</title>
     <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <script src="../../dist/projects/snake_game/script.js" defer></script>
   </head>
 
@@ -29,7 +30,7 @@
       id="gameBoard"
       width="400"
       height="400"
-      class="mt-2 border-4 border-blue-300 rounded-2xl"
+      class="mt-2 border-4 border-green-700 rounded-2xl"
     ></canvas>
     <label id="scoreText" class="text-5xl consolas text-white">0</label>
     <button
@@ -38,16 +39,6 @@
     >
       Restart
     </button>
-    <!-- <div
-        class="w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500 rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500"
-      >
-        <input
-          type="button"
-          value="Restart"
-          id="restartButton"
-          class="text-2xl text-white permanent-marker cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2 hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800"
-        />
-      </div> -->
   </body>
 </html>
 

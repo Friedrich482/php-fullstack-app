@@ -6,11 +6,11 @@ const scoreText = document.getElementById("scoreText");
 const restartButton = document.getElementById("restartButton");
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
-let gameBackground = "black";
-let snakeColor = "lightgreen";
-let snakeBorder = "black";
-let foodColor = "red";
-let unitSize = 25;
+const gameBackground = "black";
+const snakeColor = "#3de320";
+const snakeBorder = "black";
+const foodColor = "red";
+const unitSize = 25;
 let running = false;
 let xVelocity = unitSize;
 let yVelocity = 0;
@@ -29,7 +29,7 @@ restartButton.addEventListener("click", resetGame);
 gameStart();
 function gameStart() {
     running = true;
-    scoreText.textContent = score;
+    scoreText.textContent = `${score}`;
     createFood();
     nextTick();
 }
