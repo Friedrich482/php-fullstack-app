@@ -559,7 +559,9 @@ $number_of_visits = $row['visits'];
 
         <div
           class="group bg-lime-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white"
+          id="snakeGame"
         >
+        <a href="../projects/snake_game/snake.php"></a>
           <div
             class="snakeImg h-3/5 w-full rounded-t-md transform duration-700 group-hover:border-b-4 group-hover:border-b-lime-600"
           ></div>

@@ -59,7 +59,7 @@ const smallTools = document.querySelector("#smallTools") as HTMLDivElement;
 const smallAbout = document.querySelector("#smallAbout") as HTMLDivElement;
 
 /*The "go back to top" wrapper is also in this case, so I include it here.
-  The bouncing button too all the grid tools also*/
+  The bouncing button too and all the grid tools also*/
 
 const backToTopWrapper = document.querySelector("#backToTop") as HTMLDivElement;
 
@@ -75,6 +75,8 @@ const fetchWeatherApp = document.querySelector(
   "#fetchWeatherApp"
 ) as HTMLDivElement;
 
+const snakeGame = document.querySelector("#snakeGame") as HTMLDivElement;
+
 let linkDivs = [
   largeHome,
   largeTools,
@@ -86,6 +88,7 @@ let linkDivs = [
   arrowDownbutton,
   spaceCalculator,
   fetchWeatherApp,
+  snakeGame
 ];
 
 linkDivs.forEach((section: HTMLDivElement) => {
