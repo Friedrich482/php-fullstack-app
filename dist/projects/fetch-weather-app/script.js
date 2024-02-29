@@ -124,11 +124,20 @@ function displayData(data) {
     return __awaiter(this, void 0, void 0, function* () {
         const { name: city, main: { temp, humidity, feels_like }, weather: [{ description, icon }], sys: { country }, timezone: timezone, wind: { deg, speed }, } = data;
         cityText.innerHTML = `&nbsp;${city}`;
-        temperatureText.textContent = `Temperature : ${(temp - 273.15).toFixed()}°C`;
+        let temperature = (temp - 273.15).toFixed();
+        // Avoid display like {-0°C}
+        temperature === "-0" ? (temperature = "0") : true;
+        temperatureText.textContent = `Temperature : ${temperature}°C`;
+        let feels_like_fixed = (feels_like - 273.15).toFixed();
+        // Same thing here 
+        feels_like_fixed === "-0" ? (feels_like_fixed = "0") : true;
+        temperatureFlText.textContent = ` Feels like : ${feels_like_fixed}°C`;
         humidityText.textContent = ` Humidity : ${humidity} %`;
-        temperatureFlText.textContent = ` Feels like : ${(feels_like - 273.15).toFixed()}°C`;
         windDeg.textContent = `Wind Direction : ${deg} degrees`;
         windSpeed.textContent = `Wind Speed : ${speed} meters/s`;
+        description.length > 17
+            ? descriptionText.classList.remove("indent-12")
+            : descriptionText.classList.add("indent-12");
         descriptionText.textContent = description;
         let countryCode = country;
         //? Fetch the country from ISO3166-1.alpha2.json
