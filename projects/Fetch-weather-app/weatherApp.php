@@ -163,7 +163,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         class="flex items-center justify-center flex-row gap-2 flex-wrap invisible w-full"
         id="locationDateDisplay"
       >
-        A date of the place depending of your.
+        Pass
       </div>
     </div>
     <p
