@@ -774,6 +774,16 @@ video {
   height: 4.5rem;
 }
 
+.size-96 {
+  width: 24rem;
+  height: 24rem;
+}
+
+.size-\[400px\] {
+  width: 400px;
+  height: 400px;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -1279,6 +1289,11 @@ video {
   border-color: transparent;
 }
 
+.border-yellow-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(253 224 71 / var(--tw-border-opacity));
+}
+
 .border-b-purple-600 {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(147 51 234 / var(--tw-border-opacity));
@@ -1703,7 +1718,7 @@ video {
 }
 
 .permanent-marker{
-  font-family: "permanent-marker";
+  font-family: "permanent Marker";
 }
 
 .backgroundImg {
