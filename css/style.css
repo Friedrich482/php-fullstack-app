@@ -774,16 +774,6 @@ video {
   height: 4.5rem;
 }
 
-.size-96 {
-  width: 24rem;
-  height: 24rem;
-}
-
-.size-\[400px\] {
-  width: 400px;
-  height: 400px;
-}
-
 .h-10 {
   height: 2.5rem;
 }
@@ -1289,11 +1279,6 @@ video {
   border-color: transparent;
 }
 
-.border-yellow-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(253 224 71 / var(--tw-border-opacity));
-}
-
 .border-b-purple-600 {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(147 51 234 / var(--tw-border-opacity));
@@ -1466,6 +1451,10 @@ video {
 
 .p-\[2px\] {
   padding: 2px;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .pr-5 {
@@ -1698,11 +1687,7 @@ video {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  background-image: linear-gradient(
-      to right,
-      #69caeb,
-      #ce21e1
-    );
+  background-image: linear-gradient(to right, #69caeb, #ce21e1);
 }
 
 .MV-boli {
@@ -1717,7 +1702,7 @@ video {
   font-family: "consolas";
 }
 
-.permanent-marker{
+.permanent-marker {
   font-family: "permanent Marker";
 }
 
@@ -1858,6 +1843,14 @@ video {
   background-attachment: fixed;
 }
 
+.snakeImg {
+  background-image: url("../projects/snake_game/snake.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .weatherDayImg {
   background-image: url("../projects/fetch-weather-app/img/01.png");
   background-repeat: no-repeat;
@@ -1867,7 +1860,7 @@ video {
   color: black;
 }
 
-.weatherNightImg{
+.weatherNightImg {
   background-image: url("../projects/fetch-weather-app/img/02.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -2060,11 +2053,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  background-image: linear-gradient(
-      to right,
-      #69caeb,
-      #ce21e1
-    );
+  background-image: linear-gradient(to right, #69caeb, #ce21e1);
 }
 
 .focus\:outline-none:focus {

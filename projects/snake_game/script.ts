@@ -163,3 +163,7 @@ function resetGame() {
   ];
   gameStart();
 }
+
+const footer = document.querySelector("footer") as HTMLElement;
+const imageFooter = footer.querySelector("img") as HTMLImageElement;
+imageFooter.src = "../../assets/icons/rocket.gif";

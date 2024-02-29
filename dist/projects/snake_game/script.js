@@ -150,3 +150,6 @@ function resetGame() {
     ];
     gameStart();
 }
+const footer = document.querySelector("footer");
+const imageFooter = footer.querySelector("img");
+imageFooter.src = "../../assets/icons/rocket.gif";

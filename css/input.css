@@ -12,8 +12,8 @@
 .consolas {
   font-family: "consolas";
 }
-.permanent-marker{
-  font-family: "permanent Marker";  
+.permanent-marker {
+  font-family: "permanent Marker";
 }
 .backgroundImg {
   background-image: url("../assets/bg-img/02.jpeg");
@@ -44,11 +44,7 @@
   .gradient-text:hover {
     background-clip: text;
     color: transparent;
-    background-image: linear-gradient(
-      to right,
-      #69caeb,
-      #ce21e1
-    ); 
+    background-image: linear-gradient(to right, #69caeb, #ce21e1);
   }
 }
 
@@ -157,23 +153,30 @@
   background-position: center;
   background-attachment: fixed;
 }
-
-.weatherDayImg {
-    background-image: url("../projects/fetch-weather-app/img/01.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: black;  
+.snakeImg {
+  background-image: url("../projects/snake_game/snake.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.weatherNightImg{
-    background-image: url("../projects/fetch-weather-app/img/02.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: white;
+.weatherDayImg {
+  background-image: url("../projects/fetch-weather-app/img/01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: black;
+}
+
+.weatherNightImg {
+  background-image: url("../projects/fetch-weather-app/img/02.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
 }
 body::-webkit-scrollbar {
   width: 0.25rem;
