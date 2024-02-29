@@ -47,7 +47,13 @@ Technologies/tools/languages used :
 - [x] By the way refactor the structure of the page for a better experience
 - [ ] Turn of the snake game
 - [ ] Much easier because it has less code
-- [ ] The same : tailwindcss first
+- [x] The same : tailwindcss first
 - [ ] And after typescript
-  
+- [ ] Disable the buttons on the the when the player is focused on the game. What I want to say is that if the game starts, the movement buttons can't interact with other part of the page
+- [ ] Open a **dialog** when the player arrives to ask him level of difficulty. They will be ranked in :  
+  - easy
+  - normal
+  - hard 💪
+- [ ] For each level of diffculty, the speed of the snake will increase. Add that into the setInterVal Method by changing the snakespeed
+
 This list will be updated depending on my progression through it.

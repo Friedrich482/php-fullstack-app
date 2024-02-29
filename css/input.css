@@ -12,6 +12,9 @@
 .consolas {
   font-family: "consolas";
 }
+.permanent-marker{
+  font-family: "permanent-marker";  
+}
 .backgroundImg {
   background-image: url("../assets/bg-img/02.jpeg");
   background-repeat: no-repeat;
