@@ -3,7 +3,9 @@ const context = gameBoard.getContext("2d") as CanvasRenderingContext2D;
 context.fillStyle = "blue";
 
 const scoreText = document.getElementById("scoreText") as HTMLLabelElement;
-const restartButton = document.getElementById("restartButton") as HTMLButtonElement;
+const restartButton = document.getElementById(
+  "restartButton"
+) as HTMLButtonElement;
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
 
@@ -31,9 +33,10 @@ let snake = [
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
 
+resetWithEnterKey();
 gameStart();
 
-function gameStart(): void{
+function gameStart(): void {
   running = true;
   scoreText.textContent = `${score}`;
   createFood();
@@ -60,8 +63,10 @@ function clearBoard() {
 }
 
 function createFood() {
-  function randomFood(min: number, max: number): number{
-    return Math.round((Math.random() * (max - min + min)) / unitSize) * unitSize;
+  function randomFood(min: number, max: number): number {
+    return (
+      Math.round((Math.random() * (max - min + min)) / unitSize) * unitSize
+    );
   }
   foodX = randomFood(0, gameWidth - unitSize);
   foodY = randomFood(0, gameHeight - unitSize);
@@ -125,8 +130,13 @@ function changeDirection(event: KeyboardEvent) {
   }
 }
 function checkGameOver() {
-  if(snake[0].x <= 0 || snake[1].y === 25 && snake[0].y === 0 || snake[0].x >= gameWidth - unitSize || snake[0].y >= gameHeight - unitSize){
-    running = false
+  if (
+    snake[0].x <= 0 ||
+    (snake[1].y === 25 && snake[0].y === 0) ||
+    snake[0].x >= gameWidth - unitSize ||
+    snake[0].y >= gameHeight - unitSize
+  ) {
+    running = false;
   }
   for (let i = 1; i < snake.length; i++) {
     if (snake[i].x == snake[0].x && snake[i].y == snake[0].y) {
@@ -137,7 +147,7 @@ function checkGameOver() {
 
 function displayGameOver() {
   context.font = "40px Permanent Marker";
-  context.fillStyle = "white";
+  context.fillStyle = "red";
   context.textAlign = "center";
   context.fillText("GAME OVER !", gameWidth / 2, gameHeight / 2);
   running = false;
@@ -156,7 +166,11 @@ function resetGame() {
   ];
   gameStart();
 }
-
+function resetWithEnterKey(): void {
+  window.addEventListener("keydown", (event) => {
+    event.key == "Enter" ? resetGame() : true;
+  });
+}
 const footer = document.querySelector("footer") as HTMLElement;
 const imageFooter = footer.querySelector("img") as HTMLImageElement;
 imageFooter.src = "../../assets/icons/rocket.gif";

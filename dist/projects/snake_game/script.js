@@ -26,6 +26,7 @@ let snake = [
 ];
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
+resetWithEnterKey();
 gameStart();
 function gameStart() {
     running = true;
@@ -54,7 +55,7 @@ function clearBoard() {
 }
 function createFood() {
     function randomFood(min, max) {
-        return Math.round((Math.random() * (max - min + min)) / unitSize) * unitSize;
+        return (Math.round((Math.random() * (max - min + min)) / unitSize) * unitSize);
     }
     foodX = randomFood(0, gameWidth - unitSize);
     foodY = randomFood(0, gameHeight - unitSize);
@@ -113,7 +114,10 @@ function changeDirection(event) {
     }
 }
 function checkGameOver() {
-    if (snake[0].x <= 0 || snake[1].y === 25 && snake[0].y === 0 || snake[0].x >= gameWidth - unitSize || snake[0].y >= gameHeight - unitSize) {
+    if (snake[0].x <= 0 ||
+        (snake[1].y === 25 && snake[0].y === 0) ||
+        snake[0].x >= gameWidth - unitSize ||
+        snake[0].y >= gameHeight - unitSize) {
         running = false;
     }
     for (let i = 1; i < snake.length; i++) {
@@ -124,7 +128,7 @@ function checkGameOver() {
 }
 function displayGameOver() {
     context.font = "40px Permanent Marker";
-    context.fillStyle = "white";
+    context.fillStyle = "red";
     context.textAlign = "center";
     context.fillText("GAME OVER !", gameWidth / 2, gameHeight / 2);
     running = false;
@@ -141,6 +145,11 @@ function resetGame() {
         { x: 0, y: 0 },
     ];
     gameStart();
+}
+function resetWithEnterKey() {
+    window.addEventListener("keydown", (event) => {
+        event.key == "Enter" ? resetGame() : true;
+    });
 }
 const footer = document.querySelector("footer");
 const imageFooter = footer.querySelector("img");
