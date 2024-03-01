@@ -48,12 +48,18 @@ Technologies/tools/languages used :
 - [ ] Turn of the snake game
 - [ ] Much easier because it has less code
 - [x] The same : tailwindcss first
-- [ ] And after typescript
-- [ ] Disable the buttons on the the when the player is focused on the game. What I want to say is that if the game starts, the movement buttons can't interact with other part of the page
-- [ ] Open a **dialog** when the player arrives to ask him level of difficulty. They will be ranked in :  
+- [x] And after typescript
+- [ ] Disable the buttons on the the when the player is focused on the game. What I want to say is that if the game starts, the movement buttons can't interact with other parts of the page
+- [x] Open a **dialog** when the player arrives to ask him level of difficulty. They will be ranked in :  
   - easy
   - normal
   - hard 💪
-- [ ] For each level of diffculty, the speed of the snake will increase. Add that into the setInterVal Method by changing the snakespeed
+- [x] For each level of diffculty, the speed of the snake will increase. Add that into the setInterval method by changing the snakespeed
+- [ ] While the player restarts the game and the countdown is displayed, the restart button (**Enter key** or **Restart Button** itself) must be disabled to avoid time intervals overlapping
+- [ ] My other idea is to play a song when:
+  - You lose
+  - You eat a food
+  - You change direction
+  - You beat your own high score
 
 This list will be updated depending on my progression through it.
