@@ -1,5 +1,6 @@
 "use strict";
 const difficultyLevelDialog = document.querySelector("#difficultyLevelDialog");
+// const difficultyForm = document.querySelector("#")
 const gameBoard = document.querySelector("#gameBoard");
 const context = gameBoard.getContext("2d");
 context.fillStyle = "blue";
