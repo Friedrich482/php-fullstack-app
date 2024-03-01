@@ -25,6 +25,44 @@
   </head>
 
   <body class="flex items-center justify-center flex-col gap-1 snakeImg">
+    <dialog
+      id="difficultyLevelDialog"
+      class="flex items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-green-500 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] h-80 outline-none"
+    >
+      <h2 class="text-2xl text-center w-11/12">
+        Chose the level of difficulty :
+      </h2>
+
+      <form class="flex items-center justify-center flex-col text-2xl gap-2">
+        <div class="w-full">
+          <input type="radio" name="difficulty" id="level-easy" value="easy" />
+          <label for="level-easy">Easy</label>
+        </div>
+        <div class="w-full">
+          <input
+            type="radio"
+            name="difficulty"
+            id="level-normal"
+            value="normal"
+          />
+          <label for="level-normal">Normal</label>
+        </div>
+        <div class="w-full">
+          <input type="radio" name="difficulty" id="level-hard" value="hard" />
+          <label for="level-hard">Hard 💪</label>
+        </div>
+        <div
+          class="text-base w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500 rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500"
+        >
+          <input
+            type="button"
+            value="Confirm"
+            id="confirmButton"
+            class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2 hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800"
+          />
+        </div>
+      </form>
+    </dialog>
     <h1 class="text-5xl text-white">Snake Game</h1>
     <canvas
       id="gameBoard"
@@ -35,7 +73,7 @@
     <label id="scoreText" class="text-5xl consolas text-white">0</label>
     <button
       id="restartButton"
-      class="text-2xl rounded-2xl p-2 min-w-36 bg-blak text-white bg-black permanent-marker hover:scale-110 transition duration-500 active:bg-slate-900"
+      class="text-2xl rounded-2xl p-2 min-w-36 bg-blak text-white bg-black permanent-marker hover:scale-110 transition duration-500 active:bg-slate-900 active:outline active:outline-white active:outline-2"
     >
       Restart
     </button>
