@@ -11,6 +11,8 @@ const normalRadioButton = document.querySelector("#level-normal") as HTMLInputEl
 const hardRadioButton = document.querySelector("#level-hard") as HTMLInputElement;
 const radioButtons = [easyRadioButton, normalRadioButton, hardRadioButton];
 
+// Game elements
+
 const gameBoard = document.querySelector("#gameBoard") as HTMLCanvasElement;
 const context = gameBoard.getContext("2d") as CanvasRenderingContext2D;
 context.fillStyle = "blue";
@@ -43,6 +45,24 @@ let snake = [
   { x: 0, y: 0 },
 ];
 
+async function displayCountdown() {
+  for (let i = 4; i >= 0; i--) {
+    context.fillStyle = "black";
+    context.fillRect(0, 0, gameWidth, gameHeight);
+
+    context.font = "100px Permanent Marker";
+    context.fillStyle = "red";
+    context.textAlign = "center";
+    context.fillText(i.toString(), gameWidth / 2, gameHeight / 2);
+
+    // Wait 2 secondes before the following number
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
+}
+
+displayCountdown()
+// clearBoard();
+
 function toggleDialog(element: HTMLDialogElement): void {
   element.classList.toggle("hidden");
   element.classList.toggle("flex");
@@ -50,21 +70,24 @@ function toggleDialog(element: HTMLDialogElement): void {
 
 difficultyForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  difficultyLevelDialog.close();
   toggleDialog(difficultyLevelDialog);
+  difficultyLevelDialog.close();
   
-  radioButtons.forEach((radioButton) =>{
-    if(radioButton.checked){
-      console.log(`You choosed the ${radioButton.value} level`)
-    }
-  })
+  setTimeout(() => {
+    radioButtons.forEach((radioButton) =>{
+      if(radioButton.checked){
+        console.log(`You choosed the ${radioButton.value} level`)
+      }
+    });
+    gameStart(); 
+  }, 4000); 
 });
+
 
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
 
 resetWithEnterKey();
-gameStart();
 
 function gameStart(): void {
   running = true;
@@ -176,7 +199,7 @@ function checkGameOver() {
 }
 
 function displayGameOver() {
-  context.font = "40px Permanent Marker";
+  context.font = "50px Permanent Marker";
   context.fillStyle = "red";
   context.textAlign = "center";
   context.fillText("GAME OVER !", gameWidth / 2, gameHeight / 2);

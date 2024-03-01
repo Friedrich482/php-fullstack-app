@@ -1,4 +1,13 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 const difficultyLevelDialog = document.querySelector("#difficultyLevelDialog");
 const difficultyForm = document.querySelector("#difficultyForm");
 // Radio Buttons
@@ -6,6 +15,7 @@ const easyRadioButton = document.querySelector("#level-easy");
 const normalRadioButton = document.querySelector("#level-normal");
 const hardRadioButton = document.querySelector("#level-hard");
 const radioButtons = [easyRadioButton, normalRadioButton, hardRadioButton];
+// Game elements
 const gameBoard = document.querySelector("#gameBoard");
 const context = gameBoard.getContext("2d");
 context.fillStyle = "blue";
@@ -31,24 +41,42 @@ let snake = [
     { x: unitSize, y: 0 },
     { x: 0, y: 0 },
 ];
+function displayCountdown() {
+    return __awaiter(this, void 0, void 0, function* () {
+        for (let i = 4; i >= 0; i--) {
+            context.fillStyle = "black";
+            context.fillRect(0, 0, gameWidth, gameHeight);
+            context.font = "100px Permanent Marker";
+            context.fillStyle = "red";
+            context.textAlign = "center";
+            context.fillText(i.toString(), gameWidth / 2, gameHeight / 2);
+            // Wait 2 secondes before the following number
+            yield new Promise(resolve => setTimeout(resolve, 1000));
+        }
+    });
+}
+displayCountdown();
+// clearBoard();
 function toggleDialog(element) {
     element.classList.toggle("hidden");
     element.classList.toggle("flex");
 }
 difficultyForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    difficultyLevelDialog.close();
     toggleDialog(difficultyLevelDialog);
-    radioButtons.forEach((radioButton) => {
-        if (radioButton.checked) {
-            console.log(`You choosed the ${radioButton.value} level`);
-        }
-    });
+    difficultyLevelDialog.close();
+    setTimeout(() => {
+        radioButtons.forEach((radioButton) => {
+            if (radioButton.checked) {
+                console.log(`You choosed the ${radioButton.value} level`);
+            }
+        });
+        gameStart();
+    }, 4000);
 });
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
 resetWithEnterKey();
-gameStart();
 function gameStart() {
     running = true;
     scoreText.textContent = `${score}`;
@@ -148,7 +176,7 @@ function checkGameOver() {
     }
 }
 function displayGameOver() {
-    context.font = "40px Permanent Marker";
+    context.font = "50px Permanent Marker";
     context.fillStyle = "red";
     context.textAlign = "center";
     context.fillText("GAME OVER !", gameWidth / 2, gameHeight / 2);
