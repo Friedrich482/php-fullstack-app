@@ -55,7 +55,7 @@ Technologies/tools/languages used :
   - normal
   - hard 💪
 - [x] For each level of diffculty, the speed of the snake will increase. Add that into the setInterval method by changing the snakespeed
-- [ ] While the player restarts the game and the countdown is displayed, the restart button (**Enter key** or **Restart Button** itself) must be disabled to avoid time intervals overlapping
+- [x] While the player restarts the game and the countdown is displayed, the restart button (**Enter key** or **Restart Button** itself) must be disabled to avoid time intervals overlapping
 - [ ] My other idea is to play a song when:
   - You lose
   - You eat a food

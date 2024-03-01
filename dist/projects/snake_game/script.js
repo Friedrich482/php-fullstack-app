@@ -42,9 +42,14 @@ let snake = [
     { x: unitSize, y: 0 },
     { x: 0, y: 0 },
 ];
+let resetWithEnterKey = (event) => {
+    event.key == "Enter" ? resetGame() : true;
+};
 // ? This function as indicated by its name, displays a coundown after the player have choosen a level of difficulty
 function displayCountdown() {
     return __awaiter(this, void 0, void 0, function* () {
+        // window.removeEventListener("keydown", resetWithEnterKey)
+        blockResetWithEnterKey();
         for (let i = 4; i >= 0; i--) {
             context.fillStyle = "black";
             context.fillRect(0, 0, gameWidth, gameHeight);
@@ -93,7 +98,6 @@ difficultyForm.addEventListener("submit", (event) => {
 // Notice that the time I wait before starting the game (5 seconds) is the same ass the time neeeded to display the countdown
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
-resetWithEnterKey();
 function gameStart() {
     running = true;
     scoreText.textContent = `${score}`;
@@ -108,7 +112,6 @@ function nextTick() {
             moveSnake();
             drawSnake();
             checkGameOver();
-            // console.log(level);
             nextTick();
         }, level);
     }
@@ -194,8 +197,9 @@ function checkGameOver() {
     }
 }
 function displayGameOver() {
+    window.addEventListener("keydown", resetWithEnterKey);
     context.font = "50px Permanent Marker";
-    context.fillStyle = "red";
+    context.fillStyle = "#8011d0";
     context.textAlign = "center";
     context.fillText("GAME OVER !", gameWidth / 2, gameHeight / 2);
     running = false;
@@ -217,10 +221,8 @@ function resetGame() {
         gameStart();
     }, 5000);
 }
-function resetWithEnterKey() {
-    window.addEventListener("keydown", (event) => {
-        event.key == "Enter" ? resetGame() : true;
-    });
+function blockResetWithEnterKey() {
+    window.removeEventListener("keydown", resetWithEnterKey);
 }
 const footer = document.querySelector("footer");
 footer.classList.add("text-white", "MV-boli");

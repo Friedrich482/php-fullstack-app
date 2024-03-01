@@ -50,9 +50,17 @@ let snake = [
   { x: unitSize, y: 0 },
   { x: 0, y: 0 },
 ];
+
+let resetWithEnterKey = (event: KeyboardEvent) => {
+  event.key == "Enter" ? resetGame() : true;
+};
+
 // ? This function as indicated by its name, displays a coundown after the player have choosen a level of difficulty
 
 async function displayCountdown() {
+  // window.removeEventListener("keydown", resetWithEnterKey)
+  blockResetWithEnterKey()
+  
   for (let i = 4; i >= 0; i--) {
     context.fillStyle = "black";
     context.fillRect(0, 0, gameWidth, gameHeight);
@@ -111,8 +119,6 @@ difficultyForm.addEventListener("submit", (event) => {
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
 
-resetWithEnterKey();
-
 function gameStart(): void {
   running = true;
   scoreText.textContent = `${score}`;
@@ -128,7 +134,6 @@ function nextTick(): void {
       moveSnake();
       drawSnake();
       checkGameOver();
-      // console.log(level);
       nextTick();
     }, level);
   } else {
@@ -224,8 +229,9 @@ function checkGameOver() {
 }
 
 function displayGameOver() {
+  window.addEventListener("keydown", resetWithEnterKey);
   context.font = "50px Permanent Marker";
-  context.fillStyle = "red";
+  context.fillStyle = "#8011d0";
   context.textAlign = "center";
   context.fillText("GAME OVER !", gameWidth / 2, gameHeight / 2);
   running = false;
@@ -242,16 +248,18 @@ function resetGame() {
     { x: unitSize, y: 0 },
     { x: 0, y: 0 },
   ];
+
   clearBoard();
   displayCountdown();
   setTimeout(() => {
     gameStart();
   }, 5000);
 }
-function resetWithEnterKey(): void {
-  window.addEventListener("keydown", (event) => {
-    event.key == "Enter" ? resetGame() : true;
-  });
+
+
+
+function blockResetWithEnterKey() {
+  window.removeEventListener("keydown", resetWithEnterKey);
 }
 const footer = document.querySelector("footer") as HTMLElement;
 footer.classList.add("text-white", "MV-boli");
