@@ -1,5 +1,6 @@
 "use strict";
-const gameBoard = document.getElementById("gameBoard");
+const difficultyLevelDialog = document.querySelector("#difficultyLevelDialog");
+const gameBoard = document.querySelector("#gameBoard");
 const context = gameBoard.getContext("2d");
 context.fillStyle = "blue";
 const scoreText = document.getElementById("scoreText");
@@ -24,6 +25,9 @@ let snake = [
     { x: unitSize, y: 0 },
     { x: 0, y: 0 },
 ];
+document.addEventListener("DOMContentLoaded", () => {
+    difficultyLevelDialog.showModal();
+});
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
 resetWithEnterKey();

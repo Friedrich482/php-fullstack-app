@@ -1,4 +1,5 @@
-const gameBoard = document.getElementById("gameBoard") as HTMLCanvasElement;
+const difficultyLevelDialog = document.querySelector("#difficultyLevelDialog") as HTMLDialogElement;
+const gameBoard = document.querySelector("#gameBoard") as HTMLCanvasElement;
 const context = gameBoard.getContext("2d") as CanvasRenderingContext2D;
 context.fillStyle = "blue";
 
@@ -29,6 +30,10 @@ let snake = [
   { x: unitSize, y: 0 },
   { x: 0, y: 0 },
 ];
+
+document.addEventListener("DOMContentLoaded", () =>{
+    difficultyLevelDialog.showModal();
+})
 
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
