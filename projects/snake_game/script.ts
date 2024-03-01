@@ -1,5 +1,16 @@
-const difficultyLevelDialog = document.querySelector("#difficultyLevelDialog") as HTMLDialogElement;
-// const difficultyForm = document.querySelector("#")
+const difficultyLevelDialog = document.querySelector(
+  "#difficultyLevelDialog"
+) as HTMLDialogElement;
+const difficultyForm = document.querySelector(
+  "#difficultyForm"
+) as HTMLFormElement;
+
+// Radio Buttons
+const easyRadioButton = document.querySelector("#level-easy") as HTMLInputElement;
+const normalRadioButton = document.querySelector("#level-normal") as HTMLInputElement;
+const hardRadioButton = document.querySelector("#level-hard") as HTMLInputElement;
+const radioButtons = [easyRadioButton, normalRadioButton, hardRadioButton];
+
 const gameBoard = document.querySelector("#gameBoard") as HTMLCanvasElement;
 const context = gameBoard.getContext("2d") as CanvasRenderingContext2D;
 context.fillStyle = "blue";
@@ -32,9 +43,22 @@ let snake = [
   { x: 0, y: 0 },
 ];
 
-document.addEventListener("DOMContentLoaded", () =>{
-    difficultyLevelDialog.showModal();
-})
+function toggleDialog(element: HTMLDialogElement): void {
+  element.classList.toggle("hidden");
+  element.classList.toggle("flex");
+}
+
+difficultyForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  difficultyLevelDialog.close();
+  toggleDialog(difficultyLevelDialog);
+  
+  radioButtons.forEach((radioButton) =>{
+    if(radioButton.checked){
+      console.log(`You choosed the ${radioButton.value} level`)
+    }
+  })
+});
 
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
@@ -111,10 +135,10 @@ function changeDirection(event: KeyboardEvent) {
   const RIGHT = "ArrowRight";
   const DOWN = "ArrowDown";
 
-  let MovingUp = (yVelocity == -unitSize);
-  let MovingDown = (yVelocity == unitSize);
-  let MovingRight = (xVelocity == unitSize);
-  let MovingLeft = (xVelocity == -unitSize);
+  let MovingUp = yVelocity == -unitSize;
+  let MovingDown = yVelocity == unitSize;
+  let MovingRight = xVelocity == unitSize;
+  let MovingLeft = xVelocity == -unitSize;
 
   switch (true) {
     case keyPressed == LEFT && !MovingRight:

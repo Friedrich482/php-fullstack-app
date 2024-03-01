@@ -1,6 +1,11 @@
 "use strict";
 const difficultyLevelDialog = document.querySelector("#difficultyLevelDialog");
-// const difficultyForm = document.querySelector("#")
+const difficultyForm = document.querySelector("#difficultyForm");
+// Radio Buttons
+const easyRadioButton = document.querySelector("#level-easy");
+const normalRadioButton = document.querySelector("#level-normal");
+const hardRadioButton = document.querySelector("#level-hard");
+const radioButtons = [easyRadioButton, normalRadioButton, hardRadioButton];
 const gameBoard = document.querySelector("#gameBoard");
 const context = gameBoard.getContext("2d");
 context.fillStyle = "blue";
@@ -26,8 +31,19 @@ let snake = [
     { x: unitSize, y: 0 },
     { x: 0, y: 0 },
 ];
-document.addEventListener("DOMContentLoaded", () => {
-    difficultyLevelDialog.showModal();
+function toggleDialog(element) {
+    element.classList.toggle("hidden");
+    element.classList.toggle("flex");
+}
+difficultyForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    difficultyLevelDialog.close();
+    toggleDialog(difficultyLevelDialog);
+    radioButtons.forEach((radioButton) => {
+        if (radioButton.checked) {
+            console.log(`You choosed the ${radioButton.value} level`);
+        }
+    });
 });
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
@@ -95,10 +111,10 @@ function changeDirection(event) {
     const UP = "ArrowUp";
     const RIGHT = "ArrowRight";
     const DOWN = "ArrowDown";
-    let MovingUp = (yVelocity == -unitSize);
-    let MovingDown = (yVelocity == unitSize);
-    let MovingRight = (xVelocity == unitSize);
-    let MovingLeft = (xVelocity == -unitSize);
+    let MovingUp = yVelocity == -unitSize;
+    let MovingDown = yVelocity == unitSize;
+    let MovingRight = xVelocity == unitSize;
+    let MovingLeft = xVelocity == -unitSize;
     switch (true) {
         case keyPressed == LEFT && !MovingRight:
             xVelocity = -unitSize;

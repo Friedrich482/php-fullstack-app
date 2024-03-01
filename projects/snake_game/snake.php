@@ -27,14 +27,14 @@
   <body class="flex items-center justify-center flex-col gap-1 snakebgImg">
     <dialog
       id="difficultyLevelDialog"
-      class="flex items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-green-500 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-2 z-10 text-[whitesmoke] h-80 outline-none backdrop:backdrop-blur-sm"
-      autofocus="false"
-    >
+      class="flex items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-green-500 rounded-bl-[100px] rounded-tr-[100px] min-w-20 max-w-60 sm:min-w-72 sm:p-2 gap-2 z-10 text-[whitesmoke] h-80 outline-none backdrop:backdrop-blur-sm"    
+      autofocus
+      >
       <h2 class="text-2xl text-center w-11/12">
         Chose the level of difficulty :
       </h2>
 
-      <form class="flex items-center justify-center flex-col text-2xl gap-2">
+      <form class="flex items-center justify-center flex-col text-2xl gap-2" id="difficultyForm">
         <div class="w-full transition duration-300 hover:scale-110">
           <input
             type="radio"

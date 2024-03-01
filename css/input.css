@@ -211,7 +211,3 @@ body::-webkit-scrollbar-thumb {
   );
   backdrop-filter: blur(10px);
 }
-
-/* #difficultyLevelDialog::backdrop{
-  backdrop-filter: blur(12px);
-} */
