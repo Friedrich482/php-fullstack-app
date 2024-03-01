@@ -153,7 +153,7 @@
   background-position: center;
   background-attachment: fixed;
 }
-.snakeImg {
+.snakebgImg {
   background-image: url("../projects/snake_game/img/snake.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -211,3 +211,7 @@ body::-webkit-scrollbar-thumb {
   );
   backdrop-filter: blur(10px);
 }
+
+/* #difficultyLevelDialog::backdrop{
+  backdrop-filter: blur(12px);
+} */
