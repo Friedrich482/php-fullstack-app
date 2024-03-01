@@ -44,6 +44,7 @@ let snake = [
   { x: unitSize, y: 0 },
   { x: 0, y: 0 },
 ];
+// ? This function as indicated by its name, displays a coundown after the player have choosen a level of difficulty
 
 async function displayCountdown() {
   for (let i = 4; i >= 0; i--) {
@@ -55,23 +56,26 @@ async function displayCountdown() {
     context.textAlign = "center";
     context.fillText(i.toString(), gameWidth / 2, gameHeight / 2);
 
-    // Wait 2 secondes before the following number
+    // Wait 1 second before the following number
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
 }
-
-displayCountdown()
-// clearBoard();
 
 function toggleDialog(element: HTMLDialogElement): void {
   element.classList.toggle("hidden");
   element.classList.toggle("flex");
 }
 
+// ! The program starts here 👇
+clearBoard();
+
 difficultyForm.addEventListener("submit", (event) => {
+
   event.preventDefault();
   toggleDialog(difficultyLevelDialog);
   difficultyLevelDialog.close();
+  
+  displayCountdown()
   
   setTimeout(() => {
     radioButtons.forEach((radioButton) =>{
@@ -80,9 +84,10 @@ difficultyForm.addEventListener("submit", (event) => {
       }
     });
     gameStart(); 
-  }, 4000); 
+  }, 5000); 
 });
 
+// Notice that the time I wait before starting the game (5 seconds) is the same ass the time neeeded to display the countdown
 
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
@@ -217,7 +222,10 @@ function resetGame() {
     { x: unitSize, y: 0 },
     { x: 0, y: 0 },
   ];
-  gameStart();
+  clearBoard()
+  displayCountdown()
+  setTimeout(() => {gameStart()}, 5000); 
+
 }
 function resetWithEnterKey(): void {
   window.addEventListener("keydown", (event) => {
