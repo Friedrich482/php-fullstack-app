@@ -28,6 +28,7 @@ const snakeColor = "#3de320";
 const snakeBorder = "black";
 const foodColor = "red";
 const unitSize = 25;
+let level;
 let running = false;
 let xVelocity = unitSize;
 let yVelocity = 0;
@@ -52,13 +53,26 @@ function displayCountdown() {
             context.textAlign = "center";
             context.fillText(i.toString(), gameWidth / 2, gameHeight / 2);
             // Wait 1 second before the following number
-            yield new Promise(resolve => setTimeout(resolve, 1000));
+            yield new Promise((resolve) => setTimeout(resolve, 1000));
         }
     });
 }
 function toggleDialog(element) {
     element.classList.toggle("hidden");
     element.classList.toggle("flex");
+}
+function chooseDifficultyLevel(radioButton) {
+    let level = radioButton.value;
+    switch (level) {
+        case "easy":
+            return 200;
+        case "normal":
+            return 100;
+        case "hard":
+            return 50;
+    }
+    // ? By default, the level normal will be chosen but this case can't be reached !
+    return 100;
 }
 // ! The program starts here 👇
 clearBoard();
@@ -70,7 +84,7 @@ difficultyForm.addEventListener("submit", (event) => {
     setTimeout(() => {
         radioButtons.forEach((radioButton) => {
             if (radioButton.checked) {
-                console.log(`You choosed the ${radioButton.value} level`);
+                level = chooseDifficultyLevel(radioButton);
             }
         });
         gameStart();
@@ -94,8 +108,9 @@ function nextTick() {
             moveSnake();
             drawSnake();
             checkGameOver();
+            // console.log(level);
             nextTick();
-        }, 100);
+        }, level);
     }
     else {
         displayGameOver();
@@ -198,7 +213,9 @@ function resetGame() {
     ];
     clearBoard();
     displayCountdown();
-    setTimeout(() => { gameStart(); }, 5000);
+    setTimeout(() => {
+        gameStart();
+    }, 5000);
 }
 function resetWithEnterKey() {
     window.addEventListener("keydown", (event) => {
@@ -206,5 +223,6 @@ function resetWithEnterKey() {
     });
 }
 const footer = document.querySelector("footer");
+footer.classList.add("text-white", "MV-boli");
 const imageFooter = footer.querySelector("img");
 imageFooter.src = "../../assets/icons/rocket.gif";

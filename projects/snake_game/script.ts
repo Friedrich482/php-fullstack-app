@@ -6,9 +6,15 @@ const difficultyForm = document.querySelector(
 ) as HTMLFormElement;
 
 // Radio Buttons
-const easyRadioButton = document.querySelector("#level-easy") as HTMLInputElement;
-const normalRadioButton = document.querySelector("#level-normal") as HTMLInputElement;
-const hardRadioButton = document.querySelector("#level-hard") as HTMLInputElement;
+const easyRadioButton = document.querySelector(
+  "#level-easy"
+) as HTMLInputElement;
+const normalRadioButton = document.querySelector(
+  "#level-normal"
+) as HTMLInputElement;
+const hardRadioButton = document.querySelector(
+  "#level-hard"
+) as HTMLInputElement;
 const radioButtons = [easyRadioButton, normalRadioButton, hardRadioButton];
 
 // Game elements
@@ -29,7 +35,7 @@ const snakeColor = "#3de320";
 const snakeBorder = "black";
 const foodColor = "red";
 const unitSize = 25;
-
+let level: number;
 let running = false;
 let xVelocity = unitSize;
 let yVelocity = 0;
@@ -57,7 +63,7 @@ async function displayCountdown() {
     context.fillText(i.toString(), gameWidth / 2, gameHeight / 2);
 
     // Wait 1 second before the following number
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
   }
 }
 
@@ -66,25 +72,38 @@ function toggleDialog(element: HTMLDialogElement): void {
   element.classList.toggle("flex");
 }
 
+function chooseDifficultyLevel(radioButton: HTMLInputElement): number {
+  let level = radioButton.value;
+  switch (level) {
+    case "easy":
+      return 200;
+    case "normal":
+      return 100;
+    case "hard":
+      return 50;
+  }
+  // ? By default, the level normal will be chosen but this case can't be reached !
+  return 100;
+}
+
 // ! The program starts here 👇
 clearBoard();
 
 difficultyForm.addEventListener("submit", (event) => {
-
   event.preventDefault();
   toggleDialog(difficultyLevelDialog);
   difficultyLevelDialog.close();
-  
-  displayCountdown()
-  
+
+  displayCountdown();
+
   setTimeout(() => {
-    radioButtons.forEach((radioButton) =>{
-      if(radioButton.checked){
-        console.log(`You choosed the ${radioButton.value} level`)
+    radioButtons.forEach((radioButton) => {
+      if (radioButton.checked) {
+        level = chooseDifficultyLevel(radioButton);
       }
     });
-    gameStart(); 
-  }, 5000); 
+    gameStart();
+  }, 5000);
 });
 
 // Notice that the time I wait before starting the game (5 seconds) is the same ass the time neeeded to display the countdown
@@ -109,8 +128,9 @@ function nextTick(): void {
       moveSnake();
       drawSnake();
       checkGameOver();
+      // console.log(level);
       nextTick();
-    }, 100);
+    }, level);
   } else {
     displayGameOver();
   }
@@ -222,10 +242,11 @@ function resetGame() {
     { x: unitSize, y: 0 },
     { x: 0, y: 0 },
   ];
-  clearBoard()
-  displayCountdown()
-  setTimeout(() => {gameStart()}, 5000); 
-
+  clearBoard();
+  displayCountdown();
+  setTimeout(() => {
+    gameStart();
+  }, 5000);
 }
 function resetWithEnterKey(): void {
   window.addEventListener("keydown", (event) => {
@@ -233,5 +254,6 @@ function resetWithEnterKey(): void {
   });
 }
 const footer = document.querySelector("footer") as HTMLElement;
+footer.classList.add("text-white", "MV-boli");
 const imageFooter = footer.querySelector("img") as HTMLImageElement;
 imageFooter.src = "../../assets/icons/rocket.gif";
