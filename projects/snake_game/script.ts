@@ -222,7 +222,10 @@ function resetGame() {
     { x: unitSize, y: 0 },
     { x: 0, y: 0 },
   ];
-  gameStart();
+  clearBoard()
+  displayCountdown()
+  setTimeout(() => {gameStart()}, 5000); 
+
 }
 function resetWithEnterKey(): void {
   window.addEventListener("keydown", (event) => {

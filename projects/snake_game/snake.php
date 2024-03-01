@@ -78,7 +78,7 @@
         </div>
       </form>
     </dialog>
-    <h1 class="text-5xl text-white">Snake Game</h1>
+    <h1 class="text-5xl text-white permanent-marker">Snake Game</h1>
     <canvas
       id="gameBoard"
       width="400"
