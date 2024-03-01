@@ -153,7 +153,7 @@
   background-position: center;
   background-attachment: fixed;
 }
-.snakeImg {
+.snakebgImg {
   background-image: url("../projects/snake_game/img/snake.png");
   background-repeat: no-repeat;
   background-size: cover;

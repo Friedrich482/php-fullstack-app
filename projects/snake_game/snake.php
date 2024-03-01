@@ -24,22 +24,29 @@
     <script src="../../dist/projects/snake_game/script.js" defer></script>
   </head>
 
-  <body class="flex items-center justify-center flex-col gap-1 snakeImg">
+  <body class="flex items-center justify-center flex-col gap-1 snakebgImg">
     <dialog
       id="difficultyLevelDialog"
-      class="flex items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-green-500 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-2 z-10 text-[whitesmoke] h-80 outline-none backdrop:blur-lg"
-      autofocus="false"
-    >
+      class="flex items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-green-500 rounded-bl-[100px] rounded-tr-[100px] min-w-20 max-w-60 sm:min-w-72 sm:p-2 gap-2 z-10 text-[whitesmoke] h-80 outline-none backdrop:backdrop-blur-sm"    
+      autofocus
+      >
       <h2 class="text-2xl text-center w-11/12">
         Chose the level of difficulty :
       </h2>
 
-      <form class="flex items-center justify-center flex-col text-2xl gap-2" method="dialog">
-        <div class="w-full">
-          <input type="radio" name="difficulty" id="level-easy" value="easy" class="size-4 cursor-pointer" checked/>
+      <form class="flex items-center justify-center flex-col text-2xl gap-2" id="difficultyForm">
+        <div class="w-full transition duration-300 hover:scale-110">
+          <input
+            type="radio"
+            name="difficulty"
+            id="level-easy"
+            value="easy"
+            class="size-4 cursor-pointer"
+            checked
+          />
           <label for="level-easy">Easy</label>
         </div>
-        <div class="w-full">
+        <div class="w-full transition duration-300 hover:scale-110">
           <input
             type="radio"
             name="difficulty"
@@ -49,19 +56,25 @@
           />
           <label for="level-normal">Normal</label>
         </div>
-        <div class="w-full">
-          <input type="radio" name="difficulty" id="level-hard" value="hard" class="size-4 cursor-pointer"/>
+        <div class="w-full transition duration-300 hover:scale-110">
+          <input
+            type="radio"
+            name="difficulty"
+            id="level-hard"
+            value="hard"
+            class="size-4 cursor-pointer"
+          />
           <label for="level-hard">Hard 💪</label>
         </div>
         <div
-          class="text-base w-[8.25rem] p-[2px] bg-gradient-to-br from-purple-700 to-red-500 rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500"
+          class="text-base w-[8.25rem] p-[2px] bg-gradient-to-br from-green-400 to-lime-800 rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-lime-800 hover:to-green-400 active:bg-gradient-to-br active:from-green-400 active:to-lime-800"
         >
           <input
             type="submit"
             value="Confirm"
             id="confirmButton"
-            class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2 hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800"
-            />
+            class="cursor-pointer bg-gray-900 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2 hover:text-red-600 transition duration-500 min-w-32 active:font-thin active:bg-slate-800"
+          />
         </div>
       </form>
     </dialog>
