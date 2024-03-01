@@ -1,4 +1,5 @@
 const difficultyLevelDialog = document.querySelector("#difficultyLevelDialog") as HTMLDialogElement;
+// const difficultyForm = document.querySelector("#")
 const gameBoard = document.querySelector("#gameBoard") as HTMLCanvasElement;
 const context = gameBoard.getContext("2d") as CanvasRenderingContext2D;
 context.fillStyle = "blue";
