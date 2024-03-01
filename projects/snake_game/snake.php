@@ -35,7 +35,7 @@
     <label id="scoreText" class="text-5xl consolas text-white">0</label>
     <button
       id="restartButton"
-      class="text-2xl rounded-2xl p-2 min-w-36 bg-blak text-white bg-black permanent-marker hover:scale-110 transition duration-500 active:bg-slate-900"
+      class="text-2xl rounded-2xl p-2 min-w-36 bg-blak text-white bg-black permanent-marker hover:scale-110 transition duration-500 active:bg-slate-900 active:outline active:outline-white active:outline-2"
     >
       Restart
     </button>

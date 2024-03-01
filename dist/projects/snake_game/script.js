@@ -54,8 +54,7 @@ function clearBoard() {
 }
 function createFood() {
     function randomFood(min, max) {
-        const randNum = Math.round((Math.random() * (max - min + min)) / unitSize) * unitSize;
-        return randNum;
+        return Math.round((Math.random() * (max - min + min)) / unitSize) * unitSize;
     }
     foodX = randomFood(0, gameWidth - unitSize);
     foodY = randomFood(0, gameHeight - unitSize);
@@ -69,7 +68,7 @@ function moveSnake() {
     snake.unshift(head);
     if (snake[0].x == foodX && snake[0].y == foodY) {
         score++;
-        scoreText.textContent = score;
+        scoreText.textContent = `${score}`;
         createFood();
     }
     else {
@@ -85,15 +84,15 @@ function drawSnake() {
     });
 }
 function changeDirection(event) {
-    const keyPressed = event.keyCode;
-    let LEFT = 37;
-    let UP = 38;
-    let RIGHT = 39;
-    let DOWN = 40;
-    let MovingUp = yVelocity == -unitSize;
-    let MovingDown = yVelocity == unitSize;
-    let MovingRight = xVelocity == unitSize;
-    let MovingLeft = xVelocity == -unitSize;
+    const keyPressed = event.key;
+    const LEFT = "ArrowLeft";
+    const UP = "ArrowUp";
+    const RIGHT = "ArrowRight";
+    const DOWN = "ArrowDown";
+    let MovingUp = (yVelocity == -unitSize);
+    let MovingDown = (yVelocity == unitSize);
+    let MovingRight = (xVelocity == unitSize);
+    let MovingLeft = (xVelocity == -unitSize);
     switch (true) {
         case keyPressed == LEFT && !MovingRight:
             xVelocity = -unitSize;
@@ -114,15 +113,8 @@ function changeDirection(event) {
     }
 }
 function checkGameOver() {
-    switch (true) {
-        case snake[0].x < 0:
-            running = false;
-        case snake[0].x >= gameWidth:
-            running = false;
-        case snake[0].y < 0:
-            running = false;
-        case snake[0].y >= gameHeight:
-            running = false;
+    if (snake[0].x <= 0 || snake[1].y === 25 && snake[0].y === 0 || snake[0].x >= gameWidth - unitSize || snake[0].y >= gameHeight - unitSize) {
+        running = false;
     }
     for (let i = 1; i < snake.length; i++) {
         if (snake[i].x == snake[0].x && snake[i].y == snake[0].y) {
@@ -132,7 +124,7 @@ function checkGameOver() {
 }
 function displayGameOver() {
     context.font = "40px Permanent Marker";
-    context.fillStyle = "black";
+    context.fillStyle = "white";
     context.textAlign = "center";
     context.fillText("GAME OVER !", gameWidth / 2, gameHeight / 2);
     running = false;
