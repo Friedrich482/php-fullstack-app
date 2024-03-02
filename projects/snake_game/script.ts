@@ -100,6 +100,7 @@ function chooseDifficultyLevel(radioButton: HTMLInputElement): number {
 }
 
 // ! The program starts here 👇
+difficultyLevelDialog.showModal()
 clearBoard();
 
 difficultyForm.addEventListener("submit", (event) => {

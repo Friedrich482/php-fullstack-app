@@ -85,6 +85,7 @@ function chooseDifficultyLevel(radioButton) {
     return 100;
 }
 // ! The program starts here 👇
+difficultyLevelDialog.showModal();
 clearBoard();
 difficultyForm.addEventListener("submit", (event) => {
     event.preventDefault();
