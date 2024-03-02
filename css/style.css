@@ -1042,6 +1042,10 @@ video {
   cursor: pointer;
 }
 
+.cursor-wait {
+  cursor: wait;
+}
+
 .select-none {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1622,6 +1626,22 @@ video {
 
 .no-underline {
   text-decoration-line: none;
+}
+
+.accent-red-500 {
+  accent-color: #ef4444;
+}
+
+.accent-lime-500 {
+  accent-color: #84cc16;
+}
+
+.accent-yellow-400 {
+  accent-color: #facc15;
+}
+
+.accent-red-700 {
+  accent-color: #b91c1c;
 }
 
 .opacity-0 {

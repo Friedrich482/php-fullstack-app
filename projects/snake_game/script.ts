@@ -54,19 +54,21 @@ let snake = [
 let resetWithEnterKey = (event: KeyboardEvent) => {
   event.key == "Enter" ? resetGame() : true;
 };
-// ? This section is reserved for the audio variables 
+// ? This section is reserved for the audio variables
 let eating_sound = new Audio("./sounds/eating.mp3");
 let swipe_sound = new Audio("./sounds/swipe.mp3");
 let game_over_sound = new Audio("./sounds/game_over.mp3");
 let game_start_sound = new Audio("./sounds/game_start.mp3");
-
+let chrono = new Audio("./sounds/chrono.mp3");
 // ? This function as indicated by its name, displays a coundown after the player have choosen a level of difficulty
 
 async function displayCountdown() {
   // window.removeEventListener("keydown", resetWithEnterKey)
-  blockResetWithEnterKey()
-  
-  for (let i = 4; i >= 0; i--) {
+  blockResetWithEnterKey();
+  // Plays the chrono sound
+  chrono.play();
+
+  for (let i = 3; i >= 0; i--) {
     context.fillStyle = "black";
     context.fillRect(0, 0, gameWidth, gameHeight);
 
@@ -100,7 +102,7 @@ function chooseDifficultyLevel(radioButton: HTMLInputElement): number {
 }
 
 // ! The program starts here 👇
-difficultyLevelDialog.showModal()
+difficultyLevelDialog.showModal();
 clearBoard();
 
 difficultyForm.addEventListener("submit", (event) => {
@@ -117,7 +119,7 @@ difficultyForm.addEventListener("submit", (event) => {
       }
     });
     gameStart();
-  }, 5000);
+  }, 4000);
 });
 
 // Notice that the time I wait before starting the game (5 seconds) is the same ass the time neeeded to display the countdown
@@ -126,7 +128,7 @@ window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
 
 function gameStart(): void {
-  game_start_sound.play()
+  game_start_sound.play();
   running = true;
   scoreText.textContent = `${score}`;
   createFood();
@@ -136,7 +138,7 @@ function gameStart(): void {
 function nextTick(): void {
   if (running) {
     setTimeout(() => {
-      swipe_sound.play()
+      swipe_sound.play();
       clearBoard();
       drawFood();
       moveSnake();
@@ -174,7 +176,7 @@ function moveSnake() {
 
   if (snake[0].x == foodX && snake[0].y == foodY) {
     score++;
-    eating_sound.play()
+    eating_sound.play();
     scoreText.textContent = `${score}`;
     createFood();
   } else {
@@ -265,8 +267,6 @@ function resetGame() {
     gameStart();
   }, 5000);
 }
-
-
 
 function blockResetWithEnterKey() {
   window.removeEventListener("keydown", resetWithEnterKey);
