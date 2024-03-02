@@ -10,6 +10,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 const difficultyLevelDialog = document.querySelector("#difficultyLevelDialog");
 const difficultyForm = document.querySelector("#difficultyForm");
+const gameOverDialog = document.querySelector("#restartGameDialog");
+const gameOverScore = document.querySelector("#gameOverScore");
 // Radio Buttons
 const easyRadioButton = document.querySelector("#level-easy");
 const normalRadioButton = document.querySelector("#level-normal");
@@ -19,8 +21,8 @@ const radioButtons = [easyRadioButton, normalRadioButton, hardRadioButton];
 const gameBoard = document.querySelector("#gameBoard");
 const context = gameBoard.getContext("2d");
 context.fillStyle = "blue";
-const scoreText = document.getElementById("scoreText");
-const restartButton = document.getElementById("restartButton");
+const scoreText = document.querySelector("#scoreText");
+const restartButton = document.querySelector("#restartButton");
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
 const gameBackground = "black";
@@ -45,17 +47,20 @@ let snake = [
 let resetWithEnterKey = (event) => {
     event.key == "Enter" ? resetGame() : true;
 };
-// ? This section is reserved for the audio variables 
+// ? This section is reserved for the audio variables
 let eating_sound = new Audio("./sounds/eating.mp3");
 let swipe_sound = new Audio("./sounds/swipe.mp3");
 let game_over_sound = new Audio("./sounds/game_over.mp3");
 let game_start_sound = new Audio("./sounds/game_start.mp3");
+let chrono = new Audio("./sounds/chrono.mp3");
 // ? This function as indicated by its name, displays a coundown after the player have choosen a level of difficulty
 function displayCountdown() {
     return __awaiter(this, void 0, void 0, function* () {
         // window.removeEventListener("keydown", resetWithEnterKey)
         blockResetWithEnterKey();
-        for (let i = 4; i >= 0; i--) {
+        // Plays the chrono sound
+        chrono.play();
+        for (let i = 3; i >= 0; i--) {
             context.fillStyle = "black";
             context.fillRect(0, 0, gameWidth, gameHeight);
             context.font = "100px Permanent Marker";
@@ -85,6 +90,7 @@ function chooseDifficultyLevel(radioButton) {
     return 100;
 }
 // ! The program starts here 👇
+difficultyLevelDialog.showModal();
 clearBoard();
 difficultyForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -98,7 +104,7 @@ difficultyForm.addEventListener("submit", (event) => {
             }
         });
         gameStart();
-    }, 5000);
+    }, 4000);
 });
 // Notice that the time I wait before starting the game (5 seconds) is the same ass the time neeeded to display the countdown
 window.addEventListener("keydown", changeDirection);
@@ -212,6 +218,11 @@ function displayGameOver() {
     context.textAlign = "center";
     context.fillText("GAME OVER !", gameWidth / 2, gameHeight / 2);
     running = false;
+    setTimeout(() => {
+        toggleDialog(gameOverDialog);
+        gameOverDialog.showModal();
+        gameOverScore.textContent = `Your score is ${score}`;
+    }, 2000);
 }
 function resetGame() {
     score = 0;
