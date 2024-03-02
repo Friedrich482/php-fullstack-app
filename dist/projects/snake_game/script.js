@@ -12,6 +12,8 @@ const difficultyLevelDialog = document.querySelector("#difficultyLevelDialog");
 const difficultyForm = document.querySelector("#difficultyForm");
 const gameOverDialog = document.querySelector("#restartGameDialog");
 const gameOverScore = document.querySelector("#gameOverScore");
+const yesButton = document.querySelector("#yesButton");
+const noButton = document.querySelector("#noButton");
 // Radio Buttons
 const easyRadioButton = document.querySelector("#level-easy");
 const normalRadioButton = document.querySelector("#level-normal");
@@ -109,6 +111,11 @@ difficultyForm.addEventListener("submit", (event) => {
 // Notice that the time I wait before starting the game (5 seconds) is the same ass the time neeeded to display the countdown
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
+yesButton.addEventListener("click", () => {
+    toggleDialog(gameOverDialog);
+    gameOverDialog.close();
+    resetGame();
+});
 function gameStart() {
     game_start_sound.play();
     running = true;

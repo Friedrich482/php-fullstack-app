@@ -10,6 +10,8 @@ const gameOverDialog = document.querySelector(
 const gameOverScore = document.querySelector(
   "#gameOverScore"
 ) as HTMLParagraphElement;
+const yesButton = document.querySelector("#yesButton") as HTMLInputElement;
+const noButton = document.querySelector("#noButton") as HTMLInputElement;
 // Radio Buttons
 const easyRadioButton = document.querySelector(
   "#level-easy"
@@ -131,7 +133,11 @@ difficultyForm.addEventListener("submit", (event) => {
 
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
-
+yesButton.addEventListener("click", () =>{
+  toggleDialog(gameOverDialog);
+  gameOverDialog.close();
+  resetGame()
+})
 function gameStart(): void {
   game_start_sound.play();
   running = true;
