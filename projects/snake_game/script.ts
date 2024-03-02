@@ -255,7 +255,7 @@ function displayGameOver() {
   setTimeout(() => {
     toggleDialog(gameOverDialog);
     gameOverDialog.showModal();
-    gameOverScore.textContent = `Your score is ${score}`
+    gameOverScore.textContent = `Your score is : ${score}`;
   }, 2000);
 }
 

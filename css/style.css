@@ -959,14 +959,6 @@ video {
   width: 100%;
 }
 
-.w-72 {
-  width: 18rem;
-}
-
-.w-52 {
-  width: 13rem;
-}
-
 .min-w-16 {
   min-width: 4rem;
 }
@@ -1048,10 +1040,6 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.cursor-wait {
-  cursor: wait;
 }
 
 .select-none {
@@ -1636,20 +1624,16 @@ video {
   text-decoration-line: none;
 }
 
-.accent-red-500 {
-  accent-color: #ef4444;
-}
-
 .accent-lime-500 {
   accent-color: #84cc16;
 }
 
-.accent-yellow-400 {
-  accent-color: #facc15;
-}
-
 .accent-red-700 {
   accent-color: #b91c1c;
+}
+
+.accent-yellow-400 {
+  accent-color: #facc15;
 }
 
 .opacity-0 {
