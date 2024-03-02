@@ -50,9 +50,22 @@ let snake = [
   { x: unitSize, y: 0 },
   { x: 0, y: 0 },
 ];
+
+let resetWithEnterKey = (event: KeyboardEvent) => {
+  event.key == "Enter" ? resetGame() : true;
+};
+// ? This section is reserved for the audio variables 
+let eating_sound = new Audio("./sounds/eating.mp3");
+let swipe_sound = new Audio("./sounds/swipe.mp3");
+let game_over_sound = new Audio("./sounds/game_over.mp3");
+let game_start_sound = new Audio("./sounds/game_start.mp3");
+
 // ? This function as indicated by its name, displays a coundown after the player have choosen a level of difficulty
 
 async function displayCountdown() {
+  // window.removeEventListener("keydown", resetWithEnterKey)
+  blockResetWithEnterKey()
+  
   for (let i = 4; i >= 0; i--) {
     context.fillStyle = "black";
     context.fillRect(0, 0, gameWidth, gameHeight);
@@ -111,9 +124,8 @@ difficultyForm.addEventListener("submit", (event) => {
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
 
-resetWithEnterKey();
-
 function gameStart(): void {
+  game_start_sound.play()
   running = true;
   scoreText.textContent = `${score}`;
   createFood();
@@ -123,12 +135,12 @@ function gameStart(): void {
 function nextTick(): void {
   if (running) {
     setTimeout(() => {
+      swipe_sound.play()
       clearBoard();
       drawFood();
       moveSnake();
       drawSnake();
       checkGameOver();
-      // console.log(level);
       nextTick();
     }, level);
   } else {
@@ -161,6 +173,7 @@ function moveSnake() {
 
   if (snake[0].x == foodX && snake[0].y == foodY) {
     score++;
+    eating_sound.play()
     scoreText.textContent = `${score}`;
     createFood();
   } else {
@@ -224,8 +237,10 @@ function checkGameOver() {
 }
 
 function displayGameOver() {
+  game_over_sound.play();
+  window.addEventListener("keydown", resetWithEnterKey);
   context.font = "50px Permanent Marker";
-  context.fillStyle = "red";
+  context.fillStyle = "#8011d0";
   context.textAlign = "center";
   context.fillText("GAME OVER !", gameWidth / 2, gameHeight / 2);
   running = false;
@@ -242,16 +257,18 @@ function resetGame() {
     { x: unitSize, y: 0 },
     { x: 0, y: 0 },
   ];
+
   clearBoard();
   displayCountdown();
   setTimeout(() => {
     gameStart();
   }, 5000);
 }
-function resetWithEnterKey(): void {
-  window.addEventListener("keydown", (event) => {
-    event.key == "Enter" ? resetGame() : true;
-  });
+
+
+
+function blockResetWithEnterKey() {
+  window.removeEventListener("keydown", resetWithEnterKey);
 }
 const footer = document.querySelector("footer") as HTMLElement;
 footer.classList.add("text-white", "MV-boli");
