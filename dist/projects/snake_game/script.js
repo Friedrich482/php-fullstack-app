@@ -45,6 +45,11 @@ let snake = [
 let resetWithEnterKey = (event) => {
     event.key == "Enter" ? resetGame() : true;
 };
+// ? This section is reserved for the audio variables 
+let eating_sound = new Audio("./sounds/eating.mp3");
+let swipe_sound = new Audio("./sounds/swipe.mp3");
+let game_over_sound = new Audio("./sounds/game_over.mp3");
+let game_start_sound = new Audio("./sounds/game_start.mp3");
 // ? This function as indicated by its name, displays a coundown after the player have choosen a level of difficulty
 function displayCountdown() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -99,6 +104,7 @@ difficultyForm.addEventListener("submit", (event) => {
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
 function gameStart() {
+    game_start_sound.play();
     running = true;
     scoreText.textContent = `${score}`;
     createFood();
@@ -107,6 +113,7 @@ function gameStart() {
 function nextTick() {
     if (running) {
         setTimeout(() => {
+            swipe_sound.play();
             clearBoard();
             drawFood();
             moveSnake();
@@ -139,6 +146,7 @@ function moveSnake() {
     snake.unshift(head);
     if (snake[0].x == foodX && snake[0].y == foodY) {
         score++;
+        eating_sound.play();
         scoreText.textContent = `${score}`;
         createFood();
     }
@@ -197,6 +205,7 @@ function checkGameOver() {
     }
 }
 function displayGameOver() {
+    game_over_sound.play();
     window.addEventListener("keydown", resetWithEnterKey);
     context.font = "50px Permanent Marker";
     context.fillStyle = "#8011d0";
