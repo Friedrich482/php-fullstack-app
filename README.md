@@ -45,8 +45,8 @@ Technologies/tools/languages used :
 - [x] Firstly, let's use *tailwindcss* in the project
 - [x] And after **typescript**
 - [x] By the way refactor the structure of the page for a better experience
-- [ ] Turn of the snake game
-- [ ] Much easier because it has less code
+- [x] Turn of the snake game
+- [x] Much easier because it has less code
 - [x] The same : tailwindcss first
 - [x] And after typescript
 - [ ] ~~Disable the buttons on the the when the player is focused on the game. What I want to say is that if the game starts, the movement buttons can't interact with other parts of the page~~
@@ -60,7 +60,12 @@ Technologies/tools/languages used :
   - [x] You lose
   - [x] You eat a food
   - [x] You change direction
-  - [x] Game over 
-  - [ ] You beat your own high score
+  - [x] Game over
+  - [ ] You beat your own high score (*PHP needed*)
+
+- [ ] Now the Tic Tac Toe Game...
+- [ ] As always tailwind CSS first
+- [ ] And after TypeScript
+- [ ] Maybe here too, I will add sounds 🎵
 
 This list will be updated depending on my progression through it.

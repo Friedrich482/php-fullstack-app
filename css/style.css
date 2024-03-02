@@ -1144,6 +1144,10 @@ video {
   gap: 1.25rem;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
 .gap-y-10 {
   row-gap: 2.5rem;
 }
@@ -1877,7 +1881,7 @@ video {
 }
 
 .spaceImg {
-  background-image: url("../projects/space_calculator/blackSky.jpg");
+  background-image: url("../projects/space_calculator/img/blackSky.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

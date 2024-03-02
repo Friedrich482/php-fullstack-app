@@ -76,6 +76,7 @@ const fetchWeatherApp = document.querySelector(
 ) as HTMLDivElement;
 
 const snakeGame = document.querySelector("#snakeGame") as HTMLDivElement;
+const ticTacToe = document.querySelector("#ticTacToe") as HTMLDivElement;
 
 let linkDivs = [
   largeHome,
@@ -88,7 +89,8 @@ let linkDivs = [
   arrowDownbutton,
   spaceCalculator,
   fetchWeatherApp,
-  snakeGame
+  snakeGame,
+  ticTacToe,
 ];
 
 linkDivs.forEach((section: HTMLDivElement) => {

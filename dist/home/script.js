@@ -45,6 +45,7 @@ const arrowDownbutton = document.querySelector("#arrowDownbutton");
 const spaceCalculator = document.querySelector("#spaceCalculator");
 const fetchWeatherApp = document.querySelector("#fetchWeatherApp");
 const snakeGame = document.querySelector("#snakeGame");
+const ticTacToe = document.querySelector("#ticTacToe");
 let linkDivs = [
     largeHome,
     largeTools,
@@ -56,7 +57,8 @@ let linkDivs = [
     arrowDownbutton,
     spaceCalculator,
     fetchWeatherApp,
-    snakeGame
+    snakeGame,
+    ticTacToe,
 ];
 linkDivs.forEach((section) => {
     section.addEventListener("click", () => {
