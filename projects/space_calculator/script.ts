@@ -57,10 +57,10 @@ function eraser(): void {
 }
 
 //Defining a clock for the calculator
-const clock = document.querySelector<HTMLDivElement>("#clock");
-const hoursDiv = document.querySelector<HTMLDivElement>("#hours");
-const minsDiv = document.querySelector<HTMLDivElement>("#mins");
-const secondsDiv = document.querySelector<HTMLDivElement>("#seconds");
+const clock = document.querySelector("#clock") as HTMLDivElement;
+const hoursDiv = document.querySelector("#hours") as HTMLDivElement;
+const minsDiv = document.querySelector("#mins") as HTMLDivElement;
+const secondsDiv = document.querySelector("#seconds") as HTMLDivElement;
 const calcDateDiv = document.querySelector("#date") as HTMLDivElement;
 
 let timeDivs = [clock, calcDateDiv];
@@ -83,14 +83,13 @@ function clocker() {
   if (secondsDiv) secondsDiv.textContent = `${seconds}`;
 }
 
-let switched = false;
 let realTime = setInterval(clocker, 1000);
+let switched = false;
 
 function toggleTime() {
   if (!switched) {
     const date = new Date();
     if (calcDateDiv) calcDateDiv.textContent = `${date.toLocaleDateString()}`;
-    clearInterval(realTime);
   }
   switched = !switched;
   toogleTimeDivs();
@@ -102,8 +101,8 @@ timeDivs.forEach((timeDiv) => {
 
 function toogleTimeDivs() {
   timeDivs.forEach((timeDiv) => {
-    timeDiv?.classList.toggle("hidden");
-    timeDiv?.classList.toggle("flex");
+    timeDiv.classList.toggle("hidden");
+    timeDiv.classList.toggle("flex");
   });
 }
 
@@ -139,3 +138,7 @@ window.addEventListener("keydown", (event) => {
       break; 
   }
 });
+const footerCalc = document.querySelector("footer") as HTMLElement;
+footer.classList.add("text-white", "MV-boli");
+const imageFooterCalc = footer.querySelector("img") as HTMLImageElement;
+imageFooterCalc.src = "../../assets/icons/rocket.gif";
