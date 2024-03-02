@@ -8,6 +8,6 @@
 <script>
         let date = new Date();
         let year = date.getFullYear();
-        let yearLabel = document.getElementById('yearLabel');
+        let yearLabel = document.querySelector('#yearLabel');
         yearLabel.textContent = year;
 </script>

@@ -10,6 +10,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 const difficultyLevelDialog = document.querySelector("#difficultyLevelDialog");
 const difficultyForm = document.querySelector("#difficultyForm");
+const gameOverDialog = document.querySelector("#restartGameDialog");
+const gameOverScore = document.querySelector("#gameOverScore");
 // Radio Buttons
 const easyRadioButton = document.querySelector("#level-easy");
 const normalRadioButton = document.querySelector("#level-normal");
@@ -19,8 +21,8 @@ const radioButtons = [easyRadioButton, normalRadioButton, hardRadioButton];
 const gameBoard = document.querySelector("#gameBoard");
 const context = gameBoard.getContext("2d");
 context.fillStyle = "blue";
-const scoreText = document.getElementById("scoreText");
-const restartButton = document.getElementById("restartButton");
+const scoreText = document.querySelector("#scoreText");
+const restartButton = document.querySelector("#restartButton");
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
 const gameBackground = "black";
@@ -216,6 +218,11 @@ function displayGameOver() {
     context.textAlign = "center";
     context.fillText("GAME OVER !", gameWidth / 2, gameHeight / 2);
     running = false;
+    setTimeout(() => {
+        toggleDialog(gameOverDialog);
+        gameOverDialog.showModal();
+        gameOverScore.textContent = `Your score is ${score}`;
+    }, 2000);
 }
 function resetGame() {
     score = 0;

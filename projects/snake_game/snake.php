@@ -78,6 +78,19 @@
         </div>
       </form>
     </dialog>
+    <dialog
+      id="restartGameDialog"
+      class="hidden items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-green-500 rounded-bl-[100px] rounded-tr-[100px] min-w-20 max-w-60 sm:min-w-72 sm:p-2 gap-2 z-10 text-[whitesmoke] h-80 outline-none backdrop:backdrop-blur-sm"    
+      autofocus
+      >
+      <h2 class="text-5xl text-center w-full text-red-600">
+        You lose
+      </h2>
+      <p id="gameOverScore" class="text-center"></p>
+      <form action="">
+        <label for="">Do you want to restart</label>
+      </form>
+    </dialog>
     <h1 class="text-5xl text-white permanent-marker">Snake Game</h1>
     <canvas
       id="gameBoard"
