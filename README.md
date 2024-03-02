@@ -49,7 +49,7 @@ Technologies/tools/languages used :
 - [ ] Much easier because it has less code
 - [x] The same : tailwindcss first
 - [x] And after typescript
-- [ ] Disable the buttons on the the when the player is focused on the game. What I want to say is that if the game starts, the movement buttons can't interact with other parts of the page
+- [ ] ~~Disable the buttons on the the when the player is focused on the game. What I want to say is that if the game starts, the movement buttons can't interact with other parts of the page~~
 - [x] Open a **dialog** when the player arrives to ask him level of difficulty. They will be ranked in :  
   - easy
   - normal
