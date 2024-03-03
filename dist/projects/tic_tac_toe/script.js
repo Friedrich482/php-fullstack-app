@@ -1,8 +1,8 @@
 "use strict";
-let cells = document.querySelectorAll('.cell');
-let restartButton = document.getElementById('restartButton');
-let displayStatus = document.getElementById('displayStatus');
-let running = false;
+let cells = document.querySelectorAll(".cell");
+let restartButtonTic = document.querySelector("#restartButton");
+let displayStatus = document.querySelector("#displayStatus");
+let runningTic = false;
 let currentPlayer = "X";
 let winConditions = [
     [0, 1, 2],
@@ -12,32 +12,34 @@ let winConditions = [
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6]
+    [2, 4, 6],
 ];
 let actualCellsContent = ["", "", "", "", "", "", "", "", ""];
+let swipe_sound_tic = new Audio("./sounds/swipe.mp3");
 initializeGame();
 function initializeGame() {
-    running = true;
-    cells.forEach(cell => { cell.addEventListener('click', cellClicked); });
-    restartButton.addEventListener('click', restartGame);
+    runningTic = true;
+    cells.forEach((cell) => {
+        let cellIndex = Number(cell.getAttribute("cellIndex"));
+        cell.addEventListener("click", () => {
+            if (actualCellsContent[cellIndex] != "" || !runningTic) {
+                return;
+            }
+            updateCell(cell, cellIndex);
+            checkWinner();
+        });
+    });
+    restartButton.addEventListener("click", restartGame);
     displayStatus.textContent = `${currentPlayer}'s turn`;
-}
-function cellClicked() {
-    let cellIndex = this.getAttribute('cellIndex');
-    if (actualCellsContent[cellIndex] != "" || !running) {
-        return;
-    }
-    updateCell(this, cellIndex);
-    checkWinner();
 }
 function updateCell(cell, index) {
     actualCellsContent[index] = currentPlayer;
     cell.textContent = `${currentPlayer}`;
-    if (currentPlayer == "X") {
-        cell.style.backgroundColor = 'hsl(229, 83%, 65%)';
+    if (currentPlayer === "X") {
+        cell.classList.add("bg-blue-600");
     }
     else {
-        cell.style.backgroundColor = 'hsla(0, 83%, 51%, 0.642)';
+        cell.classList.add("bg-red-600");
     }
 }
 function checkWinner() {
@@ -51,15 +53,15 @@ function checkWinner() {
         }
         if (cellA == cellB && cellB == cellC) {
             roundWon = true;
-            running = false;
+            runningTic = false;
             break;
         }
     }
     if (roundWon) {
         displayStatus.textContent = `${currentPlayer} wins !`;
-        running = false;
+        runningTic = false;
     }
-    else if (!actualCellsContent.includes("")) {
+    else if (actualCellsContent.indexOf("") === -1) {
         displayStatus.textContent = ` DRAW !`;
     }
     else {
@@ -74,9 +76,13 @@ function restartGame() {
     currentPlayer = "X";
     actualCellsContent = ["", "", "", "", "", "", "", "", ""];
     displayStatus.textContent = `${currentPlayer}'s turn`;
-    cells.forEach(cell => {
+    cells.forEach((cell) => {
         cell.textContent = "";
-        cell.style.backgroundColor = 'transparent';
+        cell.style.backgroundColor = "transparent";
     });
-    running = true;
+    runningTic = true;
 }
+const footerTic = document.querySelector("footer");
+footerTic.classList.add("text-white", "MV-boli", "backdrop-blur-sm");
+const imageFooterTic = footerTic.querySelector("img");
+imageFooterTic.src = "../../assets/icons/rocket.gif";
