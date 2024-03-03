@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <h1 class="text-5xl text-white permanent-marker">Snake Game</h1>
   <canvas id="gameBoard" width="400" height="400" class="mt-2 border-4 border-green-700 rounded-2xl"></canvas>
   <label id="scoreText" class="text-5xl consolas text-white">0</label>
-  <button id="restartButton" class="text-2xl rounded-2xl p-2 min-w-36 bg-blak text-white bg-black permanent-marker hover:scale-110 transition duration-500 active:bg-slate-900 active:outline active:outline-white active:outline-2">
+  <button id="restartButton" class="text-2xl rounded-2xl p-2 min-w-36 text-white bg-black permanent-marker hover:scale-110 transition duration-500 active:bg-slate-900 active:outline active:outline-white active:outline-2">
     Restart
   </button>
 </body>

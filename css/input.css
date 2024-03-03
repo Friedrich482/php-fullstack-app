@@ -178,6 +178,14 @@
   background-attachment: fixed;
   color: white;
 }
+.newYorkImg{
+  background-image: url("../projects/tic_tac_toe/img/new_york.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+}
 body::-webkit-scrollbar {
   width: 0.25rem;
 }
