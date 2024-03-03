@@ -16,6 +16,24 @@ let winConditions = [
 ];
 let actualCellsContent = ["", "", "", "", "", "", "", "", ""];
 let swipe_sound_tic = new Audio("./sounds/swipe.mp3");
+function toggleRedColor(element) {
+    element.classList.toggle("bg-transparent");
+    element.classList.toggle("bg-red-600");
+}
+function toggleBlueColor(element) {
+    element.classList.toggle("bg-transparent");
+    element.classList.toggle("bg-blue-600");
+}
+function removeColor(element) {
+    if (element.classList.contains("bg-blue-600")) {
+        element.classList.remove("bg-blue-600");
+        element.classList.add("bg-transparent");
+    }
+    if (element.classList.contains("bg-red-600")) {
+        element.classList.remove("bg-red-600");
+        element.classList.add("bg-transparent");
+    }
+}
 initializeGame();
 function initializeGame() {
     runningTic = true;
@@ -27,6 +45,7 @@ function initializeGame() {
             }
             updateCell(cell, cellIndex);
             checkWinner();
+            swipe_sound_tic.play();
         });
     });
     restartButton.addEventListener("click", restartGame);
@@ -36,10 +55,10 @@ function updateCell(cell, index) {
     actualCellsContent[index] = currentPlayer;
     cell.textContent = `${currentPlayer}`;
     if (currentPlayer === "X") {
-        cell.classList.add("bg-blue-600");
+        toggleBlueColor(cell);
     }
     else {
-        cell.classList.add("bg-red-600");
+        toggleRedColor(cell);
     }
 }
 function checkWinner() {
@@ -78,7 +97,7 @@ function restartGame() {
     displayStatus.textContent = `${currentPlayer}'s turn`;
     cells.forEach((cell) => {
         cell.textContent = "";
-        cell.style.backgroundColor = "transparent";
+        removeColor(cell);
     });
     runningTic = true;
 }
