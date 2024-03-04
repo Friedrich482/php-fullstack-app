@@ -8,6 +8,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: ../../login/login.php");
     exit;
 }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    header("Location: ../../home/home.php");
+    exit;
+}
 
 ?>
 
@@ -40,10 +44,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <dialog id="restartTicDialog" class="hidden items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-sky-500 rounded-bl-[100px] rounded-tr-[100px] min-w-20 max-w-60 sm:min-w-72 sm:p-2 gap-2 z-10 text-[whitesmoke] h-80 outline-none backdrop:backdrop-blur-sm" autofocus>
         <h2 class="text-4xl text-center w-full text-red-600" id="gameResults"></h2>
-        <form action="snake.php" class="flex items-center justify-center flex-col gap-4" method="post">
+        <form action="tic_tac_toe.php" class="flex items-center justify-center flex-col gap-4" method="post">
             <label>Do you want to restart ?</label>
             <div class="flex items-center justify-center flex-col gap-5">
-                
+
                 <!-- "Yes" button -->
 
                 <div class="text-base w-[8.25rem] p-[2px] bg-gradient-to-br from-sky-400 to-blue-800 rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-blue-800 hover:to-sky-400 active:bg-gradient-to-br active:from-sky-400 active:to-blue-800">

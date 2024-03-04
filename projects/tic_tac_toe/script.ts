@@ -131,8 +131,8 @@ function restartGame() {
 }
 yesTicButton.addEventListener("click", () => {
   restartGame();
-  restartTicDialog.close()
   toggleTicDialog(restartTicDialog);
+  restartTicDialog.close()
 });
 const footerTic = document.querySelector("footer") as HTMLElement;
 footerTic.classList.add("text-white", "MV-boli", "backdrop-blur-sm");

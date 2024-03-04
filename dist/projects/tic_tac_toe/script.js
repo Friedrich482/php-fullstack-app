@@ -21,6 +21,7 @@ let winConditions = [
 let actualCellsContent = ["", "", "", "", "", "", "", "", ""];
 let swipe_sound_tic = new Audio("./sounds/swipe.mp3");
 function toggleTicDialog(element) {
+    element.showModal();
     element.classList.toggle("hidden");
     element.classList.toggle("flex");
 }
@@ -119,6 +120,7 @@ function restartGame() {
 yesTicButton.addEventListener("click", () => {
     restartGame();
     toggleTicDialog(restartTicDialog);
+    restartTicDialog.close();
 });
 const footerTic = document.querySelector("footer");
 footerTic.classList.add("text-white", "MV-boli", "backdrop-blur-sm");
