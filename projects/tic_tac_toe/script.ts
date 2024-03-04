@@ -1,10 +1,16 @@
-let cells = document.querySelectorAll(".cell") as NodeListOf<HTMLDivElement>;
-let restartButtonTic = document.querySelector(
+const cells = document.querySelectorAll(".cell") as NodeListOf<HTMLDivElement>;
+const restartButtonTic = document.querySelector(
   "#restartButton"
 ) as HTMLButtonElement;
-let displayStatus = document.querySelector(
+const displayStatus = document.querySelector(
   "#displayStatus"
 ) as HTMLLabelElement;
+const restartTicDialog = document.querySelector(
+  "#restartTicDialog"
+) as HTMLDialogElement;
+const gameResults = document.querySelector("#gameResults") as HTMLTitleElement;
+const yesTicButton = document.querySelector("#yesButton") as HTMLInputElement;
+const noTicButton = document.querySelector("#noTicButton") as HTMLInputElement;
 let runningTic = false;
 let currentPlayer = "X";
 let winConditions = [
@@ -19,6 +25,12 @@ let winConditions = [
 ];
 let actualCellsContent = ["", "", "", "", "", "", "", "", ""];
 let swipe_sound_tic = new Audio("./sounds/swipe.mp3");
+
+function toggleTicDialog(element: HTMLDialogElement): void {
+  element.showModal()
+  element.classList.toggle("hidden");
+  element.classList.toggle("flex");
+}
 
 function toggleRedColor(element: HTMLDivElement) {
   element.classList.toggle("bg-transparent");
@@ -85,15 +97,21 @@ function checkWinner() {
     }
   }
   if (roundWon) {
-    displayStatus.textContent = `${currentPlayer} wins !`;
+    afterGame(`${currentPlayer} wins !`);
     runningTic = false;
   } else if (actualCellsContent.indexOf("") === -1) {
-    displayStatus.textContent = ` DRAW !`;
+    afterGame(`DRAW !`);
   } else {
     changePlayer();
   }
 }
-
+function afterGame(text: string) {
+  setTimeout(() => {
+    toggleTicDialog(restartTicDialog);
+  }, 2000);
+  gameResults.textContent = text;
+  displayStatus.textContent = text;
+}
 function changePlayer() {
   currentPlayer = currentPlayer == "X" ? "O" : "X";
   displayStatus.textContent = `${currentPlayer}'s turn `;
@@ -111,6 +129,11 @@ function restartGame() {
 
   runningTic = true;
 }
+yesTicButton.addEventListener("click", () => {
+  restartGame();
+  restartTicDialog.close()
+  toggleTicDialog(restartTicDialog);
+});
 const footerTic = document.querySelector("footer") as HTMLElement;
 footerTic.classList.add("text-white", "MV-boli", "backdrop-blur-sm");
 const imageFooterTic = footerTic.querySelector("img") as HTMLImageElement;

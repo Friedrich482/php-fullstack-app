@@ -1,7 +1,11 @@
 "use strict";
-let cells = document.querySelectorAll(".cell");
-let restartButtonTic = document.querySelector("#restartButton");
-let displayStatus = document.querySelector("#displayStatus");
+const cells = document.querySelectorAll(".cell");
+const restartButtonTic = document.querySelector("#restartButton");
+const displayStatus = document.querySelector("#displayStatus");
+const restartTicDialog = document.querySelector("#restartTicDialog");
+const gameResults = document.querySelector("#gameResults");
+const yesTicButton = document.querySelector("#yesButton");
+const noTicButton = document.querySelector("#noTicButton");
 let runningTic = false;
 let currentPlayer = "X";
 let winConditions = [
@@ -16,6 +20,10 @@ let winConditions = [
 ];
 let actualCellsContent = ["", "", "", "", "", "", "", "", ""];
 let swipe_sound_tic = new Audio("./sounds/swipe.mp3");
+function toggleTicDialog(element) {
+    element.classList.toggle("hidden");
+    element.classList.toggle("flex");
+}
 function toggleRedColor(element) {
     element.classList.toggle("bg-transparent");
     element.classList.toggle("bg-red-600");
@@ -77,15 +85,22 @@ function checkWinner() {
         }
     }
     if (roundWon) {
-        displayStatus.textContent = `${currentPlayer} wins !`;
+        afterGame(`${currentPlayer} wins !`);
         runningTic = false;
     }
     else if (actualCellsContent.indexOf("") === -1) {
-        displayStatus.textContent = ` DRAW !`;
+        afterGame(`DRAW !`);
     }
     else {
         changePlayer();
     }
+}
+function afterGame(text) {
+    setTimeout(() => {
+        toggleTicDialog(restartTicDialog);
+    }, 2000);
+    gameResults.textContent = text;
+    displayStatus.textContent = text;
 }
 function changePlayer() {
     currentPlayer = currentPlayer == "X" ? "O" : "X";
@@ -101,6 +116,10 @@ function restartGame() {
     });
     runningTic = true;
 }
+yesTicButton.addEventListener("click", () => {
+    restartGame();
+    toggleTicDialog(restartTicDialog);
+});
 const footerTic = document.querySelector("footer");
 footerTic.classList.add("text-white", "MV-boli", "backdrop-blur-sm");
 const imageFooterTic = footerTic.querySelector("img");
