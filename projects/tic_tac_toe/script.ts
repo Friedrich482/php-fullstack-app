@@ -1,10 +1,17 @@
-let cells = document.querySelectorAll(".cell") as NodeListOf<HTMLDivElement>;
-let restartButtonTic = document.querySelector(
+const cells = document.querySelectorAll(".cell") as NodeListOf<HTMLDivElement>;
+const restartButtonTic = document.querySelector(
   "#restartButton"
 ) as HTMLButtonElement;
-let displayStatus = document.querySelector(
+const displayStatus = document.querySelector(
   "#displayStatus"
 ) as HTMLLabelElement;
+const restartTicDialog = document.querySelector(
+  "#restartTicDialog"
+) as HTMLDialogElement;
+const gameResults = document.querySelector("#gameResults") as HTMLTitleElement;
+const scoreP = document.querySelector("#scoreP") as HTMLParagraphElement;
+const yesTicButton = document.querySelector("#yesButton") as HTMLInputElement;
+const noTicButton = document.querySelector("#noTicButton") as HTMLInputElement;
 let runningTic = false;
 let currentPlayer = "X";
 let winConditions = [
@@ -18,7 +25,16 @@ let winConditions = [
   [2, 4, 6],
 ];
 let actualCellsContent = ["", "", "", "", "", "", "", "", ""];
+let scoreX = 0;
+let scoreY = 0;
+let winner: string;
 let swipe_sound_tic = new Audio("./sounds/swipe.mp3");
+
+function toggleTicDialog(element: HTMLDialogElement): void {
+  element.showModal();
+  element.classList.toggle("hidden");
+  element.classList.toggle("flex");
+}
 
 function toggleRedColor(element: HTMLDivElement) {
   element.classList.toggle("bg-transparent");
@@ -85,15 +101,27 @@ function checkWinner() {
     }
   }
   if (roundWon) {
-    displayStatus.textContent = `${currentPlayer} wins !`;
+    afterGame(`${currentPlayer} wins !`);
+    winner = currentPlayer;
+    scoreManagement();
     runningTic = false;
   } else if (actualCellsContent.indexOf("") === -1) {
-    displayStatus.textContent = ` DRAW !`;
+    afterGame(`DRAW !`);
   } else {
     changePlayer();
   }
 }
-
+function afterGame(text: string) {
+  setTimeout(() => {
+    toggleTicDialog(restartTicDialog);
+  }, 2000);
+  gameResults.textContent = text;
+  displayStatus.textContent = text;
+}
+function scoreManagement() {
+  winner === "X" ? (scoreX += 1) : (scoreY += 1);
+  scoreP.innerHTML = `X : <span class="text-blue-600">${scoreX}</span> - <span class="text-red-600">${scoreY}</span> : Y`
+}
 function changePlayer() {
   currentPlayer = currentPlayer == "X" ? "O" : "X";
   displayStatus.textContent = `${currentPlayer}'s turn `;
@@ -111,6 +139,11 @@ function restartGame() {
 
   runningTic = true;
 }
+yesTicButton.addEventListener("click", () => {
+  restartGame();
+  toggleTicDialog(restartTicDialog);
+  restartTicDialog.close();
+});
 const footerTic = document.querySelector("footer") as HTMLElement;
 footerTic.classList.add("text-white", "MV-boli", "backdrop-blur-sm");
 const imageFooterTic = footerTic.querySelector("img") as HTMLImageElement;
