@@ -1,4 +1,4 @@
-body{
+/* body{
     display: grid;
     justify-items: center;
     align-items: center;
@@ -6,8 +6,8 @@ body{
     background-color: hsla(0, 0%, 0%, 0.82);
     margin: 0;
     
-}
-#gameContainer{
+} */
+/* #gameContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +19,7 @@ body{
     border-radius: 30px;
     background-color:hsla(189, 74%, 79%, 0.792);
     gap:1vh;
-}
+} */
 img{
     position: relative;
     top: 5vh;
@@ -33,11 +33,11 @@ img{
     font-weight: 700;
 }
 
-#buttons{
+/* #buttons{
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 button{
     font-family: 'MV Boli';
