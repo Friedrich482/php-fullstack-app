@@ -63,9 +63,13 @@ Technologies/tools/languages used :
   - [x] Game over
   - [ ] You beat your own high score (*PHP needed*)
 
-- [ ] Now the Tic Tac Toe Game...
-- [ ] As always tailwind CSS first
-- [ ] And after TypeScript
-- [ ] Maybe here too, I will add sounds 🎵
+- [x] Now the Tic Tac Toe Game...
+- [x] As always tailwind CSS first
+- [x] And after TypeScript
+- [x] Maybe here too, I will add sounds 🎵
+- [ ] The 5th project is the shifumi game. Also not too much code...
+- [ ] Tailwind CSS
+- [ ] Typecript
+- [ ] Some SFX ...
 
 This list will be updated depending on my progression through it.
