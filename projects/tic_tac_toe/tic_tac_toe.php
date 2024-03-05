@@ -44,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <dialog id="restartTicDialog" class="hidden items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-sky-500 rounded-bl-[100px] rounded-tr-[100px] min-w-20 max-w-60 sm:min-w-72 sm:p-2 gap-2 z-10 text-[whitesmoke] h-80 outline-none backdrop:backdrop-blur-sm" autofocus>
         <h2 class="text-4xl text-center w-full text-red-600" id="gameResults"></h2>
+        <p id="scoreP" class="text-center"></p>
         <form action="tic_tac_toe.php" class="flex items-center justify-center flex-col gap-4" method="post">
             <label>Do you want to restart ?</label>
             <div class="flex items-center justify-center flex-col gap-5">

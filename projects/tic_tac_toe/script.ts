@@ -9,6 +9,7 @@ const restartTicDialog = document.querySelector(
   "#restartTicDialog"
 ) as HTMLDialogElement;
 const gameResults = document.querySelector("#gameResults") as HTMLTitleElement;
+const scoreP = document.querySelector("#scoreP") as HTMLParagraphElement;
 const yesTicButton = document.querySelector("#yesButton") as HTMLInputElement;
 const noTicButton = document.querySelector("#noTicButton") as HTMLInputElement;
 let runningTic = false;
@@ -24,10 +25,13 @@ let winConditions = [
   [2, 4, 6],
 ];
 let actualCellsContent = ["", "", "", "", "", "", "", "", ""];
+let scoreX = 0;
+let scoreY = 0;
+let winner: string;
 let swipe_sound_tic = new Audio("./sounds/swipe.mp3");
 
 function toggleTicDialog(element: HTMLDialogElement): void {
-  element.showModal()
+  element.showModal();
   element.classList.toggle("hidden");
   element.classList.toggle("flex");
 }
@@ -98,6 +102,8 @@ function checkWinner() {
   }
   if (roundWon) {
     afterGame(`${currentPlayer} wins !`);
+    winner = currentPlayer;
+    scoreManagement();
     runningTic = false;
   } else if (actualCellsContent.indexOf("") === -1) {
     afterGame(`DRAW !`);
@@ -111,6 +117,10 @@ function afterGame(text: string) {
   }, 2000);
   gameResults.textContent = text;
   displayStatus.textContent = text;
+}
+function scoreManagement() {
+  winner === "X" ? (scoreX += 1) : (scoreY += 1);
+  scoreP.innerHTML = `X : <span class="text-blue-600">${scoreX}</span> - <span class="text-red-600">${scoreY}</span> : Y`
 }
 function changePlayer() {
   currentPlayer = currentPlayer == "X" ? "O" : "X";
@@ -132,7 +142,7 @@ function restartGame() {
 yesTicButton.addEventListener("click", () => {
   restartGame();
   toggleTicDialog(restartTicDialog);
-  restartTicDialog.close()
+  restartTicDialog.close();
 });
 const footerTic = document.querySelector("footer") as HTMLElement;
 footerTic.classList.add("text-white", "MV-boli", "backdrop-blur-sm");

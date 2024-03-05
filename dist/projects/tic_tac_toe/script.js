@@ -4,6 +4,7 @@ const restartButtonTic = document.querySelector("#restartButton");
 const displayStatus = document.querySelector("#displayStatus");
 const restartTicDialog = document.querySelector("#restartTicDialog");
 const gameResults = document.querySelector("#gameResults");
+const scoreP = document.querySelector("#scoreP");
 const yesTicButton = document.querySelector("#yesButton");
 const noTicButton = document.querySelector("#noTicButton");
 let runningTic = false;
@@ -19,6 +20,9 @@ let winConditions = [
     [2, 4, 6],
 ];
 let actualCellsContent = ["", "", "", "", "", "", "", "", ""];
+let scoreX = 0;
+let scoreY = 0;
+let winner;
 let swipe_sound_tic = new Audio("./sounds/swipe.mp3");
 function toggleTicDialog(element) {
     element.showModal();
@@ -87,6 +91,8 @@ function checkWinner() {
     }
     if (roundWon) {
         afterGame(`${currentPlayer} wins !`);
+        winner = currentPlayer;
+        scoreManagement();
         runningTic = false;
     }
     else if (actualCellsContent.indexOf("") === -1) {
@@ -102,6 +108,10 @@ function afterGame(text) {
     }, 2000);
     gameResults.textContent = text;
     displayStatus.textContent = text;
+}
+function scoreManagement() {
+    winner === "X" ? (scoreX += 1) : (scoreY += 1);
+    scoreP.innerHTML = `X : <span class="text-blue-600">${scoreX}</span> - <span class="text-red-600">${scoreY}</span> : Y`;
 }
 function changePlayer() {
     currentPlayer = currentPlayer == "X" ? "O" : "X";
