@@ -1,12 +1,18 @@
 "use strict";
+//  ? DOM elements
 const playerText = document.querySelector("#playerText");
 const computerText = document.querySelector("#computerText");
 const gameButtons = document.querySelectorAll(".gameButton");
 const playerImg = document.querySelector("#playerImg");
 const computerImg = document.querySelector("#computerImg");
 const labelResult = document.querySelector("#labelResult");
+const restartShifumiDialog = document.querySelector("#restartShifumiDialog");
+const resultsShifumi = document.querySelector("#resultShifumi");
+const scoreShifumi = document.querySelector("#scoreShifumi");
 const playerScoreDiv = document.querySelector("#displayPlayerScore");
 const computerScoreDiv = document.querySelector("#displayComputerScore");
+const quitGameButton = document.querySelector("#quitGameButton");
+// ? Game elements
 let player;
 let computer;
 let playerScore = 0;
@@ -28,7 +34,7 @@ gameButtons.forEach((button) => {
         player = buttonContent(button);
         playerText.textContent = `${player}`;
         computerPlays();
-        labelResult.textContent = `${checkWinner()}`;
+        labelResult.textContent = `${checkWinnerShifumi()}`;
         updateScore();
     });
 });
@@ -37,7 +43,7 @@ function computerPlays() {
     computer = buttonContent(gameButtons[randNum - 1]);
     computerText.textContent = `${computer}`;
 }
-function checkWinner() {
+function checkWinnerShifumi() {
     if (computer === player) {
         return "DRAW !";
     }
@@ -69,15 +75,38 @@ function win() {
     return "YOU WIN !";
 }
 function lose() {
-    return "❌ YOU LOSE !";
+    return "YOU LOSE !";
 }
 function updateScore() {
-    if (checkWinner() === "YOU WIN !") {
+    if (checkWinnerShifumi() === "YOU WIN !") {
         playerScore += 1;
         playerScoreDiv.textContent = `${playerScore}`;
     }
-    else if (checkWinner() === "❌ YOU LOSE !") {
+    else if (checkWinnerShifumi() === "YOU LOSE !") {
         computerScore += 1;
         computerScoreDiv.textContent = `${computerScore}`;
     }
+}
+quitGameButton.addEventListener("click", () => manageRestartDialog());
+function manageRestartDialog() {
+    setTimeout(() => {
+        toggleShifumiDialog(restartShifumiDialog);
+    }, 500);
+    if (playerScore > computerScore) {
+        resultsShifumi.textContent = "YOU WIN";
+        resultsShifumi.classList.toggle("text-green-400");
+    }
+    else if (playerScore < computerScore) {
+        resultsShifumi.textContent = "YOU LOSE";
+        resultsShifumi.classList.toggle("text-red-600");
+    }
+    else {
+        resultsShifumi.textContent = "DRAW";
+    }
+    scoreShifumi.innerHTML = `Player : <span class=" text-red-500">${playerScore}&nbsp;</span>- <span class=" text-blue-500">${computerScore}</span> : Computer`;
+}
+function toggleShifumiDialog(element) {
+    element.showModal();
+    element.classList.toggle("hidden");
+    element.classList.toggle("flex");
 }
