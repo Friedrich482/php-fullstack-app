@@ -662,6 +662,26 @@ video {
   top: 1rem;
 }
 
+.left-1 {
+  left: 0.25rem;
+}
+
+.left-8 {
+  left: 2rem;
+}
+
+.left-20 {
+  left: 5rem;
+}
+
+.left-12 {
+  left: 3rem;
+}
+
+.left-14 {
+  left: 3.5rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -984,6 +1004,14 @@ video {
   width: 100%;
 }
 
+.w-1\/6 {
+  width: 16.666667%;
+}
+
+.w-4\/6 {
+  width: 66.666667%;
+}
+
 .min-w-10 {
   min-width: 2.5rem;
 }
@@ -1022,6 +1050,10 @@ video {
 
 .min-w-\[296px\] {
   min-width: 296px;
+}
+
+.min-w-\[29\.5rem\] {
+  min-width: 29.5rem;
 }
 
 .max-w-60 {
@@ -1077,6 +1109,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
 }
 
 .select-none {
@@ -1195,6 +1231,26 @@ video {
 
 .gap-y-6 {
   row-gap: 1.5rem;
+}
+
+.gap-y-7 {
+  row-gap: 1.75rem;
+}
+
+.gap-y-4 {
+  row-gap: 1rem;
+}
+
+.gap-y-3 {
+  row-gap: 0.75rem;
+}
+
+.place-self-start {
+  place-self: start;
+}
+
+.self-start {
+  align-self: flex-start;
 }
 
 .self-end {
@@ -1570,6 +1626,10 @@ video {
   padding: 2px;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .pr-5 {
   padding-right: 1.25rem;
 }
@@ -1598,12 +1658,48 @@ video {
   text-align: start;
 }
 
+.text-end {
+  text-align: end;
+}
+
 .indent-1 {
   text-indent: 0.25rem;
 }
 
 .indent-12 {
   text-indent: 3rem;
+}
+
+.indent-5 {
+  text-indent: 1.25rem;
+}
+
+.indent-10 {
+  text-indent: 2.5rem;
+}
+
+.indent-16 {
+  text-indent: 4rem;
+}
+
+.indent-8 {
+  text-indent: 2rem;
+}
+
+.indent-6 {
+  text-indent: 1.5rem;
+}
+
+.indent-4 {
+  text-indent: 1rem;
+}
+
+.font-serif {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.font-sans {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .text-2xl {
@@ -2307,6 +2403,26 @@ body::-webkit-scrollbar-thumb {
 .active\:bg-slate-950:active {
   --tw-bg-opacity: 1;
   background-color: rgb(2 6 23 / var(--tw-bg-opacity));
+}
+
+.active\:bg-slate-600:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
+.active\:bg-slate-500:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+
+.active\:bg-slate-300:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.active\:bg-slate-700:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
 .active\:bg-gradient-to-br:active {
