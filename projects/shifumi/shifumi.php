@@ -26,8 +26,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="../../dist/projects/shifumi/script.js" defer></script>
 </head>
 
-<body class="flex items-center justify-center flex-col bg-gray-800 text-white consolas">
-    <div id="gameContainer" class=" mt-36 flex items-center justify-center flex-col border-4 border-violet-700 border-double gap-4 rounded-2xl p-4 min-w-[29.5rem]">
+<body class="flex items-center justify-center flex-col bg-gray-800 text-white consolas gap-6">
+    <dialog id="restartShifumiDialog" class="hidden items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-violet-600 rounded-bl-[100px] rounded-tr-[100px] min-w-20 max-w-60 sm:min-w-72 sm:p-2 gap-2 z-10 text-[whitesmoke] h-80 outline-none backdrop:backdrop-blur-sm" autofocus>
+        <h2 class="text-2xl text-center w-11/12" id="resultShifumi">
+
+        </h2>
+        <p id="scoreShifumi"></p>
+        <form action="shifumi.php" class="flex items-center justify-center flex-col gap-4" method="post">
+            <label>Do you want to restart ?</label>
+            <div class="flex items-center justify-center flex-col gap-5">
+
+                <!-- "Yes" button -->
+
+                <div class="text-base w-[8.25rem] p-[2px] bg-gradient-to-br from-violet-400 to-purple-800 rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-purple-800 hover:to-violet-400 active:bg-gradient-to-br active:from-violet-400 active:to-purple-800">
+                    <input type="button" value="Yes ✅" id="yesButton" class="cursor-pointer bg-slate-700 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2 hover:bg-slate-700 hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800" />
+                </div>
+
+                <!-- "No" button -->
+
+                <div class="text-base w-[8.25rem] p-[2px] bg-gradient-to-br from-violet-400 to-purple-800 rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-purple-800 hover:to-violet-400 active:bg-gradient-to-br active:from-violet-400 active:to-purple-800">
+                    <input type="submit" value="No ❌" id="noButton" class="cursor-pointer bg-slate-700 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2 hover:bg-slate-700 hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800" />
+                </div>
+            </div>
+        </form>
+    </dialog>
+    <div id="gameContainer" class="mt-20 flex items-center justify-center flex-col border-4 border-violet-700 border-double gap-4 rounded-2xl p-4 min-w-[29.5rem]">
         <div class="text-2xl font-bold flex items-center justify-center flex-col gap-6 w-full">
             <p class="text-start w-4/6 flex items-center">
                 <span>Player :&nbsp;</span>
@@ -63,6 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
+    <button id="quitGameButton" class="outline-none text-lg bg-black rounded-lg p-1 MV-boli text-white cursor-pointer hover:scale-110 border-black border-2 active:bg-slate-900 active:outline active:outline-white active:outline-2 w-3/6 min-w-32">Quit game</button>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+// ?DOM elements
 const difficultyLevelDialog = document.querySelector(
   "#difficultyLevelDialog"
 ) as HTMLDialogElement;
@@ -24,7 +25,7 @@ const hardRadioButton = document.querySelector(
 ) as HTMLInputElement;
 const radioButtons = [easyRadioButton, normalRadioButton, hardRadioButton];
 
-// Game elements
+// ?Game elements
 
 const gameBoard = document.querySelector("#gameBoard") as HTMLCanvasElement;
 const context = gameBoard.getContext("2d") as CanvasRenderingContext2D;
@@ -133,11 +134,11 @@ difficultyForm.addEventListener("submit", (event) => {
 
 window.addEventListener("keydown", changeDirection);
 restartButton.addEventListener("click", resetGame);
-yesButton.addEventListener("click", () =>{
+yesButton.addEventListener("click", () => {
   toggleDialog(gameOverDialog);
   gameOverDialog.close();
-  resetGame()
-})
+  resetGame();
+});
 function gameStart(): void {
   game_start_sound.play();
   running = true;

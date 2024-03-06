@@ -8,6 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+// ?DOM elements
 const difficultyLevelDialog = document.querySelector("#difficultyLevelDialog");
 const difficultyForm = document.querySelector("#difficultyForm");
 const gameOverDialog = document.querySelector("#restartGameDialog");
@@ -19,7 +20,7 @@ const easyRadioButton = document.querySelector("#level-easy");
 const normalRadioButton = document.querySelector("#level-normal");
 const hardRadioButton = document.querySelector("#level-hard");
 const radioButtons = [easyRadioButton, normalRadioButton, hardRadioButton];
-// Game elements
+// ?Game elements
 const gameBoard = document.querySelector("#gameBoard");
 const context = gameBoard.getContext("2d");
 context.fillStyle = "blue";

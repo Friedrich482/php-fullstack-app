@@ -1604,6 +1604,12 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-violet-400 {
+  --tw-gradient-from: #a78bfa var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(167 139 250 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .via-teal-500 {
   --tw-gradient-to: rgb(20 184 166 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #14b8a6 var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -1623,6 +1629,10 @@ video {
 
 .to-red-500 {
   --tw-gradient-to: #ef4444 var(--tw-gradient-to-position);
+}
+
+.to-purple-800 {
+  --tw-gradient-to: #6b21a8 var(--tw-gradient-to-position);
 }
 
 .p-0 {
@@ -2264,6 +2274,12 @@ body::-webkit-scrollbar-thumb {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.hover\:from-purple-800:hover {
+  --tw-gradient-from: #6b21a8 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(107 33 168 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .hover\:to-green-400:hover {
   --tw-gradient-to: #4ade80 var(--tw-gradient-to-position);
 }
@@ -2274,6 +2290,10 @@ body::-webkit-scrollbar-thumb {
 
 .hover\:to-sky-400:hover {
   --tw-gradient-to: #38bdf8 var(--tw-gradient-to-position);
+}
+
+.hover\:to-violet-400:hover {
+  --tw-gradient-to: #a78bfa var(--tw-gradient-to-position);
 }
 
 .hover\:text-black:hover {
@@ -2398,6 +2418,12 @@ body::-webkit-scrollbar-thumb {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.active\:from-violet-400:active {
+  --tw-gradient-from: #a78bfa var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(167 139 250 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .active\:to-blue-800:active {
   --tw-gradient-to: #1e40af var(--tw-gradient-to-position);
 }
@@ -2408,6 +2434,10 @@ body::-webkit-scrollbar-thumb {
 
 .active\:to-red-500:active {
   --tw-gradient-to: #ef4444 var(--tw-gradient-to-position);
+}
+
+.active\:to-purple-800:active {
+  --tw-gradient-to: #6b21a8 var(--tw-gradient-to-position);
 }
 
 .active\:font-thin:active {
