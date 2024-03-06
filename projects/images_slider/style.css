@@ -1,21 +1,21 @@
-body{
+/* body{
     background-color: hsla(300, 3%, 7%, 0.913);
-}
-#container{
+} */
+/* #container{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin-top: 10vh;
-}
-#slides{
+} */
+/* #slides{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
+} */
 
-.slide{
+/* .slide{
     width: 400px;
     height: 400px;
     display: none;
@@ -23,13 +23,13 @@ body{
     animation-duration: 1.5s;
     border-radius: 10px;
     border: 5px inset rgba(66, 240, 240, 0.881);
-}
+} */
 
-.displaySlide{
+/* .displaySlide{
     display: block;
-}
+} */
 
-.dButtons{
+/* .dButtons{
     position: absolute;
     top: 40%;
     height: 50px;
@@ -47,15 +47,15 @@ body{
 }
 #rButton{
     right: 0px
-}
-#lButton:hover, #rButton:hover{
+} */
+/* #lButton:hover, #rButton:hover{
     background-color:  hsla(180, 90%, 55%, 1);
 }
 
 #lButton:active, #rButton:active{
     background-color:  rgba(37, 244, 244, 0.438);
-}
-#admireButton{
+} */
+/* #admireButton{
     border: 5px solid transparent;
     min-height: 5vh;
     min-width: 25vh;
@@ -65,22 +65,22 @@ body{
     font-family: 'MV Boli';
     font-size: 20px;
     font-weight: 600;
-}
+} */
 
-#admireButton:hover{
+/* #admireButton:hover{
     background-color: transparent;
     color:hsla(174, 75%, 45%, 0.989);
     border: 5px solid lightblue;
 }
 #admireButton:active{
     background-color: hsla(0, 0%, 0%, 0.613);
-}
+} */
 
-@keyframes fade {
+/* @keyframes fade {
     from {opacity: .2;}
     to {opacity: 1;}
-}
-#pins{
+} */
+/* #pins{
     font-size: 33px;
     color: hsl(0, 0%, 100%);
     display: flex;
@@ -88,7 +88,7 @@ body{
     justify-content: center;
     flex-direction: row;
     gap: 5vh;
-}
+} */
 
 .pinActive{
     color: hsl(301, 100%, 52%);

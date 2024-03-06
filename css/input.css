@@ -219,3 +219,12 @@ body::-webkit-scrollbar-thumb {
   );
   backdrop-filter: blur(10px);
 }
+
+@keyframes fade {
+  from {opacity: .2;}
+  to {opacity: 1;}
+}
+
+.animation-fade{
+  animation-name: fade;
+}
