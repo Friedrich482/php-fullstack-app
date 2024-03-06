@@ -31,15 +31,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="text-2xl font-bold flex items-center justify-center flex-col gap-6 w-full">
             <p class="text-start w-4/6 flex items-center">
                 <span>Player :&nbsp;</span>
-                <span id="playerText"></span>
+                <span id="playerText" class=" bg-slate-700 text-center rounded-lg place-self-start cursor-not-allowed min-w-32"></span>
             </p>
             <p class="text-start w-4/6 flex items-center">
                 <span>Computer :&nbsp;</span>
-                <span id="computerText"id="computerText"></span>
+                <span id="computerText" class="bg-slate-700 text-center rounded-lg place-self-start cursor-not-allowed min-w-32"></span>
             </p>
             <p id="resultText" class="text-start w-5/6 flex items-center">
-                <span>Result :&nbsp;</span>
-                <span id="labelResult" class="w-4/6"></span>
+                <span class = "text-center indent-2 w-3/6">Result :&nbsp;</span>
+                <span id="labelResult" class=" bg-slate-700 text-center rounded-lg place-self-start cursor-not-allowed min-w-36"></span>
             </p>
         </div>
 
@@ -54,9 +54,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="grid place-items-center grid-cols-2 grid-rows-2 gap-y-3 relative left-14">
             <p class="text-start w-full text-xl indent-5">Player's score : </p>
-            <div id="displayPlayerScore" class="left-8 relative border-black bg-slate-700 w-12 h-7 text-xl text-center rounded-lg place-self-start cursor-not-allowed">0</div>
+            <div id="displayPlayerScore" class="left-8 relative bg-slate-700 w-12 h-7 text-xl text-center rounded-lg place-self-start cursor-not-allowed">0</div>
             <p class="text-start w-full text-xl indent-5">Computer's score :</p>
-            <div id="displayComputerScore" class="left-8 relative border-black bg-slate-700 w-12 h-7 text-xl text-center rounded-lg place-self-start cursor-not-allowed">0</div>
+            <div id="displayComputerScore" class="left-8 relative bg-slate-700 w-12 h-7 text-xl text-center rounded-lg place-self-start cursor-not-allowed">0</div>
         </div>
     </div>
 </body>

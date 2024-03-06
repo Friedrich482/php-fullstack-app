@@ -39,44 +39,44 @@ function computerPlays() {
 }
 function checkWinner() {
     if (computer === player) {
-        return "DRAW !😐";
+        return "DRAW !";
     }
     switch (computer) {
         case "ROCK":
             if (player === "PAPER") {
-                labelResult.style.color = "green";
-                return "YOU WIN !😃";
+                return win();
             }
             else {
-                labelResult.style.color = "red";
-                return "❌ YOU LOSE !😥";
+                return lose();
             }
         case "PAPER":
             if (player === "SCISSORS") {
-                labelResult.style.color = "green";
-                return "YOU WIN !😃";
+                return win();
             }
             else {
-                labelResult.style.color = "red";
-                return "❌ YOU LOSE !😥";
+                return lose();
             }
         case "SCISSORS":
             if (player === "ROCK") {
-                labelResult.style.color = "green";
-                return "YOU WIN !😃";
+                return win();
             }
             else {
-                labelResult.style.color = "red";
-                return "❌ YOU LOSE !😥";
+                return lose();
             }
     }
 }
+function win() {
+    return "YOU WIN !";
+}
+function lose() {
+    return "❌ YOU LOSE !";
+}
 function updateScore() {
-    if (checkWinner() === "YOU WIN !😃") {
+    if (checkWinner() === "YOU WIN !") {
         playerScore += 1;
         playerScoreDiv.textContent = `${playerScore}`;
     }
-    else if (checkWinner() === "❌ YOU LOSE !😥") {
+    else if (checkWinner() === "❌ YOU LOSE !") {
         computerScore += 1;
         computerScoreDiv.textContent = `${computerScore}`;
     }
