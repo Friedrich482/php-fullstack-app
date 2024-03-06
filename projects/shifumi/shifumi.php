@@ -28,32 +28,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body class="flex items-center justify-center flex-col bg-gray-800 pt-[20%] text-white consolas">
     <div id="gameContainer" class="flex items-center justify-center flex-col border-2 border-violet-700 gap-4 rounded-2xl p-4 min-w-[29.5rem]">
-        <div class="text-2xl font-bold flex items-center justify-center flex-col gap-6">
-            <div class="grid grid-cols-2 grid-rows-2 gap-y-3 w-full">
-                <p id="playerText" class="text-start w-full flex items-center">
-                    Player :
-                </p>
-                <img id="playerImg" class="ml-4 inline size-12 rounded-xl border-2 inset-1 border-violet-600" />
-                <p id="computerText" class="text-start w-full flex items-center">
-                    Computer :
-                </p>
-                <img id="computerImg" class="ml-4 inline size-12 rounded-xl border-2 inset-1 border-violet-600" />
-            </div>
-            <p id="resultText" class="min-w-72">
-                Result :
-                <label id="labelResult"></label>
+        <div class="text-2xl font-bold flex items-center justify-center flex-col gap-6 w-full">
+            <p class="text-start w-4/6 flex items-center">
+                <span>Player :&nbsp;</span>
+                <span id="playerText"></span>
+            </p>
+            <p class="text-start w-4/6 flex items-center">
+                <span>Computer :&nbsp;</span>
+                <span id="computerText"id="computerText"></span>
+            </p>
+            <p id="resultText" class="text-start w-5/6 flex items-center">
+                <span>Result :&nbsp;</span>
+                <span id="labelResult" class="w-4/6"></span>
             </p>
         </div>
 
         <div id="buttons" class="flex items-center justify-center font-sans">
-            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500 gameButton">
-                👊
+            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500 gameButton">👊
             </button>
-            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500 gameButton">
-                🖐
+            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500 gameButton">🖐
             </button>
-            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500 gameButton">
-                ✌
+            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500 gameButton">✌
             </button>
         </div>
 

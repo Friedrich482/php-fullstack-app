@@ -1698,6 +1698,10 @@ video {
   text-indent: 1rem;
 }
 
+.indent-2 {
+  text-indent: 0.5rem;
+}
+
 .font-serif {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }

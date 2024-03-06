@@ -22,11 +22,10 @@ let computer: string;
 let playerScore = 0;
 let computerScore = 0;
 
-function buttonContent(button: HTMLButtonElement) {
-  if (button.textContent === "👊") {
-    console.log(button.textContent);
+function buttonContent(button: HTMLButtonElement): string {
+  if (button.textContent?.indexOf("👊") != -1) {
     return "ROCK";
-  } else if (button.textContent === "🖐") {
+  } else if (button.textContent?.indexOf("🖐") != -1) {
     return "PAPER";
   } else {
     return "SCISSORS";
@@ -36,8 +35,7 @@ function buttonContent(button: HTMLButtonElement) {
 gameButtons.forEach((button) => {
   button.addEventListener("click", () => {
     player = buttonContent(button);
-    // console.log(player);
-    playerText.textContent = `Player : ${player}`;
+    playerText.textContent = `${player}`;
     computerPlays();
     labelResult.textContent = `${checkWinner()}`;
     updateScore();
@@ -47,18 +45,16 @@ gameButtons.forEach((button) => {
 function computerPlays() {
   let randNum = Math.floor(Math.random() * 3) + 1;
   computer = buttonContent(gameButtons[randNum - 1]);
-  computerText.textContent = `Computer : ${computer}`;
+  computerText.textContent = `${computer}`;
 }
 
 function checkWinner() {
   if (computer === player) {
-    labelResult.classList.add("bg-slate-700");
     return "DRAW !😐";
   }
 
   switch (computer) {
     case "ROCK":
-      displayImgs();
       if (player === "PAPER") {
         labelResult.style.color = "green";
         return "YOU WIN !😃";
@@ -68,10 +64,8 @@ function checkWinner() {
       }
 
     case "PAPER":
-      displayImgs();
       if (player === "SCISSORS") {
         labelResult.style.color = "green";
-
         return "YOU WIN !😃";
       } else {
         labelResult.style.color = "red";
@@ -79,7 +73,6 @@ function checkWinner() {
       }
 
     case "SCISSORS":
-      displayImgs();
       if (player === "ROCK") {
         labelResult.style.color = "green";
         return "YOU WIN !😃";
@@ -100,20 +93,3 @@ function updateScore() {
   }
 }
 
-function displayImgs() {
-  if (player === "PAPER") {
-    playerImg.src = "./img/paper.jpg";
-  } else if (player === "ROCK") {
-    playerImg.src = "./img/rock.jpg";
-  } else {
-    playerImg.src = "./img/scissors.jpg";
-  }
-
-  if (computer === "PAPER") {
-    computerImg.src = "./img/paper.jpg";
-  } else if (computer === "ROCK") {
-    computerImg.src = "./img/rock.jpg";
-  } else {
-    computerImg.src = "./img/scissors.jpg";
-  }
-}
