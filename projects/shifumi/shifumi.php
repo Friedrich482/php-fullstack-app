@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Shifumi Game</title>
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../css/style.css" />
-    <script src="" defer></script>
+    <script src="../../dist/projects/shifumi/script.js" defer></script>
 </head>
 
 <body class="flex items-center justify-center flex-col bg-gray-800 pt-[20%] text-white consolas">
@@ -33,11 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p id="playerText" class="text-start w-full flex items-center">
                     Player :
                 </p>
-                <img src="" id="playerImg" class="ml-4 inline size-12 rounded-xl border-2 inset-1 border-violet-600" />
+                <img id="playerImg" class="ml-4 inline size-12 rounded-xl border-2 inset-1 border-violet-600" />
                 <p id="computerText" class="text-start w-full flex items-center">
                     Computer :
                 </p>
-                <img src="" id="computerImg" class="ml-4 inline size-12 rounded-xl border-2 inset-1 border-violet-600" />
+                <img id="computerImg" class="ml-4 inline size-12 rounded-xl border-2 inset-1 border-violet-600" />
             </div>
             <p id="resultText" class="min-w-72">
                 Result :
@@ -46,13 +46,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div id="buttons" class="flex items-center justify-center font-sans">
-            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500">
+            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500 gameButton">
                 👊
             </button>
-            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500">
+            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500 gameButton">
                 🖐
             </button>
-            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500">
+            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500 gameButton">
                 ✌
             </button>
         </div>
