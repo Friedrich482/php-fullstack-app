@@ -1,39 +1,68 @@
+<?php
+session_start();
+include("../../include/database.php");
+
+// Checks if the user is logged in. Otherwise, redirect him to the login page.
+
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("Location: ../../login/login.php");
+    exit;
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    header("Location: ../../home/home.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shifumi Game</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../css/style.css" />
     <script src="" defer></script>
 </head>
 
-<body class="flex items-center justify-center bg-gray-800 m-0">
-    <div id="gameContainer" class="flex items-center justify-center flex-col border-2 border-pink-700 gap-1 rounded-2xl bg-sky-300">
-        <div class="text-2xl consolas font-bold">
-            <p id="playerText" class=" inline-block min-w-72">Player :</p>
-            <img src="" id="playerImg" class=" inline size-12 rounded-xl border-4 inset-1 border-yellow-500"><br>
-            <p id="computerText" class=" inline-block min-w-72">Computer :</p>
-            <img src="" id="computerImg" class=" inline size-12 rounded-xl border-4 inset-1 border-yellow-500"><br>
-            <p id="resultText" class=" inline-block min-w-72 bg-blue-600">
+<body class="flex items-center justify-center flex-col bg-gray-800 pt-[20%] text-white consolas">
+    <div id="gameContainer" class="flex items-center justify-center flex-col border-2 border-violet-700 gap-4 rounded-2xl p-4 min-w-[29.5rem]">
+        <div class="text-2xl font-bold flex items-center justify-center flex-col gap-6">
+            <div class="grid grid-cols-2 grid-rows-2 gap-y-3 w-full">
+                <p id="playerText" class="text-start w-full flex items-center">
+                    Player :
+                </p>
+                <img src="" id="playerImg" class="ml-4 inline size-12 rounded-xl border-2 inset-1 border-violet-600" />
+                <p id="computerText" class="text-start w-full flex items-center">
+                    Computer :
+                </p>
+                <img src="" id="computerImg" class="ml-4 inline size-12 rounded-xl border-2 inset-1 border-violet-600" />
+            </div>
+            <p id="resultText" class="min-w-72">
                 Result :
                 <label id="labelResult"></label>
             </p>
-            <br>
         </div>
 
-        <div id="buttons" class="flex items-center justify-center">
-            <button class=" MV-boli border-4 border-red-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white bg-black hover:border-yellow-400 bg-transparent hover:text-black backdrop-blur-sm active:border-sky-600 active:bg-black ">👊</button>
-            <button class=" MV-boli border-4 border-red-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white bg-black hover:border-yellow-400 bg-transparent hover:text-black backdrop-blur-sm active:border-sky-600 active:bg-black ">🖐</button>
-            <button class=" MV-boli border-4 border-red-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white bg-black hover:border-yellow-400 bg-transparent hover:text-black backdrop-blur-sm active:border-sky-600 active:bg-black ">✌</button>
+        <div id="buttons" class="flex items-center justify-center font-sans">
+            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500">
+                👊
+            </button>
+            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500">
+                🖐
+            </button>
+            <button class="border-2 border-violet-600 font-bold text-3xl w-32 min-w-10 rounded-xl m-1 text-white transiton duration-700 hover:border-white backdrop-blur-sm p-2 active:border-yellow-700 active:bg-slate-500">
+                ✌
+            </button>
         </div>
 
-        <div class="display">
-            <p>Player's score : <span id="displayPlayerScore" class=" bg-green-500">0</span></p>
-            <p>Computer's score : <span id="displayComputerScore" class="bg-red-600">0</span></p>
+        <div class="grid place-items-center grid-cols-2 grid-rows-2 gap-y-3 relative left-14">
+            <p class="text-start w-full text-xl indent-5">Player's score : </p>
+            <div id="displayPlayerScore" class="left-8 relative border-black bg-slate-700 w-12 h-7 text-xl text-center rounded-lg place-self-start cursor-not-allowed">0</div>
+            <p class="text-start w-full text-xl indent-5">Computer's score :</p>
+            <div id="displayComputerScore" class="left-8 relative border-black bg-slate-700 w-12 h-7 text-xl text-center rounded-lg place-self-start cursor-not-allowed">0</div>
         </div>
-
     </div>
 </body>
 
