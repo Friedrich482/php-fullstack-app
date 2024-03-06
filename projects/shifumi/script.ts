@@ -112,20 +112,22 @@ function updateScore() {
     computerScoreDiv.textContent = `${computerScore}`;
   }
 }
-quitGameButton.addEventListener(("click"), () => manageRestartDialog())
+quitGameButton.addEventListener("click", () => manageRestartDialog());
 
 function manageRestartDialog() {
   setTimeout(() => {
     toggleShifumiDialog(restartShifumiDialog);
-  }, 2000);
+  }, 500);
   if (playerScore > computerScore) {
     resultsShifumi.textContent = "YOU WIN";
+    resultsShifumi.classList.toggle("text-green-400");
   } else if (playerScore < computerScore) {
     resultsShifumi.textContent = "YOU LOSE";
+    resultsShifumi.classList.toggle("text-red-600");
   } else {
     resultsShifumi.textContent = "DRAW";
   }
-  scoreShifumi.textContent = `Player : ${playerScore}- ${computerScore} : Computer`;
+  scoreShifumi.innerHTML = `Player : <span class=" text-red-500">${playerScore}&nbsp;</span>- <span class=" text-blue-500">${computerScore}</span> : Computer`;
 }
 
 function toggleShifumiDialog(element: HTMLDialogElement): void {
