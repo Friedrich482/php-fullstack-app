@@ -47,6 +47,7 @@ const fetchWeatherApp = document.querySelector("#fetchWeatherApp");
 const snakeGame = document.querySelector("#snakeGame");
 const ticTacToe = document.querySelector("#ticTacToe");
 const shifumi = document.querySelector("#shifumi");
+const imagesSlider = document.querySelector("#imagesSlider");
 let linkDivs = [
     largeHome,
     largeTools,
@@ -60,7 +61,8 @@ let linkDivs = [
     fetchWeatherApp,
     snakeGame,
     ticTacToe,
-    shifumi
+    shifumi,
+    imagesSlider,
 ];
 linkDivs.forEach((section) => {
     section.addEventListener("click", () => {
