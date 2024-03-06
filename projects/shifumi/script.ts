@@ -34,9 +34,15 @@ const playerScoreDiv = document.querySelector(
 const computerScoreDiv = document.querySelector(
   "#displayComputerScore"
 ) as HTMLDivElement;
+
 const quitGameButton = document.querySelector(
   "#quitGameButton"
 ) as HTMLButtonElement;
+
+const yesShifumiButton = document.querySelector(
+  "#yesShifumiButton"
+) as HTMLInputElement;
+
 // ? Game elements
 let player: string;
 let computer: string;
@@ -63,6 +69,12 @@ gameButtons.forEach((button) => {
   });
 });
 
+quitGameButton.addEventListener("click", () => manageRestartDialog());
+yesShifumiButton.addEventListener("click", () => {
+  toggleShifumiDialog(restartShifumiDialog);
+  restartShifumiDialog.close();
+  document.location.reload();
+});
 function computerPlays() {
   let randNum = Math.floor(Math.random() * 3) + 1;
   computer = buttonContent(gameButtons[randNum - 1]);
@@ -97,6 +109,7 @@ function checkWinnerShifumi() {
       }
   }
 }
+
 function win() {
   return "YOU WIN !";
 }
@@ -112,8 +125,6 @@ function updateScore() {
     computerScoreDiv.textContent = `${computerScore}`;
   }
 }
-quitGameButton.addEventListener("click", () => manageRestartDialog());
-
 function manageRestartDialog() {
   setTimeout(() => {
     toggleShifumiDialog(restartShifumiDialog);
@@ -135,3 +146,8 @@ function toggleShifumiDialog(element: HTMLDialogElement): void {
   element.classList.toggle("hidden");
   element.classList.toggle("flex");
 }
+
+const footerShifumi = document.querySelector("footer") as HTMLElement;
+footerShifumi.classList.add("text-white", "MV-boli");
+const imageFooterShifumi = footer.querySelector("img") as HTMLImageElement;
+imageFooterShifumi.src = "../../assets/icons/rocket.gif";

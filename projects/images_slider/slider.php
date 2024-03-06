@@ -1,0 +1,60 @@
+<?php
+session_start();
+include("../../include/database.php");
+
+// Checks if the user is logged in. Otherwise, redirect him to the login page.
+
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("Location: ../../login/login.php");
+    exit;
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    header("Location: ../../home/home.php");
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images slider</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="slides">
+            <img src="assets/01.jpg" alt="" class="slide">
+            <img src="assets/02.jpg" alt="" class="slide">
+            <img src="assets/03.jpg" alt="" class="slide">
+            <img src="assets/04.jpg" alt="" class="slide">
+            <img src="assets/05.jpg" alt="" class="slide">
+            <img src="assets/06.jpeg" alt="" class="slide">
+            <img src="assets/07.jpeg" alt="" class="slide">
+            <img src="assets/08.jpeg" alt="" class="slide">
+        </div>
+        <ul id="pins">
+            <li class="pinsItem"></li>
+            <li class="pinsItem"></li>
+            <li class="pinsItem"></li>
+            <li class="pinsItem"></li>
+            <li class="pinsItem"></li>
+            <li class="pinsItem"></li>
+            <li class="pinsItem"></li>
+            <li class="pinsItem"></li>
+        </ul>
+        <button id="lButton" class="dButtons" onclick="prevSlide()">&lsaquo;</button>
+
+        <button id="rButton" class="dButtons" onclick="nextSlide()">&rsaquo;</button>
+        <br><br>
+        <button id="admireButton">Admire</button>
+    </div>
+</body>
+
+</html>
+<?php
+include("../../include/footer.php");
+?>

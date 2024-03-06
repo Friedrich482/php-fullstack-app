@@ -67,9 +67,8 @@ Technologies/tools/languages used :
 - [x] As always tailwind CSS first
 - [x] And after TypeScript
 - [x] Maybe here too, I will add sounds 🎵
-- [ ] The 5th project is the shifumi game. Also not too much code...
-- [ ] Tailwind CSS
-- [ ] Typecript
-- [ ] Some SFX ...
+- [x] The 5th project is the shifumi game. Also not too much code...
+- [x] Tailwind CSS
+- [x] Typecript
 
 This list will be updated depending on my progression through it.

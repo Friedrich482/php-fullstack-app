@@ -12,6 +12,7 @@ const scoreShifumi = document.querySelector("#scoreShifumi");
 const playerScoreDiv = document.querySelector("#displayPlayerScore");
 const computerScoreDiv = document.querySelector("#displayComputerScore");
 const quitGameButton = document.querySelector("#quitGameButton");
+const yesShifumiButton = document.querySelector("#yesShifumiButton");
 // ? Game elements
 let player;
 let computer;
@@ -37,6 +38,12 @@ gameButtons.forEach((button) => {
         labelResult.textContent = `${checkWinnerShifumi()}`;
         updateScore();
     });
+});
+quitGameButton.addEventListener("click", () => manageRestartDialog());
+yesShifumiButton.addEventListener("click", () => {
+    toggleShifumiDialog(restartShifumiDialog);
+    restartShifumiDialog.close();
+    document.location.reload();
 });
 function computerPlays() {
     let randNum = Math.floor(Math.random() * 3) + 1;
@@ -87,7 +94,6 @@ function updateScore() {
         computerScoreDiv.textContent = `${computerScore}`;
     }
 }
-quitGameButton.addEventListener("click", () => manageRestartDialog());
 function manageRestartDialog() {
     setTimeout(() => {
         toggleShifumiDialog(restartShifumiDialog);
@@ -110,3 +116,7 @@ function toggleShifumiDialog(element) {
     element.classList.toggle("hidden");
     element.classList.toggle("flex");
 }
+const footerShifumi = document.querySelector("footer");
+footerShifumi.classList.add("text-white", "MV-boli");
+const imageFooterShifumi = footer.querySelector("img");
+imageFooterShifumi.src = "../../assets/icons/rocket.gif";

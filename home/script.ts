@@ -78,6 +78,7 @@ const fetchWeatherApp = document.querySelector(
 const snakeGame = document.querySelector("#snakeGame") as HTMLDivElement;
 const ticTacToe = document.querySelector("#ticTacToe") as HTMLDivElement;
 const shifumi = document.querySelector("#shifumi") as HTMLDivElement;
+const imagesSlider = document.querySelector("#imagesSlider") as HTMLDivElement;
 let linkDivs = [
   largeHome,
   largeTools,
@@ -91,7 +92,8 @@ let linkDivs = [
   fetchWeatherApp,
   snakeGame,
   ticTacToe,
-  shifumi
+  shifumi,
+  imagesSlider,
 ];
 
 linkDivs.forEach((section: HTMLDivElement) => {
