@@ -37,7 +37,7 @@ gameButtons.forEach((button) => {
     player = buttonContent(button);
     playerText.textContent = `${player}`;
     computerPlays();
-    labelResult.textContent = `${checkWinner()}`;
+    labelResult.textContent = `${checkWinnerTic()}`;
     updateScore();
   });
 });
@@ -48,7 +48,7 @@ function computerPlays() {
   computerText.textContent = `${computer}`;
 }
 
-function checkWinner() {
+function checkWinnerTic() {
   if (computer === player) {
     return "DRAW !";
   }
@@ -80,13 +80,13 @@ function win() {
   return "YOU WIN !";
 }
 function lose() {
-  return "❌ YOU LOSE !";
+  return "YOU LOSE !";
 }
 function updateScore() {
-  if (checkWinner() === "YOU WIN !") {
+  if (checkWinnerTic() === "YOU WIN !") {
     playerScore += 1;
     playerScoreDiv.textContent = `${playerScore}`;
-  } else if (checkWinner() === "❌ YOU LOSE !") {
+  } else if (checkWinnerTic() === "YOU LOSE !") {
     computerScore += 1;
     computerScoreDiv.textContent = `${computerScore}`;
   }
