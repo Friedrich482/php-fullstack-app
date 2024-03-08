@@ -1,16 +1,16 @@
 "use strict";
 const slides = document.querySelectorAll(".slide");
 const admireButton = document.querySelector("#admireButton");
+const pins = document.querySelectorAll(".pinsItem");
 let slideIndex = 0;
 let intervalId;
-const pins = document.querySelectorAll(".pinsItem");
 let pinIndex = 0;
 document.addEventListener("DOMContentLoaded", startSlides);
 function startSlides() {
     if (slides.length > 0) {
-        slides[0].classList.add("displaySlide");
+        displayImage(slides[0]);
         intervalId = setInterval(nextSlide, 5000);
-        pins[0].classList.add("pinActive");
+        pins[0].classList.add("text-violet-600");
     }
 }
 function showSlide() {
@@ -23,23 +23,32 @@ function showSlide() {
         pinIndex = pins.length - 1;
     }
     slides.forEach((slide) => {
-        slide.classList.remove("displaySlide");
+        hiddenImage(slide);
     });
     pins.forEach((pin) => {
-        pin.classList.remove("pinActive");
+        pin.classList.remove("text-violet-600");
     });
-    slides[slideIndex].classList.add("displaySlide");
-    pins[pinIndex].classList.add("pinActive");
+    displayImage(slides[slideIndex]);
+    pins[pinIndex].classList.add("text-violet-600");
 }
 function prevSlide() {
-    slideIndex--;
-    pinIndex--;
+    slideIndex -= 1;
+    pinIndex -= 1;
     showSlide();
 }
 function nextSlide() {
-    pinIndex++;
-    slideIndex++;
+    pinIndex += 1;
+    slideIndex += 1;
     showSlide();
+}
+// ? can't use toggle instead of remove or add otherwise unexpected behavior ...
+function displayImage(image) {
+    image.classList.remove("hidden");
+    image.classList.add("flex");
+}
+function hiddenImage(image) {
+    image.classList.add("hidden");
+    image.classList.remove("flex");
 }
 admireButton.addEventListener("click", () => {
     clearInterval(intervalId);
