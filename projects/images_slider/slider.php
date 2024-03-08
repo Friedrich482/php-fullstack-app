@@ -20,37 +20,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Images slider</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../dist/projects/images_slider/script.js" defer></script>
 </head>
 
-<body>
-    <div id="container">
-        <div id="slides">
-            <img src="assets/01.jpg" alt="" class="slide">
-            <img src="assets/02.jpg" alt="" class="slide">
-            <img src="assets/03.jpg" alt="" class="slide">
-            <img src="assets/04.jpg" alt="" class="slide">
-            <img src="assets/05.jpg" alt="" class="slide">
-            <img src="assets/06.jpeg" alt="" class="slide">
-            <img src="assets/07.jpeg" alt="" class="slide">
-            <img src="assets/08.jpeg" alt="" class="slide">
+<body class="bg-gray-800">
+    <div id="container" class="flex items-center justify-center flex-col">
+        <div id="slides" class="flex items-center justify-center flex-col">
+            <img src="./img/01.jpg" alt="img" class="slide size-64 hidden animation-fade transform duration-1000 rounded-lg border-4 border-sky-400 ">
+            <img src="img/02.jpg" alt="img" class="slide size-64 hidden animation-fade transform duration-1000 rounded-lg border-4 border-sky-400 ">
+            <img src="./img/03.jpg" alt="img" class="slide size-64 hidden animation-fade transform duration-1000 rounded-lg border-4 border-sky-400 ">
+            <img src="./img/04.jpg" alt="img" class="slide size-64 hidden animation-fade transform duration-1000 rounded-lg border-4 border-sky-400 ">
+            <img src="./img/05.jpg" alt="img" class="slide size-64 hidden animation-fade transform duration-1000 rounded-lg border-4 border-sky-400 ">
+            <img src="./img/06.jpeg" alt="img" class="slide size-64 hidden animation-fade transform duration-1000 rounded-lg border-4 border-sky-400 ">
+            <img src="./img/07.jpeg" alt="img" class="slide size-64 hidden animation-fade transform duration-1000 rounded-lg border-4 border-sky-400 ">
+            <img src="./img/08.jpeg" alt="img" class="slide size-64 hidden animation-fade transform duration-1000 rounded-lg border-4 border-sky-400 ">
         </div>
-        <ul id="pins">
-            <li class="pinsItem"></li>
-            <li class="pinsItem"></li>
-            <li class="pinsItem"></li>
-            <li class="pinsItem"></li>
-            <li class="pinsItem"></li>
-            <li class="pinsItem"></li>
-            <li class="pinsItem"></li>
-            <li class="pinsItem"></li>
+        <ul id="pins" class="text-3xl text-white flex items-center justify-center gap-2 h-12">
+            <li class="pinsItem size-3 rounded-full bg-white"></li>
+            <li class="pinsItem size-3 rounded-full bg-white"></li>
+            <li class="pinsItem size-3 rounded-full bg-white"></li>
+            <li class="pinsItem size-3 rounded-full bg-white"></li>
+            <li class="pinsItem size-3 rounded-full bg-white"></li>
+            <li class="pinsItem size-3 rounded-full bg-white"></li>
+            <li class="pinsItem size-3 rounded-full bg-white"></li>
+            <li class="pinsItem size-3 rounded-full bg-white"></li>
         </ul>
-        <button id="lButton" class="dButtons" onclick="prevSlide()">&lsaquo;</button>
+        <button id="lButton" class="dButtons absolute top-2/4 size-12 rounded-lg border-2 border-black text-3xl text-center bg-black left-0" onclick="prevSlide()">&lsaquo;</button>
 
-        <button id="rButton" class="dButtons" onclick="nextSlide()">&rsaquo;</button>
+        <button id="rButton" class="dButtons absolute top-2/4 size-12 rounded-lg border-2 border-black text-3xl text-center bg-black right-0" onclick="nextSlide()">&rsaquo;</button>
         <br><br>
-        <button id="admireButton">Admire</button>
+        <button id="admireButton" class="outline-none text-lg transform duration-500 bg-black rounded-lg p-1 MV-boli text-white cursor-pointer hover:scale-110 border-black border-2 active:bg-slate-900 active:outline active:outline-white active:outline-2 w-3/6 min-w-32">Admire</button>
     </div>
 </body>
 
