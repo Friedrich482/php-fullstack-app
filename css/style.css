@@ -622,6 +622,10 @@ video {
   bottom: 1.25rem;
 }
 
+.bottom-64 {
+  bottom: 16rem;
+}
+
 .bottom-\[3\.5px\] {
   bottom: 3.5px;
 }
@@ -676,10 +680,6 @@ video {
 
 .top-2 {
   top: 0.5rem;
-}
-
-.top-2\/4 {
-  top: 50%;
 }
 
 .top-4 {
@@ -812,9 +812,9 @@ video {
   height: 1.5rem;
 }
 
-.size-64 {
-  width: 16rem;
-  height: 16rem;
+.size-96 {
+  width: 24rem;
+  height: 24rem;
 }
 
 .size-\[4\.5rem\] {
@@ -996,6 +996,10 @@ video {
 
 .w-\[1\.25rem\] {
   width: 1.25rem;
+}
+
+.w-\[135\%\] {
+  width: 135%;
 }
 
 .w-\[330px\] {
@@ -1229,6 +1233,10 @@ video {
 
 .place-self-start {
   place-self: start;
+}
+
+.place-self-center {
+  place-self: center;
 }
 
 .self-end {
@@ -2138,6 +2146,17 @@ body::-webkit-scrollbar-thumb {
 
 .animation-fade{
   animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+#lButton{
+  -webkit-clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 25% 50%);
+          clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 25% 50%);
+}
+
+#rButton{
+  -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0% 50%);
+          clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0% 50%);
 }
 
 .backdrop\:backdrop-blur-sm::backdrop {
@@ -2612,6 +2631,10 @@ body::-webkit-scrollbar-thumb {
 
   .sm\:w-\[620px\] {
     width: 620px;
+  }
+
+  .sm\:w-\[640px\] {
+    width: 640px;
   }
 
   .sm\:min-w-72 {

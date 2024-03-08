@@ -54,7 +54,8 @@ function nextSlide() {
   slideIndex += 1;
   showSlide();
 }
-// ? can't use toggle instead of remove or add otherwise unexpected behavior ...
+// ? Can't use toggle instead of remove or add otherwise unexpected behavior ...
+
 function displayImage(image: HTMLDivElement) {
   image.classList.remove("hidden");
   image.classList.add("flex");

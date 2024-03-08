@@ -227,4 +227,11 @@ body::-webkit-scrollbar-thumb {
 
 .animation-fade{
   animation-name: fade;
+  animation-duration: 2.5s;
+}
+#lButton{
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 25% 50%);
+}
+#rButton{
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0% 50%);
 }
