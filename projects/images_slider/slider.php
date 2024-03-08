@@ -24,9 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="../../dist/projects/images_slider/script.js" defer></script>
 </head>
 
-<body class="bg-gray-800 flex justify-center items-center flex-col gap-8">
+<body class="bg-gray-900 flex justify-center items-center flex-col gap-8">
     <h1 class=" text-5xl text-white MV-boli">Images slider 🖼</h1>
-    <div class="flex items-center justify-center flex-col sm:w-[640px]">
+    <div class="flex items-center justify-center flex-col sm:w-[550px]">
         <div id="container" class="flex items-center justify-center flex-col">
             <div id="slides" class="flex items-center justify-center flex-col">
                 <img src="./img/01.jpg" alt="img" class="slide size-96 hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
@@ -48,13 +48,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <li class="pinsItem size-3 rounded-full bg-white"></li>
                 <li class="pinsItem size-3 rounded-full bg-white"></li>
             </ul>
-            <div class="w-[135%] flex justify-between items-center place-self-center relative bottom-64">
-                <div>
-                    <button id="rButton" class="dButtons size-12 rounded-lg border-2 border-black text-3xl text-center bg-black" onclick="nextSlide()">&rsaquo;</button>
+            <div class="w-[135%] flex justify-between items-center place-self-center relative bottom-64 ">
+                <div class="transition duration-1000 group">
+                    <button id="rButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="nextSlide()"></button>
                 </div>
-                <div>
+                <div class="transition duration-1000 group">
 
-                    <button id="lButton" class="dButtons size-12 rounded-lg border-2 border-black text-3xl text-center bg-black" onclick="prevSlide()"></button>
+                    <button id="lButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="prevSlide()"></button>
                 </div>
             </div>
             <button id="admireButton" class="outline-none text-lg transform duration-500 bg-black rounded-lg p-1 MV-boli text-white cursor-pointer hover:scale-110 border-black border-2 active:bg-slate-900 active:outline active:outline-white active:outline-2 w-3/6 min-w-32">Admire</button>
