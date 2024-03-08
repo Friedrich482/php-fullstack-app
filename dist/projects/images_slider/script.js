@@ -10,7 +10,7 @@ function startSlides() {
     if (slides.length > 0) {
         displayImage(slides[0]);
         intervalId = setInterval(nextSlide, 5000);
-        pins[0].classList.add("text-violet-600");
+        addViolet(pins[0]);
     }
 }
 function showSlide() {
@@ -26,10 +26,10 @@ function showSlide() {
         hiddenImage(slide);
     });
     pins.forEach((pin) => {
-        pin.classList.remove("text-violet-600");
+        removeViolet(pin);
     });
     displayImage(slides[slideIndex]);
-    pins[pinIndex].classList.add("text-violet-600");
+    addViolet(pins[pinIndex]);
 }
 function prevSlide() {
     slideIndex -= 1;
@@ -53,3 +53,11 @@ function hiddenImage(image) {
 admireButton.addEventListener("click", () => {
     clearInterval(intervalId);
 });
+function addViolet(element) {
+    element.classList.add("bg-violet-600");
+    element.classList.remove("bg-white");
+}
+function removeViolet(element) {
+    element.classList.remove("bg-violet-600");
+    element.classList.add("bg-white");
+}

@@ -38,23 +38,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <img src="./img/07.jpeg" alt="img" class="slide size-96 hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
                 <img src="./img/08.jpeg" alt="img" class="slide size-96 hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
             </div>
-            <ul id="pins" class="text-3xl text-white flex items-center justify-center gap-2 h-12">
-                <li class="pinsItem size-3 rounded-full bg-white"></li>
-                <li class="pinsItem size-3 rounded-full bg-white"></li>
-                <li class="pinsItem size-3 rounded-full bg-white"></li>
-                <li class="pinsItem size-3 rounded-full bg-white"></li>
-                <li class="pinsItem size-3 rounded-full bg-white"></li>
-                <li class="pinsItem size-3 rounded-full bg-white"></li>
-                <li class="pinsItem size-3 rounded-full bg-white"></li>
-                <li class="pinsItem size-3 rounded-full bg-white"></li>
-            </ul>
+            <div id="pins" class="text-3xl text-white flex items-center justify-center gap-2 h-12">
+                <div class="pinsItem size-3 rounded-full bg-white"></div>
+                <div class="pinsItem size-3 rounded-full bg-white"></div>
+                <div class="pinsItem size-3 rounded-full bg-white"></div>
+                <div class="pinsItem size-3 rounded-full bg-white"></div>
+                <div class="pinsItem size-3 rounded-full bg-white"></div>
+                <div class="pinsItem size-3 rounded-full bg-white"></div>
+                <div class="pinsItem size-3 rounded-full bg-white"></div>
+                <div class="pinsItem size-3 rounded-full bg-white"></div>
+            </div>
             <div class="w-[135%] flex justify-between items-center place-self-center relative bottom-64 ">
                 <div class="transition duration-1000 group">
-                    <button id="rButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="nextSlide()"></button>
+                    <button id="lButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="prevSlide()"></button>
                 </div>
                 <div class="transition duration-1000 group">
 
-                    <button id="lButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="prevSlide()"></button>
+                    <button id="rButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="nextSlide()"></button>
                 </div>
             </div>
             <button id="admireButton" class="outline-none text-lg transform duration-500 bg-black rounded-lg p-1 MV-boli text-white cursor-pointer hover:scale-110 border-black border-2 active:bg-slate-900 active:outline active:outline-white active:outline-2 w-3/6 min-w-32">Admire</button>
