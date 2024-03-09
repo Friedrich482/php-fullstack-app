@@ -2,20 +2,13 @@ const displayTime = document.querySelector("#displayTime") as HTMLDivElement;
 const startButton = document.querySelector("#startButton") as HTMLButtonElement;
 const pauseButton = document.querySelector("#pauseButton") as HTMLButtonElement;
 const resetButton = document.querySelector("#resetButton") as HTMLButtonElement;
-// ? Time span(s)
-// const hoursSpan = document.querySelector("#hourSpan") as HTMLSpanElement;
-// const minutesSpan = document.querySelector("#minutesSpan") as HTMLSpanElement;
-// const secondsSpan = document.querySelector("#secondsSpan") as HTMLSpanElement;
-// const milliSecondsSpan = document.querySelector(
-//   "#milliSecondsSpan"
-// ) as HTMLSpanElement;
 
 let elapsedTime = 0;
 let hours = "0";
 let minutes = "0";
-let paused = true;
 let seconds = "0";
 let milliseconds = "0";
+let paused = true;
 let timerId: number;
 let timeStart: number;
 

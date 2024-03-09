@@ -2395,6 +2395,11 @@ body::-webkit-scrollbar-thumb {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.hover\:shadow-violet-600:hover {
+  --tw-shadow-color: #7c3aed;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .hover\:gradient-text:hover:hover {
   -webkit-background-clip: text;
           background-clip: text;

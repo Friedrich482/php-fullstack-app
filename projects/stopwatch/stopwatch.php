@@ -22,12 +22,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
     <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
-    <title>My timer</title>
+    <title>Stopwatch</title>
     <script src="../../dist/projects/stopwatch/script.js" defer></script>
 </head>
 
-<body class="flex items-center justify-center flex-col gap-6 bg-gray-900">
-    <img src="./img/stopwatch.png" alt="stopwatch" id="stopwatch" class="h-48 w-48">
+<body class="flex items-center justify-center flex-col gap-6 bg-gray-950">
+    <img src="./img/stopwatch.svg" alt="stopwatch" id="stopwatch" class="h-48 w-48 hover:shadow-lg hover:shadow-violet-600 transition duration-1000">
 
     <div id="container" class="flex items-center justify-center flex-col gap-4 rounded-lg p-6 text-center bg-gray-950 border-2 border-violet-600">
         <div id="displayTime" class=" flex justify-center items-center w-full text-8xl text-violet-600 seven-segment">

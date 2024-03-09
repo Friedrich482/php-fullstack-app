@@ -3,19 +3,12 @@ const displayTime = document.querySelector("#displayTime");
 const startButton = document.querySelector("#startButton");
 const pauseButton = document.querySelector("#pauseButton");
 const resetButton = document.querySelector("#resetButton");
-// ? Time span(s)
-// const hoursSpan = document.querySelector("#hourSpan") as HTMLSpanElement;
-// const minutesSpan = document.querySelector("#minutesSpan") as HTMLSpanElement;
-// const secondsSpan = document.querySelector("#secondsSpan") as HTMLSpanElement;
-// const milliSecondsSpan = document.querySelector(
-//   "#milliSecondsSpan"
-// ) as HTMLSpanElement;
 let elapsedTime = 0;
 let hours = "0";
 let minutes = "0";
-let paused = true;
 let seconds = "0";
 let milliseconds = "0";
+let paused = true;
 let timerId;
 let timeStart;
 startButton.addEventListener("click", () => {
