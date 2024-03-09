@@ -4,11 +4,11 @@ const pauseButton = document.querySelector("#pauseButton") as HTMLButtonElement;
 const resetButton = document.querySelector("#resetButton") as HTMLButtonElement;
 
 let elapsedTime = 0;
-let hours = 0;
-let minutes = 0;
+let hours = "0";
+let minutes = "0";
+let seconds = "0";
+let milliseconds = "0";
 let paused = true;
-let seconds = 0;
-let milliseconds = 0;
 let timerId: number;
 let timeStart: number;
 
@@ -22,32 +22,31 @@ startButton.addEventListener("click", () => {
   function refreshTime() {
     let elapsedTime = Date.now() - timeStart;
 
-    milliseconds = elapsedTime % 1000;
-    seconds = Math.floor((elapsedTime / 1000) % 60);
-    minutes = Math.floor((elapsedTime / (1000 * 60)) % 60);
-    hours = Math.floor((elapsedTime / (1000 * 60 * 60)) % 60);
+    milliseconds = (elapsedTime % 1000).toString();
+    seconds = Math.floor((elapsedTime / 1000) % 60).toString();
+    minutes = Math.floor((elapsedTime / (1000 * 60)) % 60).toString();
+    hours = Math.floor((elapsedTime / (1000 * 60 * 60)) % 60).toString();
 
-    function pad(unit: number) {
-      return unit < 10 ? "0" + unit : unit;
+    function pad(unit: string) {
+      return unit.length < 2 ? "0" + unit : unit;
     }
 
-    function padms(unit: number) {
-      if (unit < 10) {
+    function padms(unit: string) {
+      if (unit.length < 2) {
         return "00" + unit;
-      } else if (unit >= 10 && unit < 100) {
+      } else if (unit.length === 2) {
         return "0" + unit;
       } else {
         return unit;
       }
     }
 
-    milliseconds = Number(padms(milliseconds));
-    seconds = Number(pad(seconds));
-    minutes = Number(pad(minutes));
-    hours = Number(pad(hours));
+    milliseconds = padms(milliseconds);
+    seconds = pad(seconds);
+    minutes = pad(minutes);
+    hours = pad(hours);
 
-    displayTime.textContent =
-      `${hours}:${minutes}:${seconds}` + `:${milliseconds}`;
+    displayTime.innerHTML = `<span class="w-24">${hours}</span>:<span class="w-24">${minutes}</span>:<span class="w-24">${seconds}</span>:<span class="w-48">${milliseconds}</span>`;
   }
 });
 
@@ -62,10 +61,18 @@ pauseButton.addEventListener("click", () => {
 resetButton.addEventListener("click", () => {
   paused = true;
   displayTime.textContent = "00:00:00:000";
-  hours = 0;
-  minutes = 0;
-  seconds = 0;
-  milliseconds = 0;
+  hours = "0";
+  minutes = "0";
+  seconds = "0";
+  milliseconds = "0";
   elapsedTime = 0;
   clearInterval(timerId);
 });
+
+const footerStopwatch = document.querySelector("footer") as HTMLElement;
+footerStopwatch.classList.add("text-white", "MV-boli");
+const imageFooterStopwatch = footerStopwatch.querySelector(
+  "img"
+) as HTMLImageElement;
+imageFooterStopwatch.src = "../../assets/icons/rocket.gif";
+footerStopwatch.classList.add("mt-2");

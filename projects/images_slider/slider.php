@@ -59,11 +59,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="pinsItem size-3 rounded-full bg-white"></div>
             </div>
             <div class=" w-full slider-custom:w-[135%] flex justify-between items-center place-self-center relative slider-custom:bottom-64 cursor-pointer">
-                <div class="transition duration-1000 group" onclick="prevSlide()">
-                    <button id="lButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="prevSlide()"></button>
+                <div class="transition duration-1000 group" id="leftButtonWrapper">
+                    <button id="lButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="prevSlide(); event.stopPropagation()"></button>
                 </div>
-                <div class="transition duration-1000 group" onclick="nextSlide()">
-                    <button id="rButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="nextSlide()"></button>
+                <div class="transition duration-1000 group" id="rightButtonWrapper">
+                    <button id="rButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="nextSlide(); event.stopPropagation()"></button>
                 </div>
             </div>
             <button id="admireButton" class="outline-none text-lg transform duration-500 bg-black rounded-lg p-1 MV-boli text-white cursor-pointer hover:scale-110 border-black border-2 active:bg-slate-900 active:outline active:outline-white active:outline-2 w-3/6 min-w-32 relative bottom-10">Admire</button>
