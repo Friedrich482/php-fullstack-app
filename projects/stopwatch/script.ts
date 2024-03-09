@@ -75,4 +75,4 @@ const imageFooterStopwatch = footerStopwatch.querySelector(
   "img"
 ) as HTMLImageElement;
 imageFooterStopwatch.src = "../../assets/icons/rocket.gif";
-footerStopwatch.classList.add("mt-2");
+footerStopwatch.classList.add("mt-8");

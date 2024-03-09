@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body class="flex items-center justify-center flex-col gap-6 bg-gray-950">
-    <img src="./img/stopwatch.svg" alt="stopwatch" id="stopwatch" class="h-48 w-48 hover:shadow-lg hover:shadow-violet-600 transition duration-1000">
+    <img src="./img/stopwatch.svg" alt="stopwatch" id="stopwatch" class="size-52 hover:shadow-lg hover:shadow-violet-600 transition duration-1000 rounded-xl mt-8 pb-1">
 
     <div id="container" class="flex items-center justify-center flex-col gap-4 rounded-lg p-6 text-center bg-gray-950 border-2 border-violet-600">
         <div id="displayTime" class=" flex justify-center items-center w-full text-8xl text-violet-600 seven-segment">

@@ -760,6 +760,10 @@ video {
   margin-top: 2rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -821,6 +825,21 @@ video {
 .size-\[4\.5rem\] {
   width: 4.5rem;
   height: 4.5rem;
+}
+
+.size-52 {
+  width: 13rem;
+  height: 13rem;
+}
+
+.size-16 {
+  width: 4rem;
+  height: 4rem;
+}
+
+.size-48 {
+  width: 12rem;
+  height: 12rem;
 }
 
 .h-10 {
@@ -1659,6 +1678,14 @@ video {
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem;
 }
 
 .text-left {

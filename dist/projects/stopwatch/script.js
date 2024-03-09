@@ -65,4 +65,4 @@ const footerStopwatch = document.querySelector("footer");
 footerStopwatch.classList.add("text-white", "MV-boli");
 const imageFooterStopwatch = footerStopwatch.querySelector("img");
 imageFooterStopwatch.src = "../../assets/icons/rocket.gif";
-footerStopwatch.classList.add("mt-2");
+footerStopwatch.classList.add("mt-8");
