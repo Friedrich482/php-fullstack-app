@@ -388,8 +388,9 @@ $number_of_visits = $row['visits'];
 
       <!-- Stopwatch card -->
 
-      <div class="group bg-sky-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
-        <div class="stopwatchImg h-3/5 w-full rounded-t-md transform duration-700 group-hover:border-b-4 group-hover:border-b-sky-600"></div>
+      <div class="group bg-sky-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white" id="stopwatch">
+      <a href="../projects/stopwatch/stopwatch.php"></a>  
+      <div class="stopwatchImg h-3/5 w-full rounded-t-md transform duration-700 group-hover:border-b-4 group-hover:border-b-sky-600"></div>
 
         <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700 shadow-sm shadow-white group-hover:shadow-none">
           <p class="text-center">Dynamic Stopwatch. Play with time !</p>

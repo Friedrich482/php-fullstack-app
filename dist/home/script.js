@@ -48,6 +48,7 @@ const snakeGame = document.querySelector("#snakeGame");
 const ticTacToe = document.querySelector("#ticTacToe");
 const shifumi = document.querySelector("#shifumi");
 const imagesSlider = document.querySelector("#imagesSlider");
+const stopwatch = document.querySelector("#stopwatch");
 let linkDivs = [
     largeHome,
     largeTools,
@@ -63,6 +64,7 @@ let linkDivs = [
     ticTacToe,
     shifumi,
     imagesSlider,
+    stopwatch,
 ];
 linkDivs.forEach((section) => {
     section.addEventListener("click", () => {

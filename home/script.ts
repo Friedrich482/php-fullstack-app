@@ -79,6 +79,7 @@ const snakeGame = document.querySelector("#snakeGame") as HTMLDivElement;
 const ticTacToe = document.querySelector("#ticTacToe") as HTMLDivElement;
 const shifumi = document.querySelector("#shifumi") as HTMLDivElement;
 const imagesSlider = document.querySelector("#imagesSlider") as HTMLDivElement;
+const stopwatch = document.querySelector("#stopwatch") as HTMLDivElement;
 let linkDivs = [
   largeHome,
   largeTools,
@@ -94,6 +95,7 @@ let linkDivs = [
   ticTacToe,
   shifumi,
   imagesSlider,
+  stopwatch,
 ];
 
 linkDivs.forEach((section: HTMLDivElement) => {

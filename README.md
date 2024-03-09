@@ -70,8 +70,12 @@ Technologies/tools/languages used :
 - [x] The 5th project is the shifumi game. Also not too much code...
 - [x] Tailwind CSS
 - [x] Typecript
-- [ ] After the **images slider** project
+- [x] After the **images slider** project
 - [x] Tailwind CSS
-- [ ] TypeScript
- 
+- [x] TypeScript
+- [ ] The stopwatch is the following project
+- [ ] Like always:  
+  - [ ] Tailwind CSS
+  - [ ] Typescript  
+
 This list will be updated depending on my progression through it.
