@@ -18,6 +18,7 @@ module.exports = {
       screens: {
         "sm-custom": "310px",
         "mysql-custom": "358px",
+        "slider-custom": "540px"
       },
     },
   },
