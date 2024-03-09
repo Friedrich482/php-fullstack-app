@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Images slider</title>
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <script src="../../dist/projects/images_slider/script.js" defer></script>
 </head>
 
