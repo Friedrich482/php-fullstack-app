@@ -2,6 +2,8 @@
 const slides = document.querySelectorAll(".slide");
 const admireButton = document.querySelector("#admireButton");
 const pins = document.querySelectorAll(".pinsItem");
+const leftButtonWrapper = document.querySelector("#leftButtonWrapper");
+const rightButtonWrapper = document.querySelector("#rightButtonWrapper");
 let slideIndex = 0;
 let intervalId;
 let pinIndex = 0;
@@ -71,4 +73,12 @@ window.addEventListener("keydown", (event) => {
         nextSlide();
     else if (event.key === "ArrowLeft")
         prevSlide();
+});
+leftButtonWrapper.addEventListener("click", (event) => {
+    event.stopPropagation();
+    prevSlide();
+});
+rightButtonWrapper.addEventListener("click", (event) => {
+    event.stopPropagation();
+    nextSlide();
 });

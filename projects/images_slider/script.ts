@@ -8,6 +8,12 @@ const admireButton = document.querySelector(
 const pins = document.querySelectorAll(
   ".pinsItem"
 ) as NodeListOf<HTMLDivElement>;
+const leftButtonWrapper = document.querySelector(
+  "#leftButtonWrapper"
+) as HTMLDivElement;
+const rightButtonWrapper = document.querySelector(
+  "#rightButtonWrapper"
+) as HTMLDivElement;
 
 let slideIndex = 0;
 let intervalId: number;
@@ -21,7 +27,6 @@ function startSlides() {
     addViolet(pins[0]);
   }
 }
-
 function showSlide() {
   if (slideIndex >= slides.length) {
     slideIndex = 0;
@@ -30,15 +35,15 @@ function showSlide() {
     slideIndex = slides.length - 1;
     pinIndex = pins.length - 1;
   }
-
+  
   slides.forEach((slide) => {
     hiddenImage(slide);
   });
-
+  
   pins.forEach((pin) => {
     removeViolet(pin);
   });
-
+  
   displayImage(slides[slideIndex]);
   addViolet(pins[pinIndex]);
 }
@@ -87,3 +92,12 @@ window.addEventListener("keydown", (event) => {
   if (event.key === "ArrowRight") nextSlide();
   else if (event.key === "ArrowLeft") prevSlide();
 });
+
+leftButtonWrapper.addEventListener("click", (event) =>{
+  event.stopPropagation()
+  prevSlide()
+})
+rightButtonWrapper.addEventListener("click", (event) =>{
+  event.stopPropagation()
+  nextSlide()
+})
