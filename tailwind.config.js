@@ -8,6 +8,7 @@ module.exports = {
     "./projects/tic_tac_toe/*{html,ts,php}",
     "./projects/shifumi/*{html,ts,php}",
     "./projects/images_slider/*{html,ts,php}",
+    "./projects/stopwatch/*{html,ts,php}",
     "./login/*{html,ts,php}",
     "./home/*{html,ts,php}",
     "./include/*{html,php,ts}",
