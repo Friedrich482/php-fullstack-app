@@ -18,7 +18,7 @@ function startSlides() {
   if (slides.length > 0) {
     displayImage(slides[0]);
     intervalId = setInterval(nextSlide, 5000);
-    addViolet(pins[0])
+    addViolet(pins[0]);
   }
 }
 
@@ -36,11 +36,11 @@ function showSlide() {
   });
 
   pins.forEach((pin) => {
-    removeViolet(pin)
+    removeViolet(pin);
   });
 
   displayImage(slides[slideIndex]);
-  addViolet(pins[pinIndex])
+  addViolet(pins[pinIndex]);
 }
 
 function prevSlide() {
@@ -68,17 +68,22 @@ admireButton.addEventListener("click", () => {
   clearInterval(intervalId);
 });
 
-function addViolet(element: HTMLDivElement){
+function addViolet(element: HTMLDivElement) {
   element.classList.add("bg-violet-600");
-  element.classList.remove("bg-white")
+  element.classList.remove("bg-white");
 }
-function removeViolet(element: HTMLDivElement){
+function removeViolet(element: HTMLDivElement) {
   element.classList.remove("bg-violet-600");
-  element.classList.add("bg-white")
-
+  element.classList.add("bg-white");
 }
+
 const footerSlider = document.querySelector("footer") as HTMLElement;
 footerSlider.classList.add("text-white", "MV-boli");
 const imageFooterSlider = footer.querySelector("img") as HTMLImageElement;
 imageFooterSlider.src = "../../assets/icons/rocket.gif";
-footerSlider.classList.add("relative", "bottom-4")
+footerSlider.classList.add("relative", "bottom-4");
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowRight") nextSlide();
+  else if (event.key === "ArrowLeft") prevSlide();
+});

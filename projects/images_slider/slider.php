@@ -35,10 +35,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <img src="./img/04.jpg" alt="img" class="slide size-96 hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
                 <img src="./img/05.jpg" alt="img" class="slide size-96 hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
                 <img src="./img/06.jpeg" alt="img" class="slide size-96 hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
-                <img src="./img/07.jpeg" alt="img" class="slide size-96 hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
-                <img src="./img/08.jpeg" alt="img" class="slide size-96 hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/07.jpg" alt="img" class="slide size-96 hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/08.jpg" alt="img" class="slide size-96 hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/09.jpg" alt="img" class="slide size-96 hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/10.jpeg" alt="img" class="slide size-96 hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/11.jpeg" alt="img" class="slide size-96 hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/12.jpeg" alt="img" class="slide size-96 hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+
             </div>
             <div id="pins" class="text-3xl text-white flex items-center justify-center gap-2 h-12">
+                <div class="pinsItem size-3 rounded-full bg-white"></div>
+                <div class="pinsItem size-3 rounded-full bg-white"></div>
+                <div class="pinsItem size-3 rounded-full bg-white"></div>
+                <div class="pinsItem size-3 rounded-full bg-white"></div>
                 <div class="pinsItem size-3 rounded-full bg-white"></div>
                 <div class="pinsItem size-3 rounded-full bg-white"></div>
                 <div class="pinsItem size-3 rounded-full bg-white"></div>
