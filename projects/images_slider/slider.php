@@ -58,10 +58,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="pinsItem size-3 rounded-full bg-white"></div>
             </div>
             <div class=" w-full slider-custom:w-[135%] flex justify-between items-center place-self-center relative slider-custom:bottom-64 cursor-pointer">
-                <div class="transition duration-1000 group">
+                <div class="transition duration-1000 group" onclick="prevSlide()">
                     <button id="lButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="prevSlide()"></button>
                 </div>
-                <div class="transition duration-1000 group">
+                <div class="transition duration-1000 group" onclick="nextSlide()">
                     <button id="rButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="nextSlide()"></button>
                 </div>
             </div>
