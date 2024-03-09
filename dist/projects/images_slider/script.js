@@ -61,3 +61,14 @@ function removeViolet(element) {
     element.classList.remove("bg-violet-600");
     element.classList.add("bg-white");
 }
+const footerSlider = document.querySelector("footer");
+footerSlider.classList.add("text-white", "MV-boli");
+const imageFooterSlider = footer.querySelector("img");
+imageFooterSlider.src = "../../assets/icons/rocket.gif";
+footerSlider.classList.add("relative", "bottom-4");
+window.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight")
+        nextSlide();
+    else if (event.key === "ArrowLeft")
+        prevSlide();
+});
