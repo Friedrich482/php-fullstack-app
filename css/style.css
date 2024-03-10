@@ -2268,6 +2268,22 @@ body::-webkit-scrollbar-thumb {
   border-right-width: 8px;
 }
 
+.hover\:border-t-2:hover {
+  border-top-width: 2px;
+}
+
+.hover\:border-t-4:hover {
+  border-top-width: 4px;
+}
+
+.hover\:border-r-2:hover {
+  border-right-width: 2px;
+}
+
+.hover\:border-r-4:hover {
+  border-right-width: 4px;
+}
+
 .hover\:border-solid:hover {
   border-style: solid;
 }
@@ -2299,6 +2315,16 @@ body::-webkit-scrollbar-thumb {
 .hover\:border-l-white:hover {
   --tw-border-opacity: 1;
   border-left-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.hover\:border-t-violet-600:hover {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(124 58 237 / var(--tw-border-opacity));
+}
+
+.hover\:border-r-violet-600:hover {
+  --tw-border-opacity: 1;
+  border-right-color: rgb(124 58 237 / var(--tw-border-opacity));
 }
 
 .hover\:bg-gray-800:hover {
