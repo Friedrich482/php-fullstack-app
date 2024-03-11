@@ -60,7 +60,7 @@ pauseButton.addEventListener("click", () => {
 
 resetButton.addEventListener("click", () => {
   paused = true;
-  displayTime.textContent = "00:00:00:000";
+  displayTime.innerHTML = `<span class="w-24">00</span>:<span class="w-24">00</span>:<span class="w-24">00</span>:<span class="w-48">000</span>`;
   hours = "0";
   minutes = "0";
   seconds = "0";
@@ -75,4 +75,4 @@ const imageFooterStopwatch = footerStopwatch.querySelector(
   "img"
 ) as HTMLImageElement;
 imageFooterStopwatch.src = "../../assets/icons/rocket.gif";
-footerStopwatch.classList.add("mt-2");
+footerStopwatch.classList.add("mt-8");

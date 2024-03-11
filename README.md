@@ -73,9 +73,11 @@ Technologies/tools/languages used :
 - [x] After the **images slider** project
 - [x] Tailwind CSS
 - [x] TypeScript
-- [ ] The stopwatch is the following project
-- [ ] Like always:  
-  - [ ] Tailwind CSS
-  - [ ] Typescript  
+- [x] The stopwatch is the following project
+- [x] Like always:  
+  - [x] Tailwind CSS
+  - [x] Typescript  
+- [ ] New york clock : all the habitual stuff
+- [ ] To do list : the same thing here
 
 This list will be updated depending on my progression through it.

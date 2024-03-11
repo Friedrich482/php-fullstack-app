@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="../../dist/projects/shifumi/script.js" defer></script>
 </head>
 
-<body class="flex items-center justify-center flex-col bg-gray-800 text-white consolas gap-10">
+<body class="flex items-center justify-center flex-col bg-gray-900 text-white consolas gap-10">
     <dialog id="restartShifumiDialog" class="hidden items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-violet-600 rounded-bl-[100px] rounded-tr-[100px] min-w-20 max-w-72 sm:min-w-70 sm:p-2 gap-2 z-10 text-[whitesmoke] h-80 outline-none backdrop:backdrop-blur-sm" autofocus>
         <h2 class="text-2xl text-center w-11/12" id="resultShifumi">
 
