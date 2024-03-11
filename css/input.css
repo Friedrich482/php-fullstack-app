@@ -178,13 +178,12 @@
   background-attachment: fixed;
   color: white;
 }
-.newYorkImg{
+.newYorkImg {
   background-image: url("../projects/tic_tac_toe/img/new_york.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-
 }
 body::-webkit-scrollbar {
   width: 0.25rem;
@@ -221,17 +220,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 @keyframes fade {
-  from {opacity: .2;}
-  to {opacity: 1;}
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.animation-fade{
+.animation-fade {
   animation-name: fade;
   animation-duration: 2.5s;
 }
-#rButton{
+#rButton {
   clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 25% 50%);
 }
-#lButton{
+#lButton {
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0% 50%);
 }

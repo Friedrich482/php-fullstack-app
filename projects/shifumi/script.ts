@@ -1,14 +1,14 @@
 //  ? DOM elements
 const playerText = document.querySelector(
-  "#playerText"
+  "#playerText",
 ) as HTMLParagraphElement;
 
 const computerText = document.querySelector(
-  "#computerText"
+  "#computerText",
 ) as HTMLParagraphElement;
 
 const gameButtons = document.querySelectorAll(
-  ".gameButton"
+  ".gameButton",
 ) as NodeListOf<HTMLButtonElement>;
 
 const playerImg = document.querySelector("#playerImg") as HTMLImageElement;
@@ -16,31 +16,31 @@ const computerImg = document.querySelector("#computerImg") as HTMLImageElement;
 const labelResult = document.querySelector("#labelResult") as HTMLLabelElement;
 
 const restartShifumiDialog = document.querySelector(
-  "#restartShifumiDialog"
+  "#restartShifumiDialog",
 ) as HTMLDialogElement;
 
 const resultsShifumi = document.querySelector(
-  "#resultShifumi"
+  "#resultShifumi",
 ) as HTMLTitleElement;
 
 const scoreShifumi = document.querySelector(
-  "#scoreShifumi"
+  "#scoreShifumi",
 ) as HTMLParagraphElement;
 
 const playerScoreDiv = document.querySelector(
-  "#displayPlayerScore"
+  "#displayPlayerScore",
 ) as HTMLDivElement;
 
 const computerScoreDiv = document.querySelector(
-  "#displayComputerScore"
+  "#displayComputerScore",
 ) as HTMLDivElement;
 
 const quitGameButton = document.querySelector(
-  "#quitGameButton"
+  "#quitGameButton",
 ) as HTMLButtonElement;
 
 const yesShifumiButton = document.querySelector(
-  "#yesShifumiButton"
+  "#yesShifumiButton",
 ) as HTMLInputElement;
 
 // ? Game elements

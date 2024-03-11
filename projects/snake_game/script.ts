@@ -1,27 +1,27 @@
 // ?DOM elements
 const difficultyLevelDialog = document.querySelector(
-  "#difficultyLevelDialog"
+  "#difficultyLevelDialog",
 ) as HTMLDialogElement;
 const difficultyForm = document.querySelector(
-  "#difficultyForm"
+  "#difficultyForm",
 ) as HTMLFormElement;
 const gameOverDialog = document.querySelector(
-  "#restartGameDialog"
+  "#restartGameDialog",
 ) as HTMLDialogElement;
 const gameOverScore = document.querySelector(
-  "#gameOverScore"
+  "#gameOverScore",
 ) as HTMLParagraphElement;
 const yesButton = document.querySelector("#yesButton") as HTMLInputElement;
 const noButton = document.querySelector("#noButton") as HTMLInputElement;
 // Radio Buttons
 const easyRadioButton = document.querySelector(
-  "#level-easy"
+  "#level-easy",
 ) as HTMLInputElement;
 const normalRadioButton = document.querySelector(
-  "#level-normal"
+  "#level-normal",
 ) as HTMLInputElement;
 const hardRadioButton = document.querySelector(
-  "#level-hard"
+  "#level-hard",
 ) as HTMLInputElement;
 const radioButtons = [easyRadioButton, normalRadioButton, hardRadioButton];
 
@@ -33,7 +33,7 @@ context.fillStyle = "blue";
 
 const scoreText = document.querySelector("#scoreText") as HTMLLabelElement;
 const restartButton = document.querySelector(
-  "#restartButton"
+  "#restartButton",
 ) as HTMLButtonElement;
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;

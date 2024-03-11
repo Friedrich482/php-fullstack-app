@@ -1,16 +1,17 @@
 <?php
 session_start();
-include("../../include/database.php");
+include "../../include/database.php";
 
 // Checks if the user is logged in. Otherwise, redirect him to the login page.
 
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-  header("Location: ../../login/login.php");
-  exit;
+    header("Location: ../../login/login.php");
+    exit();
 }
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  header("Location: ../../home/home.php");
-  exit;
+    header("Location: ../../home/home.php");
+    exit();
 }
 ?>
 
@@ -81,6 +82,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </html>
 
-<?php
-include("../../include/footer.php");
+<?php include "../../include/footer.php";
 ?>

@@ -1,5 +1,5 @@
 const displayScreen = document.getElementById(
-  "displayScreen"
+  "displayScreen",
 ) as HTMLDivElement;
 let egal = false;
 
@@ -30,7 +30,7 @@ function calculate(): void {
     if (String(eval(displayScreen.textContent || "")).length > 8) {
       displayScreen.textContent = removeTrailingZeros(
         eval(displayScreen.textContent || "").toFixed(7),
-        4
+        4,
       );
     } else displayScreen.textContent = eval(displayScreen.textContent || "");
   } catch (error) {
@@ -52,7 +52,7 @@ function managePar(): void {
 function eraser(): void {
   displayScreen.textContent = (displayScreen.textContent as string).slice(
     0,
-    -1
+    -1,
   );
 }
 
@@ -135,7 +135,7 @@ window.addEventListener("keydown", (event) => {
       break;
 
     default:
-      break; 
+      break;
   }
 });
 const footerCalc = document.querySelector("footer") as HTMLElement;

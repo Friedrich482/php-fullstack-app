@@ -1,16 +1,16 @@
 <?php
 session_start();
-include("../../include/database.php");
+include "../../include/database.php";
 
 // Checks if the user is logged in. Otherwise, redirect him to the login page.
 
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: ../../login/login.php");
-    exit;
+    exit();
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: ../../home/home.php");
-    exit;
+    exit();
 }
 ?>
 <!DOCTYPE html>
@@ -38,14 +38,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <div class="flex items-center justify-center gap-4">
             <button id="startButton" class="text-xl rounded-lg p-2 w-full text-white border-2 border-violet-600 transiton duration-700 hover:border-white active:border-yellow-700 active:bg-slate-500 cursor-pointer consolas">Start</button>
-            <button id="pauseButton" class="text-xl rounded-lg p-2 w-full text-white border-2 border-violet-600 transiton duration-700 hover:border-white active:border-yellow-700 active:bg-slate-500 cursor-pointer consolas">Pause</button>
-            <button id="resetButton" class="text-xl rounded-lg p-2 w-full text-white border-2 border-violet-600 transiton duration-700 hover:border-white active:border-yellow-700 active:bg-slate-500 cursor-pointer consolas">Reset</button>
+            <button id="pauseButton" 
+            class="text-xl rounded-lg p-2 w-full text-white border-2 border-violet-600 transiton duration-700 hover:border-white active:border-yellow-700 active:bg-slate-500 cursor-pointer consolas">Pause</button>
+            <button 
+            id="resetButton" 
+            
+            
+            class="text-xl rounded-lg p-2 w-full text-white border-2 border-violet-600 transiton duration-700 hover:border-white active:border-yellow-700 active:bg-slate-500 cursor-pointer consolas">Reset</button>
+        
         </div>
 
     </div>
 </body>
 
 </html>
-<?php
-include("../../include/footer.php");
+<?php include "../../include/footer.php";
 ?>

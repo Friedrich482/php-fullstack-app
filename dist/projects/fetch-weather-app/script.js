@@ -129,7 +129,7 @@ function displayData(data) {
         temperature === "-0" ? (temperature = "0") : true;
         temperatureText.textContent = `Temperature : ${temperature}°C`;
         let feels_like_fixed = (feels_like - 273.15).toFixed();
-        // Same thing here 
+        // Same thing here
         feels_like_fixed === "-0" ? (feels_like_fixed = "0") : true;
         temperatureFlText.textContent = ` Feels like : ${feels_like_fixed}°C`;
         humidityText.textContent = ` Humidity : ${humidity} %`;

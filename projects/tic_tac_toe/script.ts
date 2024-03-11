@@ -1,12 +1,12 @@
 const cells = document.querySelectorAll(".cell") as NodeListOf<HTMLDivElement>;
 const restartButtonTic = document.querySelector(
-  "#restartButton"
+  "#restartButton",
 ) as HTMLButtonElement;
 const displayStatus = document.querySelector(
-  "#displayStatus"
+  "#displayStatus",
 ) as HTMLLabelElement;
 const restartTicDialog = document.querySelector(
-  "#restartTicDialog"
+  "#restartTicDialog",
 ) as HTMLDialogElement;
 const gameResults = document.querySelector("#gameResults") as HTMLTitleElement;
 const scoreP = document.querySelector("#scoreP") as HTMLParagraphElement;
@@ -120,7 +120,7 @@ function afterGame(text: string) {
 }
 function scoreManagement() {
   winner === "X" ? (scoreX += 1) : (scoreY += 1);
-  scoreP.innerHTML = `X : <span class="text-blue-600">${scoreX}</span> - <span class="text-red-600">${scoreY}</span> : Y`
+  scoreP.innerHTML = `X : <span class="text-blue-600">${scoreX}</span> - <span class="text-red-600">${scoreY}</span> : Y`;
 }
 function changePlayer() {
   currentPlayer = currentPlayer == "X" ? "O" : "X";

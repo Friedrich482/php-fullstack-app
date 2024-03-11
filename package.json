@@ -53,6 +53,7 @@
     "normalize-path": "^3.0.0",
     "object-assign": "^4.1.1",
     "object-hash": "^3.0.0",
+    "onchange": "^7.1.0",
     "path-key": "^3.1.1",
     "path-parse": "^1.0.7",
     "path-scurry": "^1.10.1",
@@ -96,11 +97,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tailwindcss -i ./css/input.css -o ./css/style.css --watch",
-    "watch": "tsc --watch"
+    "tsc-watch": "tsc --watch",
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@prettier/plugin-php": "^0.22.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.12",
     "tailwindcss": "^3.4.1",
     "tailwindcss-inner-border": "^0.2.0",
     "typescript": "^5.3.3"
