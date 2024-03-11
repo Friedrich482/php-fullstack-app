@@ -80,6 +80,7 @@ const ticTacToe = document.querySelector("#ticTacToe") as HTMLDivElement;
 const shifumi = document.querySelector("#shifumi") as HTMLDivElement;
 const imagesSlider = document.querySelector("#imagesSlider") as HTMLDivElement;
 const stopwatch = document.querySelector("#stopwatch") as HTMLDivElement;
+const newYorkClock = document.querySelector("#newYorkClock") as HTMLDivElement;
 let linkDivs = [
   largeHome,
   largeTools,
@@ -96,6 +97,7 @@ let linkDivs = [
   shifumi,
   imagesSlider,
   stopwatch,
+  newYorkClock,
 ];
 
 linkDivs.forEach((section: HTMLDivElement) => {

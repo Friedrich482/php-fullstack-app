@@ -1,35 +1,32 @@
 <?php
 session_start();
-include("../include/database.php");
+include "../include/database.php";
 
 // This section checks if the user click on logout button (it's a form)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $_SESSION['loggedin'] = false;
-  session_destroy();
-  header("Location: ../login/login.php");
-  exit;
+    $_SESSION["loggedin"] = false;
+    session_destroy();
+    header("Location: ../login/login.php");
+    exit();
 }
 
 // Checks if the user is logged in. Otherwise, redirect him to the login page.
 
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-  header("Location: ../login/login.php");
-  exit;
+    header("Location: ../login/login.php");
+    exit();
 }
-
 ?>
 
 <?php
-
 // Incrementation of the counter of visits each time the page is visited by the user
 
 $sql = "UPDATE users SET visits = visits + 1 WHERE id = $1 RETURNING visits";
-$params = [$_SESSION['id']];
+$params = [$_SESSION["id"]];
 pg_prepare($conn, "update_and_select_visits", $sql);
 $result = pg_execute($conn, "update_and_select_visits", $params);
 $row = pg_fetch_assoc($result);
-$number_of_visits = $row['visits'];
-
+$number_of_visits = $row["visits"];
 ?>
 
 <!DOCTYPE html>
@@ -168,7 +165,7 @@ $number_of_visits = $row['visits'];
         <span class="w-3/4 text-start items-start">
           Username :
           <span class="text-blue-500">
-            <?php echo "{$_SESSION['username']}" ?>
+            <?php echo "{$_SESSION["username"]}"; ?>
           </span>
         </span>
       </div>
@@ -183,13 +180,11 @@ $number_of_visits = $row['visits'];
         <span class="w-3/4 text-start items-start">
           Number of visits :
           <span class="text-blue-500">
-            <?php
-            if ($number_of_visits !== null) {
-              echo $number_of_visits;
+            <?php if ($number_of_visits !== null) {
+                echo $number_of_visits;
             } else {
-              echo '0';
-            }
-            ?>
+                echo "0";
+            } ?>
           </span>
         </span>
       </div>
@@ -210,13 +205,11 @@ $number_of_visits = $row['visits'];
         <span class="w-3/4 text-start items-start h-full">
           Best score at Snake :
           <span class="text-blue-500">
-            <?php
-            if ($number_of_visits !== null) {
-              echo $number_of_visits;
+            <?php if ($number_of_visits !== null) {
+                echo $number_of_visits;
             } else {
-              echo '0';
-            }
-            ?>
+                echo "0";
+            } ?>
             <!-- For the moment, I display that by default , but I will track that value later -->
           </span>
         </span>
@@ -232,13 +225,11 @@ $number_of_visits = $row['visits'];
         <span class="w-3/4 text-start items-start">
           Best score at RPC :
           <span class="text-blue-500">
-            <?php
-            if ($number_of_visits !== null) {
-              echo $number_of_visits;
+            <?php if ($number_of_visits !== null) {
+                echo $number_of_visits;
             } else {
-              echo '0';
-            }
-            ?>
+                echo "0";
+            } ?>
             <!-- Here as well ... -->
           </span>
         </span>
@@ -266,7 +257,7 @@ $number_of_visits = $row['visits'];
   <div>
     <h1 class="flex flex-row text-3xl sm:text-5xl text-center animated-text gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-36 sm:h-28" id="animatedText">
       Welcome
-      <?php echo "{$_SESSION['username']}" ?>, on my site
+      <?php echo "{$_SESSION["username"]}"; ?>, on my site
     </h1>
   </div>
 
@@ -391,15 +382,16 @@ $number_of_visits = $row['visits'];
       <div class="group bg-sky-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white" id="stopwatch">
       <a href="../projects/stopwatch/stopwatch.php"></a>  
       <div class="stopwatchImg h-3/5 w-full rounded-t-md transform duration-700 group-hover:border-b-4 group-hover:border-b-sky-600"></div>
-
-        <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700 shadow-sm shadow-white group-hover:shadow-none">
-          <p class="text-center">Dynamic Stopwatch. Play with time !</p>
-        </div>
+      
+      <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700 shadow-sm shadow-white group-hover:shadow-none">
+        <p class="text-center">Dynamic Stopwatch. Play with time !</p>
       </div>
-
-      <!-- Clock card -->
-
-      <div class="group bg-blue-900 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white">
+    </div>
+    
+    <!-- Clock card -->
+    
+    <div class="group bg-blue-900 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white" id="newYorkClock">
+        <a href="../projects/new_york_clock/clock.php"></a>  
         <div class="clockImg h-3/5 w-full rounded-t-md transform duration-700 group-hover:border-b-4 group-hover:border-b-blue-900"></div>
 
         <div class="bg-black text-white h-2/5 text-center flex items-center justify-center rounded-b-md transform duration-700 shadow-sm shadow-white group-hover:shadow-none">
@@ -454,6 +446,16 @@ $number_of_visits = $row['visits'];
 
 </html>
 
-<?php
-include("../include/footer.php");
+<?php include "../include/footer.php"; ?>
+e:from-purple-700 active:to-red-500 z-10">
+          <input type="button" value="No ❌" id="denyButton" class="cursor-pointer bg-slate-700 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2 hover:bg-slate-700 hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800" />
+        </div>
+      </div>
+    </form>
+  </dialog>
+</body>
+
+</html>
+
+<?php include "../include/footer.php";
 ?>
