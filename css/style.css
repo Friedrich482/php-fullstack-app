@@ -909,6 +909,14 @@ video {
   height: 100%;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
+.h-\[100dvh\] {
+  height: 100dvh;
+}
+
 .max-h-10 {
   max-height: 2.5rem;
 }
@@ -1436,6 +1444,16 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-blue-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity));
+}
+
+.border-cyan-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(8 145 178 / var(--tw-border-opacity));
+}
+
 .border-b-purple-600 {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(147 51 234 / var(--tw-border-opacity));
@@ -1513,6 +1531,11 @@ video {
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
+.bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+
 .bg-rose-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 205 211 / var(--tw-bg-opacity));
@@ -1572,14 +1595,9 @@ video {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 
-.bg-red-500 {
+.bg-gray-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
-.bg-red-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-br {
@@ -1782,6 +1800,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1855,6 +1878,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-cyan-500 {
+  --tw-text-opacity: 1;
+  color: rgb(6 182 212 / var(--tw-text-opacity));
+}
+
+.text-sky-600 {
+  --tw-text-opacity: 1;
+  color: rgb(2 132 199 / var(--tw-text-opacity));
+}
+
 .no-underline {
   text-decoration-line: none;
 }
@@ -1881,6 +1914,10 @@ video {
 
 .opacity-95 {
   opacity: 0.95;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow-lg {
@@ -2215,6 +2252,14 @@ video {
   background-attachment: fixed;
 }
 
+.clockNewYorkImg {
+  background-image: url("../projects/new_york_clock/img/USA__New_York__Skyline.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 body::-webkit-scrollbar {
   width: 0.25rem;
 }
@@ -2332,6 +2377,10 @@ body::-webkit-scrollbar-thumb {
   border-top-width: 4px;
 }
 
+.hover\:border-b-2:hover {
+  border-bottom-width: 2px;
+}
+
 .hover\:border-solid:hover {
   border-style: solid;
 }
@@ -2375,6 +2424,11 @@ body::-webkit-scrollbar-thumb {
   border-top-color: rgb(124 58 237 / var(--tw-border-opacity));
 }
 
+.hover\:border-b-blue-200:hover {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(191 219 254 / var(--tw-border-opacity));
+}
+
 .hover\:bg-gray-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
@@ -2392,6 +2446,11 @@ body::-webkit-scrollbar-thumb {
 
 .hover\:bg-transparent:hover {
   background-color: transparent;
+}
+
+.hover\:bg-blue-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gradient-to-br:hover {
@@ -2436,6 +2495,11 @@ body::-webkit-scrollbar-thumb {
 
 .hover\:to-violet-400:hover {
   --tw-gradient-to: #a78bfa var(--tw-gradient-to-position);
+}
+
+.hover\:text-xl:hover {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .hover\:text-black:hover {

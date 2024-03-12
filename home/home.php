@@ -446,16 +446,5 @@ $number_of_visits = $row["visits"];
 
 </html>
 
-<?php include "../include/footer.php"; ?>
-e:from-purple-700 active:to-red-500 z-10">
-          <input type="button" value="No ❌" id="denyButton" class="cursor-pointer bg-slate-700 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2 hover:bg-slate-700 hover:text-indigo-400 transition duration-500 min-w-32 active:font-thin active:bg-slate-800" />
-        </div>
-      </div>
-    </form>
-  </dialog>
-</body>
-
-</html>
-
 <?php include "../include/footer.php";
 ?>

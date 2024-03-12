@@ -185,6 +185,13 @@
   background-position: center;
   background-attachment: fixed;
 }
+.clockNewYorkImg {
+  background-image: url("../projects/new_york_clock/img/USA__New_York__Skyline.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 body::-webkit-scrollbar {
   width: 0.25rem;
 }
