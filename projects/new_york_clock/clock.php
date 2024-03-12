@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
   <title>Clock</title>
+  <script src="../../dist/projects/new_york_clock/script.js" defer></script>
 </head>
 
 <body class="flex items-center justify-center flex-col consolas clockNewYorkImg h-[100dvh]">
@@ -37,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
   </div>
 
-  <script src="clock.js"></script>
 </body>
 
 </html>
