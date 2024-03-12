@@ -49,6 +49,11 @@ function gettingTheDate() {
     displayTimeNY.textContent = `${hours}:${minutes}:${seconds} ${amOrPm}`;
   }
   para2.textContent = `${greeting}`;
-  para1.textContent = `It is the ${date.toDateString()}`;
+  para1.innerHTML = `It is the : <br>${date.toDateString()}`;
 }
 setInterval(gettingTheDate, 1);
+
+const footerNY = document.querySelector("footer") as HTMLElement;
+footerNY.classList.add("text-white", "MV-boli", "backdrop-blur-lg");
+const imageFooterNY = footer.querySelector("img") as HTMLImageElement;
+imageFooterNY.src = "../../assets/icons/rocket.gif";
