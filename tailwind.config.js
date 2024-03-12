@@ -10,6 +10,7 @@ module.exports = {
     "./projects/images_slider/*{html,ts,php}",
     "./projects/stopwatch/*{html,ts,php}",
     "./projects/new_york_clock/*{html,ts,php}",
+    "./projects/to_do_list/*{html,ts,php}",
     "./login/*{html,ts,php}",
     "./home/*{html,ts,php}",
     "./include/*{html,php,ts}",
