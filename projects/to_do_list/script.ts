@@ -1,5 +1,5 @@
 type Task = {
-  // id: string;
+  id: number;
   title: string;
   completed: boolean;
   createdAt: Date;
@@ -8,7 +8,7 @@ const list = document.querySelector("#list") as HTMLUListElement;
 const form = document.querySelector("#new-task-form") as HTMLFormElement;
 const input = document.querySelector("#new-task-title") as HTMLInputElement;
 const tasks: Task[] = loadTasks();
-
+let id = 0;
 tasks.forEach(addlistItem);
 
 form?.addEventListener("submit", (event) => {
@@ -17,11 +17,12 @@ form?.addEventListener("submit", (event) => {
   if (input?.value == "" || input?.value == null) return;
 
   const newTask: Task = {
-    // id: uuidV4(),
+    id: id + 1,
     title: input.value,
     completed: false,
     createdAt: new Date(),
   };
+  id += 1;
   tasks.push(newTask);
   saveTasks();
   addlistItem(newTask);
@@ -54,5 +55,3 @@ function loadTasks(): Task[] {
   if (taskJSON == null) return [];
   return JSON.parse(taskJSON);
 }
-
-console.log("2");

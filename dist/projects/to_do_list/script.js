@@ -3,6 +3,7 @@ const list = document.querySelector("#list");
 const form = document.querySelector("#new-task-form");
 const input = document.querySelector("#new-task-title");
 const tasks = loadTasks();
+let id = 0;
 tasks.forEach(addlistItem);
 form === null || form === void 0
   ? void 0
@@ -14,11 +15,12 @@ form === null || form === void 0
       )
         return;
       const newTask = {
-        // id: uuidV4(),
+        id: id + 1,
         title: input.value,
         completed: false,
         createdAt: new Date(),
       };
+      id += 1;
       tasks.push(newTask);
       saveTasks();
       addlistItem(newTask);
@@ -46,4 +48,3 @@ function loadTasks() {
   if (taskJSON == null) return [];
   return JSON.parse(taskJSON);
 }
-console.log("2");
