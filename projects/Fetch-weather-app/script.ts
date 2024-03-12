@@ -75,11 +75,11 @@ const imageObject: { [key: string]: HTMLImageElement } = {};
 
 function createHTMLElements(
   htmlElementsArray: string[],
-  htmlElementObject: { [key: string]: HTMLElement }
+  htmlElementObject: { [key: string]: HTMLElement },
 ): void {
   htmlElementsArray.forEach((htmlElement) => {
     htmlElementObject[htmlElement] = document.querySelector(
-      `#${htmlElement}`
+      `#${htmlElement}`,
     ) as HTMLDivElement;
   });
 }
@@ -208,7 +208,7 @@ async function displayData(data: WeatherData) {
   temperatureText.textContent = `Temperature : ${temperature}°C`;
 
   let feels_like_fixed = (feels_like - 273.15).toFixed();
-  // Same thing here 
+  // Same thing here
   feels_like_fixed === "-0" ? (feels_like_fixed = "0") : true;
 
   temperatureFlText.textContent = ` Feels like : ${feels_like_fixed}°C`;

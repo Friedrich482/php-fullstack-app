@@ -8,14 +8,14 @@ const body = document.body;
 
 const logoutButton = document.querySelector("#logout") as HTMLInputElement;
 const logoutSmallScreens = document.querySelector(
-  "#logoutSmallScreens"
+  "#logoutSmallScreens",
 ) as HTMLDivElement;
 const logoutLargeScreens = document.querySelector(
-  "#logoutLargeScreens"
+  "#logoutLargeScreens",
 ) as HTMLDivElement;
 
 const confirmDeconnexionDialog = document.querySelector(
-  "#confirmDeconnexionDialog"
+  "#confirmDeconnexionDialog",
 ) as HTMLDialogElement;
 const denyButton = document.querySelector("#denyButton") as HTMLInputElement;
 
@@ -64,15 +64,15 @@ const smallAbout = document.querySelector("#smallAbout") as HTMLDivElement;
 const backToTopWrapper = document.querySelector("#backToTop") as HTMLDivElement;
 
 const arrowDownbutton = document.querySelector(
-  "#arrowDownbutton"
+  "#arrowDownbutton",
 ) as HTMLDivElement;
 
 const spaceCalculator = document.querySelector(
-  "#spaceCalculator"
+  "#spaceCalculator",
 ) as HTMLDivElement;
 
 const fetchWeatherApp = document.querySelector(
-  "#fetchWeatherApp"
+  "#fetchWeatherApp",
 ) as HTMLDivElement;
 
 const snakeGame = document.querySelector("#snakeGame") as HTMLDivElement;
@@ -80,6 +80,7 @@ const ticTacToe = document.querySelector("#ticTacToe") as HTMLDivElement;
 const shifumi = document.querySelector("#shifumi") as HTMLDivElement;
 const imagesSlider = document.querySelector("#imagesSlider") as HTMLDivElement;
 const stopwatch = document.querySelector("#stopwatch") as HTMLDivElement;
+const newYorkClock = document.querySelector("#newYorkClock") as HTMLDivElement;
 let linkDivs = [
   largeHome,
   largeTools,
@@ -96,6 +97,7 @@ let linkDivs = [
   shifumi,
   imagesSlider,
   stopwatch,
+  newYorkClock,
 ];
 
 linkDivs.forEach((section: HTMLDivElement) => {
@@ -109,7 +111,7 @@ linkDivs.forEach((section: HTMLDivElement) => {
 // Ping notification management
 
 const menuBurgerButton = document.querySelector(
-  "#menuBurgerButton"
+  "#menuBurgerButton",
 ) as HTMLButtonElement;
 const smallProfile = document.querySelector("#smallProfile") as HTMLDivElement;
 const largeProfile = document.querySelector("#largeProfile") as HTMLDivElement;
@@ -117,15 +119,15 @@ const largeProfile = document.querySelector("#largeProfile") as HTMLDivElement;
 let domElements = [menuBurgerButton, smallProfile, largeProfile];
 
 const pingNotificationBurger = document.querySelector(
-  "#pingNotificationBurger"
+  "#pingNotificationBurger",
 ) as HTMLSpanElement;
 
 const smallScreensNotification = document.querySelector(
-  "#smallNotification"
+  "#smallNotification",
 ) as HTMLSpanElement;
 
 const bigScreensNotification = document.querySelector(
-  "#bigNotification"
+  "#bigNotification",
 ) as HTMLSpanElement;
 
 let notifications = [
@@ -159,7 +161,7 @@ function toggleFlexHidden(element: HTMLSpanElement): void {
 // Animation for the title
 
 const animatedText = document.getElementById(
-  "animatedText"
+  "animatedText",
 ) as HTMLTitleElement;
 const cursor = document.querySelector(".cursor") as HTMLSpanElement;
 const textContent = animatedText.innerText;
@@ -172,7 +174,7 @@ function animateText(): void {
     `<img src="../assets/icons/wave1.gif" alt="greeting" class="h-9 w-9 rounded-full sm:h-12 sm:w-12 relative bottom-1 sm:bottom-0 inline-block">` +
     `<div class="inline-block">${textContent.slice(
       0,
-      charIndex + 1
+      charIndex + 1,
     )}<span class="relative inline-block bg-gradient-to-tr cursor animate-ping from-purple-500 via-teal-500 to-pink-500  sm:w-5 sm:h-5"></span></div>`;
 
   charIndex = reverse ? charIndex - 1 : charIndex + 1;
@@ -204,7 +206,7 @@ function animatemainText(): void {
 
   mainText.innerHTML = `${animatedTextContent.slice(
     0,
-    mainTextCharIndex + 1
+    mainTextCharIndex + 1,
   )}<span class="relative inline-block  bg-gray-200 cursor1 animate-ping sm:w-5 sm:h-5" id="mainCursor"></span>`;
   mainTextCharIndex = reverseMain
     ? mainTextCharIndex - 1
@@ -219,9 +221,9 @@ function animatemainText(): void {
   const delay = isLineBreak
     ? 0.5
     : mainTextCharIndex === 0 ||
-      mainTextCharIndex === animatedTextContent.length
-    ? 1000
-    : 1;
+        mainTextCharIndex === animatedTextContent.length
+      ? 1000
+      : 1;
   setTimeout(animatemainText, delay);
 }
 
@@ -230,13 +232,13 @@ animatemainText();
 // js for the menu burger button
 
 const menuburgerImg = document.querySelector(
-  "#menuBurgerImg"
+  "#menuBurgerImg",
 ) as HTMLImageElement;
 
 let menuburgerImgAlt: string = menuburgerImg.alt;
 
 const verticalNavbar = document.querySelector(
-  "#verticalNavbar"
+  "#verticalNavbar",
 ) as HTMLDivElement;
 
 menuBurgerButton.addEventListener("click", () => {
@@ -267,11 +269,11 @@ function removeVerticalNavbar(): void {
 // Dialog profile
 
 const profileDialog = document.querySelector(
-  "#profileDialog"
+  "#profileDialog",
 ) as HTMLDialogElement;
 const dateDiv = document.querySelector("#dateDiv") as HTMLDivElement;
 const closeProfileButton = document.querySelector(
-  "#closeProfile"
+  "#closeProfile",
 ) as HTMLInputElement;
 
 let profile = [smallProfile, largeProfile];

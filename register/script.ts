@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const registerForm = document.getElementById(
-    "registerForm"
+    "registerForm",
   ) as HTMLFormElement;
 
   const emailInput = document.getElementById("email") as HTMLInputElement;
@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const emailError = document.querySelector("#emailError") as HTMLLabelElement;
   const usernameError = document.getElementById(
-    "usernameError"
+    "usernameError",
   ) as HTMLLabelElement;
   const defaultError = document.querySelector(
-    "#defaultError"
+    "#defaultError",
   ) as HTMLLabelElement;
 
   registerForm.addEventListener("submit", (event) => {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toggleLabel(usernameError);
     usernameError.textContent = "";
-    
+
     const formData: FormData = new FormData(registerForm);
 
     fetch("register_process.php", {
@@ -86,7 +86,6 @@ let registerCssProps2 = [
 function addErrorFieldStyle(element: HTMLInputElement): void {
   element.classList.add(...registerCssProps1);
   element.classList.remove(...registerCssProps2);
-  
 }
 
 function deleteErrorFieldStyle(element: HTMLInputElement): void {

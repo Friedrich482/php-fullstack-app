@@ -2,15 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const loginForm = document.getElementById("loginForm") as HTMLFormElement;
 
   const usernameError = document.getElementById(
-    "usernameError"
+    "usernameError",
   ) as HTMLLabelElement;
 
   const passwordError = document.getElementById(
-    "passwordError"
+    "passwordError",
   ) as HTMLLabelElement;
 
   const defaultError = document.querySelector(
-    "#defaultError"
+    "#defaultError",
   ) as HTMLLabelElement;
 
   const usernameInput = document.getElementById("username") as HTMLInputElement;

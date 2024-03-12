@@ -9,6 +9,7 @@ module.exports = {
     "./projects/shifumi/*{html,ts,php}",
     "./projects/images_slider/*{html,ts,php}",
     "./projects/stopwatch/*{html,ts,php}",
+    "./projects/new_york_clock/*{html,ts,php}",
     "./login/*{html,ts,php}",
     "./home/*{html,ts,php}",
     "./include/*{html,php,ts}",
@@ -19,7 +20,7 @@ module.exports = {
       screens: {
         "sm-custom": "310px",
         "mysql-custom": "358px",
-        "slider-custom": "540px"
+        "slider-custom": "540px",
       },
     },
   },
