@@ -24,20 +24,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
   <title>Clock</title>
+  <script src="../../dist/projects/new_york_clock/script.js" defer></script>
 </head>
 
-<body class="flex items-center justify-center flex-col consolas clockNewYorkImg h-[100dvh]">
-  <div id="container" class="rounded-lg p-2 text-center bg-gray-600 flex items-center justify-center flex-col border-double border-cyan-600 border-8">
-    <div id="displayTime" class="text-center text-7xl text-cyan-500 backdrop-blur-sm hover:bg-blue-200">00:00:00</div>
-    <p id="para2" class="flex text-center text-4xl text-sky-600"></p>
-    <p id="para1" class="flex text-center text-3xl text-sky-600 "></p>
-    <form>
-      <label for="inputMs" class="text-center text-xs text-sky-600 inline-block backdrop-blur-sm hover:text-xl hover:border-b-2 hover:border-b-blue-200">Display milliseconds too: </label>
-      <input type="checkbox" id="inputMs" />
+<body class="flex items-center justify-center flex-col gap-20 consolas clockNewYorkImg h-[100dvh]">
+  <div id="container" class="rounded-lg p-3 text-center bg-gray-600 flex items-center justify-center flex-col border-double border-cyan-600 border-8 min-h-72">
+    <div id="displayTime" class=" rounded-lg p-1 text-center text-4xl sm-custom:text-5xl sm:text-7xl text-cyan-500 backdrop-blur-sm hover:bg-blue-200 transform duration-700">00:00:00</div>
+    <p id="para2" class="flex text-center text-2xl sm-custom:text-3xl sm:text-4xl text-sky-600"></p>
+    <p id="para1" class="flex text-center text-2xl sm:text-3xl text-sky-600 "></p>
+    <form class="flex gap-2">
+      <label for="inputMs" class="text-center text-xs text-sky-600 inline-block backdrop-blur-sm hover:scale-110 hover:border-b-2 hover:border-b-blue-200 transform duration-700">Display milliseconds too: </label>
+      <input type="checkbox" id="inputMs" class="size-5" />
     </form>
   </div>
 
-  <script src="clock.js"></script>
 </body>
 
 </html>
