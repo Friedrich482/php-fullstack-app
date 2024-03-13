@@ -79,7 +79,7 @@ Technologies/tools/languages used :
   - [x] Tailwind CSS
   - [x] Typescript
 - [x] New york clock : all the habitual stuff
-- [ ] To do list : the same thing here
+- [x] To do list : the same thing here
 - [ ] improve LightHouse score on each single page of the app:
   - [ ] replace the rocket gif image by another one
   - [ ] replace all images by their .avif of .webP version
