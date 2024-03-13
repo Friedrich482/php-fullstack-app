@@ -1,65 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 .MV-boli {
-  font-family: "MV Boli";
+  font-family: "MV-boli";
 }
 
 .seven-segment {
   font-family: "seven segment";
 }
+
 .consolas {
   font-family: "consolas";
 }
-.permanent-marker {
-  font-family: "permanent Marker";
-}
-.backgroundImg {
-  background-image: url("../assets/bg-img/02.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
 
-.visibleItem {
-  display: flex;
-  color: red;
-  font-size: 1.25rem;
-  padding: 0;
-  margin: 0;
-}
-
-.gradient-text {
-  background-clip: text;
-  color: transparent;
-}
-
-.fullElt {
-  min-width: 0;
-}
-
-@layer utilities {
-  .gradient-text:hover {
-    background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to right, #69caeb, #ce21e1);
-  }
-}
-
-.animated-text {
-  font-size: 2rem;
-  font-family: "MV Boli";
-}
-
-@keyframes textAnimation {
-  from {
-    width: 0;
-  }
-}
-/* Here a mixin in scss is a better idea for the cursors*/
-/* In resume, two mixins : one for the cursors and the other for all customized bg */
 .cursor {
   width: 1rem;
   height: 1rem;
@@ -73,7 +26,19 @@
   background-color: whitesmoke;
   border-radius: 100%;
 }
-/* Another mixin here would be welcome ... */
+
+.permanent-marker {
+  font-family: "permanent Marker";
+}
+
+.backgroundImg {
+  background-image: url("../assets/bg-img/02.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .calcImg {
   background-image: url("../assets/gridProjects/calc.jpg");
   background-repeat: no-repeat;
@@ -153,6 +118,7 @@
   background-position: center;
   background-attachment: fixed;
 }
+
 .snakebgImg {
   background-image: url("../projects/snake_game/img/snake.png");
   background-repeat: no-repeat;
@@ -178,6 +144,7 @@
   background-attachment: fixed;
   color: white;
 }
+
 .newYorkImg {
   background-image: url("../projects/tic_tac_toe/img/new_york.webp");
   background-repeat: no-repeat;
@@ -185,12 +152,48 @@
   background-position: center;
   background-attachment: fixed;
 }
+
 .clockNewYorkImg {
   background-image: url("../projects/new_york_clock/img/USA__New_York__Skyline.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+.visibleItem {
+  display: flex;
+  color: red;
+  font-size: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.gradient-text {
+  background-clip: text;
+  color: transparent;
+}
+
+.fullElt {
+  min-width: 0;
+}
+
+@layer utilities {
+  .gradient-text:hover {
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #69caeb, #ce21e1);
+  }
+}
+.animated-text {
+  font-size: 2rem;
+  font-family: "MV Boli";
+}
+
+@keyframes textAnimation {
+  from {
+    width: 0;
+  }
 }
 body::-webkit-scrollbar {
   width: 0.25rem;
@@ -208,14 +211,17 @@ body::-webkit-scrollbar-thumb {
   transition: height 300ms ease-in-out;
   height: 0;
 }
+
 .transit-final {
   display: flex;
   height: 20rem;
 }
+
 .calc-border {
   border-right: 5px outset rgb(150, 138, 138);
   border-bottom: 10px outset rgb(62, 59, 59);
 }
+
 .calc-gradient {
   background: linear-gradient(
     23deg,
@@ -234,14 +240,17 @@ body::-webkit-scrollbar-thumb {
     opacity: 1;
   }
 }
-
 .animation-fade {
   animation-name: fade;
   animation-duration: 2.5s;
 }
+
 #rButton {
   clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 25% 50%);
 }
+
 #lButton {
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0% 50%);
 }
+
+/*# sourceMappingURL=input.css.map */

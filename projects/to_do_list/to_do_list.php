@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div class="flex items-start justify-center flex-wrap gap-5 consolas">
     <form id="new-task-form" class="flex items-center justify-center flex-wrap gap-3">
       <input type="text" id="new-task-title" placeholder="Enter the task..." class="rounded-lg border-2 border-violet-600 p-2 text-xl text-white duration-700 text-center bg-gray-900 outline-none focus:border-white" required>
-      <button aria-label ="add a task" type="submit" class="transiton consolas cursor-pointer rounded-lg border-2 border-violet-600 p-2 text-xl text-white duration-700 hover:border-white active:border-yellow-700 active:bg-slate-500">
+      <button aria-label ="add a" type="submit" class="transiton consolas cursor-pointer rounded-lg border-2 border-violet-600 p-2 text-xl text-white duration-700 hover:border-white active:border-yellow-700 active:bg-slate-500">
         Add a task
       </button>
     </form>

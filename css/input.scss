@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@mixin font-family($font-family) {
+  font-family: $font-family;
+}
+@mixin background-image($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+@mixin cursor-mixin() {
+  width: 1rem;
+  height: 1rem;
+  background-color: whitesmoke;
+  border-radius: 100%;
+}
+.MV-boli {
+  @include font-family("MV-boli");
+}
+.seven-segment {
+  @include font-family("seven segment");
+}
+.consolas {
+  @include font-family("consolas");
+}
+.cursor {
+  @include cursor-mixin();
+}
+
+.cursor1 {
+  @include cursor-mixin();
+}
+.permanent-marker {
+  @include font-family("permanent Marker");
+}
+.backgroundImg {
+  @include background-image("../assets/bg-img/02.jpeg");
+}
+
+.calcImg {
+  @include background-image("../assets/gridProjects/calc.jpg");
+}
+
+.weatherImg {
+  @include background-image("../assets/gridProjects/weather.gif");
+}
+
+.snakeImg {
+  @include background-image("../assets/gridProjects/snake.jpg");
+}
+
+.ticImg {
+  @include background-image("../assets/gridProjects/tic.jpg");
+}
+
+.rpsImg {
+  @include background-image("../assets/gridProjects/rps.jpg");
+}
+
+.sliderImg {
+  @include background-image("../assets/gridProjects/slider.png");
+}
+
+.stopwatchImg {
+  @include background-image("../assets/gridProjects/stopwatch.jpeg");
+}
+
+.clockImg {
+  @include background-image("../assets/gridProjects/clock.jpg");
+}
+
+.todoImg {
+  @include background-image("../assets/gridProjects/todo.jpeg");
+}
+
+.spaceImg {
+  @include background-image("../projects/space_calculator/img/blackSky.jpg");
+}
+.snakebgImg {
+  @include background-image("../projects/snake_game/img/snake.png");
+}
+
+.weatherDayImg {
+  @include background-image("../projects/fetch-weather-app/img/01.png");
+  color: black;
+}
+
+.weatherNightImg {
+  @include background-image("../projects/fetch-weather-app/img/02.jpeg");
+  color: white;
+}
+.newYorkImg {
+  @include background-image("../projects/tic_tac_toe/img/new_york.webp");
+}
+.clockNewYorkImg {
+  @include background-image(
+    "../projects/new_york_clock/img/USA__New_York__Skyline.jpg"
+  );
+}
+
+.visibleItem {
+  display: flex;
+  color: red;
+  font-size: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.gradient-text {
+  background-clip: text;
+  color: transparent;
+}
+
+.fullElt {
+  min-width: 0;
+}
+
+@layer utilities {
+  .gradient-text:hover {
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #69caeb, #ce21e1);
+  }
+}
+
+.animated-text {
+  font-size: 2rem;
+  font-family: "MV Boli";
+}
+
+@keyframes textAnimation {
+  from {
+    width: 0;
+  }
+}
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+.transit {
+  transition: height 300ms ease-in-out;
+  height: 0;
+}
+.transit-final {
+  display: flex;
+  height: 20rem;
+}
+.calc-border {
+  border-right: 5px outset rgb(150, 138, 138);
+  border-bottom: 10px outset rgb(62, 59, 59);
+}
+.calc-gradient {
+  background: linear-gradient(
+    23deg,
+    hsla(106, 63%, 57%, 0.664),
+    pink,
+    rgba(211, 211, 27, 0.632)
+  );
+  backdrop-filter: blur(10px);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animation-fade {
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+#rButton {
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 25% 50%);
+}
+#lButton {
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0% 50%);
+}
