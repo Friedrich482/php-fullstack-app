@@ -52,6 +52,7 @@ const shifumi = document.querySelector("#shifumi");
 const imagesSlider = document.querySelector("#imagesSlider");
 const stopwatch = document.querySelector("#stopwatch");
 const newYorkClock = document.querySelector("#newYorkClock");
+const toDoList = document.querySelector("#toDoList");
 let linkDivs = [
   largeHome,
   largeTools,
@@ -69,6 +70,7 @@ let linkDivs = [
   imagesSlider,
   stopwatch,
   newYorkClock,
+  toDoList,
 ];
 linkDivs.forEach((section) => {
   section.addEventListener("click", () => {
