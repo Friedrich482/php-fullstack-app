@@ -1,33 +1,49 @@
 "use strict";
 const list = document.querySelector("#list");
-const form = document.querySelector("#new-task-form");
+const formCreate = document.querySelector("#new-task-form");
+const deleteForm = document.querySelector("#deleteForm");
 const input = document.querySelector("#new-task-title");
-const tasks = loadTasks();
-let id = 0;
+const deleteTaskInput = document.querySelector("#delete-task");
+let tasks = loadTasks();
+let id = tasks.length ? tasks[tasks.length - 1].id : 0;
 tasks.forEach(addlistItem);
-form === null || form === void 0
-  ? void 0
-  : form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      if (
-        (input === null || input === void 0 ? void 0 : input.value) == "" ||
-        (input === null || input === void 0 ? void 0 : input.value) == null
-      )
-        return;
-      const newTask = {
-        id: id + 1,
-        title: input.value,
-        completed: false,
-        createdAt: new Date(),
-      };
-      id += 1;
-      tasks.push(newTask);
+formCreate.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (input.value == "" || input.value == null) return;
+  const newTask = {
+    id: id + 1,
+    title: input.value,
+    completed: false,
+    createdAt: new Date(),
+  };
+  id += 1;
+  tasks.push(newTask);
+  saveTasks();
+  addlistItem(newTask);
+  input.value = "";
+});
+deleteForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let taskToDelete = deleteTaskInput.value;
+  let found = false;
+  tasks.forEach((task) => {
+    if (task.title === taskToDelete) {
+      let index = tasks.indexOf(task);
+      tasks.splice(index, 1);
       saveTasks();
-      addlistItem(newTask);
-      input.value = "";
-    });
+      const child = document.getElementById(`${task.id}`);
+      list.removeChild(child);
+      found = true;
+      deleteTaskInput.value = "";
+    }
+  });
+  if (!found) {
+    console.log("This task wasn't founded");
+  }
+});
 function addlistItem(task) {
   const item = document.createElement("li");
+  item.id = task.id.toString();
   const label = document.createElement("label");
   const checkbox = document.createElement("input");
   checkbox.addEventListener("change", () => {
@@ -37,8 +53,16 @@ function addlistItem(task) {
   checkbox.type = "checkbox";
   checkbox.checked = task.completed;
   label.append(checkbox, task.title);
+  checkbox.classList.add("size-5", "accent-violet-600");
+  label.classList.add(
+    "flex",
+    "items-center",
+    "justify-center",
+    "gap-4",
+    "text-white",
+  );
   item.append(label);
-  list === null || list === void 0 ? void 0 : list.append(item);
+  list.append(item);
 }
 function saveTasks() {
   localStorage.setItem("TASKS", JSON.stringify(tasks));

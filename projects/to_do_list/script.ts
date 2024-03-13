@@ -5,16 +5,22 @@ type Task = {
   createdAt: Date;
 };
 const list = document.querySelector("#list") as HTMLUListElement;
-const form = document.querySelector("#new-task-form") as HTMLFormElement;
+const formCreate = document.querySelector("#new-task-form") as HTMLFormElement;
+const deleteForm = document.querySelector("#deleteForm") as HTMLFormElement;
 const input = document.querySelector("#new-task-title") as HTMLInputElement;
-const tasks: Task[] = loadTasks();
-let id = 0;
+const deleteTaskInput = document.querySelector(
+  "#delete-task",
+) as HTMLInputElement;
+let tasks: Task[] = loadTasks();
+
+let id = tasks.length ? tasks[tasks.length - 1].id : 0;
+
 tasks.forEach(addlistItem);
 
-form?.addEventListener("submit", (event) => {
+formCreate.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  if (input?.value == "" || input?.value == null) return;
+  if (input.value == "" || input.value == null) return;
 
   const newTask: Task = {
     id: id + 1,
@@ -22,6 +28,7 @@ form?.addEventListener("submit", (event) => {
     completed: false,
     createdAt: new Date(),
   };
+
   id += 1;
   tasks.push(newTask);
   saveTasks();
@@ -29,8 +36,29 @@ form?.addEventListener("submit", (event) => {
   input.value = "";
 });
 
+deleteForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let taskToDelete = deleteTaskInput.value;
+  let found = false;
+  tasks.forEach((task) => {
+    if (task.title === taskToDelete) {
+      let index = tasks.indexOf(task);
+      tasks.splice(index, 1);
+      saveTasks();
+      const child = document.getElementById(`${task.id}`) as HTMLLIElement;
+      list.removeChild(child);
+      found = true;
+      deleteTaskInput.value = "";
+    }
+  });
+  if (!found) {
+    console.log("This task wasn't founded");
+  }
+});
+
 function addlistItem(task: Task) {
   const item = document.createElement("li");
+  item.id = task.id.toString();
   const label = document.createElement("label");
   const checkbox = document.createElement("input");
 
@@ -42,8 +70,16 @@ function addlistItem(task: Task) {
   checkbox.type = "checkbox";
   checkbox.checked = task.completed;
   label.append(checkbox, task.title);
+  checkbox.classList.add("size-5", "accent-violet-600");
+  label.classList.add(
+    "flex",
+    "items-center",
+    "justify-center",
+    "gap-4",
+    "text-white",
+  );
   item.append(label);
-  list?.append(item);
+  list.append(item);
 }
 
 function saveTasks() {
