@@ -60,6 +60,9 @@ function addlistItem(task) {
     "justify-center",
     "gap-4",
     "text-white",
+    "hover:scale-110",
+    "transform",
+    "duration-700",
   );
   item.append(label);
   list.append(item);
@@ -72,3 +75,8 @@ function loadTasks() {
   if (taskJSON == null) return [];
   return JSON.parse(taskJSON);
 }
+const footerToDo = document.querySelector("footer");
+footerToDo.classList.add("text-white", "MV-boli");
+const imageFooterToDo = footerToDo.querySelector("img");
+imageFooterToDo.src = "../../assets/icons/rocket.gif";
+footerToDo.classList.add("mt-8");
