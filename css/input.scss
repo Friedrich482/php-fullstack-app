@@ -19,7 +19,7 @@
   border-radius: 100%;
 }
 .MV-boli {
-  @include font-family("MV-boli");
+  @include font-family("MV boli");
 }
 .seven-segment {
   @include font-family("seven segment");
@@ -38,7 +38,7 @@
   @include font-family("permanent Marker");
 }
 .backgroundImg {
-  @include background-image("../assets/bg-img/02.jpeg");
+  @include background-image("../assets/bg-img/02.avif");
 }
 
 .calcImg {

@@ -4,13 +4,13 @@ My first application in php to register users. The goal is to integrate all my j
 
 Technologies/tools/languages used :
 
-![Tailwindcss](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)
+![Tailwindcss](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)
 
 ## To do
 
@@ -83,6 +83,10 @@ Technologies/tools/languages used :
 - [x] New york clock : all the habitual stuff
 - [x] To do list : the same thing here
 - [ ] improve LightHouse score on each single page of the app:
-  - [ ] replace the rocket gif image by another one
+
+  - [x] replace the rocket gif image by another one
   - [ ] replace all images by their .avif of .webP version
-        This list will be updated depending on my progression through it.
+
+- [ ] The app will be deployed by default on vercel but if it is not possible, I will deploy it on the Docker Hub using Docker
+
+This list will be updated depending on my progression through it.
