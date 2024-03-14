@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const emailInput = document.getElementById("email") as HTMLInputElement;
   const usernameInput = document.getElementById("username") as HTMLInputElement;
-  const passwordInput = document.getElementById("password") as HTMLInputElement;
+  const passwordInput = document.getElementById(
+    "passwordRegister",
+  ) as HTMLInputElement;
 
   const emailError = document.querySelector("#emailError") as HTMLLabelElement;
   const usernameError = document.getElementById(
@@ -14,7 +16,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const defaultError = document.querySelector(
     "#defaultError",
   ) as HTMLLabelElement;
-
+  const eyeSlashedRegister = document.querySelector(
+    "#eyeSlashedRegister",
+  ) as HTMLImageElement;
+  const passwordRegister = document.querySelector(
+    "#password",
+  ) as HTMLInputElement;
+  eyeSlashedRegister.addEventListener("click", () => {
+    if (passwordRegister.type === "password") {
+      passwordRegister.type = "text";
+      eyeSlashedRegister.src = "../assets/eye/eye.png";
+      eyeSlashedRegister.title = "Hide the password";
+    } else {
+      passwordRegister.type = "password";
+      eyeSlashedRegister.src = "../assets/eye/eye-crossed.png";
+      eyeSlashedRegister.title = "Display the password";
+    }
+  });
   registerForm.addEventListener("submit", (event) => {
     console.log("Form submission intercepted");
     event.preventDefault();
