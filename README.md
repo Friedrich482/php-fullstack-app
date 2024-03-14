@@ -9,6 +9,8 @@ Technologies/tools/languages used :
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
 ## To do
 
@@ -23,10 +25,10 @@ Technologies/tools/languages used :
 - [ ] a different page for each tool
 - [ ] ~~the background image may change depending of the moment of the day : sunrise 🌅, day ☀, sunset 🌇, night 🌙~~ (_canceled_)
 - [ ] ~~The counter of visits will be attached to an other element (possibly the navbar, and so it will no more be so messy positionned)~~
-- [ ] I should think to make the footer 🦶 mobile (animation 🎞)
+- [ ] ~~I should think to make the footer 🦶 mobile (animation 🎞)~~
 - [ ] ~~display the time in the navbar, eventually~~
 - [x] The time will now appear in the Profile tab.
-- [ ] the to-do-list must use the LocalStorage
+- [x] the to-do-list must use the LocalStorage
 - [x] For the log out, a dialog 💬 should pop up ( maybe a blur effect will be interesting, in background )
 - [x] The navbar should contain profile with infos about user, tools ( in many sections ) and logout
 - [x] The infos like counter of visits will be in Profile

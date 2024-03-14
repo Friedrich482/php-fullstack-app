@@ -50,6 +50,7 @@
     "minipass": "^7.0.4",
     "mz": "^2.7.0",
     "nanoid": "^3.3.7",
+    "node-sass": "^9.0.0",
     "normalize-path": "^3.0.0",
     "object-assign": "^4.1.1",
     "object-hash": "^3.0.0",
@@ -74,6 +75,7 @@
     "resolve": "^1.22.8",
     "reusify": "^1.0.4",
     "run-parallel": "^1.2.0",
+    "sass": "^1.72.0",
     "shebang-command": "^2.0.0",
     "shebang-regex": "^3.0.0",
     "signal-exit": "^4.1.0",
@@ -98,7 +100,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tailwindcss -i ./css/input.css -o ./css/style.css --watch",
     "tsc-watch": "tsc --watch",
-    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+    "sass": "sass --watch ./css/input.scss ./css/input.css"
   },
   "author": "",
   "license": "ISC",
@@ -106,6 +109,7 @@
     "@prettier/plugin-php": "^0.22.2",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.12",
+    "scss": "^0.2.4",
     "tailwindcss": "^3.4.1",
     "tailwindcss-inner-border": "^0.2.0",
     "typescript": "^5.3.3"

@@ -781,10 +781,6 @@ video {
   display: inline-flex;
 }
 
-.table {
-  display: table;
-}
-
 .grid {
   display: grid;
 }
@@ -1046,14 +1042,6 @@ video {
   width: 100%;
 }
 
-.w-5\/12 {
-  width: 41.666667%;
-}
-
-.w-7\/12 {
-  width: 58.333333%;
-}
-
 .min-w-10 {
   min-width: 2.5rem;
 }
@@ -1219,20 +1207,8 @@ video {
   align-items: flex-start;
 }
 
-.items-end {
-  align-items: flex-end;
-}
-
 .items-center {
   align-items: center;
-}
-
-.items-stretch {
-  align-items: stretch;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-center {
@@ -1623,16 +1599,6 @@ video {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 
-.bg-stone-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(231 229 228 / var(--tw-bg-opacity));
-}
-
-.bg-stone-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(87 83 78 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -1709,6 +1675,10 @@ video {
   padding: 0.25rem;
 }
 
+.p-12 {
+  padding: 3rem;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1727,18 +1697,6 @@ video {
 
 .p-\[2px\] {
   padding: 2px;
-}
-
-.p-5 {
-  padding: 1.25rem;
-}
-
-.p-10 {
-  padding: 2.5rem;
-}
-
-.p-12 {
-  padding: 3rem;
 }
 
 .pb-1 {
@@ -1949,12 +1907,12 @@ video {
   accent-color: #b91c1c;
 }
 
-.accent-yellow-400 {
-  accent-color: #facc15;
-}
-
 .accent-violet-600 {
   accent-color: #7c3aed;
+}
+
+.accent-yellow-400 {
+  accent-color: #facc15;
 }
 
 .opacity-0 {
@@ -2129,7 +2087,7 @@ video {
 }
 
 .MV-boli {
-  font-family: "MV Boli";
+  font-family: "MV boli";
 }
 
 .seven-segment {
@@ -2139,51 +2097,6 @@ video {
 .consolas {
   font-family: "consolas";
 }
-
-.permanent-marker {
-  font-family: "permanent Marker";
-}
-
-.backgroundImg {
-  background-image: url("../assets/bg-img/02.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.visibleItem {
-  display: flex;
-  color: red;
-  font-size: 1.25rem;
-  padding: 0;
-  margin: 0;
-}
-
-.gradient-text {
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.fullElt {
-  min-width: 0;
-}
-
-.animated-text {
-  font-size: 2rem;
-  font-family: "MV Boli";
-}
-
-@keyframes textAnimation {
-  from {
-    width: 0;
-  }
-}
-
-/* Here a mixin in scss is a better idea for the cursors*/
-
-/* In resume, two mixins : one for the cursors and the other for all customized bg */
 
 .cursor {
   width: 1rem;
@@ -2199,7 +2112,17 @@ video {
   border-radius: 100%;
 }
 
-/* Another mixin here would be welcome ... */
+.permanent-marker {
+  font-family: "permanent Marker";
+}
+
+.backgroundImg {
+  background-image: url("../assets/bg-img/02.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
 .calcImg {
   background-image: url("../assets/gridProjects/calc.jpg");
@@ -2321,6 +2244,35 @@ video {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+.visibleItem {
+  display: flex;
+  color: red;
+  font-size: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.gradient-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.fullElt {
+  min-width: 0;
+}
+
+.animated-text {
+  font-size: 2rem;
+  font-family: "MV Boli";
+}
+
+@keyframes textAnimation {
+  from {
+    width: 0;
+  }
 }
 
 body::-webkit-scrollbar {
@@ -2658,11 +2610,6 @@ body::-webkit-scrollbar-thumb {
   border-color: rgb(161 98 7 / var(--tw-border-opacity));
 }
 
-.active\:border-white:active {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
 .active\:bg-slate-500:active {
   --tw-bg-opacity: 1;
   background-color: rgb(100 116 139 / var(--tw-bg-opacity));
@@ -2681,46 +2628,6 @@ body::-webkit-scrollbar-thumb {
 .active\:bg-slate-950:active {
   --tw-bg-opacity: 1;
   background-color: rgb(2 6 23 / var(--tw-bg-opacity));
-}
-
-.active\:bg-violet-500:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(139 92 246 / var(--tw-bg-opacity));
-}
-
-.active\:bg-violet-600:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(124 58 237 / var(--tw-bg-opacity));
-}
-
-.active\:bg-purple-600:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(147 51 234 / var(--tw-bg-opacity));
-}
-
-.active\:bg-violet-800:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(91 33 182 / var(--tw-bg-opacity));
-}
-
-.active\:bg-violet-950:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(46 16 101 / var(--tw-bg-opacity));
-}
-
-.active\:bg-violet-200:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(221 214 254 / var(--tw-bg-opacity));
-}
-
-.active\:bg-purple-500:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(168 85 247 / var(--tw-bg-opacity));
-}
-
-.active\:bg-purple-700:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(126 34 206 / var(--tw-bg-opacity));
 }
 
 .active\:bg-gradient-to-br:active {
@@ -3074,3 +2981,5 @@ body::-webkit-scrollbar-thumb {
     --tw-ring-color: rgb(226 232 240 / 0.2);
   }
 }
+
+/*# sourceMappingURL=style.css.map */

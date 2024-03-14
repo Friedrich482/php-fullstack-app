@@ -3,10 +3,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const registerForm = document.getElementById("registerForm");
   const emailInput = document.getElementById("email");
   const usernameInput = document.getElementById("username");
-  const passwordInput = document.getElementById("password");
+  const passwordInput = document.getElementById("passwordRegister");
   const emailError = document.querySelector("#emailError");
   const usernameError = document.getElementById("usernameError");
   const defaultError = document.querySelector("#defaultError");
+  const eyeSlashedRegister = document.querySelector("#eyeSlashedRegister");
+  const passwordRegister = document.querySelector("#password");
+  eyeSlashedRegister.addEventListener("click", () => {
+    if (passwordRegister.type === "password") {
+      passwordRegister.type = "text";
+      eyeSlashedRegister.src = "../assets/eye/eye.png";
+      eyeSlashedRegister.title = "Hide the password";
+    } else {
+      passwordRegister.type = "password";
+      eyeSlashedRegister.src = "../assets/eye/eye-crossed.png";
+      eyeSlashedRegister.title = "Display the password";
+    }
+  });
   registerForm.addEventListener("submit", (event) => {
     console.log("Form submission intercepted");
     event.preventDefault();
