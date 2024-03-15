@@ -66,7 +66,7 @@
 }
 
 .stopwatchImg {
-  @include background-image("../assets/gridProjects/stopwatch.jpeg");
+  @include background-image("../assets/gridProjects/stopwatch.webp");
 }
 
 .clockImg {
@@ -74,7 +74,7 @@
 }
 
 .todoImg {
-  @include background-image("../assets/gridProjects/todo.jpeg");
+  @include background-image("../assets/gridProjects/todo.webp");
 }
 
 .spaceImg {

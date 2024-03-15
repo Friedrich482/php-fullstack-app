@@ -150,7 +150,7 @@ $number_of_visits = $row["visits"];
 
     <dialog id="profileDialog" class="hidden items-center justify-center flex-col bg-slate-800 sm:opacity-100 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-64 w-[330px] min-h-[560px] gap-6 z-10 text-[whitesmoke]">
       <div class="flex items-center justify-center gap-3">
-        <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="h-12 w-12 sm:h-10 sm:w-10" />
+        <img src="../assets/icons/navbarIcons/info.svg" alt="info icon" class="h-12 w-12 sm:h-10 sm:w-10" />
         <h2 class="text-3xl text-violet-500">About Me</h2>
       </div>
       <hr class="text-white w-11/12" />
@@ -159,7 +159,7 @@ $number_of_visits = $row["visits"];
 
       <div class="flex items-center justify-center w-full">
         <span class="w-1/4 flex items-center justify-center">
-          <img src="../assets/icons/navbarIcons/circle-user.png" alt="User" class="h-12 w-12" />
+          <img src="../assets/icons/navbarIcons/circle-user.svg" alt="User" class="h-12 w-12" />
         </span>
 
         <span class="w-3/4 text-start items-start">
@@ -174,7 +174,7 @@ $number_of_visits = $row["visits"];
 
       <div class="flex items-center justify-center w-full">
         <span class="w-1/4 flex items-center justify-center">
-          <img src="../assets/icons/stats.png" alt="stats icon" class="h-12 w-12" />
+          <img src="../assets/icons/stats.svg" alt="stats icon" class="h-12 w-12" />
         </span>
 
         <span class="w-3/4 text-start items-start">
@@ -219,7 +219,7 @@ $number_of_visits = $row["visits"];
 
       <div class="flex items-center justify-center w-full">
         <span class="w-1/4 flex items-center justify-center">
-          <img src="../assets/icons/hand-horns.png" alt="rock icon" class="h-12 w-12" />
+          <img src="../assets/icons/hand-horns.svg" alt="rock icon" class="h-12 w-12" />
         </span>
 
         <span class="w-3/4 text-start items-start">
@@ -264,7 +264,7 @@ $number_of_visits = $row["visits"];
   <!-- "Go back to top" button-->
 
   <div class="group h-12 w-12 sm:h-16 sm:w-16 bg-white rounded-2xl bottom-5 right-5 hidden fixed z-50 items-center justify-center cursor-pointer hover:bg-slate-200" title="Go back to the top" id="backToTop">
-    <a href="#header"><img src="../assets/icons/top.png" alt="back to up !" class="scroll-smooth h-5 w-5 sm:h-7 sm:w-7 group-hover:animate-bounce" /></a>
+    <a href="#header"><img src="../assets/icons/top.svg" alt="back to up !" class="scroll-smooth h-5 w-5 sm:h-7 sm:w-7 group-hover:animate-bounce" /></a>
   </div>
 
   <main class="flex items-center justify-center flex-col gap-3 sm:w-[620px] z-0">

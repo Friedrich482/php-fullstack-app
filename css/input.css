@@ -88,7 +88,7 @@
 }
 
 .stopwatchImg {
-  background-image: url("../assets/gridProjects/stopwatch.jpeg");
+  background-image: url("../assets/gridProjects/stopwatch.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -104,7 +104,7 @@
 }
 
 .todoImg {
-  background-image: url("../assets/gridProjects/todo.jpeg");
+  background-image: url("../assets/gridProjects/todo.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
