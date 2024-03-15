@@ -312,7 +312,7 @@ $number_of_visits = $row["visits"];
     <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6" id="toolsGrid">
       <!-- Calculator card -->
 
-      <div class="group bg-orange-300 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-lg hover:shadow-white" id="spaceCalculator">
+      <div class="group bg-orange-300 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-lg hover:shadow-white cursor-pointer" id="spaceCalculator">
         <a href="../projects/space_calculator/calculator.php"></a>
         <div class="calcImg h-3/5 w-full rounded-t-md transform duration-700 group-hover:border-b-4 group-hover:border-b-orange-300"></div>
 
@@ -323,7 +323,7 @@ $number_of_visits = $row["visits"];
 
       <!-- Comprehensive fetch weather app card -->
 
-      <div class="group bg-yellow-300 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white" id="fetchWeatherApp">
+      <div class="group bg-yellow-300 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white cursor-pointer" id="fetchWeatherApp">
         <a href="../projects/fetch-weather-app/weatherApp.php"></a>
         <div class="weatherImg h-3/5 w-full rounded-t-md transform duration-700 group-hover:border-b-4 group-hover:border-b-yellow-300"></div>
 
@@ -334,7 +334,7 @@ $number_of_visits = $row["visits"];
 
       <!-- Snake game card -->
 
-      <div class="group bg-lime-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white" id="snakeGame">
+      <div class="group bg-lime-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white cursor-pointer" id="snakeGame">
         <a href="../projects/snake_game/snake.php"></a>
         <div class="snakeImg h-3/5 w-full rounded-t-md transform duration-700 group-hover:border-b-4 group-hover:border-b-lime-600"></div>
 
@@ -345,7 +345,7 @@ $number_of_visits = $row["visits"];
 
       <!-- Tic tac toe game card -->
 
-      <div class="group bg-slate-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white" id="ticTacToe">
+      <div class="group bg-slate-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white cursor-pointer" id="ticTacToe">
         <a href="../projects/tic_tac_toe/tic_tac_toe.php"></a>
         <div class="ticImg h-3/5 w-full rounded-t-md transform duration-700 group-hover:border-b-4 group-hover:border-b-slate-200"></div>
 
@@ -356,7 +356,7 @@ $number_of_visits = $row["visits"];
 
       <!-- Shifumi game card -->
 
-      <div class="group bg-red-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white" id="shifumi">
+      <div class="group bg-red-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white cursor-pointer" id="shifumi">
         <a href="../projects/shifumi/shifumi.php"></a>
         <div class="rpsImg h-3/5 w-full rounded-t-md transform duration-700 group-hover:border-b-4 group-hover:border-b-red-600"></div>
 
@@ -367,7 +367,7 @@ $number_of_visits = $row["visits"];
 
       <!-- Images slider card -->
 
-      <div class="group bg-indigo-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white" id="imagesSlider">
+      <div class="group bg-indigo-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white cursor-pointer" id="imagesSlider">
         <a href="../projects/images_slider/slider.php"></a>
 
         <div class="sliderImg h-3/5 w-full rounded-t-md transform duration-700 group-hover:border-b-4 group-hover:border-b-indigo-200"></div>
@@ -379,7 +379,7 @@ $number_of_visits = $row["visits"];
 
       <!-- Stopwatch card -->
 
-      <div class="group bg-sky-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white" id="stopwatch">
+      <div class="group bg-sky-600 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white cursor-pointer" id="stopwatch">
       <a href="../projects/stopwatch/stopwatch.php"></a>  
       <div class="stopwatchImg h-3/5 w-full rounded-t-md transform duration-700 group-hover:border-b-4 group-hover:border-b-sky-600"></div>
       
@@ -390,7 +390,7 @@ $number_of_visits = $row["visits"];
     
     <!-- Clock card -->
     
-    <div class="group bg-blue-900 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white" id="newYorkClock">
+    <div class="group bg-blue-900 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white cursor-pointer" id="newYorkClock">
         <a href="../projects/new_york_clock/clock.php"></a>  
         <div class="clockImg h-3/5 w-full rounded-t-md transform duration-700 group-hover:border-b-4 group-hover:border-b-blue-900"></div>
         
@@ -401,7 +401,7 @@ $number_of_visits = $row["visits"];
       
       <!-- To-do-list -->
       
-      <div class="group bg-rose-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white" id="toDoList">
+      <div class="group bg-rose-200 w-5/6 max-w-96 aspect-square text-center flex items-center justify-center flex-col gap-0 text-2xl rounded-md transform duration-700 hover:scale-110 text-black hover:shadow-xl hover:shadow-white cursor-pointer" id="toDoList">
         <a href="../projects/to_do_list/to_do_list.php"></a>  
         <div class="todoImg h-3/5 w-full rounded-t-md transform duration-700 group-hover:border-b-4 group-hover:border-b-rose-200"></div>
 

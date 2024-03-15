@@ -113,4 +113,4 @@ window.addEventListener("keydown", (event) => {
 const footerCalc = document.querySelector("footer");
 footer.classList.add("text-white", "MV-boli");
 const imageFooterCalc = footer.querySelector("img");
-imageFooterCalc.src = "../../assets/icons/rocket.gif";
+imageFooterCalc.src = "../../assets/icons/rocket.svg";

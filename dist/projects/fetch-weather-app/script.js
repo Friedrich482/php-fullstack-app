@@ -80,7 +80,7 @@ const { marker, weatherIcon, sunOrMoon } = imageObject;
 const weatherForm = document.getElementById("weatherForm");
 const footer = document.querySelector("footer");
 const imageFooter = footer.querySelector("img");
-imageFooter.src = "../../assets/icons/rocket.gif";
+imageFooter.src = "../../assets/icons/rocket.svg";
 footer.classList.add("hidden");
 const apiKey = API_KEY;
 let interval; // For the setInterval function later in the code

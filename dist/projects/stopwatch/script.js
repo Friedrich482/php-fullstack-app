@@ -62,5 +62,5 @@ resetButton.addEventListener("click", () => {
 const footerStopwatch = document.querySelector("footer");
 footerStopwatch.classList.add("text-white", "MV-boli");
 const imageFooterStopwatch = footerStopwatch.querySelector("img");
-imageFooterStopwatch.src = "../../assets/icons/rocket.gif";
+imageFooterStopwatch.src = "../../assets/icons/rocket.svg";
 footerStopwatch.classList.add("mt-8");

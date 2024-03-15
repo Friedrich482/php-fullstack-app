@@ -119,4 +119,4 @@ function toggleShifumiDialog(element) {
 const footerShifumi = document.querySelector("footer");
 footerShifumi.classList.add("text-white", "MV-boli");
 const imageFooterShifumi = footer.querySelector("img");
-imageFooterShifumi.src = "../../assets/icons/rocket.gif";
+imageFooterShifumi.src = "../../assets/icons/rocket.svg";

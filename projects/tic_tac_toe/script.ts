@@ -147,4 +147,4 @@ yesTicButton.addEventListener("click", () => {
 const footerTic = document.querySelector("footer") as HTMLElement;
 footerTic.classList.add("text-white", "MV-boli", "backdrop-blur-sm");
 const imageFooterTic = footerTic.querySelector("img") as HTMLImageElement;
-imageFooterTic.src = "../../assets/icons/rocket.gif";
+imageFooterTic.src = "../../assets/icons/rocket.svg";
