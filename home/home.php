@@ -48,14 +48,14 @@ $number_of_visits = $row["visits"];
       <!-- Home -->
 
       <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 transform duration-500 hover:border-b-8 hover:border-l-8 hover:border-b-white hover:border-l-white hover:bg-gray-800 active:bg-slate-950" id="largeHome">
-        <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1" />
+        <img src="../assets/icons/navbarIcons/home.svg" alt="home icon" class="w-6 h-6 relative bottom-1" />
         <span><a href="#animatedText" class="no-underline">Home</a></span>
       </div>
 
       <!-- Profile -->
 
       <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950" id="largeProfile">
-        <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1" />
+        <img src="../assets/icons/navbarIcons/circle-user.svg" alt="user icon" class="w-6 h-6 relative bottom-1" />
         <span class="">Profile</span>
 
         <!-- Ping element for notification -->
@@ -68,21 +68,21 @@ $number_of_visits = $row["visits"];
       <!-- Tools -->
 
       <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950" id="largeTools">
-        <img src="../assets/icons/navbarIcons/wrench.png" alt="tool icon" class="w-6 h-6 relative bottom-1" />
+        <img src="../assets/icons/navbarIcons/wrench.svg" alt="tool icon" class="w-6 h-6 relative bottom-1" />
         <span class=""><a href="#toolsGrid">Tools</a></span>
       </div>
 
       <!-- About -->
 
       <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 transform duration-500 hover:border-b-8 hover:border-b-white hover:bg-gray-800 active:bg-slate-950" id="largeAbout">
-        <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="w-6 h-6 relative bottom-1" />
+        <img src="../assets/icons/navbarIcons/info.svg" alt="info icon" class="w-6 h-6 relative bottom-1" />
         <span class=""><a href="#footer">About</a></span>
       </div>
 
       <!-- Logout -->
 
       <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 cursor-pointer transform duration-500 hover:border-b-8 hover:border-r-8 hover:border-b-white hover border-r-2:border-r-white hover:bg-gray-800 active:bg-slate-950" id="logoutLargeScreens">
-        <img src="../assets/icons/navbarIcons/exit.png" alt="info icon" class="w-6 h-6 relative bottom-1" />
+        <img src="../assets/icons/navbarIcons/exit.svg" alt="info icon" class="w-6 h-6 relative bottom-1" />
         <span class="">Logout</span>
       </div>
     </div>
@@ -92,7 +92,7 @@ $number_of_visits = $row["visits"];
     <!-- Menu Burger button -->
 
     <button class="sm:hidden h-9 w-9 bg-black p-1 border-[0.5px] border-gray-500 rounded-sm hover:border-white relative left-4 top-2" id="menuBurgerButton">
-      <img src="../assets/icons/navbarIcons/menu-burger.png" alt="menu-burger icon" class="" id="menuBurgerImg" />
+      <img src="../assets/icons/navbarIcons/menu-burger.svg" alt="menu-burger icon" class="" id="menuBurgerImg" />
     </button>
 
     <!-- Ping element for notification (here for the menu burger button) -->
@@ -106,7 +106,7 @@ $number_of_visits = $row["visits"];
       <!-- Home -->
 
       <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallHome">
-        <img src="../assets/icons/navbarIcons/home.png" alt="home icon" class="w-6 h-6 relative bottom-1" />
+        <img src="../assets/icons/navbarIcons/home.svg" alt="home icon" class="w-6 h-6 relative bottom-1" />
         <span><a href="#animatedText" class="no-underline">Home</a></span>
       </div>
 
@@ -114,7 +114,7 @@ $number_of_visits = $row["visits"];
 
       <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallProfile">
         <!-- <div class="w-3"></div> -->
-        <img src="../assets/icons/navbarIcons/circle-user.png" alt="user icon" class="w-6 h-6 relative bottom-1" />
+        <img src="../assets/icons/navbarIcons/circle-user.svg" alt="user icon" class="w-6 h-6 relative bottom-1" />
         <span class="">Profile</span>
 
         <!-- Ping element for notification -->
@@ -127,21 +127,21 @@ $number_of_visits = $row["visits"];
       <!-- Tools -->
 
       <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallTools">
-        <img src="../assets/icons/navbarIcons/wrench.png" alt="tool icon" class="w-6 h-6 relative bottom-1" />
+        <img src="../assets/icons/navbarIcons/wrench.svg" alt="tool icon" class="w-6 h-6 relative bottom-1" />
         <span class=""><a href="#toolsGrid">Tools</a></span>
       </div>
 
       <!-- About -->
 
       <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallAbout">
-        <img src="../assets/icons/navbarIcons/info.png" alt="info icon" class="w-6 h-6 relative bottom-1" />
+        <img src="../assets/icons/navbarIcons/info.svg" alt="info icon" class="w-6 h-6 relative bottom-1" />
         <span class=""><a href="#footer">About</a></span>
       </div>
 
       <!-- Logout -->
 
       <div class="group text-center flex items-center justify-center gap-2 h-full w-full p-0 cursor-pointer border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="logoutSmallScreens">
-        <img src="../assets/icons/navbarIcons/exit.png" alt="info icon" class="w-6 h-6 relative bottom-1" />
+        <img src="../assets/icons/navbarIcons/exit.svg" alt="info icon" class="w-6 h-6 relative bottom-1" />
         <span class="">Logout</span>
       </div>
     </div>

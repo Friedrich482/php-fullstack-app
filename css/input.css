@@ -40,7 +40,7 @@
 }
 
 .calcImg {
-  background-image: url("../assets/gridProjects/calc.jpg");
+  background-image: url("../assets/gridProjects/calc.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -56,7 +56,7 @@
 }
 
 .snakeImg {
-  background-image: url("../assets/gridProjects/snake.jpg");
+  background-image: url("../assets/gridProjects/snake.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -64,7 +64,7 @@
 }
 
 .ticImg {
-  background-image: url("../assets/gridProjects/tic.jpg");
+  background-image: url("../assets/gridProjects/tic.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -72,7 +72,7 @@
 }
 
 .rpsImg {
-  background-image: url("../assets/gridProjects/rps.jpg");
+  background-image: url("../assets/gridProjects/rps.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -80,7 +80,7 @@
 }
 
 .sliderImg {
-  background-image: url("../assets/gridProjects/slider.png");
+  background-image: url("../assets/gridProjects/slider.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -96,7 +96,7 @@
 }
 
 .clockImg {
-  background-image: url("../assets/gridProjects/clock.jpg");
+  background-image: url("../assets/gridProjects/clock.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -112,7 +112,7 @@
 }
 
 .spaceImg {
-  background-image: url("../projects/space_calculator/img/blackSky.jpg");
+  background-image: url("../projects/space_calculator/img/blackSky.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
