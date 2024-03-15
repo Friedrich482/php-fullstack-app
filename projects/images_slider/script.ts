@@ -85,7 +85,7 @@ function removeViolet(element: HTMLDivElement) {
 const footerSlider = document.querySelector("footer") as HTMLElement;
 footerSlider.classList.add("text-white", "MV-boli");
 const imageFooterSlider = footer.querySelector("img") as HTMLImageElement;
-imageFooterSlider.src = "../../assets/icons/rocket.gif";
+imageFooterSlider.src = "../../assets/icons/rocket.svg";
 footerSlider.classList.add("relative", "bottom-4");
 
 window.addEventListener("keydown", (event) => {

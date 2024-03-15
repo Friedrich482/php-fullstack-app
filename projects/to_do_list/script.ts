@@ -98,5 +98,5 @@ function loadTasks(): Task[] {
 const footerToDo = document.querySelector("footer") as HTMLElement;
 footerToDo.classList.add("text-white", "MV-boli");
 const imageFooterToDo = footerToDo.querySelector("img") as HTMLImageElement;
-imageFooterToDo.src = "../../assets/icons/rocket.gif";
+imageFooterToDo.src = "../../assets/icons/rocket.svg";
 footerToDo.classList.add("mt-8");

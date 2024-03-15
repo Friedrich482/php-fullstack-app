@@ -78,5 +78,5 @@ function loadTasks() {
 const footerToDo = document.querySelector("footer");
 footerToDo.classList.add("text-white", "MV-boli");
 const imageFooterToDo = footerToDo.querySelector("img");
-imageFooterToDo.src = "../../assets/icons/rocket.gif";
+imageFooterToDo.src = "../../assets/icons/rocket.svg";
 footerToDo.classList.add("mt-8");

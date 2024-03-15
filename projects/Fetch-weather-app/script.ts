@@ -107,7 +107,7 @@ const weatherForm = document.getElementById("weatherForm") as HTMLFormElement;
 
 const footer = document.querySelector("footer") as HTMLElement;
 const imageFooter = footer.querySelector("img") as HTMLImageElement;
-imageFooter.src = "../../assets/icons/rocket.gif";
+imageFooter.src = "../../assets/icons/rocket.svg";
 footer.classList.add("hidden");
 
 const apiKey: string = API_KEY;

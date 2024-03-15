@@ -281,4 +281,4 @@ function blockResetWithEnterKey() {
 const footer = document.querySelector("footer");
 footer.classList.add("text-white", "MV-boli");
 const imageFooter = footer.querySelector("img");
-imageFooter.src = "../../assets/icons/rocket.gif";
+imageFooter.src = "../../assets/icons/rocket.svg";
