@@ -42,7 +42,7 @@
 }
 
 .calcImg {
-  @include background-image("../assets/gridProjects/calc.jpg");
+  @include background-image("../assets/gridProjects/calc.webp");
 }
 
 .weatherImg {
@@ -50,35 +50,35 @@
 }
 
 .snakeImg {
-  @include background-image("../assets/gridProjects/snake.jpg");
+  @include background-image("../assets/gridProjects/snake.webp");
 }
 
 .ticImg {
-  @include background-image("../assets/gridProjects/tic.jpg");
+  @include background-image("../assets/gridProjects/tic.webp");
 }
 
 .rpsImg {
-  @include background-image("../assets/gridProjects/rps.jpg");
+  @include background-image("../assets/gridProjects/rps.webp");
 }
 
 .sliderImg {
-  @include background-image("../assets/gridProjects/slider.png");
+  @include background-image("../assets/gridProjects/slider.webp");
 }
 
 .stopwatchImg {
-  @include background-image("../assets/gridProjects/stopwatch.jpeg");
+  @include background-image("../assets/gridProjects/stopwatch.webp");
 }
 
 .clockImg {
-  @include background-image("../assets/gridProjects/clock.jpg");
+  @include background-image("../assets/gridProjects/clock.webp");
 }
 
 .todoImg {
-  @include background-image("../assets/gridProjects/todo.jpeg");
+  @include background-image("../assets/gridProjects/todo.webp");
 }
 
 .spaceImg {
-  @include background-image("../projects/space_calculator/img/blackSky.jpg");
+  @include background-image("../projects/space_calculator/img/blackSky.webp");
 }
 .snakebgImg {
   @include background-image("../projects/snake_game/img/snake.png");

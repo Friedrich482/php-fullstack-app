@@ -7,7 +7,7 @@ include "../include/header.php";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0>
     <title>Register 📝</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../dist/register/script.js"></script> 
@@ -31,7 +31,7 @@ include "../include/header.php";
         <label for="password">Enter your password :</label>
         <div class="w-11/12 flex flex-row flex-nowrap p-0 sm:w-10/12">
             <input type="password" name="password" id="password" required placeholder="**********" minlength="8" class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-full flex-shrink-0 box-border focus:outline-none text-[0.564rem] sm:text-sm placeholder:">
-            <img src="../assets/eye/eye-crossed.png" id="eyeSlashedRegister" alt="Eye slashed" title="Display the password" class="h-[1.25rem] w-[1.25rem] select-none relative top-1 right-7 hover:scale-125">
+            <img src="../assets/eye/eye-crossed.svg" id="eyeSlashedRegister" alt="Eye slashed" title="Display the password" class="h-[1.25rem] w-[1.25rem] select-none relative top-1 right-7 hover:scale-125">
         </div>
 
         <div class="p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">

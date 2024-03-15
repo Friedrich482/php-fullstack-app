@@ -25,7 +25,7 @@ include "../include/header.php";
         <label for="password">Enter your password :</label>
         <div class="w-11/12 flex flex-row flex-nowrap p-0 sm:w-10/12">
             <input type="password" required name="password" id="password" placeholder="*********" class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-full flex-shrink-0 box-border focus:outline-none text-[0.564rem] sm:text-sm">
-            <img src="../assets/eye/eye-crossed.png" id="eyeSlashed" alt="Eye slashed" title="Display the password" class="h-[1.25rem] w-[1.25rem] select-none relative top-1 right-7 hover:scale-125">
+            <img src="../assets/eye/eye-crossed.svg" id="eyeSlashed" alt="Eye slashed" title="Display the password" class="h-[1.25rem] w-[1.25rem] select-none relative top-1 right-7 hover:scale-125">
         </div>   
         <label id="passwordError" class="hidden"></label>
 

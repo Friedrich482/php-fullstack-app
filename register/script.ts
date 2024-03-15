@@ -25,11 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
   eyeSlashedRegister.addEventListener("click", () => {
     if (passwordRegister.type === "password") {
       passwordRegister.type = "text";
-      eyeSlashedRegister.src = "../assets/eye/eye.png";
+      eyeSlashedRegister.src = "../assets/eye/eye.svg";
       eyeSlashedRegister.title = "Hide the password";
     } else {
       passwordRegister.type = "password";
-      eyeSlashedRegister.src = "../assets/eye/eye-crossed.png";
+      eyeSlashedRegister.src = "../assets/eye/eye-crossed.svg";
       eyeSlashedRegister.title = "Display the password";
     }
   });
