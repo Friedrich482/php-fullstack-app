@@ -1,12 +1,12 @@
 <?php
 session_start();
-include("../../include/database.php");
+include "../../include/database.php";
 
 // Checks if the user is logged in. Otherwise, redirect him to the login page.
 
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-  header("Location: ../../login/login.php");
-  exit;
+    header("Location: ../../login/login.php");
+    exit();
 }
 ?>
 <!DOCTYPE html>
@@ -32,14 +32,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     >
       <span id="spanTittle" class="text-center">Weather App</span>
       <div class="flex items-center justify-center flex-row">
-        <img src="icons/titleIcons/snow.svg" class="size-[4.5rem]" />
+        <img src="icons/titleIcons/snow.svg" class="size-[4.5rem]"  alt="snow weather image"/>
 
-        <img src="icons/titleIcons/tornado.svg" class="size-[4.5rem]" />
+        <img src="icons/titleIcons/tornado.svg" class="size-[4.5rem]"  alt="tornado weather image"/>
 
         <img
           src="icons/titleIcons/clear-day.svg"
           class="size-[4.5rem]"
-          id="sunOrMoon"
+          id="sunOrMoon" alt="sun weather image"
         />
       </div>
     </h1>
@@ -172,6 +172,5 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     ></p>
   </body>
 </html>
-<?php
-include("../../include/footer.php");
+<?php include "../../include/footer.php";
 ?>

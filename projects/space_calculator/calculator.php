@@ -1,14 +1,13 @@
 <?php
 session_start();
-include("../../include/database.php");
+include "../../include/database.php";
 
 // Checks if the user is logged in. Otherwise, redirect him to the login page.
 
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-  header("Location: ../../login/login.php");
-  exit;
+    header("Location: ../../login/login.php");
+    exit();
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -88,7 +87,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       <button class="bg-[#080707bf] text-white h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300" onclick="appendToDisplay('0')">
         0
       </button>
-      <button class="commaButton bg-white flex items-center justify-center h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300" onclick="appendToDisplay('.')">
+      <button  aria-label = "comma-button" class="commaButton bg-white flex items-center justify-center h-16 aspect-square text-4xl rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300" onclick="appendToDisplay('.')">
         <div class="h-[6px] w-[6px] bg-black rounded-full"></div>
       </button>
       <button class="bg-[#440b4b77] h-16 text-4xl aspect-square rounded-2xl consolas border-4 border-double border-[#13cdc7bc] cursor-pointer hover:border-sky-200 hover:border-solid hover:bg-transparent hover:text-black active:border-blue-300" onclick="clearDisplay()" id="clearButton">
@@ -117,7 +116,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 </html>
 
-<?php
-  include("../../include/footer.php");
+<?php include "../../include/footer.php";
 
 ?>

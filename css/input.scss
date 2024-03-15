@@ -81,7 +81,7 @@
   @include background-image("../projects/space_calculator/img/blackSky.webp");
 }
 .snakebgImg {
-  @include background-image("../projects/snake_game/img/snake.png");
+  @include background-image("../projects/snake_game/img/snake.avif");
 }
 
 .weatherDayImg {
@@ -98,7 +98,7 @@
 }
 .clockNewYorkImg {
   @include background-image(
-    "../projects/new_york_clock/img/USA__New_York__Skyline.jpg"
+    "../projects/new_york_clock/img/USA__New_York__Skyline.webp"
   );
 }
 

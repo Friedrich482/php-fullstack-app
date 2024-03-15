@@ -120,7 +120,7 @@
 }
 
 .snakebgImg {
-  background-image: url("../projects/snake_game/img/snake.png");
+  background-image: url("../projects/snake_game/img/snake.avif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -154,7 +154,7 @@
 }
 
 .clockNewYorkImg {
-  background-image: url("../projects/new_york_clock/img/USA__New_York__Skyline.jpg");
+  background-image: url("../projects/new_york_clock/img/USA__New_York__Skyline.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

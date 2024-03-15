@@ -1500,11 +1500,6 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.bg-gray-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-}
-
 .bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
@@ -1875,11 +1870,6 @@ video {
   color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
-.text-sky-600 {
-  --tw-text-opacity: 1;
-  color: rgb(2 132 199 / var(--tw-text-opacity));
-}
-
 .text-violet-500 {
   --tw-text-opacity: 1;
   color: rgb(139 92 246 / var(--tw-text-opacity));
@@ -2205,7 +2195,7 @@ video {
 }
 
 .snakebgImg {
-  background-image: url("../projects/snake_game/img/snake.png");
+  background-image: url("../projects/snake_game/img/snake.avif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2239,7 +2229,7 @@ video {
 }
 
 .clockNewYorkImg {
-  background-image: url("../projects/new_york_clock/img/USA__New_York__Skyline.jpg");
+  background-image: url("../projects/new_york_clock/img/USA__New_York__Skyline.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
