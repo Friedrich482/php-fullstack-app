@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" />
   <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
   <title>Clock</title>
   <script src="../../dist/projects/new_york_clock/script.js" defer></script>
 </head>

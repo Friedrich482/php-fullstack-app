@@ -1,18 +1,17 @@
 <?php
 session_start();
-include("../../include/database.php");
+include "../../include/database.php";
 
 // Checks if the user is logged in. Otherwise, redirect him to the login page.
 
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: ../../login/login.php");
-    exit;
+    exit();
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: ../../home/home.php");
-    exit;
+    exit();
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe Game</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../dist/projects/tic_tac_toe/script.js" defer></script>
 </head>
@@ -67,6 +67,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
-<?php
-include("../../include/footer.php");
+<?php include "../../include/footer.php";
 ?>
