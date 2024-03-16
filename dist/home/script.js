@@ -89,6 +89,10 @@ const pingNotificationBurger = document.querySelector(
 );
 const smallScreensNotification = document.querySelector("#smallNotification");
 const bigScreensNotification = document.querySelector("#bigNotification");
+const profileSmallScreen = document.querySelector("#profileSmallScreen");
+const profileImageSmallScreen = document.querySelector(
+  "#profileImageSmallScreen",
+);
 let notifications = [
   pingNotificationBurger,
   smallScreensNotification,
@@ -201,6 +205,9 @@ profile.forEach((element) => {
   element.addEventListener("click", () => {
     profileDialog.showModal();
     toggleProfileDialog();
+    profileSmallScreen.classList.remove("ml-3");
+    profileImageSmallScreen.classList.remove("ml-6");
+    smallProfile.classList.add("gap-2");
   });
 });
 profileDialog.addEventListener("cancel", () => {

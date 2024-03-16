@@ -131,7 +131,12 @@ const smallScreensNotification = document.querySelector(
 const bigScreensNotification = document.querySelector(
   "#bigNotification",
 ) as HTMLSpanElement;
-
+const profileSmallScreen = document.querySelector(
+  "#profileSmallScreen",
+) as HTMLSpanElement;
+const profileImageSmallScreen = document.querySelector(
+  "#profileImageSmallScreen",
+) as HTMLImageElement;
 let notifications = [
   pingNotificationBurger,
   smallScreensNotification,
@@ -289,6 +294,9 @@ profile.forEach((element) => {
   element.addEventListener("click", () => {
     profileDialog.showModal();
     toggleProfileDialog();
+    profileSmallScreen.classList.remove("ml-3");
+    profileImageSmallScreen.classList.remove("ml-6");
+    smallProfile.classList.add("gap-2");
   });
 });
 

@@ -114,8 +114,8 @@ $number_of_visits = $row["visits"];
 
       <div class="group text-center flex items-center justify-center h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallProfile">
         <!-- <div class="w-3"></div> -->
-        <img src="../assets/icons/navbarIcons/circle-user.svg" alt="user icon" class="w-6 h-6 relative bottom-1 ml-6" />
-        <span class="ml-3">Profile</span>
+        <img src="../assets/icons/navbarIcons/circle-user.svg" alt="user icon" class="w-6 h-6 relative bottom-1 ml-6" id="profileImageSmallScreen"/>
+        <span class="ml-3" id="profileSmallScreen">Profile</span>
 
         <!-- Ping element for notification -->
         <span class="flex relative left-1/4" id="smallNotification">
@@ -300,7 +300,7 @@ $number_of_visits = $row["visits"];
       </div>
       <!-- Boucing button ⬇ -->
 
-      <div class="hidden cursor-pointer animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full items-center justify-center relative sm:bottom-0 mysql-custom:bottom-32 sm-custom:bottom-0" id="arrowDownbutton">
+      <div class="hidden cursor-pointer animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full items-center justify-center relative sm:bottom-0 mysql-custom:bottom-0 sm-custom:bottom-0" id="arrowDownbutton">
         <svg class="w-6 h-6 text-violet-500 transition duration-500 hover:scale-110" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
           <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>
