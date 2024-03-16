@@ -138,12 +138,14 @@ const mainText = document.getElementById("mainText");
 const animatedTextContent = mainText.innerHTML;
 let mainTextCharIndex = 0;
 let reverseMain = false;
+let buttonAppear = false;
+let animationTimer;
 function animatemainText() {
   const currentChar = animatedTextContent.charAt(mainTextCharIndex);
   const isLineBreak =
     currentChar === "<" &&
     animatedTextContent.charAt(mainTextCharIndex + 1) === "b";
-  mainText.innerHTML = `${animatedTextContent.slice(0, mainTextCharIndex + 1)}<span class="relative inline-block  bg-gray-200 cursor1 animate-ping sm:w-5 sm:h-5" id="mainCursor"></span>`;
+  mainText.innerHTML = `${animatedTextContent.slice(0, mainTextCharIndex + 1)}<span class="relative inline-block bg-gray-200 cursor1 animate-ping sm:w-5 sm:h-5" id="mainCursor"></span>`;
   mainTextCharIndex = reverseMain
     ? mainTextCharIndex - 1
     : mainTextCharIndex + 1;
@@ -159,19 +161,23 @@ function animatemainText() {
       ? 1000
       : 1;
   setTimeout(animatemainText, delay);
+  buttonAppear = true;
 }
 animatemainText();
+setTimeout(() => {
+  arrowDownbutton.classList.remove("hidden");
+}, 19000);
 // js for the menu burger button
 const menuburgerImg = document.querySelector("#menuBurgerImg");
 let menuburgerImgAlt = menuburgerImg.alt;
 const verticalNavbar = document.querySelector("#verticalNavbar");
 menuBurgerButton.addEventListener("click", () => {
   if (menuburgerImgAlt === "menu-burger icon") {
-    menuburgerImg.src = "../assets/icons/navbarIcons/cross.png";
+    menuburgerImg.src = "../assets/icons/navbarIcons/cross.svg";
     menuburgerImgAlt = "cross icon";
     addVerticalNavbar();
   } else {
-    menuburgerImg.src = "../assets/icons/navbarIcons/menu-burger.png";
+    menuburgerImg.src = "../assets/icons/navbarIcons/menu-burger.svg";
     menuburgerImgAlt = "menu-burger icon";
     removeVerticalNavbar();
   }

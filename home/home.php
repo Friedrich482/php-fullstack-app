@@ -112,10 +112,10 @@ $number_of_visits = $row["visits"];
 
       <!-- Profile -->
 
-      <div class="group text-center flex items-center justify-center gap-2 h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallProfile">
+      <div class="group text-center flex items-center justify-center h-full w-full cursor-pointer p-0 border-b border-b-white transform duration-500 hover:border-l-8 hover:border-l-purple-700 group-hover:border-b-0 hover:bg-gray-800 active:bg-slate-950" id="smallProfile">
         <!-- <div class="w-3"></div> -->
-        <img src="../assets/icons/navbarIcons/circle-user.svg" alt="user icon" class="w-6 h-6 relative bottom-1" />
-        <span class="">Profile</span>
+        <img src="../assets/icons/navbarIcons/circle-user.svg" alt="user icon" class="w-6 h-6 relative bottom-1 ml-6" />
+        <span class="ml-3">Profile</span>
 
         <!-- Ping element for notification -->
         <span class="flex relative left-1/4" id="smallNotification">
@@ -255,7 +255,7 @@ $number_of_visits = $row["visits"];
   <!-- Title with animation -->
 
   <div>
-    <h1 class="flex flex-row text-3xl sm:text-5xl text-center animated-text gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-36 sm:h-28" id="animatedText">
+    <h1 class="flex flex-row text-3xl sm:text-5xl text-center animated-text gradient-text bg-gradient-to-r from-purple-500 via-teal-500 to-pink-500 pr-5 h-28 sm:h-28" id="animatedText">
       Welcome
       <?php echo "{$_SESSION["username"]}"; ?>, on my site
     </h1>
@@ -269,7 +269,7 @@ $number_of_visits = $row["visits"];
 
   <main class="flex items-center justify-center flex-col gap-3 sm:w-[620px] z-0">
     <div class="flex items-center justify-center flex-col gap-5 m-3">
-      <div class="text-lg sm:text-2xl h-[1150px] mysql-custom:h-[1000px] text-pretty" id="mainText">
+      <div class="text-lg sm:text-2xl min-h-[850px] text-pretty" id="mainText">
         👉 Hello, dear visitor, my name is Friedrich482.<br /><br />
 
         👉 I am a junior developper 👨‍💻.
@@ -298,16 +298,16 @@ $number_of_visits = $row["visits"];
         <br />(If you don't see them, scroll down or click on the bouncing
         button)
       </div>
-
       <!-- Boucing button ⬇ -->
 
-      <div class="cursor-pointer animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full items-center justify-center relative sm:bottom-32 mysql-custom:bottom-10 sm-custom:bottom-0" id="arrowDownbutton">
+      <div class="hidden cursor-pointer animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full items-center justify-center relative sm:bottom-0 mysql-custom:bottom-32 sm-custom:bottom-0" id="arrowDownbutton">
         <svg class="w-6 h-6 text-violet-500 transition duration-500 hover:scale-110" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
           <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>
         <a href="#toolsGrid"></a>
       </div>
     </div>
+
     <!-- Tools grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-10 pt-6" id="toolsGrid">
       <!-- Calculator card -->
