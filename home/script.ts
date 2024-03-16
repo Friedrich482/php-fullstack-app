@@ -131,7 +131,12 @@ const smallScreensNotification = document.querySelector(
 const bigScreensNotification = document.querySelector(
   "#bigNotification",
 ) as HTMLSpanElement;
-
+const profileSmallScreen = document.querySelector(
+  "#profileSmallScreen",
+) as HTMLSpanElement;
+const profileImageSmallScreen = document.querySelector(
+  "#profileImageSmallScreen",
+) as HTMLImageElement;
 let notifications = [
   pingNotificationBurger,
   smallScreensNotification,
@@ -199,7 +204,8 @@ const mainText = document.getElementById("mainText") as HTMLDivElement;
 const animatedTextContent = mainText.innerHTML;
 let mainTextCharIndex = 0;
 let reverseMain = false;
-
+let buttonAppear = false;
+let animationTimer: number;
 function animatemainText(): void {
   const currentChar = animatedTextContent.charAt(mainTextCharIndex);
   const isLineBreak =
@@ -209,7 +215,7 @@ function animatemainText(): void {
   mainText.innerHTML = `${animatedTextContent.slice(
     0,
     mainTextCharIndex + 1,
-  )}<span class="relative inline-block  bg-gray-200 cursor1 animate-ping sm:w-5 sm:h-5" id="mainCursor"></span>`;
+  )}<span class="relative inline-block bg-gray-200 cursor1 animate-ping sm:w-5 sm:h-5" id="mainCursor"></span>`;
   mainTextCharIndex = reverseMain
     ? mainTextCharIndex - 1
     : mainTextCharIndex + 1;
@@ -227,9 +233,13 @@ function animatemainText(): void {
       ? 1000
       : 1;
   setTimeout(animatemainText, delay);
+  buttonAppear = true;
 }
 
 animatemainText();
+setTimeout(() => {
+  arrowDownbutton.classList.remove("hidden");
+}, 19000);
 
 // js for the menu burger button
 
@@ -245,11 +255,11 @@ const verticalNavbar = document.querySelector(
 
 menuBurgerButton.addEventListener("click", () => {
   if (menuburgerImgAlt === "menu-burger icon") {
-    menuburgerImg.src = "../assets/icons/navbarIcons/cross.png";
+    menuburgerImg.src = "../assets/icons/navbarIcons/cross.svg";
     menuburgerImgAlt = "cross icon";
     addVerticalNavbar();
   } else {
-    menuburgerImg.src = "../assets/icons/navbarIcons/menu-burger.png";
+    menuburgerImg.src = "../assets/icons/navbarIcons/menu-burger.svg";
     menuburgerImgAlt = "menu-burger icon";
     removeVerticalNavbar();
   }
@@ -284,6 +294,9 @@ profile.forEach((element) => {
   element.addEventListener("click", () => {
     profileDialog.showModal();
     toggleProfileDialog();
+    profileSmallScreen.classList.remove("ml-3");
+    profileImageSmallScreen.classList.remove("ml-6");
+    smallProfile.classList.add("gap-2");
   });
 });
 

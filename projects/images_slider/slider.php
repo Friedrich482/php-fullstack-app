@@ -1,16 +1,16 @@
 <?php
 session_start();
-include("../../include/database.php");
+include "../../include/database.php";
 
 // Checks if the user is logged in. Otherwise, redirect him to the login page.
 
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: ../../login/login.php");
-    exit;
+    exit();
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: ../../home/home.php");
-    exit;
+    exit();
 }
 ?>
 <!DOCTYPE html>
@@ -30,18 +30,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="flex items-center justify-center flex-col sm:w-[550px]">
         <div id="container" class="flex items-center justify-center flex-col p-1">
             <div id="slides" class="flex items-center justify-center flex-col aspect-square min-w-72 shadow-xl shadow-black">
-                <img src="./img/01.jpeg" alt="img" class="slide min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
-                <img src="img/02.jpg" alt="img" class="slide min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
-                <img src="./img/03.jpg" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
-                <img src="./img/04.jpg" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
-                <img src="./img/05.jpg" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
-                <img src="./img/06.jpeg" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
-                <img src="./img/07.jpg" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
-                <img src="./img/08.jpg" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
-                <img src="./img/09.jpg" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
-                <img src="./img/10.jpeg" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
-                <img src="./img/11.jpeg" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
-                <img src="./img/12.jpeg" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/01.webp" alt="img" class="slide min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="img/02.webp" alt="img" class="slide min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/03.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/04.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/05.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/06.jwebp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/07.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/08.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/09.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/10.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/11.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/12.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
 
             </div>
             <div id="pins" class="text-3xl text-white flex items-center justify-center gap-2 h-12">
@@ -60,10 +60,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class=" w-full slider-custom:w-[135%] flex justify-between items-center place-self-center relative slider-custom:bottom-64 cursor-pointer">
                 <div class="transition duration-1000 group" id="leftButtonWrapper">
-                    <button id="lButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="prevSlide(); event.stopPropagation()"></button>
+                    <button aria-label ="left-button" id="lButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="prevSlide(); event.stopPropagation()"></button>
                 </div>
                 <div class="transition duration-1000 group" id="rightButtonWrapper">
-                    <button id="rButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="nextSlide(); event.stopPropagation()"></button>
+                    <button  aria-label ="right-button" id="rButton" class="dButtons size-12 rounded-lg text-3xl text-center bg-black border-8 border-white group-hover:bg-gray-900 group-hover:border-violet-600 group-active:bg-gray-800 group-active:border-white" onclick="nextSlide(); event.stopPropagation()"></button>
                 </div>
             </div>
             <button id="admireButton" class="outline-none text-lg transform duration-500 bg-black rounded-lg p-1 MV-boli text-white cursor-pointer hover:scale-110 border-black border-2 active:bg-slate-900 active:outline active:outline-white active:outline-2 w-3/6 min-w-32 relative bottom-10">Admire</button>
@@ -72,6 +72,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
-<?php
-include("../../include/footer.php");
+<?php include "../../include/footer.php";
 ?>
