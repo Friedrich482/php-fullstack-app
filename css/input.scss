@@ -85,12 +85,12 @@
 }
 
 .weatherDayImg {
-  @include background-image("../projects/fetch-weather-app/img/01.png");
+  @include background-image("../projects/fetch-weather-app/img/01.webp");
   color: black;
 }
 
 .weatherNightImg {
-  @include background-image("../projects/fetch-weather-app/img/02.jpeg");
+  @include background-image("../projects/fetch-weather-app/img/02.webp");
   color: white;
 }
 .newYorkImg {
