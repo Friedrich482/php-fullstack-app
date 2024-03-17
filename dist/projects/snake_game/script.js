@@ -311,7 +311,7 @@ tryAgainForm.addEventListener("submit", (event) => {
     date.setTime(date.getTime() + expirationTime);
     const expires = "; expires=" + date.toUTCString();
     document.cookie = "score" + "=" + score + expires + "; path=/";
-    console.log(document.cookie);
+    // console.log(document.cookie);
   }
   setCookie();
 });
