@@ -64,7 +64,7 @@ Technologies/tools/languages used :
   - [x] You eat a food
   - [x] You change direction
   - [x] Game over
-  - [ ] You beat your own high score (_PHP needed_)
+  - [] ~~You beat your own high score (_PHP needed_)~~
 
 - [x] Now the Tic Tac Toe Game...
 - [x] As always tailwind CSS first
@@ -82,10 +82,10 @@ Technologies/tools/languages used :
   - [x] Typescript
 - [x] New york clock : all the habitual stuff
 - [x] To do list : the same thing here
-- [ ] improve LightHouse score on each single page of the app:
+- [x] improve LightHouse score on each single page of the app:
 
   - [x] replace the rocket gif image by another one
-  - [ ] replace all images by their .avif of .webP version
+  - [x] replace all images by their .avif of .webP version
 
 - [ ] The app will be deployed by default on vercel but if it is not possible, I will deploy it on the Docker Hub using Docker
 

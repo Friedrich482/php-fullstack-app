@@ -2207,7 +2207,7 @@ video {
 }
 
 .weatherDayImg {
-  background-image: url("../projects/fetch-weather-app/img/01.png");
+  background-image: url("../projects/fetch-weather-app/img/01.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2216,7 +2216,7 @@ video {
 }
 
 .weatherNightImg {
-  background-image: url("../projects/fetch-weather-app/img/02.jpeg");
+  background-image: url("../projects/fetch-weather-app/img/02.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2802,20 +2802,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (min-width: 358px) {
-  .mysql-custom\:bottom-10 {
-    bottom: 2.5rem;
-  }
-
   .mysql-custom\:bottom-0 {
     bottom: 0px;
-  }
-
-  .mysql-custom\:bottom-20 {
-    bottom: 5rem;
-  }
-
-  .mysql-custom\:bottom-32 {
-    bottom: 8rem;
   }
 }
 
@@ -2832,10 +2820,6 @@ body::-webkit-scrollbar-thumb {
 @media (min-width: 640px) {
   .sm\:bottom-0 {
     bottom: 0px;
-  }
-
-  .sm\:bottom-32 {
-    bottom: 8rem;
   }
 
   .sm\:ml-36 {

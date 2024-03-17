@@ -2,7 +2,7 @@
 session_start();
 include "../../include/database.php";
 
-// Checks if the user is logged in. Otherwise, redirect him to the login page.
+// ?Checks if the user is logged in. Otherwise, redirect him to the login page.
 
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: ../../login/login.php");
@@ -81,9 +81,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <?php if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_COOKIE["score"])) {
         $score = $_COOKIE["score"];
-        // Insertion of the score in the database
+        // ? Insertion of the score in the database
 
-        // Get the actual best score of the user form the database
+        // ?Get the actual best score of the user form the database
         $sql = "SELECT snake_best_score FROM users WHERE id = $1";
         $params = [$_SESSION["id"]];
         pg_prepare($conn, "fetch_best_score", $sql);
@@ -91,9 +91,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         $row = pg_fetch_assoc($result);
         $best_score = $row["snake_best_score"];
 
-        // Compare the best score got from the the database to the score made by the user on the actual game
+        // ? Compare the best score got from the the database to the score made by the user on the actual game
         if ($score > $best_score) {
-            // Update the best score of the user
+            // ? Update the best score of the user
             $update_sql =
                 "UPDATE users SET snake_best_score = $1 WHERE id = $2";
             $update_params = [$score, $_SESSION["id"]];
@@ -108,7 +108,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             // echo "You weren't able to beat your own high score. Try again !";
         }
     } else {
-        // No data received
+        // ? No data received
         // echo "No score sent.";
     }
 }

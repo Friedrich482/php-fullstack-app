@@ -128,7 +128,7 @@
 }
 
 .weatherDayImg {
-  background-image: url("../projects/fetch-weather-app/img/01.png");
+  background-image: url("../projects/fetch-weather-app/img/01.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -137,7 +137,7 @@
 }
 
 .weatherNightImg {
-  background-image: url("../projects/fetch-weather-app/img/02.jpeg");
+  background-image: url("../projects/fetch-weather-app/img/02.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

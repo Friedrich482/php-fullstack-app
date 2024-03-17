@@ -139,6 +139,7 @@ restartButton.addEventListener("click", resetGame);
 yesButton.addEventListener("click", () => {
   toggleDialog(gameOverDialog);
   gameOverDialog.close();
+  setCookie();
   resetGame();
 });
 function gameStart() {
@@ -184,7 +185,7 @@ function moveSnake() {
   const head = { x: snake[0].x + xVelocity, y: snake[0].y + yVelocity };
   snake.unshift(head);
   if (snake[0].x == foodX && snake[0].y == foodY) {
-    score++;
+    score += 1;
     eating_sound.play();
     scoreText.textContent = `${score}`;
     createFood();
@@ -284,34 +285,14 @@ footer.classList.add("text-white", "MV-boli");
 const imageFooter = footer.querySelector("img");
 imageFooter.src = "../../assets/icons/rocket.svg";
 const tryAgainForm = document.querySelector("#tryAgainForm");
-tryAgainForm.addEventListener("submit", (event) => {
-  // event.preventDefault();
-  // async function sendData() {
-  //   try {
-  //     const response = await fetch("../../projects/snake_game/process.php", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/x-www-form-urlencoded",
-  //       },
-  //       body: "score=" + encodeURIComponent(score),
-  //     });
-  //     if (response.ok) {
-  //       console.log("Data sent with success !");
-  //     } else {
-  //       console.error("Error while sending the data.");
-  //     }
-  //   } catch (error) {
-  //     console.error("Fetch error:", error);
-  //   }
-  // }
-  // sendData();
-  function setCookie() {
-    const date = new Date();
-    const expirationTime = 24 * 60 * 60 * 1000;
-    date.setTime(date.getTime() + expirationTime);
-    const expires = "; expires=" + date.toUTCString();
-    document.cookie = "score" + "=" + score + expires + "; path=/";
-    // console.log(document.cookie);
-  }
+tryAgainForm.addEventListener("submit", () => {
   setCookie();
 });
+function setCookie() {
+  const date = new Date();
+  const expirationTime = 24 * 60 * 60 * 1000;
+  date.setTime(date.getTime() + expirationTime);
+  const expires = "; expires=" + date.toUTCString();
+  document.cookie = "score" + "=" + score + expires + "; path=/";
+  // console.log(document.cookie);
+}
