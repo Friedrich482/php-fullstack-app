@@ -8,13 +8,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: ../../login/login.php");
     exit();
 }
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    header("Location: ../../home/home.php");
-    exit();
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,8 +49,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <dialog id="restartGameDialog" class="hidden items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-green-500 rounded-bl-[100px] rounded-tr-[100px] min-w-20 max-w-60 sm:min-w-72 sm:p-2 gap-2 z-10 text-[whitesmoke] h-80 outline-none backdrop:backdrop-blur-sm" autofocus>
     <h2 class="text-4xl text-center w-full text-red-600">You lose !</h2>
     <p id="gameOverScore" class="text-center"></p>
-    <form action="snake.php" class="flex items-center justify-center flex-col gap-4" method="post">
-      <label>Do you want to restart ?</label>
+    <form action="snake.php" class="flex items-center justify-center flex-col gap-4" method="post" id="tryAgainForm">
+      <p>Do you want to restart ?</p>
       <div class="flex items-center justify-center flex-col gap-5">
         <!-- "Yes" button -->
 
@@ -82,5 +76,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </html>
 
-<?php include "../../include/footer.php";
-?>
+<?php require "../../include/footer.php"; ?>
+
+<?php if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_COOKIE["score"])) {
+        // Données reçues avec succès
+        $score = $_COOKIE["score"];
+        echo "Le score est $score";
+    } else {
+        // Aucune donnée reçue
+        echo "Aucun score n'a été envoyé.";
+    }
+}

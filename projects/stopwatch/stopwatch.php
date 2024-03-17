@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       href="https://fonts.cdnfonts.com/css/seven-segment"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../css/style.css" />
     <title>Stopwatch</title>
     <script src="../../dist/projects/stopwatch/script.js" defer></script>
