@@ -71,6 +71,7 @@ gameButtons.forEach((button) => {
 
 quitGameButton.addEventListener("click", () => manageRestartDialog());
 yesShifumiButton.addEventListener("click", () => {
+  setShifumiCookie();
   toggleShifumiDialog(restartShifumiDialog);
   restartShifumiDialog.close();
   document.location.reload();
