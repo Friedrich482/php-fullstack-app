@@ -47,6 +47,7 @@ gameButtons.forEach((button) => {
 });
 quitGameButton.addEventListener("click", () => manageRestartDialog());
 yesShifumiButton.addEventListener("click", () => {
+  setShifumiCookie();
   toggleShifumiDialog(restartShifumiDialog);
   restartShifumiDialog.close();
   document.location.reload();
@@ -120,3 +121,17 @@ const footerShifumi = document.querySelector("footer");
 footerShifumi.classList.add("text-white", "MV-boli");
 const imageFooterShifumi = footer.querySelector("img");
 imageFooterShifumi.src = "../../assets/icons/rocket.svg";
+const restartShifumiGameForm = document.querySelector(
+  "#restartShifumiGameForm",
+);
+restartShifumiGameForm.addEventListener("submit", () => {
+  setShifumiCookie();
+});
+function setShifumiCookie() {
+  const date = new Date();
+  const expirationTime = 24 * 60 * 60 * 1000;
+  date.setTime(date.getTime() + expirationTime);
+  const expires = "; expires=" + date.toUTCString();
+  document.cookie = "playerScore" + "=" + playerScore + expires + "; path=/";
+  console.log(document.cookie);
+}

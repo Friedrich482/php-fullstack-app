@@ -1,16 +1,12 @@
 <?php
 session_start();
-include("../../include/database.php");
+include "../../include/database.php";
 
 // Checks if the user is logged in. Otherwise, redirect him to the login page.
 
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: ../../login/login.php");
-    exit;
-}
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    header("Location: ../../home/home.php");
-    exit;
+    exit();
 }
 ?>
 
@@ -32,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         </h2>
         <p id="scoreShifumi" class=" whitespace-nowrap"></p>
-        <form action="shifumi.php" class="flex items-center justify-center flex-col gap-4" method="post">
+        <form action="shifumi.php" class="flex items-center justify-center flex-col gap-4" method="post" id="restartShifumiGameForm">
             <label>Do you want to restart ?</label>
             <div class="flex items-center justify-center flex-col gap-5">
 
@@ -92,6 +88,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
-<?php
-include("../../include/footer.php");
-?>
+<?php include "../../include/footer.php"; ?>
+<?php if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_COOKIE["playerScore"])) {
+        $playerScore = $_COOKIE["playerScore"]; // ? Insertion of the score in the database
+        // ? Get the actual best score of the user form the database
+        $sql = "SELECT shifumi_best_score FROM users WHERE id = $1";
+        $params = [$_SESSION["id"]];
+        pg_prepare($conn, "fetch_best_score", $sql);
+        $result = pg_execute($conn, "fetch_best_score", $params);
+        $row = pg_fetch_assoc($result);
+        $best_score = $row["shifumi_best_score"]; // ? Compare the best score got from the the database to the score made by the user on the actual game
+        if ($playerScore > $best_score) {
+            // ? Update the best score of the user
+            $update_sql =
+                "UPDATE users SET shifumi_best_score = $1 WHERE id = $2";
+            $update_params = [$playerScore, $_SESSION["id"]];
+            pg_prepare($conn, "update_best_score", $update_sql);
+            $update_result = pg_execute(
+                $conn,
+                "update_best_score",
+                $update_params
+            ); // echo "You beat your own high score !";
+        } else {
+            // echo "You weren't able to beat your own high score. Try again !";
+        }
+    } else {
+        // ? No data received
+        // echo "No score sent.";
+    }
+    header("Location: ../../home/home.php");
+    exit();
+} ?>

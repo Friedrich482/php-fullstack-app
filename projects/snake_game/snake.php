@@ -111,4 +111,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         // ? No data received
         // echo "No score sent.";
     }
+    header("Location: ../../home/home.php");
+    exit();
 }
