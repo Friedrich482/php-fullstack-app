@@ -80,11 +80,35 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 <?php if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_COOKIE["score"])) {
-        // Données reçues avec succès
         $score = $_COOKIE["score"];
-        echo "Le score est $score";
+        // Insertion of the score in the database
+
+        // Get the actual best score of the user form the database
+        $sql = "SELECT snake_best_score FROM users WHERE id = $1";
+        $params = [$_SESSION["id"]];
+        pg_prepare($conn, "fetch_best_score", $sql);
+        $result = pg_execute($conn, "fetch_best_score", $params);
+        $row = pg_fetch_assoc($result);
+        $best_score = $row["snake_best_score"];
+
+        // Compare the best score got from the the database to the score made by the user on the actual game
+        if ($score > $best_score) {
+            // Update the best score of the user
+            $update_sql =
+                "UPDATE users SET snake_best_score = $1 WHERE id = $2";
+            $update_params = [$score, $_SESSION["id"]];
+            pg_prepare($conn, "update_best_score", $update_sql);
+            $update_result = pg_execute(
+                $conn,
+                "update_best_score",
+                $update_params
+            );
+            // echo "You beat your own high score !";
+        } else {
+            // echo "You weren't able to beat your own high score. Try again !";
+        }
     } else {
-        // Aucune donnée reçue
-        echo "Aucun score n'a été envoyé.";
+        // No data received
+        echo "No score sent.";
     }
 }
