@@ -27,6 +27,13 @@ pg_prepare($conn, "update_and_select_visits", $sql);
 $result = pg_execute($conn, "update_and_select_visits", $params);
 $row = pg_fetch_assoc($result);
 $number_of_visits = $row["visits"];
+
+$sql = "SELECT snake_best_score FROM users WHERE id = $1";
+$params = [$_SESSION["id"]];
+pg_prepare($conn, "fetch_best_score", $sql);
+$result = pg_execute($conn, "fetch_best_score", $params);
+$row = pg_fetch_assoc($result);
+$snake_best_score = $row["snake_best_score"];
 ?>
 
 <!DOCTYPE html>
@@ -206,12 +213,11 @@ $number_of_visits = $row["visits"];
         <span class="w-3/4 text-start items-start h-full">
           Best score at Snake :
           <span class="text-blue-500">
-            <?php if ($number_of_visits !== null) {
-                echo $number_of_visits;
+            <?php if ($snake_best_score !== null) {
+                echo $snake_best_score;
             } else {
                 echo "0";
             } ?>
-            <!-- For the moment, I display that by default , but I will track that value later -->
           </span>
         </span>
       </div>

@@ -109,6 +109,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         }
     } else {
         // No data received
-        echo "No score sent.";
+        // echo "No score sent.";
     }
 }
