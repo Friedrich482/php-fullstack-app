@@ -288,7 +288,42 @@ function resetGame() {
 function blockResetWithEnterKey() {
   window.removeEventListener("keydown", resetWithEnterKey);
 }
+// console.log(`The score is ${score}`);
 const footer = document.querySelector("footer") as HTMLElement;
 footer.classList.add("text-white", "MV-boli");
 const imageFooter = footer.querySelector("img") as HTMLImageElement;
 imageFooter.src = "../../assets/icons/rocket.svg";
+
+const tryAgainForm = document.querySelector("#tryAgainForm") as HTMLFormElement;
+tryAgainForm.addEventListener("submit", (event) => {
+  // event.preventDefault();
+  // async function sendData() {
+  //   try {
+  //     const response = await fetch("../../projects/snake_game/process.php", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/x-www-form-urlencoded",
+  //       },
+  //       body: "score=" + encodeURIComponent(score),
+  //     });
+  //     if (response.ok) {
+  //       console.log("Data sent with success !");
+  //     } else {
+  //       console.error("Error while sending the data.");
+  //     }
+  //   } catch (error) {
+  //     console.error("Fetch error:", error);
+  //   }
+  // }
+
+  // sendData();
+  function setCookie() {
+    const date = new Date();
+    const expirationTime = 24 * 60 * 60 * 1000;
+    date.setTime(date.getTime() + expirationTime);
+    const expires = "; expires=" + date.toUTCString();
+    document.cookie = "score" + "=" + score + expires + "; path=/";
+    console.log(document.cookie);
+  }
+  setCookie();
+});
