@@ -49,8 +49,8 @@ quitGameButton.addEventListener("click", () => manageRestartDialog());
 yesShifumiButton.addEventListener("click", () => {
   toggleShifumiDialog(restartShifumiDialog);
   restartShifumiDialog.close();
-  document.location.reload();
   setShifumiCookie();
+  document.location.reload();
 });
 function computerPlays() {
   let randNum = Math.floor(Math.random() * 3) + 1;
@@ -148,5 +148,4 @@ function setShifumiCookie() {
     "playerScores=" + JSON.stringify(playerScores) + expires + "; path=/";
   document.cookie =
     "bestShifumiScore=" + bestShifumiScore + expires + "; path=/";
-  alert(document.cookie);
 }
