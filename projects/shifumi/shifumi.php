@@ -29,7 +29,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </h2>
         <p id="scoreShifumi" class=" whitespace-nowrap"></p>
         <form action="shifumi.php" class="flex items-center justify-center flex-col gap-4" method="post" id="restartShifumiGameForm">
-            <label>Do you want to restart ?</label>
+            <p>Do you want to restart ?</p>
             <div class="flex items-center justify-center flex-col gap-5">
 
                 <!-- "Yes" button -->
@@ -88,18 +88,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </body>
 
 </html>
-<?php include "../../include/footer.php"; ?>
+<?php require "../../include/footer.php"; ?>
 <?php if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_COOKIE["playerScore"])) {
-        $playerScore = $_COOKIE["playerScore"]; // ? Insertion of the score in the database
+    echo "fils de pute";
+    if (isset($_COOKIE["bestShifumiScore"])) {
+        $playerScore = $_COOKIE["bestShifumiScore"]; // ? Insertion of the score in the database
         // ? Get the actual best score of the user form the database
         $sql = "SELECT shifumi_best_score FROM users WHERE id = $1";
         $params = [$_SESSION["id"]];
         pg_prepare($conn, "fetch_best_score", $sql);
         $result = pg_execute($conn, "fetch_best_score", $params);
         $row = pg_fetch_assoc($result);
-        $best_score = $row["shifumi_best_score"]; // ? Compare the best score got from the the database to the score made by the user on the actual game
-        if ($playerScore > $best_score) {
+        $actual_best_score = $row["shifumi_best_score"]; // ? Compare the best score got from the the database to the score made by the user on the actual game
+        if ($playerScore > $actual_best_score) {
             // ? Update the best score of the user
             $update_sql =
                 "UPDATE users SET shifumi_best_score = $1 WHERE id = $2";
@@ -119,4 +120,4 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     }
     header("Location: ../../home/home.php");
     exit();
-} ?>
+}

@@ -71,10 +71,10 @@ gameButtons.forEach((button) => {
 
 quitGameButton.addEventListener("click", () => manageRestartDialog());
 yesShifumiButton.addEventListener("click", () => {
-  setShifumiCookie();
   toggleShifumiDialog(restartShifumiDialog);
   restartShifumiDialog.close();
   document.location.reload();
+  setShifumiCookie();
 });
 function computerPlays() {
   let randNum = Math.floor(Math.random() * 3) + 1;
@@ -157,13 +157,32 @@ const restartShifumiGameForm = document.querySelector(
   "#restartShifumiGameForm",
 ) as HTMLFormElement;
 restartShifumiGameForm.addEventListener("submit", () => {
-  setShifumiCookie();
+  if (playerScore > computerScore) {
+    setShifumiCookie();
+  }
 });
+
 function setShifumiCookie() {
-  const date = new Date();
-  const expirationTime = 24 * 60 * 60 * 1000;
-  date.setTime(date.getTime() + expirationTime);
-  const expires = "; expires=" + date.toUTCString();
-  document.cookie = "playerScore" + "=" + playerScore + expires + "; path=/";
-  console.log(document.cookie);
+  // ? Get existing cookie ou initialize an empty array (an array of numbers)
+  const existingCookie = document.cookie
+    .split("; ")
+    .find((cookie) => cookie.startsWith("playerScores="));
+  let playerScores: Array<number> = existingCookie
+    ? JSON.parse(existingCookie.split("=")[1])
+    : [];
+
+  //  ? Add the new score to the array
+  playerScores.push(playerScore);
+  console.table(playerScores);
+  const bestShifumiScore = Math.max(...playerScores);
+
+  // ? Update the cookie with the updated array and the maximum score
+  const expires =
+    "; expires=" + new Date(Date.now() + 24 * 60 * 60 * 1000).toUTCString();
+  document.cookie =
+    "playerScores=" + JSON.stringify(playerScores) + expires + "; path=/";
+  document.cookie =
+    "bestShifumiScore=" + bestShifumiScore + expires + "; path=/";
+
+  alert(document.cookie);
 }
