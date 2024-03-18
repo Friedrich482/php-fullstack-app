@@ -6,6 +6,10 @@ include "../include/database.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION["loggedin"] = false;
     session_destroy();
+    $cookies = $_COOKIE;
+    foreach ($cookies as $key => $value) {
+        setcookie($key, "", time() - 3600, "/");
+    }
     header("Location: ../login/login.php");
     exit();
 }
