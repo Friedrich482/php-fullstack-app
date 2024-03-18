@@ -79,8 +79,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <?php require "../../include/footer.php"; ?>
 
 <?php if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_COOKIE["score"])) {
-        $score = $_COOKIE["score"];
+    if (isset($_COOKIE["bestSnakeScore"])) {
+        $score = $_COOKIE["bestSnakeScore"];
         // ? Insertion of the score in the database
 
         // ?Get the actual best score of the user form the database

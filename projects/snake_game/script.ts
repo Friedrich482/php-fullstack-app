@@ -301,10 +301,25 @@ tryAgainForm.addEventListener("submit", () => {
 });
 
 function setCookie() {
-  const date = new Date();
-  const expirationTime = 24 * 60 * 60 * 1000;
-  date.setTime(date.getTime() + expirationTime);
-  const expires = "; expires=" + date.toUTCString();
-  document.cookie = "score" + "=" + score + expires + "; path=/";
-  // console.log(document.cookie);
+  // const date = new Date();
+  // const expirationTime = 24 * 60 * 60 * 1000;
+  // date.setTime(date.getTime() + expirationTime);
+  // const expires = "; expires=" + date.toUTCString();
+  // document.cookie = "score" + "=" + score + expires + "; path=/";
+  // ? Get existing cookie ou initialize an empty array (an array of numbers)
+  const existingCookie = document.cookie
+    .split("; ")
+    .find((cookie) => cookie.startsWith("playerSnakeScores="));
+  let playerSnakeScores: Array<number> = existingCookie
+    ? JSON.parse(existingCookie.split("=")[1])
+    : [];
+
+  //  ? Add the new score to the array
+  playerSnakeScores.push(score);
+  let bestSnakeScore = Math.max(...playerSnakeScores);
+
+  // ? Update the cookie with the updated array and the maximum score
+  const expires = `; expires=${new Date(Date.now() + 24 * 60 * 60 * 1000).toUTCString()}`;
+  document.cookie = `playerSnakeScores=${JSON.stringify(playerSnakeScores)}${expires}; path=/`;
+  document.cookie = `bestSnakeScore=${bestSnakeScore}${expires}; path=/`;
 }
