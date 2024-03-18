@@ -139,13 +139,9 @@ function setShifumiCookie() {
     : [];
   //  ? Add the new score to the array
   playerScores.push(playerScore);
-  console.table(playerScores);
-  const bestShifumiScore = Math.max(...playerScores);
+  let bestShifumiScore = Math.max(...playerScores);
   // ? Update the cookie with the updated array and the maximum score
-  const expires =
-    "; expires=" + new Date(Date.now() + 24 * 60 * 60 * 1000).toUTCString();
-  document.cookie =
-    "playerScores=" + JSON.stringify(playerScores) + expires + "; path=/";
-  document.cookie =
-    "bestShifumiScore=" + bestShifumiScore + expires + "; path=/";
+  const expires = `;expires=${new Date(Date.now() + 24 * 60 * 60 * 1000).toUTCString()}`;
+  document.cookie = `playerScores=${JSON.stringify(playerScores)}${expires};path=/`;
+  document.cookie = `bestShifumiScore=${bestShifumiScore}${expires};path=/`;
 }
