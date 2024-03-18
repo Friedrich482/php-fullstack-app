@@ -15,6 +15,9 @@ Technologies/tools/languages used :
 ## To do
 
 - [ ] Add a forgot password 🔑
+- [ ] I need two pages here :
+  - [ ] The first one to ask the email to the user
+  - [ ] The second one will be a page to say him that a mail has been sent to him and to check his mails. He will now fill two fiels and pass only if the two passwords matches.
 - [ ] Inside the forgot password, I will ask your email address and send a random number with 6 digits (so between 100000 and 999999)
 - [ ] The user will enter that number and will pass only if the number matches. After that the number will be put to zero in the DB.
 - [ ] For the registration, I will do the same thing.
@@ -22,7 +25,7 @@ Technologies/tools/languages used :
 - [x] a navbar (if possible) on the home page
 - [ ] ~~the tools will be classified by category : game 🎮, weather app ☀, calculator 🖩, to do-list, and so on~~
 - [x] All the games and utilities as ~~flex~~ grid 💪 elements (and their behavior should be responsive) (Here improvements are coming )
-- [ ] a different page for each tool
+- [x] a different page for each tool
 - [ ] ~~the background image may change depending of the moment of the day : sunrise 🌅, day ☀, sunset 🌇, night 🌙~~ (_canceled_)
 - [ ] ~~The counter of visits will be attached to an other element (possibly the navbar, and so it will no more be so messy positionned)~~
 - [ ] ~~I should think to make the footer 🦶 mobile (animation 🎞)~~
@@ -58,7 +61,7 @@ Technologies/tools/languages used :
   - hard 💪
 - [x] For each level of diffculty, the speed of the snake will increase. Add that into the setInterval method by changing the snakespeed
 - [x] While the player restarts the game and the countdown is displayed, the restart button (**Enter key** or **Restart Button** itself) must be disabled to avoid time intervals overlapping
-- [ ] My other idea is to play a song when:
+- [x] My other idea is to play a song when:
 
   - [x] You lose
   - [x] You eat a food
