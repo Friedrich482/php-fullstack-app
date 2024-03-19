@@ -34,7 +34,7 @@ include "../include/header.php";
         </div>
         <label id="defaultError" class="hidden"></label>
         <div id="passwordForgotten" class="relative bottom-3 self-end text-pink-500">
-            <a class=" hover:text-sky-200 hover:underline cursor-pointer transform duration-500">Forgot password ?</a>
+            <a class=" hover:text-sky-200 hover:underline cursor-pointer transform duration-500" href="./forgottenPassword.php">Forgot password ?</a>
         </div>
     </form>
     
