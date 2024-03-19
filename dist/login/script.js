@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleElement(usernameError);
             usernameError.innerHTML = data.message;
             errorFieldStyle(usernameInput);
-            console.log("motherfucker !");
           } else if (data.message.includes("Incorrect password! ❌")) {
             passwordInput.focus();
             toggleElement(passwordError);
