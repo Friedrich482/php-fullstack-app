@@ -6,6 +6,10 @@ include "../include/database.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION["loggedin"] = false;
     session_destroy();
+    $cookies = $_COOKIE;
+    foreach ($cookies as $key => $value) {
+        setcookie($key, "", time() - 3600, "/");
+    }
     header("Location: ../login/login.php");
     exit();
 }
@@ -28,12 +32,21 @@ $result = pg_execute($conn, "update_and_select_visits", $params);
 $row = pg_fetch_assoc($result);
 $number_of_visits = $row["visits"];
 
+// Fetch the user's best score in snake game
 $sql = "SELECT snake_best_score FROM users WHERE id = $1";
 $params = [$_SESSION["id"]];
-pg_prepare($conn, "fetch_best_score", $sql);
-$result = pg_execute($conn, "fetch_best_score", $params);
+pg_prepare($conn, "fetch_best_score_snake", $sql);
+$result = pg_execute($conn, "fetch_best_score_snake", $params);
 $row = pg_fetch_assoc($result);
 $snake_best_score = $row["snake_best_score"];
+
+// Fetch the user's best score in shifumi game
+$sql = "SELECT shifumi_best_score FROM users WHERE id = $1";
+$params = [$_SESSION["id"]];
+pg_prepare($conn, "fetch_best_score_shifumi", $sql);
+$result = pg_execute($conn, "fetch_best_score_shifumi", $params);
+$row = pg_fetch_assoc($result);
+$shifumi_best_score = $row["shifumi_best_score"];
 ?>
 
 <!DOCTYPE html>
@@ -232,12 +245,11 @@ $snake_best_score = $row["snake_best_score"];
         <span class="w-3/4 text-start items-start">
           Best score at RPC :
           <span class="text-blue-500">
-            <?php if ($number_of_visits !== null) {
-                echo $number_of_visits;
+            <?php if ($shifumi_best_score !== null) {
+                echo $shifumi_best_score;
             } else {
                 echo "0";
             } ?>
-            <!-- Here as well ... -->
           </span>
         </span>
       </div>
