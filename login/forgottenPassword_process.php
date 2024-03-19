@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($email)) {
         $response["error"] = true;
-        $response["message"] = "The email field required !";
+        $response["message"] = "The email field is required !";
     } else {
         $stmt = pg_prepare(
             $conn,
