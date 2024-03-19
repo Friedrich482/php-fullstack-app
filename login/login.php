@@ -29,12 +29,13 @@ include "../include/header.php";
             <img src="../assets/eye/eye-crossed.svg" id="eyeSlashed" alt="Eye slashed" title="Display the password" class="h-[1.25rem] w-[1.25rem] select-none relative top-1 right-7 hover:scale-125">
         </div>   
         <label id="passwordError" class="hidden"></label>
-
         <div class="p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
             <input type="submit" value="Submit" id="submit" name="submit" class="cursor-pointer bg-slate-700 hover:border-transparent border-2 border-solid border-transparent rounded-2xl p-2 hover:bg-slate-700 hover:text-indigo-400 transition duration-200 min-w-32 active:font-thin active:bg-slate-800">
         </div>
         <label id="defaultError" class="hidden"></label>
-        <p></p>
+        <div id="passwordForgotten" class="relative bottom-3 self-end text-pink-500">
+            <a class=" hover:text-sky-200 hover:underline cursor-pointer transform duration-500" href="./forgottenPassword.php">Forgot password ?</a>
+        </div>
     </form>
     
     <p class="h-7 flex items-center justify-center flex-wrap text-center">Not yet registered? Click here to &thinsp;<a href="../register/register.php" class="text-pink-500 no-underline hover:text-indigo-400">register</a></p><br>
