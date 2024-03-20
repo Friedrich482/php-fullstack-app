@@ -27,9 +27,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["username"] = $username;
             $_SESSION["id"] = $user["id"];
             $id_user = $user["id"];
+            // Set the code to a random number at 6 digits
+            $code = rand(100000, 999999);
+            $stmt = pg_prepare(
+                $conn,
+                "update_code",
+                "UPDATE users SET code = $1 WHERE id = $2"
+            );
+
+            $result = pg_execute($conn, "update_code", [$code, $id_user]);
             $response = [
                 "error" => false,
-                "redirect" => "resetPassword.php?username=$username&id=$id_user",
+                "redirect" => "codeSubmit.php?username=$username&id=$id_user",
             ];
         }
         pg_free_result($result);
