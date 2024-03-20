@@ -24,12 +24,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ];
         } else {
             $user = pg_fetch_assoc($result);
+            $username = $user["username"];
             $_SESSION["username"] = $username;
             $_SESSION["id"] = $user["id"];
             $id_user = $user["id"];
+
+            // Set the code to a random number at 6 digits
+            $code = rand(100000, 999999);
+
+            //  Push this code in the database
+            $stmt = pg_prepare(
+                $conn,
+                "update_code",
+                "UPDATE users SET code = $1 WHERE id = $2"
+            );
+
+            $result = pg_execute($conn, "update_code", [$code, $id_user]);
+
+            // Send a mail to the user
+            $user_email_address = $user["email"];
+            $email_subject = "Reset password on Fredrich's corner";
+            $email_message = "
+            Hi $username,
+            Forgot your password?\n
+            We received a request to reset the password for your account.\n
+            Here is your SECRET code :\n
+            $code\n
+            Don't share that code !\n
+            Now go back on the page to enter it\n
+            Sincerely, Friedrich's corner team\n";
+            $email_header = "From: friedrichcorner@gmail.com\r\n";
+            if (
+                mail(
+                    $user_email_address,
+                    $email_subject,
+                    $email_message,
+                    $email_header
+                )
+            ) {
+                echo "Email sent with success";
+            } else {
+                $response = [
+                    "error" => true,
+                    "message" => "Error while sending the email",
+                ];
+            }
             $response = [
                 "error" => false,
-                "redirect" => "resetPassword.php?username=$username&id=$id_user",
+                "redirect" => "codeSubmit.php?username=$username&id=$id_user",
             ];
         }
         pg_free_result($result);

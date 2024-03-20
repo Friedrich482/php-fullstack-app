@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
             emailError.innerHTML = data.message;
             errorFieldStylePF(emailInput);
           } else {
-            // In this case, (all the fields are empty), so it will display an appropriate message
+            // ? In this case,  (all the fields are empty), so it will display an appropriate message
             emailInput.focus();
-            errorFieldStyle(emailInput);
+            errorFieldStylePF(emailInput);
             toggleElementPF(defaultErrorPF);
             defaultErrorPF.innerHTML = data.message;
           }
