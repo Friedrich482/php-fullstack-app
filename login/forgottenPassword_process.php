@@ -40,10 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             );
 
             $result = pg_execute($conn, "update_code", [$code, $id_user]);
-            $response = [
-                "error" => false,
-                "redirect" => "codeSubmit.php?username=$username&id=$id_user",
-            ];
 
             // Send a mail to the user
             $user_email_address = $user["email"];
@@ -57,7 +53,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             Don't share that code !\n
             Now go back on the page to enter it\n
             Sincerely, Friedrich's corner team\n";
-            $email_header = "From: votreadresse@example.com\r\n";
+            $email_header = "From: friedrichcorner@gmail.com\r\n";
+            if (
+                mail(
+                    $user_email_address,
+                    $email_subject,
+                    $email_message,
+                    $email_header
+                )
+            ) {
+                echo "Email sent with success";
+            } else {
+                $response = [
+                    "error" => true,
+                    "message" => "Error while sending the email",
+                ];
+            }
+            $response = [
+                "error" => false,
+                "redirect" => "codeSubmit.php?username=$username&id=$id_user",
+            ];
         }
         pg_free_result($result);
         pg_close($conn);
