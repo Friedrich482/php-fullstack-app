@@ -3,9 +3,11 @@ session_start();
 include "../include/database.php";
 
 // Importations needed to use the phpmailer plugin
+
 require "../vendor/autoload.php";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
+
 // use PHPMailer\PHPMailer\Exception;
 
 $response = ["error" => false];
@@ -50,6 +52,7 @@ try {
                 $result = pg_execute($conn, "update_code", [$code, $id_user]);
 
                 // Send a mail to the user
+
                 $user_email_address = $user["email"];
                 $email_subject = "Reset password on Friedrich's corner";
                 $email_message = "
@@ -61,7 +64,6 @@ try {
                 <b>Don't share that code !</b><br>
                 Now go back on the page to enter it.<br>
                 Sincerely, Friedrich's corner team";
-                // $email_header = "From: friedrichcorner@gmail.com\r\n";
 
                 // Initializing the mail
 

@@ -1,13 +1,35 @@
 <?php
 session_start();
 include "../include/database.php";
-
+$params = [$_SESSION["id"]];
 $response = ["error" => false];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $code = filter_input(INPUT_POST, "code", FILTER_VALIDATE_INT);
+    $code_entered = filter_input(INPUT_POST, "code", FILTER_VALIDATE_INT);
     if (empty($code)) {
         $response["error"] = true;
         $response["message"] = "The code is required !";
     } else {
+        // Get the user's code from the database
+
+        $sql = "SELECT code FROM users WHERE id=$1";
+        pg_prepare($conn, "fetch_code", $sql);
+        $result = pg_execute($conn, "fecth_code", $params);
+        $row = pg_fetch_assoc($result);
+        $user_code = $row["code"];
+
+        if ($user_code !== $code_entered) {
+            $response = [
+                "error" => true,
+                "message" => "The code is incorrect <br> (ಥ _ ಥ)",
+            ];
+        } else {
+            $response = [
+                "error" => false,
+                "redirect" => "resetPassword.php?username=$username&id=$id_user",
+            ];
+        }
     }
+    pg_free_result($result);
+    pg_close($conn);
 }
+echo json_encode($response);
