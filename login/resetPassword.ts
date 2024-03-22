@@ -6,9 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "#passwordError",
   ) as HTMLLabelElement;
 
-  const passwordInput = document.querySelector(
-    "#passwordInput",
-  ) as HTMLInputElement;
+  const passwordInput = document.querySelector("#password") as HTMLInputElement;
+
   const confirmPasswordInput = document.querySelector(
     "#confirmPassword",
   ) as HTMLInputElement;
@@ -32,28 +31,29 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {
-          const inputs = [passwordInput, confirmPasswordInput];
+          let inputs = [passwordInput, confirmPasswordInput];
           inputs.forEach((element) => {
-            removeErrorFieldStyleCS(element);
+            removeErrorFieldStyleRP(element);
           });
 
           if (data.message.includes("Passwords don't match !")) {
             passwordInput.focus();
-            toggleElementCS(passwordError);
-            passwordInput.innerHTML = data.message;
-            errorFieldStyleCS(passwordInput);
-            errorFieldStyleCS(confirmPasswordInput);
+            toggleElementRP(passwordError);
+            passwordError.textContent = data.message;
+            // console.log(data.message);
+            errorFieldStyleRP(passwordInput);
+            errorFieldStyleRP(confirmPasswordInput);
           } else {
             passwordInput.focus();
-            errorFieldStyleCS(passwordInput);
-            toggleElementCS(defaultErrorRP);
-            defaultErrorRP.innerHTML = data.message;
+            errorFieldStyleRP(passwordInput);
+            toggleElementRP(defaultErrorRP);
+            defaultErrorRP.textContent = data.message;
           }
         } else {
           window.location.href = data.redirect;
         }
       })
-      .catch((error) => console.error("Error : ", error));
+      .catch((error) => console.error(error));
   });
 });
 
@@ -63,12 +63,12 @@ function toggleElementRP(element: HTMLLabelElement): void {
 }
 
 function removeErrorFieldStyleRP(element: HTMLInputElement): void {
-  element.classList.remove(...cssProps1CS);
-  element.classList.add(...cssProps2CS);
+  element.classList.remove(...cssProps1RP);
+  element.classList.add(...cssProps2RP);
 }
 function errorFieldStyleRP(element: HTMLInputElement): void {
-  element.classList.add(...cssProps1CS);
-  element.classList.remove(...cssProps2CS);
+  element.classList.add(...cssProps1RP);
+  element.classList.remove(...cssProps2RP);
 }
 let cssProps1RP = [
   "border-red-600",

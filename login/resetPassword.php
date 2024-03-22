@@ -9,20 +9,29 @@ include "../include/header.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reset passowrd</title>
+    <title>Reset password</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../dist/login/resetPassword.js" defer></script>
 </head>
 
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-6 backgroundImg text-[whitesmoke] MV-boli">
-<form action="forgottenPassword_process.php" method="post" id="resetPasswordForm" class="flex items-center justify-center flex-col bg-slate-700 opacity-95 MV-boli p-6 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-7">
+<form action="resetPassword_process.php" method="post" id="resetPasswordForm" class="flex items-center justify-center flex-col bg-slate-700 opacity-95 MV-boli p-6 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-7">
     <h1 class=" text-4xl text-red-600 mt-5">Reset your Password </h1>
 
         <label for="password" class>Enter the new password:</label>
-        <input type="password" name="password" id="password" required placeholder="Enter the new password..." class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-11/12 sm:w-10/12 focus:outline-none text-sm sm:text-sm">
+
+        <div class="w-full flex flex-row flex-nowrap p-0 sm:w-10/12">
+            <input type="password" name="password" id="password" required placeholder="Enter the new password..." class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-full sm:w-full focus:outline-none text-sm sm:text-sm">
+            <img src="../assets/eye/eye-crossed.svg" id="eyeSlashed" alt="Eye slashed" title="Display the password" class="h-[1.25rem] w-[1.25rem] select-none relative top-1 right-7 hover:scale-125">
+        </div>  
 
         <label for="confirmPassword" class>Confirm password:</label>
-        <input type="password" name="confirm_password" id="confirmPassword" required placeholder="Re-enter the password..." class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-11/12 sm:w-10/12 focus:outline-none text-sm sm:text-sm">
+        
+        <div class="w-full flex flex-row flex-nowrap p-0 sm:w-10/12">
+            <input type="password" name="confirm_password" id="confirmPassword" required placeholder="Re-enter the password..." class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-full sm:w-full focus:outline-none text-sm sm:text-sm">
+            <img src="../assets/eye/eye-crossed.svg" id="eyeSlashed" alt="Eye slashed" title="Display the password" class="h-[1.25rem] w-[1.25rem] select-none relative top-1 right-7 hover:scale-125">
+        </div>   
+
 
         <label id="passwordError" class="hidden"></label>
 

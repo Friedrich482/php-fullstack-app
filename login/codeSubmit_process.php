@@ -2,6 +2,7 @@
 session_start();
 include "../include/database.php";
 $id_user = $_SESSION["id"];
+$username = $_SESSION["username"];
 $params = [$_SESSION["id"]];
 $response = ["error" => false];
 try {
