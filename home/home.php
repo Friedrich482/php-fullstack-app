@@ -444,7 +444,7 @@ $shifumi_best_score = $row["shifumi_best_score"];
   <!-- Dialog for logout -->
 
   <dialog id="confirmDeconnexionDialog" class="hidden items-center justify-center flex-col bg-slate-800 opacity-95 MV-boli p-4 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-6 z-10 text-[whitesmoke] h-80">
-    <form action="home.php" method="post">
+    <form action="home.php" method="post" class="flex items-center justify-center flex-col gap-5">
       <label class="text-2xl">Are you sure to log out ?</label>
 
       <div class="flex items-center justify-center flex-col gap-5">

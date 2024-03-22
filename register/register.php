@@ -30,9 +30,9 @@ include "../include/header.php";
         <label id="usernameError" class="hidden"></label>
 
         <label for="password">Enter your password :</label>
-        <div class="w-11/12 flex flex-row flex-nowrap p-0 sm:w-10/12">
+        <div class="w-11/12 flex flex-row flex-nowrap p-0 sm:w-10/12 group">
             <input type="password" name="password" id="password" required placeholder="**********" minlength="8" class="transition duration-500 hover:scale-110 hover:border-b-4 hover:shadow-xl hover:shadow-black border-2 border-solid border-black border-b-2  border-b-purple-600 text-center bg-gray-800 text-white opacity-75 rounded-tl-md rounded-br-md h-8 w-full flex-shrink-0 box-border focus:outline-none text-[0.564rem] sm:text-sm placeholder:">
-            <img src="../assets/eye/eye-crossed.svg" id="eyeSlashedRegister" alt="Eye slashed" title="Display the password" class="h-[1.25rem] w-[1.25rem] select-none relative top-1 right-7 hover:scale-125">
+            <img src="../assets/eye/eye-crossed.svg" id="eyeSlashedRegister" alt="Eye slashed" title="Display the password" class="h-[1.25rem] w-[1.25rem] select-none relative top-1 right-7 transform duration-500 hover:scale-125 group-hover:scale-125">
         </div>
 
         <div class="p-[2px] bg-gradient-to-br from-purple-700 to-red-500  rounded-2xl transition duration-500 hover:scale-110 hover:bg-gradient-to-br hover:from-red-500 hover:to-purple-700 active:bg-gradient-to-br active:from-purple-700 active:to-red-500 z-10">
@@ -42,7 +42,7 @@ include "../include/header.php";
         <p></p>
     </form>
 
-    <p class="h-7 flex items-center justify-center text-center flex-col sm-custom:flex-row"><span>Already registered? Click here to &ThinSpace;</span><span><a href="../login/login.php" class="text-pink-500 no-underline hover:text-indigo-400">login</a></span></p><br><p class="sm:h-0 sm:w-0 sm:hidden"></p>
+    <p class="h-7 flex items-center justify-center text-center flex-col sm-custom:flex-row"><span>Already registered? Click here to &ThinSpace;</span><span><a href="../login/login.php" class="text-pink-500 no-underline transform duration-500 hover:text-indigo-400">login</a></span></p><br><p class="sm:h-0 sm:w-0 sm:hidden"></p>
 </body>
 </html>
 

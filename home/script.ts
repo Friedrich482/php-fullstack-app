@@ -369,9 +369,9 @@ function displayDate() {
   dateDiv.innerHTML = `${day} ${month} ${date}, ${year}
 
    <div class="font-bold grid grid-cols-3 place-items-center w-2/5 gap-0">
-      <div class="w-6">${hours}:</div> 
-      <div class="w-6">${minutes}:</div>
-      <div class="w-6 text-start">${seconds}</div>
+      <div class="w-6 p-1">${hours}:&nbsp;</div> 
+      <div class="w-6 p-1">${minutes}:&nbsp;</div>
+      <div class="w-6 p-1 text-start">${seconds}</div>
    </div>`;
 }
 
