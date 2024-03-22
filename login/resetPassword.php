@@ -15,7 +15,7 @@ include "../include/header.php";
 </head>
 
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-6 backgroundImg text-[whitesmoke] MV-boli">
-<form action="resetPassword_process.php" method="post" id="resetPasswordForm" class="flex items-center justify-center flex-col bg-slate-700 opacity-95 MV-boli p-6 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-7">
+<form action="resetPassword_process.php" method="post" id="resetPasswordForm" class="flex items-center justify-center flex-col bg-slate-700 opacity-95 MV-boli p-6 mt-6 border-4 border-double border-purple-800 rounded-bl-[100px] rounded-tr-[100px] min-w-16 max-w-60 sm:min-w-72 sm:p-2 gap-7">
     <h1 class=" text-4xl text-red-600 mt-5">Reset your Password </h1>
 
         <label for="password" class>Enter the new password:</label>
