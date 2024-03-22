@@ -1,10 +1,10 @@
 "use strict";
+const resetPasswordForm = document.querySelector("#resetPasswordForm");
+const passwordError = document.querySelector("#passwordError");
+const passwordInput = document.querySelector("#password");
+const confirmPasswordInput = document.querySelector("#confirmPassword");
+const defaultErrorRP = document.querySelector("#defaultError");
 document.addEventListener("DOMContentLoaded", () => {
-  const resetPasswordForm = document.querySelector("#resetPasswordForm");
-  const passwordError = document.querySelector("#passwordError");
-  const passwordInput = document.querySelector("#password");
-  const confirmPasswordInput = document.querySelector("#confirmPassword");
-  const defaultErrorRP = document.querySelector("#defaultError");
   resetPasswordForm.addEventListener("submit", (event) => {
     console.log("Form submission intercepted");
     event.preventDefault();
@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
             passwordInput.focus();
             toggleElementRP(passwordError);
             passwordError.textContent = data.message;
-            // console.log(data.message);
             errorFieldStyleRP(passwordInput);
             errorFieldStyleRP(confirmPasswordInput);
           } else {
@@ -65,3 +64,23 @@ let cssProps2RP = [
   "border-b-purple-600",
   "hover:border-b-4",
 ];
+const eyes = document.querySelectorAll(".eye-crossed");
+eyes.forEach((eye) => {
+  eye.addEventListener("click", () => {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      confirmPasswordInput.type = "text";
+      eyes.forEach((eye) => {
+        eye.src = "../assets/eye/eye.svg";
+        eye.title = "Hide the password";
+      });
+    } else {
+      passwordInput.type = "password";
+      confirmPasswordInput.type = "password";
+      eyes.forEach((eye) => {
+        eye.src = "../assets/eye/eye-crossed.svg";
+        eye.title = "Display the password";
+      });
+    }
+  });
+});

@@ -39,6 +39,15 @@ try {
             ]);
 
             if ($result) {
+                $sql = "UPDATE users SET code=$1 WHERE id=$2";
+
+                pg_prepare($conn, "set_code_back_to_0", $sql);
+
+                $result = pg_execute($conn, "set_code_back_to_0", [
+                    0,
+                    $id_user,
+                ]);
+
                 $response[
                     "redirect"
                 ] = "login.php?username=$username&id=$id_user";
