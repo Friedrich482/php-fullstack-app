@@ -10,6 +10,7 @@ include "../include/header.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Forgotten</title>
+    <link rel="shortcut icon" href="../assets/icons/password-favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/style.css">
     <script src="../dist/login/codeSubmit.js"></script>
 </head>

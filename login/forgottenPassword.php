@@ -11,6 +11,7 @@ include "../include/header.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Forgotten</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../assets/icons/password-favicon.ico" type="image/x-icon" />
     <script src="../dist/login/forgottenPassword.js"></script>
 </head>
 
