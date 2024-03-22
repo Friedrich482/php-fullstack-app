@@ -14,14 +14,14 @@ Technologies/tools/languages used :
 
 ## To do
 
-- [ ] Add a forgot password 🔑
-- [ ] I need two pages here :
+- [x] Add a forgot password 🔑
+- [x] I need two pages here :
   - [x] The first one to ask the email to the user
-  - [ ] The second one will be a page to say him that a mail has been sent to him and to check his mails. He will now fill two fiels and pass only if the two passwords matches.
+  - [x] The second one will be a page to say him that a mail has been sent to him and to check his mails. He will now fill two fiels and pass only if the two passwords matches.
 - [x] Inside the forgot password, I will ask your email address
-- [ ] Then send a random number with 6 digits (so between 100000 and 999999)
-- [ ] The user will enter that number and will pass only if the number matches. After that the number will be put to zero in the DB.
-- [ ] ~~For the registration, I will do the same thing.~~
+- [x] Then send a random number with 6 digits (so between 100000 and 999999)
+- [x] The user will enter that number and will pass only if the number matches. After that the number will be put to zero in the DB.
+- [x] ~~For the registration, I will do the same thing.~~
 - [x] a nice animation to the welcome message 👋 when logging or registering. It needs to be multicolor and chars will display one after the other
 - [x] a navbar (if possible) on the home page
 - [ ] ~~the tools will be classified by category : game 🎮, weather app ☀, calculator 🖩, to do-list, and so on~~
