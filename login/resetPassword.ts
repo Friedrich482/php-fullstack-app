@@ -1,21 +1,20 @@
+const resetPasswordForm = document.querySelector(
+  "#resetPasswordForm",
+) as HTMLFormElement;
+const passwordError = document.querySelector(
+  "#passwordError",
+) as HTMLLabelElement;
+
+const passwordInput = document.querySelector("#password") as HTMLInputElement;
+
+const confirmPasswordInput = document.querySelector(
+  "#confirmPassword",
+) as HTMLInputElement;
+
+const defaultErrorRP = document.querySelector(
+  "#defaultError",
+) as HTMLLabelElement;
 document.addEventListener("DOMContentLoaded", () => {
-  const resetPasswordForm = document.querySelector(
-    "#resetPasswordForm",
-  ) as HTMLFormElement;
-  const passwordError = document.querySelector(
-    "#passwordError",
-  ) as HTMLLabelElement;
-
-  const passwordInput = document.querySelector("#password") as HTMLInputElement;
-
-  const confirmPasswordInput = document.querySelector(
-    "#confirmPassword",
-  ) as HTMLInputElement;
-
-  const defaultErrorRP = document.querySelector(
-    "#defaultError",
-  ) as HTMLLabelElement;
-
   resetPasswordForm.addEventListener("submit", (event) => {
     console.log("Form submission intercepted");
 
@@ -80,3 +79,27 @@ let cssProps2RP = [
   "border-b-purple-600",
   "hover:border-b-4",
 ];
+
+const eyes = document.querySelectorAll(
+  ".eye-crossed",
+) as NodeListOf<HTMLImageElement>;
+
+eyes.forEach((eye) => {
+  eye.addEventListener("click", () => {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      confirmPasswordInput.type = "text";
+      eyes.forEach((eye) => {
+        eye.src = "../assets/eye/eye.svg";
+        eye.title = "Hide the password";
+      });
+    } else {
+      passwordInput.type = "password";
+      confirmPasswordInput.type = "password";
+      eyes.forEach((eye) => {
+        eye.src = "../assets/eye/eye-crossed.svg";
+        eye.title = "Display the password";
+      });
+    }
+  });
+});
