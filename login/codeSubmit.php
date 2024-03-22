@@ -11,7 +11,7 @@ include "../include/header.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Forgotten</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../dist/login/forgottenPassword.js"></script>
+    <script src="../dist/login/codeSubmit.js"></script>
 </head>
 
 <body class="flex items-center justify-center flex-wrap text-center flex-col gap-6 backgroundImg text-[whitesmoke] MV-boli">

@@ -23,9 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleElementCS(codeError);
             codeError.innerHTML = data.message;
             errorFieldStyleCS(codeInput);
+          } else {
+            codeInput.focus();
+            errorFieldStyleCS(codeInput);
+            toggleElementCS(defaultErrorCS);
+            defaultErrorCS.innerHTML = data.message;
           }
+        } else {
+          window.location.href = data.redirect;
         }
-      });
+      })
+      .catch((error) => console.error("Error : ", error));
   });
 });
 function toggleElementCS(element) {
@@ -33,12 +41,12 @@ function toggleElementCS(element) {
   element.classList.add("visibleItem");
 }
 function removeErrorFieldStyleCS(element) {
-  element.classList.remove(...cssProps1PF);
-  element.classList.add(...cssProps2PF);
+  element.classList.remove(...cssProps1CS);
+  element.classList.add(...cssProps2CS);
 }
 function errorFieldStyleCS(element) {
-  element.classList.add(...cssProps1PF);
-  element.classList.remove(...cssProps2PF);
+  element.classList.add(...cssProps1CS);
+  element.classList.remove(...cssProps2CS);
 }
 let cssProps1CS = [
   "border-red-600",
