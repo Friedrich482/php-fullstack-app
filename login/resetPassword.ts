@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
             passwordInput.focus();
             toggleElementRP(passwordError);
             passwordError.textContent = data.message;
-            // console.log(data.message);
             errorFieldStyleRP(passwordInput);
             errorFieldStyleRP(confirmPasswordInput);
           } else {
