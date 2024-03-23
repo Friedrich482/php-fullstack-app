@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <img src="./img/03.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
                 <img src="./img/04.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
                 <img src="./img/05.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
-                <img src="./img/06.jwebp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
+                <img src="./img/06.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
                 <img src="./img/07.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
                 <img src="./img/08.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">
                 <img src="./img/09.webp" alt="img" class="slide  min-w-72 w-96 aspect-square hidden animation-fade transform duration-1000 rounded-xl border-4 border-violet-600 ">

@@ -1,23 +1,61 @@
-# php_form_registration
+<h1 style="text-align:center; font-size: 3rem"> Php Fullstack App</h1>  
 
-My first application in php to register users. The goal is to integrate all my javascript mini projects inside a big crud application.
+*A full stack php application that manages user
+ authentication, registration, login and even password forgotten.*  
 
 Technologies/tools/languages used :
+<div align=center style="display:flex; gap:2px; align-items:center; justify-content:center;
+padding:0.25px;
+flex-wrap:wrap;" >
 
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Tailwindcss](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)
+<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"
+alt="php-logo">
+<img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"
+alt="postgresql-badge">
+<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"
+alt="php-logo">
+<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"
+alt="php-logo">
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"
+alt="php-logo">
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"
+alt="php-logo">
+<img src="https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E"
+alt="php-logo">
+</div>
+
+## Overview  
+
+This project is initialy an exercice to practise Php, Ajax, Tailwindcss, 
+Typescript and sass in a real life application like.
+It has 3 major pages:  
+
+1. Login page 🔑
+2. Register page 👤
+3. Home page 🏠
+
+As database, for the registration, login, and other utilities, I used PostgreSQL.
+On the home page, I added my main projects I built when I was learning
+ JavaScript :
+
+- Space Calculator 🚀
+- Comprehensive Weather app ⚡🌞🌪
+- Full snake Game (plays sounds 🎵) 🐍
+- Tic tac Toe (also with SFX 🎵) ❌⭕
+- Shifumi game ✌🖐👊
+- Images slider 🖼
+- Dynamic Stopwatch ⏱
+- New York Simple Clock ⌚
+- Classic Todo List 📋
 
 ## To do
+
 
 - [x] Add a forgot password 🔑
 - [x] I need two pages here :
   - [x] The first one to ask the email to the user
-  - [x] The second one will be a page to say him that a mail has been sent to him and to check his mails. He will now fill two fiels and pass only if the two passwords matches.
+  - [x] The second one will be a page to say him that a mail has been sent to him and to check his mails. He will now fill 
+  - [] two fiels and pass only if the two passwords matches.
 - [x] Inside the forgot password, I will ask your email address
 - [x] Then send a random number with 6 digits (so between 100000 and 999999)
 - [x] The user will enter that number and will pass only if the number matches. After that the number will be put to zero in the DB.
@@ -27,7 +65,7 @@ Technologies/tools/languages used :
 - [ ] ~~the tools will be classified by category : game 🎮, weather app ☀, calculator 🖩, to do-list, and so on~~
 - [x] All the games and utilities as ~~flex~~ grid 💪 elements (and their behavior should be responsive) (Here improvements are coming )
 - [x] a different page for each tool
-- [ ] ~~the background image may change depending of the moment of the day : sunrise 🌅, day ☀, sunset 🌇, night 🌙~~ (_canceled_)
+- [ ] ~~the background image may change depending of the moment of the day : sunrise 🌅, day ☀, sunset 🌇, night 🌙~~ (*canceled*)
 - [ ] ~~The counter of visits will be attached to an other element (possibly the navbar, and so it will no more be so messy positionned)~~
 - [ ] ~~I should think to make the footer 🦶 mobile (animation 🎞)~~
 - [ ] ~~display the time in the navbar, eventually~~
@@ -37,7 +75,7 @@ Technologies/tools/languages used :
 - [x] The navbar should contain profile with infos about user, tools ( in many sections ) and logout
 - [x] The infos like counter of visits will be in Profile
 - [x] The "go back to top" button may be set as fixed element, so it will display at the bottom of the page as soon as we quit the top
-- [x] If we click on the DOM elements that have the notification **ping**, it disappears and for the _Profile_ sections, a dialog 💬 will open and display infos about the users
+- [x] If we click on the DOM elements that have the notification **ping**, it disappears and for the *Profile* sections, a dialog 💬 will open and display infos about the users
 - [x] If the user has alredy checked the one of the ping elements(especially the logout elements for the small and large screens navbars), if he reduce or increase the size of his screen and so, for example the display for small or large sreens occurs, the ping **WILL NO LONGER BE PRESENT**
 - [x] Added the simple calculator file
 - [x] Add Typescript instead of vanilla JavaScript for the calculator
@@ -48,7 +86,7 @@ Technologies/tools/languages used :
 - [x] And after that the register page
 - [x] And there too, fix every single squiggled line
 - [x] Now it is the turn of the weather app. This is probably the biggest 💪 refactor of all
-- [x] Firstly, let's use _tailwindcss_ in the project
+- [x] Firstly, let's use *tailwindcss* in the project
 - [x] And after **typescript**
 - [x] By the way refactor the structure of the page for a better experience
 - [x] Turn of the snake game
@@ -68,7 +106,7 @@ Technologies/tools/languages used :
   - [x] You eat a food
   - [x] You change direction
   - [x] Game over
-  - [] ~~You beat your own high score (_PHP needed_)~~
+  - [] ~~You beat your own high score (*PHP needed*)~~
 
 - [x] Now the Tic Tac Toe Game...
 - [x] As always tailwind CSS first
