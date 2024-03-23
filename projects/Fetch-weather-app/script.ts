@@ -1,5 +1,5 @@
+export {}
 // ? This is the interface for the data fetched
-import API_KEY from "./apiKey.js";
 interface WeatherData {
   coord: {
     lon: number;
@@ -45,6 +45,15 @@ interface WeatherData {
   name: string;
   cod: number;
 }
+async function fetchApiKey(): Promise<string>{
+  let request = await fetch("apiKey.json");
+  let response = await request.json()
+  const API_KEY: string = response["API_KEY"]
+  return API_KEY;
+}
+const API_KEY = await fetchApiKey();
+
+console.log(API_KEY);
 
 // ! Here the goal is to reference all the dom Elements without using abusively the document.querySelector() method
 // ?I start by creating an array for each type of nodes ...
@@ -110,8 +119,8 @@ const imageFooter = footer.querySelector("img") as HTMLImageElement;
 imageFooter.src = "../../assets/icons/rocket.svg";
 footer.classList.add("hidden");
 
-const apiKey: string = API_KEY;
-let interval: number; // For the setInterval function later in the code
+// const apiKey: string = API_KEY;
+let interval: ReturnType<typeof setTimeout> ; // For the setInterval function later in the code
 
 //?All Arrays for css classes
 const flexCssClasses = ["flex", "items-center", "justify-center", "flex-row"];
@@ -168,7 +177,7 @@ weatherForm.addEventListener("submit", async (event) => {
 });
 
 async function fetchData(city: string) {
-  let ApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  let ApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
   let response: Response = await fetch(ApiUrl);
 
   if (!response.ok) {
