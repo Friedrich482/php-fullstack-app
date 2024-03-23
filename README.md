@@ -26,7 +26,7 @@ alt="php-logo">
 
 ## Overview  
 
-This project is initialy an exercice to practise Php, Ajax, Tailwindcss, 
+This project is initially an exercise to practice Php, Ajax, Tailwindcss,
 Typescript and sass in a real life application like.
 It has 3 major pages:  
 
@@ -51,7 +51,7 @@ On the home page, I added my main projects I built when I was learning
 Because I used tailwindcss CLI, I put SASS in the project
 for a more pragmatically way to write CSS (especially mixins)
 
-## Login Page 
+## Login Page
 
 A fully responsive login page with a purple design
 
@@ -60,16 +60,17 @@ A fully responsive login page with a purple design
 - Small screens
 
 - Big Screens
-  
-### Login page : Features
+  // lighthouse score
+
+### Login Page : Features
 
 1. This page have two many fields :
     - Username
-    - password (has hide/show password) 
+    - password (has hide/show password)
 2. A forgot password link that lead to another page to reset the password
 3. A link to send the user to the register page if he is not registered yet
 
-## Register page
+## Register Page
 
 As the login page, it is also responsive and will adapt depending of your screen
 
@@ -79,25 +80,29 @@ As the login page, it is also responsive and will adapt depending of your screen
 
 - Big Screens
 
+  // lighthouse score
+
 ### Register page : Features
 
 1. Here, three fields:
   
    - Email address
    - Username
-   - Password (at least 8 caracters) and also hide/show option
+   - Password (at least 8 characters) and also hide/show option
 
 2. A link to the login page if the user has already signed in
 
 ## Home page
 
-Responsive (natyrally). The purple design is kept.
+Responsive (naturally). The purple design is kept.
 
  // images of register page. One for :
 
 - Small screens
 
 - Big Screens
+
+  // lighthouse score
 
 ### Home page : Features
 
@@ -117,24 +122,51 @@ On small screens, it is a menu burger that displays a vertical navbar.
 
 // image of vertical navbar
 
-1. The main title has a nice animation of cursor typing. It loops infinitly
+1. The main title has an animation of cursor typing. It loops infinitely
 
 // Image (or video) of the title with its animation
 3. A bouncing button that leads to the project grid
-4. Project grids : all my JS projects are displayed as a grid of card. 
+4. Project grids : all my JS projects are displayed as a grid of card.
 More on that later.
 5. A logout button. It opens a dialog that ask the user to confirm the logout
 6. A "back to top" button able to scale depending of the user's screen width.
 
+## Profile Tab
 
-## To do
+This tab is quite special, it will open a dialog that make a brief recap of the
+user current stats. Here are the stats shown :
 
+- Username
+- Number of visits : this counter will increment each time you visit the main page
+- Best Score at snake game
+- Best Score at Rock-Paper-Scissors game (shifumi)
+- And also the date
+
+## Log out Tab
+
+It behaves exactly like the logout button at the bottom of the page
+
+## Space Calculator 🚀
+
+ // Some images of the space calculator
+
+A calculator with a good-looking design that performs basic operations : addition,
+ substraction, multiplication, division
+
+As a personal touch, I added a clock on the top of the calculator.
+// image of the clock
+
+If you click on it, it will change and display the date in DD/MM/YYYY format.
+Click an another time to go back to default state.
+
+
+## Project Roadmap
 
 - [x] Add a forgot password 🔑
 - [x] I need two pages here :
   - [x] The first one to ask the email to the user
   - [x] The second one will be a page to say him that a mail has been sent to him and to check his mails. He will now fill 
-  - [] two fiels and pass only if the two passwords matches.
+  - [] two fields and pass only if the two passwords matches.
 - [x] Inside the forgot password, I will ask your email address
 - [x] Then send a random number with 6 digits (so between 100000 and 999999)
 - [x] The user will enter that number and will pass only if the number matches. After that the number will be put to zero in the DB.
@@ -155,7 +187,7 @@ More on that later.
 - [x] The infos like counter of visits will be in Profile
 - [x] The "go back to top" button may be set as fixed element, so it will display at the bottom of the page as soon as we quit the top
 - [x] If we click on the DOM elements that have the notification **ping**, it disappears and for the *Profile* sections, a dialog 💬 will open and display infos about the users
-- [x] If the user has alredy checked the one of the ping elements(especially the logout elements for the small and large screens navbars), if he reduce or increase the size of his screen and so, for example the display for small or large sreens occurs, the ping **WILL NO LONGER BE PRESENT**
+- [x] If the user has already checked the one of the ping elements(especially the logout elements for the small and large screens navbars), if he reduce or increase the size of his screen and so, for example the display for small or large sreens occurs, the ping **WILL NO LONGER BE PRESENT**
 - [x] Added the simple calculator file
 - [x] Add Typescript instead of vanilla JavaScript for the calculator
 - [x] Add Typescript instead of vanilla JavaScript for the home page
@@ -177,7 +209,7 @@ More on that later.
   - easy
   - normal
   - hard 💪
-- [x] For each level of diffculty, the speed of the snake will increase. Add that into the setInterval method by changing the snakespeed
+- [x] For each level of difficulty, the speed of the snake will increase. Add that into the setInterval method by changing the snakespeed
 - [x] While the player restarts the game and the countdown is displayed, the restart button (**Enter key** or **Restart Button** itself) must be disabled to avoid time intervals overlapping
 - [x] My other idea is to play a song when:
 
@@ -193,7 +225,7 @@ More on that later.
 - [x] Maybe here too, I will add sounds 🎵
 - [x] The 5th project is the shifumi game. Also not too much code...
 - [x] Tailwind CSS
-- [x] Typecript
+- [x] TypeScript
 - [x] After the **images slider** project
 - [x] Tailwind CSS
 - [x] TypeScript
@@ -208,6 +240,7 @@ More on that later.
   - [x] replace the rocket gif image by another one
   - [x] replace all images by their .avif of .webP version
 
-- [ ] The app will be deployed by default on vercel but if it is not possible, I will deploy it on the Docker Hub using Docker
+- [ ] The app will be deployed by default on vercel
+- [ ] Todo : add the lighthouse score for the main pages
 
 This list will be updated depending on my progression through it.
