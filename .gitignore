@@ -1,4 +1,5 @@
 node_modules
-projects/fetch-weather-app/apiKey.ts
 /vendor
 /.vscode
+.env
+projects/fetch-weather-app/apiKey.json

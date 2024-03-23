@@ -1,17 +1,23 @@
 <?php
-    // $dbServer = 'localhost';
-    // $dbUser = 'postgres'; // Your username goes here
-    // $dbPass = 'Logarithme18#'; // Your password goes here
-    // $dbName = 'users_data'; // This database can be imported in phpMyAdmin via the usrers_data.sql file
-    // $conn = '';
+try {
+    require __DIR__ . "/../vendor/autoload.php";
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+$dbServer = $_ENV["dbServer"];
+$dbUser = $_ENV["dbUser"];
+$dbPass = $_ENV["dbPass"];
+$dbName = $_ENV["dbName"];
 
-    $conn = pg_connect("host=localhost dbname=users_data user=postgres password=Logarithme18#");
-        
-    if (!$conn) {
-        // echo "Connection rejected !";
-        exit;
-    } 
-    else {
-        // echo "Connection success ✨!";
-    }
-?>
+$conn = pg_connect(
+    "host=$dbServer dbname=$dbName user=$dbUser password=$dbPass"
+);
+
+if (!$conn) {
+    // echo "Connection rejected !";
+    exit();
+} else {
+    // echo "Connection success ✨!";
+}
