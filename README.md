@@ -46,7 +46,86 @@ On the home page, I added my main projects I built when I was learning
 - Images slider 🖼
 - Dynamic Stopwatch ⏱
 - New York Simple Clock ⌚
-- Classic Todo List 📋
+- Classic Todo List 📋  
+  
+Because I used tailwindcss CLI, I put SASS in the project
+for a more pragmatically way to write CSS (especially mixins)
+
+## Login Page 
+
+A fully responsive login page with a purple design
+
+ // images of login page. One for :
+
+- Small screens
+
+- Big Screens
+  
+### Login page : Features
+
+1. This page have two many fields :
+    - Username
+    - password (has hide/show password) 
+2. A forgot password link that lead to another page to reset the password
+3. A link to send the user to the register page if he is not registered yet
+
+## Register page
+
+As the login page, it is also responsive and will adapt depending of your screen
+
+ // images of register page. One for :
+
+- Small screens
+
+- Big Screens
+
+### Register page : Features
+
+1. Here, three fields:
+  
+   - Email address
+   - Username
+   - Password (at least 8 caracters) and also hide/show option
+
+2. A link to the login page if the user has already signed in
+
+## Home page
+
+Responsive (natyrally). The purple design is kept.
+
+ // images of register page. One for :
+
+- Small screens
+
+- Big Screens
+
+### Home page : Features
+
+1. A navbar that will change depending of the screen you have.It has 5 tabs :
+
+   - Home
+   - Profile
+   - Tools
+   - About
+   - Log out
+
+On big screens (width >= 640px), it will be a normal navbar horizontal.
+
+// Image of the horizontal navbar
+
+On small screens, it is a menu burger that displays a vertical navbar.
+
+// image of vertical navbar
+
+1. The main title has a nice animation of cursor typing. It loops infinitly
+
+// Image (or video) of the title with its animation
+3. A bouncing button that leads to the project grid
+4. Project grids : all my JS projects are displayed as a grid of card. 
+More on that later.
+5. A logout button. It opens a dialog that ask the user to confirm the logout
+6. A "back to top" button able to scale depending of the user's screen width.
+
 
 ## To do
 
