@@ -55,14 +55,18 @@ for a more pragmatically way to write CSS (especially mixins)
 
 ## Login Page
 
-A fully responsive login page with a purple design
+A fully responsive login page with a purple design.
 
-// images of login page. One for :
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center">
 
-- Small screens
+<img src="./assets/img/Capture d’écran 2024-03-24 à 22.34.13-1.png" height="400" alt="small-screen-login-page-image">
+<img src="./assets/img/Annotation 2024-03-24 223249-1.png" height=400 alt="large-screen-login-page-image">
+</div>
 
-- Big Screens
-  // lighthouse score
+<div style="display:flex; align-items:center;justify-content:center; margin-top:2rem;">
+<img src="./assets/img/Annotation 2024-03-24 230300.png" height=200 alt="lighthouse-score" style="border:2px solid green">
+
+</div>
 
 ### Login Page : Features
 
@@ -75,15 +79,18 @@ A fully responsive login page with a purple design
 
 ## Register Page
 
-As the login page, it is also responsive and will adapt depending of your screen
+As the login page, it is also responsive and will adapt depending of your screen.
 
-// images of register page. One for :
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center">
 
-- Small screens
+<img src="./assets/img/Capture d’écran 2024-03-24 à 23.33.46.png" height="400" alt="small-screen-register-page-image">
+<img src="./assets/img/Annotation 2024-03-24 233308.png" height=400 alt="large-screen-register-page-image">
+</div>
 
-- Big Screens
+<div style="display:flex; align-items:center;justify-content:center; margin-top:2rem;">
+<img src="./assets/img/Annotation 2024-03-24 233453.png" height=200 alt="lighthouse-score" style="border:2px solid green">
 
-  // lighthouse score
+</div>
 
 ### Register Page : Features
 
@@ -91,7 +98,7 @@ As the login page, it is also responsive and will adapt depending of your screen
 
    - Email address
    - Username
-   - Password (at least 8 characters) and also hide/show option
+   - Password (at least 8 characters) and also hide/show 👁 option
 
 2. A link to the login page if the user has already signed in
 
@@ -99,13 +106,16 @@ As the login page, it is also responsive and will adapt depending of your screen
 
 Responsive (naturally). The purple design is kept.
 
-// images of register page. One for :
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center">
 
-- Small screens
+<img src="./assets/img/Annotation 2024-03-24 234012.png" height="400" alt="small-screen-register-page-image">
+<img src="./assets/img/Annotation 2024-03-24 233941.png" height=400 alt="large-screen-register-page-image">
+</div>
 
-- Big Screens
+<div style="display:flex; align-items:center;justify-content:center; margin-top:2rem;">
+<img src="./assets/img/Annotation 2024-03-24 234112.png" height=200 alt="lighthouse-score" style="border:2px solid green">
 
-  // lighthouse score
+</div>
 
 ### Home Page : Features
 
@@ -119,19 +129,37 @@ Responsive (naturally). The purple design is kept.
 
 On big screens (width >= 640px), it will be a normal navbar horizontal.
 
-// Image of the horizontal navbar
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center">
+
+  <img src="./assets/img/Annotation 2024-03-24 234638.png" height=75 alt="horizontal-navbar-image">
+
+</div>
 
 On small screens, it is a menu burger that displays a vertical navbar.
 
-// image of vertical navbar
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center">
+
+<img src="./assets/img/Annotation 2024-03-24 234848.png" height=400 alt="vertical-navbar-image">
+
+</div>
 
 1. The main title has an animation of cursor typing. It loops infinitely
 
-// Image (or video) of the title with its animation
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center">
+
+<img src="./assets/img/Annotation 2024-03-24 235024.png" height=50 alt="lighthouse-score">
+
+</div>
 
 3. A bouncing button that leads to the project grid
 4. Project grids : all my JS projects are displayed as a grid of card.
-   More on that later.
+
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center; margin-bottom:1rem">
+
+<img src="./assets/img/Annotation 2024-03-24 235558.png" height="400" alt="small-screen-grid-tools-image">
+<img src="./assets/img/Annotation 2024-03-24 235507.png" height=400 alt="large-screen-grid-tools-image">
+</div>
+
 5. A logout button. It opens a dialog that ask the user to confirm the logout
 6. A "back to top" button able to scale depending of the user's screen width.
 
@@ -279,7 +307,7 @@ You will receive an email Friedrich Corner that gives you a code to reset the pa
 After entered the right password, you will be redirected to the last page
 that needs the new password. Confirm it and submit.
 
-// image of the reset password page
+// image of the reset password
 
 You will be back on the login page.
 Congratulations, your password has been reset.
