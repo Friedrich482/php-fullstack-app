@@ -108,9 +108,9 @@ Responsive (naturally). The purple design is kept.
 
 1. A navbar that will change depending of the screen you have.It has 5 tabs :
 
-   - Home
-   - Profile
-   - Tools
+   - Home 🏠
+   - Profile 👤
+   - Tools ⚙
    - About
    - Log out
 
@@ -159,13 +159,113 @@ As a personal touch, I added a clock on the top of the calculator.
 If you click on it, it will change and display the date in DD/MM/YYYY format.
 Click an another time to go back to default state.
 
+## Comprehensive Weather app ⚡🌞🌪
+
+A readaptation of my weather app project on github(link). Enter the
+ name of the city and GO ! A simple design with animated icons to add some style.
+ List of all parameters rendered when you query a city :
+
+1. **Location** (city, town, ...) & **Country**
+2. **Temperature** in Celsius degrees
+3. **Feels Like** also in Celsius degrees
+4. **Humidity**
+5. **Wind Direction**
+6. **Speed Direction**
+7. **Description** (clear sky, rainy, foggy, ...)
+8. **The date and time** at the place queried
+
+## Full snake Game 🐍
+
+A complete snake game with many features. You can choose one between three
+ levels of difficulty : easy, normal and hard
+
+// Image of the level dialog
+
+Here, audios are integrated. Different sounds will play
+(start, movement, eating, lose).
+If you lose, an another dialog will open
+
+// Image of the restart snake game dialog
+
+and ask you if you want to replay.
+Your best score will be registered, store in the database and shown, as I mentioned
+before, in your profile dialog. It is not responsive, so you need a screen at
+ least 600 px large.
+
+## Tic tac Toe (also with SFX 🎵) ❌⭕
+
+Tic tac toe game, but with swipe SFX. Play and admire the bright city behind you.
+
+// Image of the tic tac toe game
+
+This game need two players. When one of them wins, a dialog will popup
+and ask for retry or quit the game.
+
+// Image of the tic tac toe restart game popup
+
+## Shifumi game ✌🖐👊
+Rock Paper Scissors game against the Computer. Purple design is back.
+
+// Image of the shifumi game
+
+The rules are simple : to win, your score must be higher than computer's score.
+You can stop a any moment by pressing the "Quit game" button. A dialog
+(another one) will popup and ask you to confirm.
+
+// Image of the shifumi game confirm quit dialog
+
+Similarly to the snake game, your best score will be registered in the database
+and shown on the home page in the user's profile
+
+## Images slider 🖼
+
+Welcome in my short collection of city images.
+
+// Image of the image slider
+
+You can stop the scrolling effect by clicking on the admire button.
+To navigate through the slider, you can use the arrow buttons or directly the
+ LEFT and RIGHT arrow key. This project is fully responsive.
+
+## Dynamic Stopwatch ⏱
+
+A stopwatch with three (3) main options:
+
+- Start
+- Pause
+- Reset
+
+// Image of the stopwatch with the clock hovered
+
+Lighting effect when you hover the clock image.
+
+## New York Simple Clock ⌚
+
+A simple clock that display :
+
+// Image of the new york clock
+
+- current time code HH:MM:SS  and you can add the milliseconds
+- A greeting depending of the moment of the day
+- The date on, the format DayOfWeek Month Day Year
+- an option to show or hide milliseconds
+
+## Classic To do List 📋  
+
+The classic
+
+// Image of the to do list
+
+
+
 
 ## Project Roadmap
 
 - [x] Add a forgot password 🔑
 - [x] I need two pages here :
   - [x] The first one to ask the email to the user
-  - [x] The second one will be a page to say him that a mail has been sent to him and to check his mails. He will now fill 
+  - [x] The second one will be a page to say him that a mail has been sent to him and to check his mails.
+   He will now fill
   - [] two fields and pass only if the two passwords matches.
 - [x] Inside the forgot password, I will ask your email address
 - [x] Then send a random number with 6 digits (so between 100000 and 999999)
