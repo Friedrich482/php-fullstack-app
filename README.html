@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Converted from: README.md</title>
+    <meta charset="utf-8"/>
+
+</head>
+<body>
+
+<h1 style="text-align:center; font-size: 3rem"> Php Fullstack App</h1>  
+<p><em>A full stack php application that manages user
+authentication, registration, login and even password forgotten.</em></p><p>Technologies/tools/languages used :</p><div align=center style="display:flex; gap:2px; align-items:center; justify-content:center;
+padding:0.25px;
+flex-wrap:wrap;" >
+<p><img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"
+alt="php-logo">
+<img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"
+alt="postgresql-badge">
+<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"
+alt="php-logo">
+<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"
+alt="php-logo">
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"
+alt="php-logo">
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"
+alt="php-logo">
+<img src="https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E"
+alt="php-logo"></p></div>
+<h2 id="heading-overview">Overview</h2>
+<p>This project is initially an exercise to practice Php, Ajax, Tailwindcss,
+Typescript and sass in a real life application like.
+It has 3 major pages:</p><ol>
+<li>Login page 🔑</li>
+<li>Register page 👤</li>
+<li>Home page 🏠</li>
+</ol>
+<p>As database, for the registration, login, and other utilities, I used PostgreSQL.
+On the home page, I added my main projects I built when I was learning
+JavaScript :</p><ul>
+<li>Space Calculator 🚀</li>
+<li>Comprehensive Weather app ⚡🌞🌪</li>
+<li>Full snake Game (plays sounds 🎵) 🐍</li>
+<li>Tic tac Toe (also with SFX 🎵) ❌⭕</li>
+<li>Shifumi game ✌🖐👊</li>
+<li>Images slider 🖼</li>
+<li>Dynamic Stopwatch ⏱</li>
+<li>New York Simple Clock ⌚</li>
+<li>Classic Todo List 📋</li>
+</ul>
+<p>Because I used tailwindcss CLI, I put SASS in the project
+for a more pragmatically way to write CSS (especially mixins)</p><h2 id="heading-login-page">Login Page</h2>
+<p>A fully responsive login page with a purple design</p><p>// images of login page. One for :</p><ul>
+<li><p>Small screens</p></li>
+<li><p>Big Screens
+// lighthouse score</p></li>
+</ul>
+<h3 id="heading-login-page-3a-features">Login Page : Features</h3>
+<ol>
+<li>This page have two many fields :
+<ul>
+<li>Username</li>
+<li>password (has hide/show password)</li>
+</ul>
+</li>
+<li>A forgot password link that lead to another page to reset the password</li>
+<li>A link to send the user to the register page if he is not registered yet</li>
+</ol>
+<h2 id="heading-register-page">Register Page</h2>
+<p>As the login page, it is also responsive and will adapt depending of your screen</p><p>// images of register page. One for :</p><ul>
+<li><p>Small screens</p></li>
+<li><p>Big Screens</p><p>// lighthouse score</p></li>
+</ul>
+<h3 id="heading-register-page-3a-features">Register Page : Features</h3>
+<ol>
+<li><p>Here, three fields:</p><ul>
+<li>Email address</li>
+<li>Username</li>
+<li>Password (at least 8 characters) and also hide/show option</li>
+</ul>
+</li>
+<li><p>A link to the login page if the user has already signed in</p></li>
+</ol>
+<h2 id="heading-home-page">Home Page</h2>
+<p>Responsive (naturally). The purple design is kept.</p><p>// images of register page. One for :</p><ul>
+<li><p>Small screens</p></li>
+<li><p>Big Screens</p><p>// lighthouse score</p></li>
+</ul>
+<h3 id="heading-home-page-3a-features">Home Page : Features</h3>
+<ol>
+<li><p>A navbar that will change depending of the screen you have.It has 5 tabs :</p><ul>
+<li>Home 🏠</li>
+<li>Profile 👤</li>
+<li>Tools ⚙</li>
+<li>About</li>
+<li>Log out</li>
+</ul>
+</li>
+</ol>
+<p>On big screens (width ≥ 640px), it will be a normal navbar horizontal.</p><p>// Image of the horizontal navbar</p><p>On small screens, it is a menu burger that displays a vertical navbar.</p><p>// image of vertical navbar</p><ol>
+<li>The main title has an animation of cursor typing. It loops infinitely</li>
+</ol>
+<p>// Image (or video) of the title with its animation
+3. A bouncing button that leads to the project grid
+4. Project grids : all my JS projects are displayed as a grid of card.
+More on that later.
+5. A logout button. It opens a dialog that ask the user to confirm the logout
+6. A “back to top” button able to scale depending of the user’s screen width.</p><h2 id="heading-profile-tab">Profile Tab</h2>
+<p>This tab is quite special, it will open a dialog that make a brief recap of the
+user current stats. Here are the stats shown :</p><ul>
+<li>Username</li>
+<li>Number of visits : this counter will increment each time you visit the main page</li>
+<li>Best Score at snake game</li>
+<li>Best Score at Rock-Paper-Scissors game (shifumi)</li>
+<li>And also the date</li>
+</ul>
+<h2 id="heading-log-out-tab">Log out Tab</h2>
+<p>It behaves exactly like the logout button at the bottom of the page</p><h2 id="heading-space-calculator-d83dde80">Space Calculator 🚀</h2>
+<p>// Some images of the space calculator</p><p>A calculator with a good-looking design that performs basic operations : addition,
+substraction, multiplication, division</p><p>As a personal touch, I added a clock on the top of the calculator.
+// image of the clock</p><p>If you click on it, it will change and display the date in DD/MM/YYYY format.
+Click an another time to go back to default state.</p><h2 id="heading-comprehensive-weather-app-26a1d83cdf1ed83cdf2a">Comprehensive Weather app ⚡🌞🌪</h2>
+<p>A readaptation of my weather app project on github(link). Enter the
+name of the city and GO ! A simple design with animated icons to add some style.
+List of all parameters rendered when you query a city :</p><ol>
+<li><strong>Location</strong> (city, town, …) &amp; <strong>Country</strong></li>
+<li><strong>Temperature</strong> in Celsius degrees</li>
+<li><strong>Feels Like</strong> also in Celsius degrees</li>
+<li><strong>Humidity</strong></li>
+<li><strong>Wind Direction</strong></li>
+<li><strong>Speed Direction</strong></li>
+<li><strong>Description</strong> (clear sky, rainy, foggy, …)</li>
+<li><strong>The date and time</strong> at the place queried</li>
+</ol>
+<h2 id="heading-full-snake-game-d83ddc0d">Full snake Game 🐍</h2>
+<p>A complete snake game with many features. You can choose one between three
+levels of difficulty : easy, normal and hard</p><p>// Image of the level dialog</p><p>Here, audios are integrated. Different sounds will play
+(start, movement, eating, lose).
+If you lose, an another dialog will open</p><p>// Image of the restart snake game dialog</p><p>and ask you if you want to replay.
+Your best score will be registered, store in the database and shown, as I mentioned
+before, in your profile dialog. It is not responsive, so you need a screen at
+least 600 px large.</p><h2 id="heading-tic-tac-toe-28also-with-sfx-d83cdfb529-274c2b55">Tic tac Toe (also with SFX 🎵) ❌⭕</h2>
+<p>Tic tac toe game, but with swipe SFX. Play and admire the bright city behind you.</p><p>// Image of the tic tac toe game</p><p>This game need two players. When one of them wins, a dialog will popup
+and ask for retry or quit the game.</p><p>// Image of the tic tac toe restart game popup</p><h2 id="heading-shifumi-game-270cd83ddd90d83ddc4a">Shifumi game ✌🖐👊</h2>
+<p>Rock Paper Scissors game against the Computer. Purple design is back.</p><p>// Image of the shifumi game</p><p>The rules are simple : to win, your score must be higher than computer’s score.
+You can stop a any moment by pressing the “Quit game” button. A dialog
+(another one) will popup and ask you to confirm.</p><p>// Image of the shifumi game confirm quit dialog</p><p>Similarly to the snake game, your best score will be registered in the database
+and shown on the home page in the user’s profile</p><h2 id="heading-images-slider-d83dddbc">Images slider 🖼</h2>
+<p>Welcome in my short collection of city images.</p><p>// Image of the image slider</p><p>You can stop the scrolling effect by clicking on the admire button.
+To navigate through the slider, you can use the arrow buttons or directly the
+LEFT and RIGHT arrow key. This project is fully responsive.</p><h2 id="heading-dynamic-stopwatch-23f1">Dynamic Stopwatch ⏱</h2>
+<p>A stopwatch with three (3) main options:</p><ul>
+<li>Start</li>
+<li>Pause</li>
+<li>Reset</li>
+</ul>
+<p>// Image of the stopwatch with the clock hovered</p><p>Lighting effect when you hover the clock image.</p><h2 id="heading-new-york-simple-clock-231a">New York Simple Clock ⌚</h2>
+<p>A simple clock that display :</p><p>// Image of the new york clock</p><ul>
+<li>current time code HH:MM:SS  and you can add the milliseconds</li>
+<li>A greeting depending of the moment of the day</li>
+<li>The date on, the format DayOfWeek Month Day Year</li>
+<li>an option to show or hide milliseconds</li>
+</ul>
+<h2 id="heading-classic-to-do-list-d83ddccb">Classic To do List 📋</h2>
+<p>The classic</p><p>// Image of the to do list</p><h2 id="heading-project-roadmap">Project Roadmap</h2>
+<ul>
+<li><p>[x] Add a forgot password 🔑</p></li>
+<li><p>[x] I need two pages here :</p><ul>
+<li>[x] The first one to ask the email to the user</li>
+<li>[x] The second one will be a page to say him that a mail has been sent to him and to check his mails.
+He will now fill</li>
+<li>[] two fields and pass only if the two passwords matches.</li>
+</ul>
+</li>
+<li><p>[x] Inside the forgot password, I will ask your email address</p></li>
+<li><p>[x] Then send a random number with 6 digits (so between 100000 and 999999)</p></li>
+<li><p>[x] The user will enter that number and will pass only if the number matches. After that the number will be put to zero in the DB.</p></li>
+<li><p>[x] <s>For the registration, I will do the same thing.</s></p></li>
+<li><p>[x] a nice animation to the welcome message 👋 when logging or registering. It needs to be multicolor and chars will display one after the other</p></li>
+<li><p>[x] a navbar (if possible) on the home page</p></li>
+<li><p>[ ] <s>the tools will be classified by category : game 🎮, weather app ☀, calculator 🖩, to do-list, and so on</s></p></li>
+<li><p>[x] All the games and utilities as <s>flex</s> grid 💪 elements (and their behavior should be responsive) (Here improvements are coming )</p></li>
+<li><p>[x] a different page for each tool</p></li>
+<li><p>[ ] <s>the background image may change depending of the moment of the day : sunrise 🌅, day ☀, sunset 🌇, night 🌙</s> (<em>canceled</em>)</p></li>
+<li><p>[ ] <s>The counter of visits will be attached to an other element (possibly the navbar, and so it will no more be so messy positionned)</s></p></li>
+<li><p>[ ] <s>I should think to make the footer 🦶 mobile (animation 🎞)</s></p></li>
+<li><p>[ ] <s>display the time in the navbar, eventually</s></p></li>
+<li><p>[x] The time will now appear in the Profile tab.</p></li>
+<li><p>[x] the to-do-list must use the LocalStorage</p></li>
+<li><p>[x] For the log out, a dialog 💬 should pop up ( maybe a blur effect will be interesting, in background )</p></li>
+<li><p>[x] The navbar should contain profile with infos about user, tools ( in many sections ) and logout</p></li>
+<li><p>[x] The infos like counter of visits will be in Profile</p></li>
+<li><p>[x] The “go back to top” button may be set as fixed element, so it will display at the bottom of the page as soon as we quit the top</p></li>
+<li><p>[x] If we click on the DOM elements that have the notification <strong>ping</strong>, it disappears and for the <em>Profile</em> sections, a dialog 💬 will open and display infos about the users</p></li>
+<li><p>[x] If the user has already checked the one of the ping elements(especially the logout elements for the small and large screens navbars), if he reduce or increase the size of his screen and so, for example the display for small or large sreens occurs, the ping <strong>WILL NO LONGER BE PRESENT</strong></p></li>
+<li><p>[x] Added the simple calculator file</p></li>
+<li><p>[x] Add Typescript instead of vanilla JavaScript for the calculator</p></li>
+<li><p>[x] Add Typescript instead of vanilla JavaScript for the home page</p></li>
+<li><p>[x] Correct all the errors for the home.ts page</p></li>
+<li><p>[x] Now the next mission is to add ts for the login page</p></li>
+<li><p>[x] And correct all the (<strong>potential</strong>) errors</p></li>
+<li><p>[x] And after that the register page</p></li>
+<li><p>[x] And there too, fix every single squiggled line</p></li>
+<li><p>[x] Now it is the turn of the weather app. This is probably the biggest 💪 refactor of all</p></li>
+<li><p>[x] Firstly, let’s use <em>tailwindcss</em> in the project</p></li>
+<li><p>[x] And after <strong>typescript</strong></p></li>
+<li><p>[x] By the way refactor the structure of the page for a better experience</p></li>
+<li><p>[x] Turn of the snake game</p></li>
+<li><p>[x] Much easier because it has less code</p></li>
+<li><p>[x] The same : tailwindcss first</p></li>
+<li><p>[x] And after typescript</p></li>
+<li><p>[ ] <s>Disable the buttons on the the when the player is focused on the game. What I want to say is that if the game starts, the movement buttons can’t interact with other parts of the page</s></p></li>
+<li><p>[x] Open a <strong>dialog</strong> when the player arrives to ask him level of difficulty. They will be ranked in :</p><ul>
+<li>easy</li>
+<li>normal</li>
+<li>hard 💪</li>
+</ul>
+</li>
+<li><p>[x] For each level of difficulty, the speed of the snake will increase. Add that into the setInterval method by changing the snakespeed</p></li>
+<li><p>[x] While the player restarts the game and the countdown is displayed, the restart button (<strong>Enter key</strong> or <strong>Restart Button</strong> itself) must be disabled to avoid time intervals overlapping</p></li>
+<li><p>[x] My other idea is to play a song when:</p><ul>
+<li>[x] You lose</li>
+<li>[x] You eat a food</li>
+<li>[x] You change direction</li>
+<li>[x] Game over</li>
+<li>[] <s>You beat your own high score (<em>PHP needed</em>)</s></li>
+</ul>
+</li>
+<li><p>[x] Now the Tic Tac Toe Game…</p></li>
+<li><p>[x] As always tailwind CSS first</p></li>
+<li><p>[x] And after TypeScript</p></li>
+<li><p>[x] Maybe here too, I will add sounds 🎵</p></li>
+<li><p>[x] The 5th project is the shifumi game. Also not too much code…</p></li>
+<li><p>[x] Tailwind CSS</p></li>
+<li><p>[x] TypeScript</p></li>
+<li><p>[x] After the <strong>images slider</strong> project</p></li>
+<li><p>[x] Tailwind CSS</p></li>
+<li><p>[x] TypeScript</p></li>
+<li><p>[x] The stopwatch is the following project</p></li>
+<li><p>[x] Like always:</p><ul>
+<li>[x] Tailwind CSS</li>
+<li>[x] Typescript</li>
+</ul>
+</li>
+<li><p>[x] New york clock : all the habitual stuff</p></li>
+<li><p>[x] To do list : the same thing here</p></li>
+<li><p>[x] improve LightHouse score on each single page of the app:</p><ul>
+<li>[x] replace the rocket gif image by another one</li>
+<li>[x] replace all images by their .avif of .webP version</li>
+</ul>
+</li>
+<li><p>[ ] The app will be deployed by default on vercel</p></li>
+<li><p>[ ] Todo : add the lighthouse score for the main pages</p></li>
+</ul>
+<p>This list will be updated depending on my progression through it.</p>
+
+</body>
+</html>

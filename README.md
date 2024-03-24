@@ -1,9 +1,10 @@
-<h1 style="text-align:center; font-size: 3rem"> Php Fullstack App</h1>  
+<h1 style="text-align:center; font-size: 3rem"> Php Fullstack App</h1>
 
-*A full stack php application that manages user
- authentication, registration, login and even password forgotten.*  
+_A full stack php application that manages user
+authentication, registration, login and even password forgotten._
 
 Technologies/tools/languages used :
+
 <div align=center style="display:flex; gap:2px; align-items:center; justify-content:center;
 padding:0.25px;
 flex-wrap:wrap;" >
@@ -22,13 +23,14 @@ alt="php-logo">
 alt="php-logo">
 <img src="https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E"
 alt="php-logo">
+
 </div>
 
-## Overview  
+## Overview
 
 This project is initially an exercise to practice Php, Ajax, Tailwindcss,
 Typescript and sass in a real life application like.
-It has 3 major pages:  
+It has 3 major pages:
 
 1. Login page 🔑
 2. Register page 👤
@@ -36,7 +38,7 @@ It has 3 major pages:
 
 As database, for the registration, login, and other utilities, I used PostgreSQL.
 On the home page, I added my main projects I built when I was learning
- JavaScript :
+JavaScript :
 
 - Space Calculator 🚀
 - Comprehensive Weather app ⚡🌞🌪
@@ -46,8 +48,8 @@ On the home page, I added my main projects I built when I was learning
 - Images slider 🖼
 - Dynamic Stopwatch ⏱
 - New York Simple Clock ⌚
-- Classic Todo List 📋  
-  
+- Classic Todo List 📋
+
 Because I used tailwindcss CLI, I put SASS in the project
 for a more pragmatically way to write CSS (especially mixins)
 
@@ -55,7 +57,7 @@ for a more pragmatically way to write CSS (especially mixins)
 
 A fully responsive login page with a purple design
 
- // images of login page. One for :
+// images of login page. One for :
 
 - Small screens
 
@@ -65,16 +67,17 @@ A fully responsive login page with a purple design
 ### Login Page : Features
 
 1. This page have two many fields :
-    - Username
-    - password (has hide/show password)
-2. A forgot password link that lead to another page to reset the password
+   - Username
+   - password (has hide/show password)
+2. A forgot (link to the forgotten password section) password link that lead
+   to another page to reset the password
 3. A link to send the user to the register page if he is not registered yet
 
 ## Register Page
 
 As the login page, it is also responsive and will adapt depending of your screen
 
- // images of register page. One for :
+// images of register page. One for :
 
 - Small screens
 
@@ -82,21 +85,21 @@ As the login page, it is also responsive and will adapt depending of your screen
 
   // lighthouse score
 
-### Register page : Features
+### Register Page : Features
 
 1. Here, three fields:
-  
+
    - Email address
    - Username
    - Password (at least 8 characters) and also hide/show option
 
 2. A link to the login page if the user has already signed in
 
-## Home page
+## Home Page
 
 Responsive (naturally). The purple design is kept.
 
- // images of register page. One for :
+// images of register page. One for :
 
 - Small screens
 
@@ -104,7 +107,7 @@ Responsive (naturally). The purple design is kept.
 
   // lighthouse score
 
-### Home page : Features
+### Home Page : Features
 
 1. A navbar that will change depending of the screen you have.It has 5 tabs :
 
@@ -125,9 +128,10 @@ On small screens, it is a menu burger that displays a vertical navbar.
 1. The main title has an animation of cursor typing. It loops infinitely
 
 // Image (or video) of the title with its animation
+
 3. A bouncing button that leads to the project grid
 4. Project grids : all my JS projects are displayed as a grid of card.
-More on that later.
+   More on that later.
 5. A logout button. It opens a dialog that ask the user to confirm the logout
 6. A "back to top" button able to scale depending of the user's screen width.
 
@@ -148,10 +152,10 @@ It behaves exactly like the logout button at the bottom of the page
 
 ## Space Calculator 🚀
 
- // Some images of the space calculator
+// Some images of the space calculator
 
 A calculator with a good-looking design that performs basic operations : addition,
- substraction, multiplication, division
+substraction, multiplication, division
 
 As a personal touch, I added a clock on the top of the calculator.
 // image of the clock
@@ -162,8 +166,8 @@ Click an another time to go back to default state.
 ## Comprehensive Weather app ⚡🌞🌪
 
 A readaptation of my weather app project on github(link). Enter the
- name of the city and GO ! A simple design with animated icons to add some style.
- List of all parameters rendered when you query a city :
+name of the city and GO ! A simple design with animated icons to add some style.
+List of all parameters rendered when you query a city :
 
 1. **Location** (city, town, ...) & **Country**
 2. **Temperature** in Celsius degrees
@@ -177,7 +181,7 @@ A readaptation of my weather app project on github(link). Enter the
 ## Full snake Game 🐍
 
 A complete snake game with many features. You can choose one between three
- levels of difficulty : easy, normal and hard
+levels of difficulty : easy, normal and hard
 
 // Image of the level dialog
 
@@ -190,7 +194,7 @@ If you lose, an another dialog will open
 and ask you if you want to replay.
 Your best score will be registered, store in the database and shown, as I mentioned
 before, in your profile dialog. It is not responsive, so you need a screen at
- least 600 px large.
+least 600 px large.
 
 ## Tic tac Toe (also with SFX 🎵) ❌⭕
 
@@ -204,6 +208,7 @@ and ask for retry or quit the game.
 // Image of the tic tac toe restart game popup
 
 ## Shifumi game ✌🖐👊
+
 Rock Paper Scissors game against the Computer. Purple design is back.
 
 // Image of the shifumi game
@@ -225,7 +230,7 @@ Welcome in my short collection of city images.
 
 You can stop the scrolling effect by clicking on the admire button.
 To navigate through the slider, you can use the arrow buttons or directly the
- LEFT and RIGHT arrow key. This project is fully responsive.
+LEFT and RIGHT arrow key. This project is fully responsive.
 
 ## Dynamic Stopwatch ⏱
 
@@ -245,19 +250,39 @@ A simple clock that display :
 
 // Image of the new york clock
 
-- current time code HH:MM:SS  and you can add the milliseconds
+- current time code HH:MM:SS and you can add the milliseconds
 - A greeting depending of the moment of the day
 - The date on, the format DayOfWeek Month Day Year
 - an option to show or hide milliseconds
 
-## Classic To do List 📋  
+## Classic To do List 📋
 
 The classic
 
 // Image of the to do list
 
+## Forgotten Password Management
 
+On the login page you have the option : <span style="color: red">Forgot password</span>
 
+// image of the login page with an arrow on the forgot password option
+
+Click on it and you will be redirected to a page that asks you your email address.
+Provide it and submit.
+
+// image of the forgotten password page
+
+You will receive an email Friedrich Corner that gives you a code to reset the password.
+
+// image of the code submit page
+
+After entered the right password, you will be redirected to the last page
+that needs the new password. Confirm it and submit.
+
+// image of the reset password page
+
+You will be back on the login page.
+Congratulations, your password has been reset.
 
 ## Project Roadmap
 
@@ -265,7 +290,7 @@ The classic
 - [x] I need two pages here :
   - [x] The first one to ask the email to the user
   - [x] The second one will be a page to say him that a mail has been sent to him and to check his mails.
-   He will now fill
+        He will now fill
   - [] two fields and pass only if the two passwords matches.
 - [x] Inside the forgot password, I will ask your email address
 - [x] Then send a random number with 6 digits (so between 100000 and 999999)
@@ -276,7 +301,7 @@ The classic
 - [ ] ~~the tools will be classified by category : game 🎮, weather app ☀, calculator 🖩, to do-list, and so on~~
 - [x] All the games and utilities as ~~flex~~ grid 💪 elements (and their behavior should be responsive) (Here improvements are coming )
 - [x] a different page for each tool
-- [ ] ~~the background image may change depending of the moment of the day : sunrise 🌅, day ☀, sunset 🌇, night 🌙~~ (*canceled*)
+- [ ] ~~the background image may change depending of the moment of the day : sunrise 🌅, day ☀, sunset 🌇, night 🌙~~ (_canceled_)
 - [ ] ~~The counter of visits will be attached to an other element (possibly the navbar, and so it will no more be so messy positionned)~~
 - [ ] ~~I should think to make the footer 🦶 mobile (animation 🎞)~~
 - [ ] ~~display the time in the navbar, eventually~~
@@ -286,7 +311,7 @@ The classic
 - [x] The navbar should contain profile with infos about user, tools ( in many sections ) and logout
 - [x] The infos like counter of visits will be in Profile
 - [x] The "go back to top" button may be set as fixed element, so it will display at the bottom of the page as soon as we quit the top
-- [x] If we click on the DOM elements that have the notification **ping**, it disappears and for the *Profile* sections, a dialog 💬 will open and display infos about the users
+- [x] If we click on the DOM elements that have the notification **ping**, it disappears and for the _Profile_ sections, a dialog 💬 will open and display infos about the users
 - [x] If the user has already checked the one of the ping elements(especially the logout elements for the small and large screens navbars), if he reduce or increase the size of his screen and so, for example the display for small or large sreens occurs, the ping **WILL NO LONGER BE PRESENT**
 - [x] Added the simple calculator file
 - [x] Add Typescript instead of vanilla JavaScript for the calculator
@@ -297,7 +322,7 @@ The classic
 - [x] And after that the register page
 - [x] And there too, fix every single squiggled line
 - [x] Now it is the turn of the weather app. This is probably the biggest 💪 refactor of all
-- [x] Firstly, let's use *tailwindcss* in the project
+- [x] Firstly, let's use _tailwindcss_ in the project
 - [x] And after **typescript**
 - [x] By the way refactor the structure of the page for a better experience
 - [x] Turn of the snake game
@@ -317,7 +342,7 @@ The classic
   - [x] You eat a food
   - [x] You change direction
   - [x] Game over
-  - [] ~~You beat your own high score (*PHP needed*)~~
+  - [] ~~You beat your own high score (_PHP needed_)~~
 
 - [x] Now the Tic Tac Toe Game...
 - [x] As always tailwind CSS first

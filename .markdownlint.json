@@ -1,11 +1,5 @@
 {
-    "MD033": {
-      "allowed_elements": [
-        "h1",
-        "",
-        "a",
-        "div",
-        "img"
-      ]
-    }
+  "MD033": {
+    "allowed_elements": ["h1", "", "a", "div", "img"]
   }
+}
