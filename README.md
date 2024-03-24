@@ -174,19 +174,28 @@ user current stats. Here are the stats shown :
 - Best Score at Rock-Paper-Scissors game (shifumi)
 - And also the date
 
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center">
+
+<img src="./assets/img/Annotation 2024-03-25 000331.png" height=400 alt="profile-dialog-image">
+
+</div>
+
 ## Log out Tab
 
 It behaves exactly like the logout button at the bottom of the page
 
 ## Space Calculator 🚀
 
-// Some images of the space calculator
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center; margin-bottom:1rem">
+
+<img src="./assets/img/Annotation 2024-03-25 001200.png" height="400" alt="space-calculator-image">
+<img src="./assets/img/Annotation 2024-03-25 001224.png" height=400 alt="space-calculator-image">
+</div>
 
 A calculator with a good-looking design that performs basic operations : addition,
 substraction, multiplication, division
 
-As a personal touch, I added a clock on the top of the calculator.
-// image of the clock
+As a personal touch, I added a clock on the top of the calculator (the clock).
 
 If you click on it, it will change and display the date in DD/MM/YYYY format.
 Click an another time to go back to default state.
@@ -206,46 +215,66 @@ List of all parameters rendered when you query a city :
 7. **Description** (clear sky, rainy, foggy, ...)
 8. **The date and time** at the place queried
 
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center">
+
+<img src="./assets/img/Annotation 2024-03-25 001612.png" height=400 width=400 alt="weather-app-image-night">
+<img src="./assets/img/Annotation 2024-03-25 001552.png" height=400 width=400 alt="weather-app-image-day">
+
+</div>
+
 ## Full snake Game 🐍
 
 A complete snake game with many features. You can choose one between three
 levels of difficulty : easy, normal and hard
 
-// Image of the level dialog
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center">
+
+<img src="./assets/img/Annotation 2024-03-25 002000.png" height=400 alt="snake-start-dialog-image">
+<img src="./assets/img/Annotation 2024-03-25 002150.png" height=400 width=400 alt="snake-game-in-game-image">
+
+</div>
 
 Here, audios are integrated. Different sounds will play
 (start, movement, eating, lose).
 If you lose, an another dialog will open
 
-// Image of the restart snake game dialog
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center; margin-bottom:2rem;">
 
-and ask you if you want to replay.
+<img src="./assets/img/Annotation 2024-03-25 002204.png" height=400 alt="restart-snake-game-dialog-image">
+
+</div>
+
+And ask you if you want to replay.
 Your best score will be registered, store in the database and shown, as I mentioned
 before, in your profile dialog. It is not responsive, so you need a screen at
 least 600 px large.
 
-## Tic tac Toe (also with SFX 🎵) ❌⭕
+## Tic tac Toe ⭕❌
 
 Tic tac toe game, but with swipe SFX. Play and admire the bright city behind you.
 
-// Image of the tic tac toe game
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center; margin-bottom:2rem;">
+
+<img src="./assets/img/Annotation 2024-03-25 002521.png" height=400 alt="tic-tac-toe-game-image">
+
+</div>
 
 This game need two players. When one of them wins, a dialog will popup
 and ask for retry or quit the game.
-
-// Image of the tic tac toe restart game popup
 
 ## Shifumi game ✌🖐👊
 
 Rock Paper Scissors game against the Computer. Purple design is back.
 
-// Image of the shifumi game
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center; margin-bottom:2rem;">
+
+<img src="./assets/img/Annotation 2024-03-25 002647.png" height=400 alt="tic-tac-toe-game-image">
+
+</div>
 
 The rules are simple : to win, your score must be higher than computer's score.
 You can stop a any moment by pressing the "Quit game" button. A dialog
 (another one) will popup and ask you to confirm.
-
-// Image of the shifumi game confirm quit dialog
 
 Similarly to the snake game, your best score will be registered in the database
 and shown on the home page in the user's profile
@@ -254,7 +283,12 @@ and shown on the home page in the user's profile
 
 Welcome in my short collection of city images.
 
-// Image of the image slider
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center">
+
+<img src="./assets/img/Annotation 2024-03-25 002819.png" height=400 alt="large-screen-images-slider-image">
+<img src="./assets/img/Annotation 2024-03-25 002857.png" height=400 alt="small-screen-images-slider-image">
+
+</div>
 
 You can stop the scrolling effect by clicking on the admire button.
 To navigate through the slider, you can use the arrow buttons or directly the
