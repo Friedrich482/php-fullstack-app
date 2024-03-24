@@ -217,6 +217,47 @@ You can stop a any moment by pressing the "Quit game" button. A dialog
 Similarly to the snake game, your best score will be registered in the database
 and shown on the home page in the user's profile
 
+## Images slider 🖼
+
+Welcome in my short collection of city images.
+
+// Image of the image slider
+
+You can stop the scrolling effect by clicking on the admire button.
+To navigate through the slider, you can use the arrow buttons or directly the
+ LEFT and RIGHT arrow key. This project is fully responsive.
+
+## Dynamic Stopwatch ⏱
+
+A stopwatch with three (3) main options:
+
+- Start
+- Pause
+- Reset
+
+// Image of the stopwatch with the clock hovered
+
+Lighting effect when you hover the clock image.
+
+## New York Simple Clock ⌚
+
+A simple clock that display :
+
+// Image of the new york clock
+
+- current time code HH:MM:SS  and you can add the milliseconds
+- A greeting depending of the moment of the day
+- The date on, the format DayOfWeek Month Day Year
+- an option to show or hide milliseconds
+
+## Classic To do List 📋  
+
+The classic
+
+// Image of the to do list
+
+
+
 
 ## Project Roadmap
 
