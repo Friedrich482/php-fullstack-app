@@ -26,29 +26,54 @@ alt="php-logo">
 
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Login Page](#login-page)
+    - [Login Page : Features](#login-page--features)
+  - [Register Page](#register-page)
+    - [Register Page : Features](#register-page--features)
+  - [Home Page](#home-page)
+    - [Home Page : Features](#home-page--features)
+  - [Profile Tab](#profile-tab)
+  - [Log out Tab](#log-out-tab)
+  - [Space Calculator 🚀](#space-calculator-)
+  - [Comprehensive Weather app ⚡🌞🌪](#comprehensive-weather-app-)
+  - [Full snake Game 🐍](#full-snake-game-)
+  - [Tic tac Toe ⭕❌](#tic-tac-toe-)
+  - [Shifumi game ✌🖐👊](#shifumi-game-)
+  - [Images slider 🖼](#images-slider-)
+  - [Dynamic Stopwatch ⏱](#dynamic-stopwatch-)
+  - [New York Simple Clock ⌚](#new-york-simple-clock-)
+  - [Classic To do List 📋](#classic-to-do-list-)
+  - [Forgotten Password Management](#forgotten-password-management)
+  - [Project Roadmap](#project-roadmap)
+
 ## Overview
 
 This project is initially an exercise to practice Php, Ajax, Tailwindcss,
 Typescript and sass in a real life application like.
 It has 3 major pages:
 
-1. Login page 🔑
-2. Register page 👤
-3. Home page 🏠
+1. [Login page 🔑](#login-page)
+2. [Register page 👤](#register-page)
+3. [Home page 🏠](#home-page)
 
 As database, for the registration, login, and other utilities, I used PostgreSQL.
 On the home page, I added my main projects I built when I was learning
 JavaScript :
 
-- Space Calculator 🚀
-- Comprehensive Weather app ⚡🌞🌪
-- Full snake Game (plays sounds 🎵) 🐍
-- Tic tac Toe (also with SFX 🎵) ❌⭕
-- Shifumi game ✌🖐👊
-- Images slider 🖼
-- Dynamic Stopwatch ⏱
-- New York Simple Clock ⌚
-- Classic Todo List 📋
+- [Space Calculator 🚀](#space-calculator-)
+- [Comprehensive Weather app ⚡🌞🌪](#comprehensive-weather-app-)
+- [Full snake Game 🐍](#full-snake-game-)
+- [Tic tac Toe ⭕❌](#tic-tac-toe-)
+- [Shifumi game ✌🖐👊](#shifumi-game-)
+- [Images slider 🖼](#images-slider-)
+- [Dynamic Stopwatch ⏱](#dynamic-stopwatch-)
+- [New York Simple Clock ⌚](#new-york-simple-clock-)
+- [Classic To do List 📋](#classic-to-do-list-)
+- [Forgotten Password Management](#forgotten-password-management)
 
 Because I used tailwindcss CLI, I put SASS in the project
 for a more pragmatically way to write CSS (especially mixins)
@@ -143,7 +168,7 @@ On small screens, it is a menu burger that displays a vertical navbar.
 
 </div>
 
-1. The main title has an animation of cursor typing. It loops infinitely
+2. The main title has an animation of cursor typing. It loops infinitely
 
 <div style="display:flex; gap:4rem; align-items:center; justify-content:center">
 
@@ -302,7 +327,12 @@ A stopwatch with three (3) main options:
 - Pause
 - Reset
 
-// Image of the stopwatch with the clock hovered
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center; margin-bottom:2rem;">
+
+<img src="./assets/img/Annotation 2024-03-25 003707.png" height=400 alt="stopwatch-image">
+<img src="./assets/img/Annotation 2024-03-25 003633.png" height=400 alt="stopwatch-hover-image">
+
+</div>
 
 Lighting effect when you hover the clock image.
 
@@ -310,7 +340,11 @@ Lighting effect when you hover the clock image.
 
 A simple clock that display :
 
-// Image of the new york clock
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center; margin-bottom:2rem;">
+
+<img src="./assets/img/Annotation 2024-03-25 003941.png" height=300 alt="NYC-clock-image">
+
+</div>
 
 - current time code HH:MM:SS and you can add the milliseconds
 - A greeting depending of the moment of the day
@@ -321,30 +355,50 @@ A simple clock that display :
 
 The classic
 
-// Image of the to do list
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center; margin-bottom:2rem;">
+
+<img src="./assets/img/Annotation 2024-03-25 004158.png" height=300 alt="To-do-list-image">
+
+</div>
 
 ## Forgotten Password Management
 
-On the login page you have the option : <span style="color: red">Forgot password</span>
+On the login page you have the option <span style="color: red">Forgot password</span>
 
-// image of the login page with an arrow on the forgot password option
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center; margin-bottom:2rem;">
 
+<img src="./assets/img/Annotation 2024-03-25 004541.png" height=400 alt="forgotten-password-image">
+
+</div>
 Click on it and you will be redirected to a page that asks you your email address.
 Provide it and submit.
-
-// image of the forgotten password page
-
 You will receive an email Friedrich Corner that gives you a code to reset the password.
 
-// image of the code submit page
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center; margin-bottom:2rem;">
 
-After entered the right password, you will be redirected to the last page
+<img src="./assets/img/Annotation 2024-03-25 004601.png" height=400 alt="code-submit-image">
+
+</div>
+
+After entered the right code, you will be redirected to the last page
 that needs the new password. Confirm it and submit.
 
-// image of the reset password
+<div style="display:flex; gap:4rem; align-items:center; justify-content:center; margin-bottom:2rem;">
+
+<img src="./assets/img/Annotation 2024-03-25 004640.png" height=400 alt="reset-password-image">
+
+</div>
 
 You will be back on the login page.
 Congratulations, your password has been reset.
+
+## Installation : Run locally
+
+You can run the project locally. Start by cloning the repository with the command :
+
+```code
+  git clone https://github.com/Friedrich482/php_form_registration.git
+```
 
 ## Project Roadmap
 
@@ -353,7 +407,7 @@ Congratulations, your password has been reset.
   - [x] The first one to ask the email to the user
   - [x] The second one will be a page to say him that a mail has been sent to him and to check his mails.
         He will now fill
-  - [] two fields and pass only if the two passwords matches.
+  - [x] two fields and pass only if the two passwords matches.
 - [x] Inside the forgot password, I will ask your email address
 - [x] Then send a random number with 6 digits (so between 100000 and 999999)
 - [x] The user will enter that number and will pass only if the number matches. After that the number will be put to zero in the DB.
@@ -428,6 +482,6 @@ Congratulations, your password has been reset.
   - [x] replace all images by their .avif of .webP version
 
 - [ ] The app will be deployed by default on vercel
-- [ ] Todo : add the lighthouse score for the main pages
+- [x] Todo : add the lighthouse score for the main pages
 
 This list will be updated depending on my progression through it.
