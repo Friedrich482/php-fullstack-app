@@ -407,8 +407,19 @@ After install the npm dependencies via :
   npm install
 ```
 
+Also **install php** on your local machine.
+
 You will need a local server. Because it is PHP, I recommend you applications
-like [MAMP](https://www.mamp.info/en/windows/) or [XAMPP](https://www.apachefriends.org/fr/index.html). They will install a local **Apache Server** to serve the project. Personally I prefer MAMP.
+like [MAMP](https://www.mamp.info/en/windows/) or [XAMPP](https://www.apachefriends.org/fr/index.html).
+They will install a local **Apache Server** to serve the project.
+Personally I prefer MAMP.
+
+After that, you also need PHP dependencies installed via Composer.
+Install them with the command :
+
+```code
+  php composer.phar update
+```
 
 ## Project Roadmap
 
