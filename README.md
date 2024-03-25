@@ -48,6 +48,7 @@ alt="php-logo">
   - [New York Simple Clock ⌚](#new-york-simple-clock-)
   - [Classic To do List 📋](#classic-to-do-list-)
   - [Forgotten Password Management](#forgotten-password-management)
+  - [Installation : Run locally](#installation--run-locally)
   - [Project Roadmap](#project-roadmap)
 
 ## Overview
@@ -64,16 +65,15 @@ As database, for the registration, login, and other utilities, I used PostgreSQL
 On the home page, I added my main projects I built when I was learning
 JavaScript :
 
-- [Space Calculator 🚀](#space-calculator-)
-- [Comprehensive Weather app ⚡🌞🌪](#comprehensive-weather-app-)
-- [Full snake Game 🐍](#full-snake-game-)
-- [Tic tac Toe ⭕❌](#tic-tac-toe-)
-- [Shifumi game ✌🖐👊](#shifumi-game-)
-- [Images slider 🖼](#images-slider-)
-- [Dynamic Stopwatch ⏱](#dynamic-stopwatch-)
-- [New York Simple Clock ⌚](#new-york-simple-clock-)
-- [Classic To do List 📋](#classic-to-do-list-)
-- [Forgotten Password Management](#forgotten-password-management)
+- Space Calculator 🚀
+- Comprehensive Weather app ⚡🌞🌪
+- Full snake Game 🐍
+- Tic tac Toe ⭕❌
+- Shifumi game ✌🖐👊
+- Images slider 🖼
+- Dynamic Stopwatch ⏱
+- New York Simple Clock ⌚
+- Classic To do List 📋
 
 Because I used tailwindcss CLI, I put SASS in the project
 for a more pragmatically way to write CSS (especially mixins)
@@ -394,11 +394,21 @@ Congratulations, your password has been reset.
 
 ## Installation : Run locally
 
-You can run the project locally. Start by cloning the repository with the command :
+You can run the project locally. Start by cloning the
+repository with the command :
 
 ```code
   git clone https://github.com/Friedrich482/php_form_registration.git
 ```
+
+After install the npm dependencies via :
+
+```code
+  npm install
+```
+
+You will need a local server. Because it is PHP, I recommend you applications
+like [MAMP](https://www.mamp.info/en/windows/) or [XAMPP](https://www.apachefriends.org/fr/index.html). They will install a local **Apache Server** to serve the project. Personally I prefer MAMP.
 
 ## Project Roadmap
 
