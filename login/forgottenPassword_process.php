@@ -2,6 +2,19 @@
 session_start();
 include "../include/database.php";
 
+try {
+    require __DIR__ . "/../vendor/autoload.php";
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+
+$mailUsername = $_ENV["mailUsername"];
+$mailPassword = $_ENV["mailPassword"];
+$mailAddress = $_ENV["mailAddress"];
+$mailName = $_ENV["mailName"];
+// print "$mailUSername; $mailPassword; $mailAddress; $mailName";
 // Importations needed to use the phpmailer plugin
 
 require "../vendor/autoload.php";
@@ -73,11 +86,11 @@ try {
                 $mail->Host = "smtp.gmail.com";
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = 587;
-                $mail->Username = "friedrichcorner@gmail.com";
-                $mail->Password = "naue ukmu wjkj aenp";
+                $mail->Username = $mailUsername;
+                $mail->Password = $mailPassword;
                 $mail->setFrom(
-                    "friedrichcorner@gmail.com",
-                    "Friedrich Corner",
+                    $mailAddress,
+                    $mailName,
                     $auto = true
                 );
                 $mail->addAddress($user_email_address, "");
