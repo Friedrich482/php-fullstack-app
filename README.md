@@ -452,7 +452,7 @@ package in order to send mail for the reset password option. To run in local,
 
 And also there is a ```apiKey.example.json``` file in the ```projects/fetch-weather-app```
 
-```code
+```json
 {"API_KEY" : "YOUR_OPENWEATHER_MAP_API_KEY"}
 ```
 
