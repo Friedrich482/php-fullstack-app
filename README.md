@@ -49,6 +49,7 @@ alt="php-logo">
   - [Classic To do List 📋](#classic-to-do-list-)
   - [Forgotten Password Management](#forgotten-password-management)
   - [Installation : Run locally](#installation--run-locally)
+    - [Environment variables](#environment-variables)
   - [Project Roadmap](#project-roadmap)
 
 ## Overview
@@ -420,6 +421,44 @@ Install them with the command :
 ```code
   php composer.phar update
 ```
+
+### Environment variables
+
+If you are running the project locally, you will need to create two .env files
+based on the .env.example files in the ```login``` and the ```include``` folders.
+
+- login folder :
+
+  ``` code
+      mailUsername = "example@gmail.com" # The email address goes here
+      mailPassword = "xxxx xxxx xxxx xxxx" # Your code for smtp server
+      mailAddress = "example@gmail.com" # The email address also goes here
+      mailName = "example Example" # Your email username
+  ```
+
+I need to add some precisions here. In fact, I used the [PHPMailer](https://github.com/PHPMailer/PHPMailer)
+package in order to send mail for the reset password option. To run in local,
+  you'll need tour own **SMTP Server**. Create one using Gmail. And fill the
+   template with the data specified.
+
+- include folder :
+
+ ``` code
+      dbServer = "localhost"
+      dbUser = "postgres" # This is the username by default with a postgres database
+      dbPass = "password" # The password for your database goes here
+      dbName = "users_data" # The database name, I named it users_data
+ ```
+
+And also there is a ```apiKey.example.json``` file in the ```projects/fetch-weather-app```
+
+```code
+{"API_KEY" : "YOUR_OPENWEATHER_MAP_API_KEY"}
+```
+
+I used a key from [openweathermap.org](https://openweathermap.org/). So to run 
+locally, you'll need your own key. Go there and subscribe (it is free) to get 
+yours. After come back and just rename the ```apiKey.example.json``` into ```apiKey.json``` and paste your API key inside.
 
 ## Project Roadmap
 
