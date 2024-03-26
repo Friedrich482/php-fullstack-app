@@ -399,7 +399,7 @@ You can run the project locally. Start by cloning the
 repository with the command :
 
 ```code
-  git clone https://github.com/Friedrich482/php_form_registration.git
+  git clone https://github.com/Friedrich482/php-fullstack-app.git
 ```
 
 After install the npm dependencies via :
