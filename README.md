@@ -422,6 +422,8 @@ Install them with the command :
   php composer.phar update
 ```
 
+Then run by opening the ```login``` folder and open the ```login.php``` file.
+
 ### Environment variables
 
 If you are running the project locally, you will need to create two .env files
