@@ -419,7 +419,7 @@ After that, you also need PHP dependencies installed via Composer.
 Install them with the command :
 
 ```code
-  php composer.phar update
+  composer update
 ```
 
 Then run by opening the ```login``` folder and open the ```login.php``` file.
