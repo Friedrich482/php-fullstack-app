@@ -50,6 +50,7 @@ alt="php-logo">
   - [Forgotten Password Management](#forgotten-password-management)
   - [Installation : Run locally](#installation--run-locally)
     - [Environment variables](#environment-variables)
+    - [Database shape](#database-shape)
   - [Project Roadmap](#project-roadmap)
 
 ## Overview
@@ -452,7 +453,7 @@ package in order to send mail for the reset password option. To run in local,
       dbName = "users_data" # The database name, I named it users_data
  ```
 
-And also there is a ```apiKey.example.json``` file in the ```projects/fetch-weather-app```
+And also there is a ```apiKey.example.json``` file in the ```projects/fetch-weather-app``` 
 
 ```json
 {"API_KEY" : "YOUR_OPENWEATHER_MAP_API_KEY"}
@@ -461,6 +462,13 @@ And also there is a ```apiKey.example.json``` file in the ```projects/fetch-weat
 I used a key from [openweathermap.org](https://openweathermap.org/). So to run 
 locally, you'll need your own key. Go there and subscribe (it is free) to get 
 yours. After come back and just rename the ```apiKey.example.json``` into ```apiKey.json``` and paste your API key inside.
+
+
+### Database shape
+
+You need to have postgreSQL installed. Create a database called _users_data_.
+After that you'll need to create a table called *users*
+I put the .sql file in the ```database``` folder
 
 ## Project Roadmap
 
