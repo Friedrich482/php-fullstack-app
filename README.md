@@ -1,7 +1,7 @@
 <h1 style="text-align:center; font-size: 3rem"> Php Fullstack App</h1>
 
-_A full stack php application that manages user
-authentication, registration, login and even password forgotten._
+_A full stack php application that manages **user
+authentication, registration, login and even password forgotten**._
 
 Technologies/tools/languages used :
 
